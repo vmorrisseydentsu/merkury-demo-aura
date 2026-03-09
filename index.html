@@ -805,7 +805,7 @@ footer{background:#fff;padding:40px 0 0;}
     <div class="ps-section-label">Select a Visitor State</div>
     <div class="ps-persona-list" id="ps-persona-list"></div>
 
-    <div class="ps-ab-section"><div class="ps-ab-label">Content Variant Active</div><div class="ps-ab-card"><div class="ps-ab-variant"><div class="ps-ab-variant-dot"></div><span id="ps-ab-variant-name">Default</span></div><div class="ps-ab-segment" id="ps-ab-segment">No targeting active</div><div class="ps-ab-why" id="ps-ab-why">Generic experience - no Merkury match.</div><div class="ps-ab-signals" id="ps-ab-signals"></div></div></div>
+
     <div class="ps-footer"><span class="ps-reset" onclick="resetPersona()">Reset to default</span><span class="ps-page-indicator">Page: <strong id="ps-page-name">Home</strong></span></div>
   </div>
 </div>
@@ -1271,7 +1271,14 @@ function closeOfferLightbox() { var o = document.getElementById('offer-lightbox-
 
 // ── MODALS ────────────────────────────────────────────────────
 function openModal() { var o = document.getElementById('pers-modal-overlay'); if (o) { o.style.display = 'flex'; document.body.style.overflow = 'hidden'; } }
-function dismissModal() { var o = document.getElementById('pers-modal-overlay'); if (o) { o.style.display = 'none'; document.body.style.overflow = ''; } if (activeKey !== 'def') { var btn = document.getElementById('pers-reopen-btn'); if (btn) btn.classList.add('visible'); } }
+function dismissModal() {
+  var o = document.getElementById('pers-modal-overlay');
+  if (o) { o.style.display = 'none'; document.body.style.overflow = ''; }
+  if (activeKey === 'danielle') {
+    var btn = document.getElementById('pers-reopen-btn');
+    if (btn) btn.classList.add('visible');
+  }
+}
 function populateModal(key) {
   var v = MODALS[key]; if (!v) return;
   var d = PAYLOADS[key].d.data;
@@ -1372,10 +1379,11 @@ function applyPersona(key) {
   setTimeout(function(){ panelOpen=false; var pan=document.getElementById('ps-panel'),tog=document.getElementById('ps-toggle'); if(pan)pan.classList.remove('open'); if(tog)tog.classList.remove('open'); }, 300);
   if (key !== 'def') {
     populateModal(key);
-    if (key === 'danielle') { setTimeout(function(){openSignupModal();}, 380); }
-    else { setTimeout(function(){openModal();}, 380); }
-    if (key === 'maya') { setTimeout(function(){showPush('Maya, your cart is waiting','The Salutation Tight you viewed is almost sold out in your size.');}, 4500); }
-    if (key === 'danielle') { setTimeout(function(){showPush('Free shipping, just for you','New arrivals just dropped. Free shipping on your first order.');}, 4500); }
+    if (key === 'danielle') {
+      setTimeout(function(){openSignupModal();}, 380);
+    } else {
+      setTimeout(function(){openModal();}, 380);
+    }
   } else {
     dismissModal();
     if (reopenBtn) reopenBtn.classList.remove('visible');
