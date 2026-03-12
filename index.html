@@ -446,6 +446,24 @@ footer{background:#fff;padding:40px 0 0;}
 .push-iph-footer{display:flex;align-items:center;gap:6px;padding:8px 14px;background:rgba(0,0,0,.04);border-top:1px solid rgba(0,0,0,.06);}
 .push-iph-via{font-size:10px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:rgba(0,0,0,.35);}
 .push-iph-badge{font-size:10px;font-weight:700;color:#fff;background:#f46600;padding:2px 7px;border-radius:3px;}
+/* SIGNAL TOAST */
+#signal-toast{position:fixed;top:24px;left:24px;z-index:9300;opacity:0;transform:translateY(-8px);transition:opacity .3s ease,transform .3s ease;pointer-events:none;width:260px;}
+#signal-toast.visible{opacity:1;transform:translateY(0);pointer-events:auto;}
+.signal-toast-inner{background:rgba(13,13,13,.92);backdrop-filter:blur(12px);border-radius:10px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.28);}
+.signal-toast-header{padding:9px 14px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.08);}
+.signal-toast-label{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#1a5f6a;display:flex;align-items:center;gap:6px;}
+.signal-toast-dot{width:6px;height:6px;border-radius:50%;background:#00c8a0;animation:psDotPulse 2s ease-in-out infinite;flex-shrink:0;}
+.signal-toast-close{font-size:14px;color:rgba(255,255,255,.4);cursor:pointer;background:none;border:none;line-height:1;font-family:var(--font);}
+.signal-toast-close:hover{color:#fff;}
+.signal-toast-body{padding:10px 14px 12px;}
+.signal-toast-row{display:flex;align-items:baseline;justify-content:space-between;padding:4px 0;border-bottom:1px solid rgba(255,255,255,.06);}
+.signal-toast-row:last-child{border-bottom:none;}
+.signal-toast-key{font-size:10px;color:rgba(255,255,255,.45);letter-spacing:.5px;}
+.signal-toast-val{font-size:11px;font-weight:600;color:#fff;text-align:right;max-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.signal-toast-val.green{color:#00c8a0;}
+.signal-toast-val.amber{color:#f0a030;}
+.signal-toast-footer{padding:7px 14px;background:rgba(255,255,255,.04);font-size:10px;color:rgba(255,255,255,.3);display:flex;align-items:center;justify-content:space-between;}
+.signal-toast-source{font-weight:600;color:rgba(255,255,255,.4);}
 /* IDENTITY TIMELINE */
 #id-timeline-btn{position:fixed;left:0;top:50%;transform:translateY(-50%);z-index:8500;background:#0d0d0d;color:#fff;border:none;border-radius:0 6px 6px 0;padding:12px 10px;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;font-family:var(--font);writing-mode:vertical-rl;display:flex;align-items:center;gap:6px;box-shadow:4px 0 16px rgba(0,0,0,.2);}
 .itb-dot{width:7px;height:7px;border-radius:50%;background:#00c8a0;flex-shrink:0;animation:psDotPulse 2s ease-in-out infinite;}
@@ -549,6 +567,18 @@ footer{background:#fff;padding:40px 0 0;}
 </style>
 </head>
 <body>
+
+<!-- SIGNAL TOAST -->
+<div id="signal-toast">
+  <div class="signal-toast-inner">
+    <div class="signal-toast-header">
+      <div class="signal-toast-label"><div class="signal-toast-dot"></div>_svdatalayer firing</div>
+      <button class="signal-toast-close" onclick="dismissSignalToast()">&#215;</button>
+    </div>
+    <div class="signal-toast-body" id="signal-toast-body"></div>
+    <div class="signal-toast-footer"><span>Merkury Consumer Identity</span><span class="signal-toast-source">Schema B</span></div>
+  </div>
+</div>
 
 <!-- PUSH NOTIFICATION -->
 <div id="push-notif-wrap">
@@ -818,7 +848,7 @@ footer{background:#fff;padding:40px 0 0;}
 <!-- HOME PAGE -->
 <div id="page-home" class="page active">
   <div class="hero"><div class="hero-split">
-    <div class="hero-photo-left" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/AdobeStock_121109011.jpeg') center/cover no-repeat;"></div>
+    <div class="hero-photo-left" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/meditation.mountain') center/cover no-repeat;"></div>
     <div class="hero-center">
       <p class="hero-eyebrow" id="hero-eyebrow"></p>
       <span class="hero-h1-light" id="hero-h1-light">MOVE IN WHAT</span>
@@ -1289,6 +1319,33 @@ function closeCampaignModal(){var o=document.getElementById('campaign-modal-over
 document.getElementById('campaign-modal-overlay').addEventListener('click',function(e){if(e.target===this)closeCampaignModal();});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeShipFlyout();dismissModal();dismissSignupModal();closeCampaignModal();closeEmailModal();closeOfferLightbox();dismissPush();closeTimeline();}});
 
+var signalToastTimer=null;
+function showSignalToast(key){
+  var d=(PAYLOADS[key]&&PAYLOADS[key].d.response==='match')?PAYLOADS[key].d.data:null;
+  var toast=document.getElementById('signal-toast');
+  var body=document.getElementById('signal-toast-body');
+  if(!toast||!body)return;
+  if(!d){toast.classList.remove('visible');return;}
+  var confColor=d.confidence_score===1?'green':d.confidence_score===2?'green':'amber';
+  var rows=[
+    {k:'match_type',v:d.match_type,c:d.match_type==='deterministic'?'green':'amber'},
+    {k:'confidence_score',v:d.confidence_score+' — '+(d.confidence_score===1?'Highest':d.confidence_score===2?'High':'Moderate'),c:confColor},
+    {k:'lifestyle_segment',v:d.lifestyle_segment,c:''},
+    {k:'category_affinity_1',v:d.category_affinity_1,c:''},
+    {k:'category_affinity_2',v:d.category_affinity_2,c:''}
+  ];
+  body.innerHTML=rows.map(function(r){
+    return '<div class="signal-toast-row"><span class="signal-toast-key">'+r.k+'</span><span class="signal-toast-val '+(r.c||'')+'">'+r.v+'</span></div>';
+  }).join('');
+  clearTimeout(signalToastTimer);
+  toast.classList.add('visible');
+  signalToastTimer=setTimeout(dismissSignalToast,6000);
+}
+function dismissSignalToast(){
+  var toast=document.getElementById('signal-toast');
+  if(toast)toast.classList.remove('visible');
+  clearTimeout(signalToastTimer);
+}
 function showPush(title,msg){var w=document.getElementById('push-notif-wrap');var t=document.getElementById('push-title');var m=document.getElementById('push-msg');if(t)t.textContent=title;if(m)m.textContent=msg;if(w)w.classList.add('visible');clearTimeout(pushTimer);pushTimer=setTimeout(dismissPush,7000);}
 function dismissPush(){var w=document.getElementById('push-notif-wrap');if(w)w.classList.remove('visible');}
 function showPushNotifRachel(){showPush('Rachel, your 15% off is ready','You are $127 away from Circle Premier. Use your discount now.');}
