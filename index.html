@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Athleta | Performance Apparel for Women</title>
+<title>Aura | Performance Apparel for Women</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
 <!--MERKURY TAG START. PLACE AT START OF DOCUMENT HEAD. DO NOT CHANGE-->
 <script>
 window._svq=window._svq||[];
@@ -28,9 +28,8 @@ img{display:block;width:100%;height:100%;object-fit:cover;}
 .btn-outline{background:transparent;color:#0d0d0d;border-color:#0d0d0d;}.btn-outline:hover{background:#0d0d0d;color:#fff;}
 .btn-white{background:#fff;color:#0d0d0d;}
 .btn-sm{padding:10px 22px;font-size:13px;}
-/* BARS */
+/* UTIL BAR */
 .util-bar{background:#0d0d0d;height:36px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;}
-.util-left{display:flex;gap:24px;}.util-left a{font-size:12px;color:rgba(255,255,255,.5);letter-spacing:.5px;}.util-left a.active{color:#fff;font-weight:600;}
 .util-center{font-size:12px;color:rgba(255,255,255,.85);display:flex;align-items:center;gap:16px;}.util-center a{color:#fff;text-decoration:underline;font-size:12px;cursor:pointer;}
 .util-right{display:flex;gap:16px;}.util-icon{color:rgba(255,255,255,.7);font-size:18px;cursor:pointer;}
 .promo-bar{background:#1a5f6a;height:40px;display:flex;align-items:center;justify-content:space-between;padding:0 24px;}
@@ -39,7 +38,7 @@ img{display:block;width:100%;height:100%;object-fit:cover;}
 /* NAV */
 .main-nav{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:900;}
 .nav-inner{max-width:var(--mw);margin:0 auto;padding:0 32px;display:flex;align-items:center;height:64px;}
-.nav-logo{font-size:22px;font-weight:600;letter-spacing:6px;text-transform:uppercase;color:#0d0d0d;cursor:pointer;flex-shrink:0;margin-right:40px;}
+.nav-logo{font-family:'Inter',sans-serif;font-size:26px;font-weight:900;letter-spacing:8px;text-transform:uppercase;color:#0d0d0d;cursor:pointer;flex-shrink:0;margin-right:40px;}
 .nav-links{display:flex;align-items:center;flex:1;}
 .nav-link{font-size:13px;color:var(--text);letter-spacing:.5px;padding:0 14px;height:64px;display:flex;align-items:center;border-bottom:2px solid transparent;transition:all .15s;white-space:nowrap;cursor:pointer;}
 .nav-link:hover,.nav-link.active{border-bottom-color:#0d0d0d;}
@@ -55,16 +54,25 @@ img{display:block;width:100%;height:100%;object-fit:cover;}
 /* HERO */
 .hero{overflow:hidden;}
 .hero-split{display:grid;grid-template-columns:1fr 1fr 1fr;min-height:580px;}
-.hero-photo-left{position:relative;overflow:hidden;background:linear-gradient(160deg,#c8c0b8,#b0a8a0);}
-.hero-photo-left img,.hero-photo-right img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}
-.hero-photo-left:hover img,.hero-photo-right:hover img{transform:scale(1.03);}
+.hero-photo-left{position:relative;overflow:hidden;}
+.hero-photo-right{position:relative;overflow:hidden;}
 .hero-center{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 40px;text-align:center;background:#fff;}
 .hero-eyebrow{font-size:11px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--text3);margin-bottom:16px;display:none;}
 .hero-h1-light{font-family:var(--font-serif);font-size:clamp(36px,3.5vw,56px);font-weight:300;color:#0d0d0d;letter-spacing:4px;text-transform:uppercase;line-height:1.05;display:block;}
 .hero-h1-bold{font-family:var(--font-serif);font-size:clamp(36px,3.5vw,56px);font-weight:700;color:#0d0d0d;letter-spacing:4px;text-transform:uppercase;line-height:1.05;display:block;}
 .hero-sub{font-size:14px;color:var(--text2);line-height:1.7;margin:16px 0 28px;max-width:260px;}
-.hero-photo-right{position:relative;overflow:hidden;background:linear-gradient(160deg,#b8c0c4,#a0b0b8);}
 .hero-product-label{position:absolute;top:20px;right:20px;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#fff;text-align:right;line-height:1.6;text-shadow:0 1px 4px rgba(0,0,0,.4);}
+/* PHOTO PLACEHOLDERS */
+.grad-1{background:linear-gradient(160deg,#c8c0b8,#a0988e);}
+.grad-2{background:linear-gradient(160deg,#b8c4c8,#90a8b4);}
+.grad-3{background:linear-gradient(160deg,#c4b8c8,#a098b0);}
+.grad-4{background:linear-gradient(160deg,#c8c4b8,#b0a898);}
+.grad-5{background:linear-gradient(160deg,#b8c4b8,#98b098);}
+.grad-6{background:linear-gradient(160deg,#c8b8b8,#b09898);}
+.grad-7{background:linear-gradient(135deg,#1a2a3a,#0d1828);}
+.grad-8{background:linear-gradient(135deg,#1a2820,#0d1a10);}
+.grad-9{background:linear-gradient(135deg,#2a1a10,#1a0e08);}
+.grad-10{background:linear-gradient(135deg,#1a1a2a,#0d0d18);}
 /* SECTIONS */
 .cat-section{padding:56px 0;border-bottom:1px solid var(--border);}
 .cat-section-hdr{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:28px;}
@@ -72,31 +80,25 @@ img{display:block;width:100%;height:100%;object-fit:cover;}
 .cat-section-hdr a{font-size:13px;color:var(--text2);text-decoration:underline;cursor:pointer;}
 .cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
 .cat-tile{cursor:pointer;}
-.cat-photo{aspect-ratio:3/4;overflow:hidden;position:relative;background:#f0ece8;}
-.cat-photo img{transition:transform .4s;}
-.cat-tile:hover .cat-photo img{transform:scale(1.04);}
+.cat-photo{aspect-ratio:3/4;overflow:hidden;position:relative;}
 .cat-badge{position:absolute;bottom:12px;left:12px;background:rgba(255,255,255,.92);padding:4px 10px;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;border-radius:2px;}
 .cat-label{font-size:13px;font-weight:500;color:var(--text);margin-top:10px;letter-spacing:.5px;}
 .cat-sub{font-size:12px;color:var(--text3);margin-top:2px;}
 .promo-band{background:var(--off);}
 .promo-band-inner{max-width:var(--mw);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;min-height:360px;}
-.pb-photo{overflow:hidden;background:linear-gradient(160deg,#c8d4c8,#a8b8a8);}
-.pb-photo img{width:100%;height:100%;object-fit:cover;}
+.pb-photo{overflow:hidden;}
 .pb-text{display:flex;flex-direction:column;justify-content:center;padding:48px 64px;}
 .pb-eyebrow{font-size:11px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--text3);margin-bottom:12px;}
 .pb-h2{font-family:var(--font-serif);font-size:clamp(28px,2.5vw,42px);font-weight:400;color:#0d0d0d;line-height:1.15;margin-bottom:16px;}
 .pb-p{font-size:14px;color:var(--text2);line-height:1.7;margin-bottom:28px;max-width:380px;}
 .life-section{padding:56px 0;border-bottom:1px solid var(--border);}
 .life-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:16px;min-height:420px;}
-.life-main{position:relative;overflow:hidden;cursor:pointer;background:linear-gradient(160deg,#c0b8b0,#a8a098);}
-.life-main img,.life-card img{width:100%;height:100%;object-fit:cover;transition:transform .4s;}
-.life-main:hover img{transform:scale(1.03);}
+.life-main{position:relative;overflow:hidden;cursor:pointer;}
 .life-main-label{position:absolute;bottom:24px;left:24px;}
 .life-main-label h3{font-family:var(--font-serif);font-size:28px;font-weight:400;color:#fff;letter-spacing:2px;text-transform:uppercase;text-shadow:0 2px 10px rgba(0,0,0,.4);}
 .life-main-label p{font-size:13px;color:rgba(255,255,255,.85);margin-top:4px;}
 .life-side{display:grid;grid-template-rows:1fr 1fr;gap:16px;}
 .life-card{position:relative;overflow:hidden;cursor:pointer;}
-.life-card:hover img{transform:scale(1.04);}
 .life-card-label{position:absolute;bottom:14px;left:14px;font-size:12px;font-weight:600;color:#fff;letter-spacing:2px;text-transform:uppercase;text-shadow:0 1px 6px rgba(0,0,0,.5);}
 .loyalty-strip{background:#0d0d0d;padding:48px 0;}
 .loyalty-inner{max-width:var(--mw);margin:0 auto;padding:0 var(--g);display:grid;grid-template-columns:1fr 2px 1fr 2px 1fr;align-items:center;}
@@ -133,9 +135,7 @@ footer{background:#fff;padding:40px 0 0;}
 .cat-page-result-count{font-size:13px;color:var(--text3);margin-bottom:24px;}
 .product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
 .product-tile{cursor:pointer;}
-.pt-photo{aspect-ratio:3/4;overflow:hidden;position:relative;background:#f0ece8;}
-.pt-photo img{transition:transform .4s;}
-.product-tile:hover .pt-photo img{transform:scale(1.04);}
+.pt-photo{aspect-ratio:3/4;overflow:hidden;position:relative;}
 .pt-badge{position:absolute;bottom:10px;left:10px;background:rgba(255,255,255,.9);padding:3px 8px;font-size:11px;font-weight:600;border-radius:2px;color:#0d0d0d;}
 .pt-badge.sale{background:#c0392b;color:#fff;}
 .pt-colors{display:flex;gap:4px;margin-top:10px;}
@@ -172,9 +172,8 @@ footer{background:#fff;padding:40px 0 0;}
 .pdp-breadcrumb{font-size:12px;color:var(--text3);margin-bottom:24px;cursor:pointer;}
 .pdp-grid{display:grid;grid-template-columns:1fr 420px;gap:48px;}
 .pdp-photos{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-.pdp-photo-main{aspect-ratio:3/4;overflow:hidden;background:#f0ece8;grid-column:span 2;}
-.pdp-photo-main img,.pdp-photo-thumb img{width:100%;height:100%;object-fit:cover;}
-.pdp-photo-thumb{aspect-ratio:3/4;overflow:hidden;background:#f0ece8;}
+.pdp-photo-main{aspect-ratio:3/4;overflow:hidden;grid-column:span 2;}
+.pdp-photo-thumb{aspect-ratio:3/4;overflow:hidden;}
 .pdp-eyebrow{font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--text3);margin-bottom:8px;}
 .pdp-title{font-family:var(--font-serif);font-size:clamp(24px,2.5vw,34px);font-weight:400;color:#0d0d0d;line-height:1.2;margin-bottom:8px;}
 .pdp-price{font-size:18px;font-weight:500;color:#0d0d0d;margin-bottom:4px;}
@@ -205,15 +204,14 @@ footer{background:#fff;padding:40px 0 0;}
 .pdp-recs{padding:48px 0;border-top:1px solid var(--border);}
 .pdp-recs h2{font-family:var(--font-serif);font-size:24px;font-weight:400;letter-spacing:2px;text-transform:uppercase;color:#0d0d0d;margin-bottom:24px;}
 .pdp-recs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
-/* CART PAGE */
+/* CART */
 .cart-page-wrap{max-width:1100px;margin:0 auto;padding:32px 48px 64px;display:grid;grid-template-columns:1fr 340px;gap:40px;align-items:start;}
 .cart-page-empty{background:#fff;border:1px solid var(--border);border-radius:4px;padding:40px 36px;}
 .cart-page-empty h2{font-size:22px;font-weight:600;color:#0d0d0d;margin-bottom:10px;}
 .cart-page-empty p{font-size:14px;color:var(--text3);margin-bottom:24px;}
 .cart-page-title{font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0d0d0d;margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid #0d0d0d;}
 .cart-page-item{display:grid;grid-template-columns:100px 1fr auto;gap:16px;padding:20px 0;border-bottom:1px solid var(--border);align-items:start;}
-.cart-page-item-img{aspect-ratio:3/4;overflow:hidden;border-radius:3px;background:#f0ece8;}
-.cart-page-item-img img{width:100%;height:100%;object-fit:cover;}
+.cart-page-item-img{aspect-ratio:3/4;overflow:hidden;border-radius:3px;}
 .cart-page-item-name{font-size:14px;font-weight:600;color:#0d0d0d;margin-bottom:4px;}
 .cart-page-item-detail{font-size:12px;color:var(--text3);margin-bottom:8px;}
 .cart-page-item-price{font-size:14px;font-weight:600;color:#0d0d0d;}
@@ -229,7 +227,6 @@ footer{background:#fff;padding:40px 0 0;}
 .cart-page-summary{background:#fff;border:1px solid var(--border);border-radius:4px;padding:20px;}
 .cart-summary-row{display:flex;justify-content:space-between;font-size:13px;color:var(--text2);margin-bottom:10px;}
 .cart-summary-row.total{font-size:15px;font-weight:700;color:#0d0d0d;border-top:1px solid var(--border);padding-top:12px;margin-top:4px;}
-.cart-summary-savings{font-size:12px;color:#1a5f6a;font-weight:600;margin-bottom:14px;}
 .cart-page-checkout{width:100%;padding:15px;background:#0d0d0d;color:#fff;border:none;border-radius:3px;font-size:15px;font-weight:600;font-family:inherit;cursor:pointer;margin-bottom:10px;margin-top:14px;}
 .cart-page-checkout:hover{background:#333;}
 .cart-page-continue-link{display:block;text-align:center;font-size:13px;color:var(--text3);text-decoration:underline;cursor:pointer;margin-top:6px;}
@@ -241,9 +238,7 @@ footer{background:#fff;padding:40px 0 0;}
 .cart-recs-section h3{font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0d0d0d;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--border);}
 .cart-recs-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
 .cart-rec-tile{cursor:pointer;}
-.cart-rec-tile-img{aspect-ratio:3/4;overflow:hidden;border-radius:3px;background:#f0ece8;margin-bottom:8px;}
-.cart-rec-tile-img img{width:100%;height:100%;object-fit:cover;transition:transform .3s;}
-.cart-rec-tile:hover .cart-rec-tile-img img{transform:scale(1.04);}
+.cart-rec-tile-img{aspect-ratio:3/4;overflow:hidden;border-radius:3px;margin-bottom:8px;}
 .cart-rec-tile-name{font-size:13px;font-weight:600;color:#0d0d0d;line-height:1.3;margin-bottom:3px;}
 .cart-rec-tile-price{font-size:12px;color:var(--text3);}
 /* MODALS */
@@ -263,15 +258,14 @@ footer{background:#fff;padding:40px 0 0;}
 .email-subject-value{font-size:12px;color:rgba(255,255,255,.85);}
 .email-body{background:#f7f4f0;}
 .email-header-band{background:#0d0d0d;padding:20px;text-align:center;}
-.email-logo{font-size:18px;font-weight:600;letter-spacing:6px;text-transform:uppercase;color:#fff;}
+.email-logo{font-size:18px;font-weight:900;letter-spacing:6px;text-transform:uppercase;color:#fff;font-family:'Inter',sans-serif;}
 .email-hero{background:linear-gradient(160deg,#1a5f6a,#0d3d45);padding:32px 40px;text-align:center;}
 .email-hero-eyebrow{font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:10px;}
 .email-hero-h1{font-family:var(--font-serif);font-size:32px;font-weight:400;color:#fff;line-height:1.2;margin-bottom:8px;}
 .email-hero-sub{font-size:14px;color:rgba(255,255,255,.75);line-height:1.6;}
 .email-content{padding:32px 40px;background:#fff;}
 .email-product-card{border:1px solid var(--border);border-radius:6px;overflow:hidden;display:grid;grid-template-columns:160px 1fr;margin-bottom:24px;}
-.email-product-img{background:linear-gradient(160deg,#c8c0b8,#b0a8a0);position:relative;overflow:hidden;}
-.email-product-img img{width:100%;height:100%;object-fit:cover;}
+.email-product-img{background:linear-gradient(160deg,#c8c0b8,#a0988e);position:relative;overflow:hidden;min-height:160px;}
 .email-product-info{padding:20px;}
 .email-product-eyebrow{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#1a5f6a;margin-bottom:6px;}
 .email-product-name{font-family:var(--font-serif);font-size:18px;font-weight:600;color:#0d0d0d;margin-bottom:6px;line-height:1.2;}
@@ -287,7 +281,7 @@ footer{background:#fff;padding:40px 0 0;}
 .email-encore-text{font-size:13px;color:var(--text2);line-height:1.5;}
 .email-encore-text strong{color:#0d0d0d;}
 .email-footer-band{background:#0d0d0d;padding:20px 40px;text-align:center;}
-.email-footer-logo{font-size:14px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#fff;margin-bottom:8px;}
+.email-footer-logo{font-size:14px;font-weight:900;letter-spacing:4px;text-transform:uppercase;color:#fff;margin-bottom:8px;font-family:'Inter',sans-serif;}
 .email-footer-links{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-bottom:8px;}
 .email-footer-links a{font-size:11px;color:rgba(255,255,255,.5);text-decoration:underline;}
 .email-footer-legal{font-size:10px;color:rgba(255,255,255,.3);line-height:1.5;}
@@ -356,13 +350,11 @@ footer{background:#fff;padding:40px 0 0;}
 #pers-reopen-btn{display:none;position:fixed;bottom:80px;left:24px;z-index:7999;background:#0d0d0d;color:#fff;border:none;border-radius:50px;padding:10px 18px;font-size:12px;font-weight:600;font-family:var(--font);cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.25);align-items:center;gap:8px;}
 #pers-reopen-btn.visible{display:flex;}
 .pers-reopen-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
-/* OFFER LIGHTBOX */
 #offer-lightbox-overlay{display:none;position:fixed;inset:0;z-index:8400;background:rgba(10,10,10,.55);backdrop-filter:blur(3px);align-items:center;justify-content:center;padding:20px;}
 #offer-lightbox-overlay.open{display:flex;}
 .offer-lightbox{background:#fff;border-radius:8px;width:100%;max-width:400px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,.25);animation:modalIn .22s ease;position:relative;}
 .offer-lb-accent{height:5px;background:#0d0d0d;}
 .offer-lb-close{position:absolute;top:16px;right:18px;font-size:20px;color:var(--text3);cursor:pointer;background:none;border:none;font-family:inherit;line-height:1;}
-.offer-lb-close:hover{color:#0d0d0d;}
 .offer-lb-header{padding:28px 32px 0;text-align:center;}
 .offer-lb-name{font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);margin-bottom:6px;}
 .offer-lb-body{padding:12px 32px 32px;text-align:center;}
@@ -372,11 +364,10 @@ footer{background:#fff;padding:40px 0 0;}
 .offer-lb-code{background:var(--off);border:1.5px dashed var(--border);border-radius:4px;padding:10px 24px;font-size:15px;font-weight:700;letter-spacing:3px;color:#0d0d0d;width:100%;text-align:center;}
 .offer-lb-cta{width:100%;padding:14px;background:#0d0d0d;color:#fff;border:none;border-radius:50px;font-size:14px;font-weight:600;font-family:inherit;cursor:pointer;}
 .offer-lb-cta:hover{background:#333;}
-/* STICKY PILL */
 #sticky-20-btn{position:fixed;bottom:24px;left:24px;z-index:7000;color:#fff;border:none;border-radius:50px;padding:10px 16px;font-size:13px;font-weight:600;font-family:var(--font);cursor:pointer;display:flex;align-items:center;gap:10px;box-shadow:0 4px 16px rgba(0,0,0,.25);transition:background .15s;background:#0d0d0d;}
 #sticky-20-btn.hidden{display:none;}
 .s20-close{font-size:16px;color:rgba(255,255,255,.6);line-height:1;}
-/* CAMPAIGN BUILDER */
+/* CAMPAIGN */
 #campaign-modal-overlay{display:none;position:fixed;inset:0;z-index:9100;background:rgba(10,10,10,.65);backdrop-filter:blur(4px);align-items:center;justify-content:center;padding:20px;}
 #campaign-modal-overlay.open{display:flex;}
 .campaign-modal{background:#f5f0ff;border-radius:16px;width:100%;max-width:900px;max-height:92vh;overflow-y:auto;box-shadow:0 24px 64px rgba(0,0,0,.3);animation:modalIn .22s ease;position:relative;}
@@ -402,7 +393,7 @@ footer{background:#fff;padding:40px 0 0;}
 .cm-tone-pill{padding:5px 12px;border:1.5px solid var(--border);border-radius:50px;font-size:12px;font-weight:500;color:var(--text2);cursor:pointer;background:#fff;transition:all .15s;font-family:var(--font);}
 .cm-tone-pill.active{background:#0d0d0d;color:#fff;border-color:#0d0d0d;}
 .cm-variants{display:flex;flex-direction:column;gap:10px;margin-bottom:18px;}
-.cm-variant{background:#fff;border-radius:10px;padding:14px 16px;border:1.5px solid var(--border);cursor:pointer;transition:border-color .15s;position:relative;}
+.cm-variant{background:#fff;border-radius:10px;padding:14px 16px;border:1.5px solid var(--border);cursor:pointer;transition:border-color .15s;}
 .cm-variant.active{border-color:var(--purple);background:#fdfbff;}
 .cm-variant-label{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#9a7adf;margin-bottom:8px;}
 .cm-variant-text{font-size:13px;color:var(--text);line-height:1.6;margin-bottom:8px;}
@@ -420,7 +411,7 @@ footer{background:#fff;padding:40px 0 0;}
 .cm-phone{background:#1c1c1e;border-radius:36px;padding:12px;width:210px;box-shadow:0 8px 32px rgba(0,0,0,.25);border:2px solid #3a3a3c;flex-shrink:0;}
 .cm-phone-screen{background:#f2f2f7;border-radius:26px;overflow:hidden;}
 .cm-phone-notch{width:80px;height:22px;background:#1c1c1e;border-radius:0 0 12px 12px;margin:0 auto;}
-.cm-phone-status{padding:6px 16px;display:flex;justify-content:space-between;align-items:center;}
+.cm-phone-status{padding:6px 16px;display:flex;justify-content:space-between;}
 .cm-phone-status-time{font-size:11px;font-weight:700;color:#1a1a1a;}
 .cm-phone-header{background:#f2f2f7;padding:8px 14px;text-align:center;border-bottom:1px solid #e5e5ea;}
 .cm-phone-avatar{width:34px;height:34px;border-radius:50%;background:#1a5f6a;display:flex;align-items:center;justify-content:center;margin:0 auto 4px;}
@@ -438,12 +429,12 @@ footer{background:#fff;padding:40px 0 0;}
 .cm-footer-left{font-size:12px;color:var(--text3);}
 .cm-footer-left strong{color:#0d0d0d;}
 .cm-schedule-btn{background:#f5d800;color:#1a1a1a;border:none;border-radius:10px;padding:13px 24px;font-size:14px;font-weight:700;font-family:var(--font);cursor:pointer;}
-/* PUSH NOTIFICATION */
+/* PUSH */
 #push-notif-wrap{position:fixed;top:24px;right:24px;z-index:9200;opacity:0;transform:translateY(-10px) scale(.97);transition:opacity .35s ease,transform .35s ease;pointer-events:none;width:340px;}
 #push-notif-wrap.visible{opacity:1;transform:translateY(0) scale(1);pointer-events:auto;}
-.push-iphone{background:rgba(255,255,255,.84);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border-radius:16px;box-shadow:0 8px 40px rgba(0,0,0,.22);overflow:hidden;}
+.push-iphone{background:rgba(255,255,255,.84);backdrop-filter:blur(20px) saturate(180%);border-radius:16px;box-shadow:0 8px 40px rgba(0,0,0,.22);overflow:hidden;}
 .push-iph-header{display:flex;align-items:center;gap:8px;padding:12px 14px 6px;}
-.push-iph-appicon{width:28px;height:28px;border-radius:8px;background:#0d0d0d;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#fff;flex-shrink:0;}
+.push-iph-appicon{width:28px;height:28px;border-radius:8px;background:#0d0d0d;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:900;color:#fff;flex-shrink:0;letter-spacing:1px;font-family:'Inter',sans-serif;}
 .push-iph-appname{font-size:12px;font-weight:600;color:rgba(0,0,0,.5);flex:1;}
 .push-iph-time{font-size:12px;color:rgba(0,0,0,.4);font-weight:500;}
 .push-iph-dismiss{width:20px;height:20px;border-radius:50%;background:rgba(0,0,0,.1);display:flex;align-items:center;justify-content:center;font-size:13px;color:rgba(0,0,0,.4);cursor:pointer;border:none;line-height:1;flex-shrink:0;}
@@ -464,7 +455,6 @@ footer{background:#fff;padding:40px 0 0;}
 .itp-header-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;}
 .itp-title{font-size:14px;font-weight:700;color:#fff;}
 .itp-close{font-size:20px;color:rgba(255,255,255,.6);cursor:pointer;background:none;border:none;font-family:var(--font);line-height:1;}
-.itp-close:hover{color:#fff;}
 .itp-sub{font-size:11px;color:rgba(255,255,255,.45);}
 .itp-body{padding:20px 22px;flex:1;}
 .itp-stage{position:relative;padding-left:40px;padding-bottom:28px;}
@@ -485,6 +475,40 @@ footer{background:#fff;padding:40px 0 0;}
 .itp-signal{display:flex;align-items:center;gap:8px;margin-bottom:7px;font-size:12px;color:var(--text2);}
 .itp-signal-dot{width:6px;height:6px;border-radius:50%;background:#1a5f6a;flex-shrink:0;}
 .itp-signal strong{color:#0d0d0d;}
+/* RETAIL CONCIERGE */
+#chat-bubble{position:fixed;bottom:72px;right:24px;z-index:9000;background:#1a5f6a;color:#fff;border:none;border-radius:50px;padding:12px 20px;font-size:13px;font-weight:600;font-family:var(--font);cursor:pointer;display:flex;align-items:center;gap:10px;box-shadow:0 4px 24px rgba(0,0,0,.3);transition:background .15s;white-space:nowrap;}
+#chat-bubble:hover{background:#145059;}
+#chat-bubble .cb-dot{width:8px;height:8px;border-radius:50%;background:#00e8a8;flex-shrink:0;animation:psDotPulse 2s ease-in-out infinite;}
+#chat-window{display:none;position:fixed;bottom:120px;right:24px;z-index:9001;width:360px;max-height:520px;background:#fff;border-radius:12px;box-shadow:0 16px 48px rgba(0,0,0,.22);flex-direction:column;overflow:hidden;}
+#chat-window.open{display:flex;}
+.chat-header{background:#0d0d0d;padding:14px 18px;display:flex;align-items:center;gap:10px;flex-shrink:0;}
+.chat-header-icon{width:32px;height:32px;border-radius:50%;background:#1a5f6a;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900;color:#fff;flex-shrink:0;letter-spacing:1px;font-family:'Inter',sans-serif;}
+.chat-header-info{flex:1;}
+.chat-header-name{font-size:13px;font-weight:700;color:#fff;}
+.chat-header-sub{font-size:11px;color:rgba(255,255,255,.5);margin-top:1px;}
+.chat-header-close{font-size:20px;color:rgba(255,255,255,.5);cursor:pointer;background:none;border:none;line-height:1;}
+.chat-header-close:hover{color:#fff;}
+.chat-context-bar{background:var(--off);border-bottom:1px solid var(--border);padding:8px 14px;font-size:11px;color:var(--text3);display:flex;align-items:center;gap:6px;flex-shrink:0;}
+.chat-context-dot{width:6px;height:6px;border-radius:50%;background:#1a5f6a;flex-shrink:0;}
+.chat-context-text{font-weight:600;color:#0d0d0d;}
+.chat-messages{flex:1;overflow-y:auto;padding:16px 14px;display:flex;flex-direction:column;gap:12px;min-height:200px;}
+.chat-msg{display:flex;flex-direction:column;max-width:85%;}
+.chat-msg.bot{align-self:flex-start;}
+.chat-msg.user{align-self:flex-end;}
+.chat-msg-bubble{padding:10px 14px;border-radius:14px;font-size:13px;line-height:1.55;}
+.chat-msg.bot .chat-msg-bubble{background:#f0f0f0;color:#1a1a1a;border-radius:14px 14px 14px 3px;}
+.chat-msg.user .chat-msg-bubble{background:#0d0d0d;color:#fff;border-radius:14px 14px 3px 14px;}
+.chat-typing{align-self:flex-start;background:#f0f0f0;border-radius:14px 14px 14px 3px;padding:10px 14px;display:flex;gap:4px;align-items:center;}
+.chat-typing span{width:7px;height:7px;border-radius:50%;background:#aaa;animation:typingBounce .9s infinite;}
+.chat-typing span:nth-child(2){animation-delay:.15s;}
+.chat-typing span:nth-child(3){animation-delay:.3s;}
+@keyframes typingBounce{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-5px)}}
+.chat-input-row{display:flex;gap:8px;padding:12px 14px;border-top:1px solid var(--border);flex-shrink:0;background:#fff;}
+.chat-input{flex:1;border:1.5px solid var(--border);border-radius:50px;padding:9px 14px;font-size:13px;font-family:var(--font);color:var(--text);outline:none;transition:border-color .15s;}
+.chat-input:focus{border-color:#0d0d0d;}
+.chat-send{background:#0d0d0d;color:#fff;border:none;border-radius:50px;padding:9px 18px;font-size:13px;font-weight:600;font-family:var(--font);cursor:pointer;white-space:nowrap;}
+.chat-send:hover{background:#333;}
+.chat-send:disabled{background:#ccc;cursor:not-allowed;}
 /* PERSONA SWITCHER */
 #persona-switcher{position:fixed;bottom:24px;right:24px;z-index:9999;font-family:var(--font);}
 #ps-toggle{display:flex;align-items:center;gap:8px;background:#0d0d0d;color:#fff;padding:10px 16px;border-radius:24px;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 20px rgba(0,0,0,.3);border:2px solid rgba(255,255,255,.2);user-select:none;}
@@ -520,40 +544,6 @@ footer{background:#fff;padding:40px 0 0;}
 .ps-reset:hover{color:#0d0d0d;}
 .ps-page-indicator{font-size:11px;color:var(--text3);}
 .ps-page-indicator strong{color:#1a5f6a;}
-/* RETAIL CONCIERGE */
-#chat-bubble{position:fixed;bottom:72px;right:24px;z-index:9000;background:#1a5f6a;color:#fff;border:none;border-radius:50px;padding:12px 20px;font-size:13px;font-weight:600;font-family:var(--font);cursor:pointer;display:flex;align-items:center;gap:10px;box-shadow:0 4px 24px rgba(0,0,0,.3);transition:background .15s;white-space:nowrap;}
-#chat-bubble:hover{background:#145059;}
-#chat-bubble .cb-dot{width:8px;height:8px;border-radius:50%;background:#00e8a8;flex-shrink:0;animation:psDotPulse 2s ease-in-out infinite;}
-#chat-window{display:none;position:fixed;bottom:120px;right:24px;z-index:9001;width:360px;max-height:520px;background:#fff;border-radius:12px;box-shadow:0 16px 48px rgba(0,0,0,.22);flex-direction:column;overflow:hidden;}
-#chat-window.open{display:flex;}
-.chat-header{background:#0d0d0d;padding:14px 18px;display:flex;align-items:center;gap:10px;flex-shrink:0;}
-.chat-header-icon{width:32px;height:32px;border-radius:50%;background:#1a5f6a;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:#fff;flex-shrink:0;}
-.chat-header-info{flex:1;}
-.chat-header-name{font-size:13px;font-weight:700;color:#fff;}
-.chat-header-sub{font-size:11px;color:rgba(255,255,255,.5);margin-top:1px;}
-.chat-header-close{font-size:20px;color:rgba(255,255,255,.5);cursor:pointer;background:none;border:none;line-height:1;}
-.chat-header-close:hover{color:#fff;}
-.chat-context-bar{background:var(--off);border-bottom:1px solid var(--border);padding:8px 14px;font-size:11px;color:var(--text3);display:flex;align-items:center;gap:6px;flex-shrink:0;}
-.chat-context-dot{width:6px;height:6px;border-radius:50%;background:#1a5f6a;flex-shrink:0;}
-.chat-context-text{font-weight:600;color:#0d0d0d;}
-.chat-messages{flex:1;overflow-y:auto;padding:16px 14px;display:flex;flex-direction:column;gap:12px;min-height:200px;}
-.chat-msg{display:flex;flex-direction:column;max-width:85%;}
-.chat-msg.bot{align-self:flex-start;}
-.chat-msg.user{align-self:flex-end;}
-.chat-msg-bubble{padding:10px 14px;border-radius:14px;font-size:13px;line-height:1.55;}
-.chat-msg.bot .chat-msg-bubble{background:#f0f0f0;color:#1a1a1a;border-radius:14px 14px 14px 3px;}
-.chat-msg.user .chat-msg-bubble{background:#0d0d0d;color:#fff;border-radius:14px 14px 3px 14px;}
-.chat-typing{align-self:flex-start;background:#f0f0f0;border-radius:14px 14px 14px 3px;padding:10px 14px;display:flex;gap:4px;align-items:center;}
-.chat-typing span{width:7px;height:7px;border-radius:50%;background:#aaa;animation:typingBounce .9s infinite;}
-.chat-typing span:nth-child(2){animation-delay:.15s;}
-.chat-typing span:nth-child(3){animation-delay:.3s;}
-@keyframes typingBounce{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-5px)}}
-.chat-input-row{display:flex;gap:8px;padding:12px 14px;border-top:1px solid var(--border);flex-shrink:0;background:#fff;}
-.chat-input{flex:1;border:1.5px solid var(--border);border-radius:50px;padding:9px 14px;font-size:13px;font-family:var(--font);color:var(--text);outline:none;transition:border-color .15s;}
-.chat-input:focus{border-color:#0d0d0d;}
-.chat-send{background:#0d0d0d;color:#fff;border:none;border-radius:50px;padding:9px 18px;font-size:13px;font-weight:600;font-family:var(--font);cursor:pointer;white-space:nowrap;}
-.chat-send:hover{background:#333;}
-.chat-send:disabled{background:#ccc;cursor:not-allowed;}
 @media(max-width:1024px){:root{--g:24px}.hero-split{grid-template-columns:1fr 1fr}.hero-photo-right{display:none}.cat-grid,.product-grid,.pdp-recs-grid{grid-template-columns:repeat(2,1fr)}.pdp-grid{grid-template-columns:1fr}.footer-cols{grid-template-columns:repeat(2,1fr)}.life-grid,.promo-band-inner{grid-template-columns:1fr}.loyalty-inner{grid-template-columns:1fr}.ls-divider{display:none}.loyalty-banner-inner{grid-template-columns:1fr}.lb-tiers{grid-template-columns:1fr}.cm-body{grid-template-columns:1fr}.cm-right{display:none}.cart-page-wrap{grid-template-columns:1fr;padding:24px}}
 @media(max-width:768px){.nav-links{display:none}.cat-grid,.product-grid,.pdp-recs-grid{grid-template-columns:repeat(2,1fr)}.footer-cols{grid-template-columns:1fr 1fr}}
 </style>
@@ -564,8 +554,8 @@ footer{background:#fff;padding:40px 0 0;}
 <div id="push-notif-wrap">
   <div class="push-iphone">
     <div class="push-iph-header">
-      <div class="push-iph-appicon">AT</div>
-      <div class="push-iph-appname">ATHLETA</div>
+      <div class="push-iph-appicon">AURA</div>
+      <div class="push-iph-appname">AURA</div>
       <div class="push-iph-time" id="push-time">now</div>
       <button class="push-iph-dismiss" onclick="dismissPush()">&#215;</button>
     </div>
@@ -573,7 +563,7 @@ footer{background:#fff;padding:40px 0 0;}
       <div class="push-iph-icon">&#128722;</div>
       <div class="push-iph-text">
         <div class="push-iph-title" id="push-title">Your cart is waiting</div>
-        <div class="push-iph-msg" id="push-msg">Complete your purchase and earn Encore points.</div>
+        <div class="push-iph-msg" id="push-msg">Complete your purchase and earn Aura Circle points.</div>
       </div>
     </div>
     <div class="push-iph-footer"><span class="push-iph-via">Delivered via</span><span class="push-iph-badge">Braze</span></div>
@@ -591,17 +581,17 @@ footer{background:#fff;padding:40px 0 0;}
     <div class="itp-stage" id="itp-s0"><div class="itp-dot-wrap">1</div><div class="itp-stage-name">Anonymous</div><div class="itp-stage-desc">No identity signal. Visitor arrives with no cookie, no email, no match. Default experience served to all.</div></div>
     <div class="itp-stage" id="itp-s1"><div class="itp-dot-wrap">2</div><div class="itp-stage-name">Prospect Match</div><div class="itp-stage-desc">Merkury resolves a probabilistic identity from device signals and modeled attributes. No PII confirmed. Confidence score: 3.</div></div>
     <div class="itp-stage" id="itp-s2"><div class="itp-dot-wrap">3</div><div class="itp-stage-name">1P Known (Unauthenticated)</div><div class="itp-stage-desc">Visitor is on customer file via deterministic match but has not signed in. High-confidence identity with full behavioral history. Confidence score: 2.</div></div>
-    <div class="itp-stage" id="itp-s3"><div class="itp-dot-wrap">4</div><div class="itp-stage-name">Authenticated</div><div class="itp-stage-desc">Visitor has signed in. Full first-party identity confirmed. All Encore tier data and purchase history available. Confidence score: 1.</div></div>
+    <div class="itp-stage" id="itp-s3"><div class="itp-dot-wrap">4</div><div class="itp-stage-name">Authenticated</div><div class="itp-stage-desc">Visitor has signed in. Full first-party identity confirmed. All Aura Circle tier data and purchase history available. Confidence score: 1.</div></div>
     <div class="itp-merkury-card" id="itp-merkury-card" style="display:none;"><div class="itp-merkury-card-title">Active Merkury Signals</div><div id="itp-signals-list"></div></div>
   </div>
 </div>
 
 <!-- RETAIL CONCIERGE -->
-<button id="chat-bubble" onclick="toggleChat()"><div class="cb-dot"></div><span>Retail Concierge</span></button>
+<button id="chat-bubble" onclick="toggleChat()"><div class="cb-dot"></div><span>Style Concierge</span></button>
 <div id="chat-window">
   <div class="chat-header">
     <div class="chat-header-icon">A</div>
-    <div class="chat-header-info"><div class="chat-header-name">Athleta Retail Concierge</div><div class="chat-header-sub">Personalized by Merkury</div></div>
+    <div class="chat-header-info"><div class="chat-header-name">Aura Style Concierge</div><div class="chat-header-sub">Personalized by Merkury</div></div>
     <button class="chat-header-close" onclick="toggleChat()">&#215;</button>
   </div>
   <div class="chat-context-bar"><div class="chat-context-dot"></div>Shopping as: <span class="chat-context-text" id="chat-context-label">Guest</span></div>
@@ -618,20 +608,23 @@ footer{background:#fff;padding:40px 0 0;}
     <button class="email-modal-close" onclick="closeEmailModal()">&#215;</button>
     <div class="email-modal-topbar"><div class="email-modal-topbar-left"><div class="email-dot" style="background:#ff5f57"></div><div class="email-dot" style="background:#febc2e"></div><div class="email-dot" style="background:#28c840"></div></div><div style="font-size:11px;color:rgba(255,255,255,.4);letter-spacing:1px;">MAIL PREVIEW</div><div style="width:48px"></div></div>
     <div class="email-modal-subject-bar">
-      <div class="email-subject-row"><div class="email-subject-label">From:</div><div class="email-subject-value">Athleta &lt;noreply@athleta.com&gt;</div></div>
+      <div class="email-subject-row"><div class="email-subject-label">From:</div><div class="email-subject-value">Aura &lt;noreply@aura.com&gt;</div></div>
       <div class="email-subject-row"><div class="email-subject-label">To:</div><div class="email-subject-value">maya.chen@gmail.com</div></div>
       <div class="email-subject-row"><div class="email-subject-label">Subject:</div><div class="email-subject-value" style="color:#fff;font-weight:600;">Maya, you left something behind</div></div>
     </div>
     <div class="email-body">
-      <div class="email-header-band"><div class="email-logo">ATHLETA</div></div>
-      <div class="email-hero"><div class="email-hero-eyebrow">Still thinking it over?</div><div class="email-hero-h1">Maya, you left something behind.</div><div class="email-hero-sub">Your cart is saved. As an Encore member, your exclusive discount is still applied.</div></div>
+      <div class="email-header-band"><div class="email-logo">AURA</div></div>
+      <div class="email-hero"><div class="email-hero-eyebrow">Still thinking it over?</div><div class="email-hero-h1">Maya, you left something behind.</div><div class="email-hero-sub">Your cart is saved. As an Aura Circle member, your exclusive discount is still applied.</div></div>
       <div class="email-content">
-        <div class="email-product-card"><div class="email-product-img"><img src="https://athleta.gap.com/webcontent/0059/604/427/cn59604427.jpg" alt="" onerror="this.parentElement.style.background='linear-gradient(160deg,#c8c0b8,#b0a8a0)';this.remove()"></div><div class="email-product-info"><div class="email-product-eyebrow">In Your Cart</div><div class="email-product-name">Salutation Stash Pocket II 7/8 Tight</div><div class="email-product-detail">Size: S | Color: True Black | Qty: 1</div><div class="email-product-price">$109</div><div class="email-product-member">Encore Member Price: $98.10</div><div class="email-product-points">You will earn 545 points on this order</div></div></div>
+        <div class="email-product-card">
+          <div class="email-product-img"></div>
+          <div class="email-product-info"><div class="email-product-eyebrow">In Your Cart</div><div class="email-product-name">High Rise Performance Tight 7/8</div><div class="email-product-detail">Size: S | Color: Midnight Black | Qty: 1</div><div class="email-product-price">$109</div><div class="email-product-member">Circle Member Price: $98.10</div><div class="email-product-points">You will earn 545 points on this order</div></div>
+        </div>
         <div class="email-body-copy">These sell out fast, Maya. Your size is still available.</div>
         <div class="email-cta-wrap"><div class="email-cta-btn">Complete My Purchase</div></div>
-        <div class="email-encore-strip"><div class="email-encore-icon">&#11088;</div><div class="email-encore-text"><strong>All-Access Cardmember perk:</strong> You are earning 25 points per $1 on this purchase.</div></div>
+        <div class="email-encore-strip"><div class="email-encore-icon">&#11088;</div><div class="email-encore-text"><strong>Aura Circle All-Access perk:</strong> You are earning 25 points per $1 on this purchase.</div></div>
       </div>
-      <div class="email-footer-band"><div class="email-footer-logo">ATHLETA</div><div class="email-footer-links"><a>Unsubscribe</a><a>Privacy Policy</a><a>Help Center</a></div><div class="email-footer-legal">Athleta LLC, 2 Folsom Street, San Francisco CA 94105.</div></div>
+      <div class="email-footer-band"><div class="email-footer-logo">AURA</div><div class="email-footer-links"><a>Unsubscribe</a><a>Privacy Policy</a><a>Help Center</a></div><div class="email-footer-legal">&copy; 2026 Aura Active, Inc. All Rights Reserved.</div></div>
       <div class="email-merkury-strip"><div class="email-merkury-title">Merkury signals - Salesforce Marketing Cloud</div><div class="email-merkury-pills"><div class="email-merkury-pill trigger"><span>email_engagement:</span> Active</div><div class="email-merkury-pill trigger"><span>last_purchase_days:</span> 12</div><div class="email-merkury-pill"><span>category_affinity_1:</span> Leggings</div><div class="email-merkury-pill"><span>match_type:</span> Deterministic</div></div></div>
     </div>
   </div>
@@ -641,8 +634,8 @@ footer{background:#fff;padding:40px 0 0;}
 <div id="ship-flyout-overlay" onclick="closeShipFlyout()">
   <div class="ship-flyout" onclick="event.stopPropagation()">
     <button class="ship-flyout-close" onclick="closeShipFlyout()">&#215;</button>
-    <h2>Encore Members, Shipping is on Us!</h2>
-    <ul><li>Free shipping for Core and Premier Members on orders of $50+</li><li>All-Access Cardmembers get free shipping on orders $35+</li></ul>
+    <h2>Aura Circle Members, Shipping is on Us!</h2>
+    <ul><li>Free shipping for Core and Premier Members on orders of $50+</li><li>All-Access Members get free shipping on orders $35+</li></ul>
     <h3>Free Returns</h3>
     <ul><li>Qualifying items can be returned free by mail or in store</li></ul>
     <div class="ship-flyout-legal">Must be signed into your online account to receive offer.</div>
@@ -652,9 +645,9 @@ footer{background:#fff;padding:40px 0 0;}
 <!-- MEGA NAV -->
 <div class="mega-nav-dropdown" id="mega-nav-new">
   <div class="mega-nav-inner">
-    <div class="mega-col"><h4>Featured Shops</h4><a onclick="showPage('category');closeMegaNav()">New Arrivals</a><a onclick="showPage('category');closeMegaNav()">Shop All Womens</a><a onclick="showPage('category');closeMegaNav()">Best Sellers</a></div>
+    <div class="mega-col"><h4>Featured</h4><a onclick="showPage('category');closeMegaNav()">New Arrivals</a><a onclick="showPage('category');closeMegaNav()">Shop All Women</a><a onclick="showPage('category');closeMegaNav()">Best Sellers</a></div>
     <div class="mega-col"><h4>Shop By Activity</h4><a onclick="showPage('category');closeMegaNav()">Yoga and Studio</a><a onclick="showPage('category');closeMegaNav()">Run and Train</a></div>
-    <div class="mega-col"><h4>Extended Sizes</h4><a onclick="showPage('category');closeMegaNav()">All Petite</a><a onclick="showPage('category');closeMegaNav()">All Tall</a></div>
+    <div class="mega-col"><h4>Extended Sizes</h4><a onclick="showPage('category');closeMegaNav()">Petite</a><a onclick="showPage('category');closeMegaNav()">Tall</a></div>
     <div class="mega-col"><h4>Gift Cards</h4><a onclick="showPage('category');closeMegaNav()">Shop Gift Cards</a></div>
   </div>
 </div>
@@ -664,10 +657,10 @@ footer{background:#fff;padding:40px 0 0;}
   <div class="signup-modal">
     <button class="signup-modal-close" onclick="dismissSignupModal()">&#215;</button>
     <div class="signup-step">STEP 1</div>
-    <div class="signup-headline">Score 20% off* when you sign up for email and texts.</div>
-    <div class="signup-sub">Get the latest news on drops, exclusive sales, and more.</div>
+    <div class="signup-headline">Score 20% off* when you join Aura.</div>
+    <div class="signup-sub">Get the latest on new arrivals, exclusive offers, and more.</div>
     <input class="signup-input" type="email" id="signup-email-input" placeholder="Enter your email address">
-    <button class="signup-btn" onclick="submitSignupModal()">Get On the List</button>
+    <button class="signup-btn" onclick="submitSignupModal()">Join Now</button>
     <div class="signup-legal"><a href="#">Restrictions apply</a><a href="#">Privacy policy</a></div>
   </div>
 </div>
@@ -712,7 +705,7 @@ footer{background:#fff;padding:40px 0 0;}
         <button class="pm-campaign-btn" onclick="dismissModal();setTimeout(openCampaignModal,200)">Build SMS Re-engagement Campaign</button>
       </div>
       <div class="pm-campaign-row" id="pm-email-row" style="display:none;">
-        <div class="pm-campaign-label">She left leggings in her cart - trigger an abandoned cart email via Salesforce</div>
+        <div class="pm-campaign-label">She left items in her cart - trigger an abandoned cart email via Salesforce</div>
         <button class="pm-campaign-btn" style="background:#1a5f6a;" onclick="dismissModal();setTimeout(openEmailModal,200)">Preview Abandoned Cart Email</button>
       </div>
       <div class="pm-campaign-row" id="pm-push-row" style="display:none;">
@@ -745,12 +738,12 @@ footer{background:#fff;padding:40px 0 0;}
     <div class="cm-body">
       <div class="cm-left">
         <div class="cm-section-label">Audience</div>
-        <div class="cm-audience-card"><div class="cm-aud-icon">&#128105;</div><div><div class="cm-aud-name">Lapsed Premier Members - Jackets Affinity</div><div class="cm-aud-size">4,284 subscribers matched via Merkury signals</div><div class="cm-aud-signals"><div class="cm-signal-pill trigger">last_purchase_days: 47</div><div class="cm-signal-pill trigger">email_engagement: Lapsed</div><div class="cm-signal-pill">category_affinity_1: Jackets</div><div class="cm-signal-pill">in_market_flag: Y</div></div></div></div>
+        <div class="cm-audience-card"><div class="cm-aud-icon">&#128105;</div><div><div class="cm-aud-name">Lapsed Circle Members - Jackets Affinity</div><div class="cm-aud-size">4,284 subscribers matched via Merkury signals</div><div class="cm-aud-signals"><div class="cm-signal-pill trigger">last_purchase_days: 47</div><div class="cm-signal-pill trigger">email_engagement: Lapsed</div><div class="cm-signal-pill">category_affinity_1: Jackets</div><div class="cm-signal-pill">in_market_flag: Y</div></div></div></div>
         <div class="cm-section-label">AI Copy Assistant</div>
         <div class="cm-ai-bar"><div class="cm-ai-bar-label">AI copy assistant</div><div class="cm-tone-pills"><button class="cm-tone-pill" onclick="setCmTone(this,'shorter')">Make shorter</button><button class="cm-tone-pill active" onclick="setCmTone(this,'urgent')">Add urgency</button><button class="cm-tone-pill" onclick="setCmTone(this,'casual')">Make casual</button></div></div>
         <div class="cm-variants">
-          <div class="cm-variant active" onclick="selectVariant(this,0)"><div class="cm-variant-label">Variant A</div><div class="cm-variant-text" id="cv-text-0">Athleta: Hi Jennifer! We have missed you. New jackets just dropped and we are holding 20% off just for you. Shop now > athleta.attn.tv/jennifer Code: WELCOME20</div><div class="cm-add-msg">+ Add message</div></div>
-          <div class="cm-variant" onclick="selectVariant(this,1)"><div class="cm-variant-label">Variant B</div><div class="cm-variant-text" id="cv-text-1">Athleta: Jennifer, your 20% off is waiting. The jackets you love are back but not for long > athleta.attn.tv/jennifer Code: WELCOME20</div><div class="cm-add-msg">+ Add message</div></div>
+          <div class="cm-variant active" onclick="selectVariant(this,0)"><div class="cm-variant-label">Variant A</div><div class="cm-variant-text" id="cv-text-0">Aura: Hi Jennifer! We have missed you. New jackets just dropped and we are holding 20% off just for you. Shop now > aura.com/jennifer Code: WELCOME20</div><div class="cm-add-msg">+ Add message</div></div>
+          <div class="cm-variant" onclick="selectVariant(this,1)"><div class="cm-variant-label">Variant B</div><div class="cm-variant-text" id="cv-text-1">Aura: Jennifer, your 20% off is waiting. The jackets you love are back but not for long > aura.com/jennifer Code: WELCOME20</div><div class="cm-add-msg">+ Add message</div></div>
         </div>
         <div class="cm-section-label">Send Time</div>
         <div class="cm-sendtime">
@@ -760,7 +753,7 @@ footer{background:#fff;padding:40px 0 0;}
       </div>
       <div class="cm-right">
         <div class="cm-section-label" style="align-self:flex-start;margin-bottom:12px;">Preview</div>
-        <div class="cm-phone"><div class="cm-phone-screen"><div class="cm-phone-notch"></div><div class="cm-phone-status"><span class="cm-phone-status-time">9:41</span></div><div class="cm-phone-header"><div class="cm-phone-avatar"><svg viewBox="0 0 40 40"><path d="M20 4 L24 14 L34 10 L28 20 L34 30 L24 26 L20 36 L16 26 L6 30 L12 20 L6 10 L16 14 Z" fill="white"/></svg></div><div class="cm-phone-sender">Athleta</div><div class="cm-phone-type">Text Message</div></div><div class="cm-phone-thread"><div class="cm-phone-bubble" id="cm-phone-preview">Athleta: Hi Jennifer! New jackets just dropped. 20% off just for you > athleta.attn.tv/jennifer Code: WELCOME20</div></div></div></div>
+        <div class="cm-phone"><div class="cm-phone-screen"><div class="cm-phone-notch"></div><div class="cm-phone-status"><span class="cm-phone-status-time">9:41</span></div><div class="cm-phone-header"><div class="cm-phone-avatar"><svg viewBox="0 0 40 40"><path d="M20 4 L24 14 L34 10 L28 20 L34 30 L24 26 L20 36 L16 26 L6 30 L12 20 L6 10 L16 14 Z" fill="white"/></svg></div><div class="cm-phone-sender">Aura</div><div class="cm-phone-type">Text Message</div></div><div class="cm-phone-thread"><div class="cm-phone-bubble" id="cm-phone-preview">Aura: Hi Jennifer! New jackets just dropped. 20% off just for you > aura.com/jennifer Code: WELCOME20</div></div></div></div>
         <div class="cm-perf-card"><div class="cm-perf-label">Est. Performance</div><div class="cm-perf-row"><span>Audience size</span><strong>4,284</strong></div><div class="cm-perf-row"><span>Est. click rate</span><strong>18-24%</strong></div><div class="cm-perf-row green"><span>Est. revenue</span><strong>$12,400-$18,600</strong></div></div>
       </div>
     </div>
@@ -791,22 +784,22 @@ footer{background:#fff;padding:40px 0 0;}
 
 <!-- UTILITY BAR -->
 <div class="util-bar">
-  <div class="util-left"><a href="#">Gap</a><a href="#">Old Navy</a><a href="#">Banana Republic</a><a href="#" class="active">Athleta</a></div>
-  <div class="util-center"><span>FREE SHIPPING ON $50+ FOR ENCORE MEMBERS</span><a onclick="openShipFlyout()">Sign In or Join Now</a><a onclick="openShipFlyout()">Details</a></div>
+  <div style="width:40px"></div>
+  <div class="util-center"><span>FREE SHIPPING ON $50+ FOR AURA CIRCLE MEMBERS</span><a onclick="openShipFlyout()">Join Now</a><a onclick="openShipFlyout()">Details</a></div>
   <div class="util-right"><span class="util-icon" onclick="showPage('home')" style="cursor:pointer;">&#128100;</span><span class="util-icon" onclick="goToCart()" style="cursor:pointer;">&#128722;</span></div>
 </div>
 
 <!-- PROMO BAR -->
 <div class="promo-bar">
   <div style="width:100px"></div>
-  <div class="promo-bar-text" id="promo-bar-text">30% Off Your New Favorites <a onclick="showPage('category')">Shop Women</a> <a onclick="showPage('category')">Shop Girl</a></div>
+  <div class="promo-bar-text" id="promo-bar-text">30% Off Your New Favorites <a onclick="showPage('category')">Shop Women</a></div>
   <div class="promo-bar-right"><a href="#">Exclusions Apply</a></div>
 </div>
 
 <!-- MAIN NAV -->
 <div class="main-nav">
   <div class="nav-inner">
-    <div class="nav-logo" onclick="showPage('home')">ATHLETA</div>
+    <div class="nav-logo" onclick="showPage('home')">AURA</div>
     <div class="nav-links">
       <span class="nav-link" onclick="toggleMegaNav()" id="nav-new-link">New</span>
       <span class="nav-link active" onclick="showPage('category')">Bottoms</span>
@@ -816,9 +809,7 @@ footer{background:#fff;padding:40px 0 0;}
       <span class="nav-link" onclick="showPage('category')">Swim</span>
       <span class="nav-link" onclick="showPage('category')">Dresses</span>
       <span class="nav-link" onclick="showPage('category')">Accessories</span>
-      <span class="nav-link" onclick="showPage('category')">Athleta Girl</span>
       <span class="nav-link sale" onclick="showPage('category')">Sale</span>
-      <span class="nav-link" onclick="showPage('category')">Preloved</span>
     </div>
     <div class="nav-search"><input type="text" placeholder="Search"><span style="color:var(--text3)">&#128269;</span></div>
   </div>
@@ -827,51 +818,51 @@ footer{background:#fff;padding:40px 0 0;}
 <!-- HOME PAGE -->
 <div id="page-home" class="page active">
   <div class="hero"><div class="hero-split">
-    <div class="hero-photo-left"><img src="https://athleta.gap.com/webcontent/0059/604/427/cn59604427.jpg" alt="" onerror="this.remove()"></div>
+    <div class="hero-photo-left grad-1"></div>
     <div class="hero-center">
       <p class="hero-eyebrow" id="hero-eyebrow"></p>
       <span class="hero-h1-light" id="hero-h1-light">MOVE IN WHAT</span>
       <span class="hero-h1-bold" id="hero-h1-bold">MOVES YOU</span>
-      <p class="hero-sub" id="hero-sub">How we are wearing and loving our latest styles.</p>
+      <p class="hero-sub" id="hero-sub">Discover our latest collection — designed for every move you make.</p>
       <a class="btn-pill btn-black" id="hero-cta1" onclick="showPage('category')">Shop Now</a>
     </div>
-    <div class="hero-photo-right"><img src="https://athleta.gap.com/webcontent/0059/604/412/cn59604412.jpg" alt="" onerror="this.remove()"><div class="hero-product-label" id="hero-product-label">Elation<br>Flare Pant</div></div>
+    <div class="hero-photo-right grad-2"><div class="hero-product-label" id="hero-product-label">High Rise<br>Flare Pant</div></div>
   </div></div>
   <div class="cat-section"><div class="w">
     <div class="cat-section-hdr"><h2 id="home-cat-title">TRENDING SILHOUETTES</h2><a onclick="showPage('category')">View All</a></div>
     <div class="cat-grid">
-      <div class="cat-tile" onclick="showPage('pdp')"><div class="cat-photo"><img src="https://athleta.gap.com/webcontent/0059/470/432/cn59470432.jpg" alt="" onerror="this.remove()"><div class="cat-badge">New</div></div><div class="cat-label" id="cat-label-1">Wide Leg</div><div class="cat-sub" id="cat-sub-1">Relaxed + elevated</div></div>
-      <div class="cat-tile" onclick="showPage('pdp')"><div class="cat-photo"><img src="https://athleta.gap.com/webcontent/0059/604/409/cn59604409.jpg" alt="" onerror="this.remove()"></div><div class="cat-label" id="cat-label-2">Legging</div><div class="cat-sub" id="cat-sub-2">Your forever favorite</div></div>
-      <div class="cat-tile" onclick="showPage('pdp')"><div class="cat-photo"><img src="https://athleta.gap.com/webcontent/0059/485/695/cn59485695.jpg" alt="" onerror="this.remove()"></div><div class="cat-label" id="cat-label-3">Jogger</div><div class="cat-sub" id="cat-sub-3">Effortless comfort</div></div>
-      <div class="cat-tile" onclick="showPage('pdp')"><div class="cat-photo"><img src="https://athleta.gap.com/webcontent/0059/472/069/cn59472069.jpg" alt="" onerror="this.remove()"></div><div class="cat-label" id="cat-label-4">Flare</div><div class="cat-sub" id="cat-sub-4">Studio to street</div></div>
+      <div class="cat-tile" onclick="showPage('pdp')"><div class="cat-photo grad-3"><div class="cat-badge">New</div></div><div class="cat-label" id="cat-label-1">Wide Leg</div><div class="cat-sub" id="cat-sub-1">Relaxed + elevated</div></div>
+      <div class="cat-tile" onclick="showPage('pdp')"><div class="cat-photo grad-4"></div><div class="cat-label" id="cat-label-2">Legging</div><div class="cat-sub" id="cat-sub-2">Your forever favorite</div></div>
+      <div class="cat-tile" onclick="showPage('pdp')"><div class="cat-photo grad-5"></div><div class="cat-label" id="cat-label-3">Jogger</div><div class="cat-sub" id="cat-sub-3">Effortless comfort</div></div>
+      <div class="cat-tile" onclick="showPage('pdp')"><div class="cat-photo grad-6"></div><div class="cat-label" id="cat-label-4">Flare</div><div class="cat-sub" id="cat-sub-4">Studio to street</div></div>
     </div>
   </div></div>
   <div class="promo-band"><div class="promo-band-inner">
-    <div class="pb-photo"><img src="https://athleta.gap.com/webcontent/0059/927/680/cn59927680.jpg" alt="" onerror="this.remove()"></div>
-    <div class="pb-text"><p class="pb-eyebrow" id="pb-eyebrow">New Collection</p><h2 class="pb-h2" id="pb-h2">The Skyline Barrel Pant</h2><p class="pb-p" id="pb-p">Polished structure meets performance stretch. Designed for wherever the day takes you.</p><a class="btn-pill btn-black" onclick="showPage('pdp')" id="pb-cta">Shop Now</a></div>
+    <div class="pb-photo grad-7"></div>
+    <div class="pb-text"><p class="pb-eyebrow" id="pb-eyebrow">New Collection</p><h2 class="pb-h2" id="pb-h2">The Structured Barrel Pant</h2><p class="pb-p" id="pb-p">Polished structure meets performance stretch. Designed for wherever the day takes you.</p><a class="btn-pill btn-black" onclick="showPage('pdp')" id="pb-cta">Shop Now</a></div>
   </div></div>
   <div class="life-section"><div class="w">
     <div class="cat-section-hdr" style="margin-bottom:20px"><h2 id="life-title">MADE TO MOVE</h2><a onclick="showPage('category')">Shop All</a></div>
     <div class="life-grid">
-      <div class="life-main" onclick="showPage('category')"><img src="https://athleta.gap.com/webcontent/0059/927/678/cn59927678.jpg" alt="" onerror="this.remove()"><div class="life-main-label"><h3 id="life-main-label">STUDIO FAVORITES</h3><p id="life-main-sub">Top-rated by our community</p></div></div>
+      <div class="life-main grad-7" onclick="showPage('category')"><div class="life-main-label"><h3 id="life-main-label">STUDIO FAVORITES</h3><p id="life-main-sub">Top-rated by our community</p></div></div>
       <div class="life-side">
-        <div class="life-card" onclick="showPage('category')" style="background:#b0c0c8"><img src="https://athleta.gap.com/webcontent/0059/472/076/cn59472076.jpg" alt="" onerror="this.remove()"><div class="life-card-label" id="life-card-1">SWIM</div></div>
-        <div class="life-card" onclick="showPage('category')" style="background:#c8b0c0"><img src="https://athleta.gap.com/webcontent/0059/472/083/cn59472083.jpg" alt="" onerror="this.remove()"><div class="life-card-label" id="life-card-2">DRESSES</div></div>
+        <div class="life-card grad-5" onclick="showPage('category')"><div class="life-card-label" id="life-card-1">SWIM</div></div>
+        <div class="life-card grad-3" onclick="showPage('category')"><div class="life-card-label" id="life-card-2">DRESSES</div></div>
       </div>
       <div class="life-side">
-        <div class="life-card" onclick="showPage('category')" style="background:#b8c8b0"><img src="https://athleta.gap.com/webcontent/0059/472/090/cn59472090.jpg" alt="" onerror="this.remove()"><div class="life-card-label" id="life-card-3">JACKETS</div></div>
-        <div class="life-card" onclick="showPage('category')" style="background:#c8c0a8"><img src="https://athleta.gap.com/webcontent/0060/616/478/cn60616478.jpg" alt="" onerror="this.remove()"><div class="life-card-label" id="life-card-4">BRAS</div></div>
+        <div class="life-card grad-8" onclick="showPage('category')"><div class="life-card-label" id="life-card-3">JACKETS</div></div>
+        <div class="life-card grad-4" onclick="showPage('category')"><div class="life-card-label" id="life-card-4">BRAS</div></div>
       </div>
     </div>
   </div></div>
   <div class="loyalty-strip"><div class="loyalty-inner">
-    <div class="ls-col"><div class="ls-eyebrow">Score 20% Off</div><div class="ls-title" id="loyalty-title">Join and save instantly</div><div class="ls-sub" id="loyalty-sub">Sign up for emails and get 20% off your next order.</div><div class="ls-email-row"><input class="ls-email-input" type="email" placeholder="Enter your email address"><button class="btn-pill btn-white btn-sm">Sign Up</button></div></div>
+    <div class="ls-col"><div class="ls-eyebrow">Score 20% Off</div><div class="ls-title" id="loyalty-title">Join Aura Circle free</div><div class="ls-sub" id="loyalty-sub">Sign up for emails and get 20% off your next order.</div><div class="ls-email-row"><input class="ls-email-input" type="email" placeholder="Enter your email address"><button class="btn-pill btn-white btn-sm">Sign Up</button></div></div>
     <div class="ls-divider"></div>
-    <div class="ls-col"><div class="ls-eyebrow">Encore</div><div class="ls-title" id="encore-title">Extra 20% off your first purchase</div><div class="ls-sub">When you open and shop with your new Encore card at Athleta.</div><div style="display:flex;gap:10px;justify-content:center"><button class="btn-pill btn-white btn-sm">Apply</button><button class="btn-pill btn-sm" style="color:#fff;border:2px solid rgba(255,255,255,.4);background:transparent">Learn More</button></div></div>
+    <div class="ls-col"><div class="ls-eyebrow">Aura Circle</div><div class="ls-title" id="encore-title">Extra 20% off your first purchase</div><div class="ls-sub">When you open and shop with your new Aura Circle card.</div><div style="display:flex;gap:10px;justify-content:center"><button class="btn-pill btn-white btn-sm">Apply</button><button class="btn-pill btn-sm" style="color:#fff;border:2px solid rgba(255,255,255,.4);background:transparent">Learn More</button></div></div>
     <div class="ls-divider"></div>
-    <div class="ls-col"><div class="ls-eyebrow">Certified</div><div class="ls-title">WE ARE A B CORP</div><div class="ls-sub">If you believe in using business as a force for good, join us.</div><a style="color:rgba(255,255,255,.8);font-size:13px;text-decoration:underline" href="#">Why This Matters</a></div>
+    <div class="ls-col"><div class="ls-eyebrow">Our Mission</div><div class="ls-title">MOVE WITH PURPOSE</div><div class="ls-sub">We believe in performance, sustainability, and inclusivity in everything we make.</div><a style="color:rgba(255,255,255,.8);font-size:13px;text-decoration:underline" href="#">Learn More</a></div>
   </div></div>
-  <footer><div class="footer-cols"><div class="fc"><h4>Customer Support</h4><a>Shipping</a><a>Returns and Exchanges</a><a>Track Your Order</a><a>Gift Cards</a></div><div class="fc"><h4>Encore Membership</h4><a>Points and Rewards</a><a>Account</a><a>Pay Credit Card</a><a>Become an Encore Member</a></div><div class="fc"><h4>About Us</h4><a>Careers</a><a>Gap Inc. Sustainability</a></div><div class="fc"><h4>Find Us</h4><a>Contact Us</a><a>Store Locator</a><a>Athleta App</a></div></div><div class="footer-bottom"><span>2026 Athleta LLC</span><div class="footer-bottom-links"><a>Privacy Policy</a><a>Terms of Use</a></div><div class="footer-social"><a>IG</a><a>TT</a><a>FB</a><a>YT</a></div></div></footer>
+  <footer><div class="footer-cols"><div class="fc"><h4>Customer Support</h4><a>Shipping</a><a>Returns and Exchanges</a><a>Track Your Order</a><a>Gift Cards</a></div><div class="fc"><h4>Aura Circle</h4><a>Points and Rewards</a><a>Account</a><a>Pay Credit Card</a><a>Become a Circle Member</a></div><div class="fc"><h4>About Us</h4><a>Our Story</a><a>Sustainability</a><a>Careers</a></div><div class="fc"><h4>Find Us</h4><a>Contact Us</a><a>Store Locator</a><a>Aura App</a></div></div><div class="footer-bottom"><span>&copy; 2026 Aura Active, Inc. All Rights Reserved.</span><div class="footer-bottom-links"><a>Privacy Policy</a><a>Terms of Use</a><a>Accessibility</a></div><div class="footer-social"><a>IG</a><a>TT</a><a>FB</a><a>YT</a></div></div></footer>
 </div>
 
 <!-- CATEGORY PAGE -->
@@ -884,14 +875,14 @@ footer{background:#fff;padding:40px 0 0;}
   </div></div>
   <div class="cat-page-grid-wrap"><div class="w"><div class="cat-page-result-count" id="cat-result-count">342 Results</div><div class="product-grid" id="cat-product-grid"></div></div></div>
   <div class="loyalty-banner">
-    <div class="loyalty-banner-inner"><div class="lb-icon" id="cat-lb-icon" style="background:#f0ece8;">&#127885;</div><div><div class="lb-eyebrow" id="cat-lb-eyebrow">Encore Membership</div><div class="lb-headline" id="cat-lb-headline">Your membership for leveling up.</div><div class="lb-sub" id="cat-lb-sub">Join free and earn points on every purchase.</div></div><div class="lb-actions"><button class="btn-pill btn-black btn-sm" id="cat-lb-cta1">Join for Free</button><button class="btn-pill btn-outline btn-sm" id="cat-lb-cta2">Explore Program</button></div></div>
+    <div class="loyalty-banner-inner"><div class="lb-icon" id="cat-lb-icon" style="background:#f0ece8;">&#127885;</div><div><div class="lb-eyebrow" id="cat-lb-eyebrow">Aura Circle</div><div class="lb-headline" id="cat-lb-headline">Your membership for leveling up.</div><div class="lb-sub" id="cat-lb-sub">Join free and earn points on every purchase.</div></div><div class="lb-actions"><button class="btn-pill btn-black btn-sm" id="cat-lb-cta1">Join for Free</button><button class="btn-pill btn-outline btn-sm" id="cat-lb-cta2">Explore Program</button></div></div>
     <div class="lb-tiers">
-      <div class="lb-tier" id="cat-tier-1"><div class="lb-tier-header"><div class="lb-tier-num">1</div><div class="lb-tier-hdr-text"><h3>Core Member</h3><div class="lb-tier-hdr-btn"><a href="#">Join for Free</a></div></div></div><div class="lb-tier-body"><div class="lb-tier-body-desc">Sign up for free to unlock our core benefits.</div><div class="lb-tier-perks"><div class="lb-tier-perk-pill">1X POINTS</div><div class="lb-tier-perk-pill">FREE SHIPPING</div><div class="lb-tier-more">+</div></div></div></div>
-      <div class="lb-tier" id="cat-tier-2"><div class="lb-tier-header"><div class="lb-tier-num">2</div><div class="lb-tier-hdr-text"><h3>Premier Member</h3></div></div><div class="lb-tier-body"><div class="lb-tier-body-desc">Spend $350+ annually to unlock more benefits.</div><div class="lb-tier-perks"><div class="lb-tier-perk-pill">CREATE YOUR OWN SALE DAY</div><div class="lb-tier-perk-pill">EXTENDED RETURNS</div><div class="lb-tier-more">+</div></div></div></div>
-      <div class="lb-tier" id="cat-tier-3"><div class="lb-tier-header"><div class="lb-tier-num">3</div><div class="lb-tier-hdr-text"><h3>All-Access Cardmember</h3><div class="lb-tier-hdr-btn"><a href="#">Apply Now</a></div></div></div><div class="lb-tier-body"><div class="lb-tier-body-desc">Become a Cardmember to unlock all benefits.</div><div class="lb-tier-perks"><div class="lb-tier-perk-pill">5X POINTS</div><div class="lb-tier-perk-pill">EARLY ACCESS</div><div class="lb-tier-more">+</div></div><div class="lb-tier-card-badge">CARDMEMBERS</div><div class="lb-tier-card-note">Get an extra 20% off your first purchase with your new Athleta Encore Credit Card.</div></div></div>
+      <div class="lb-tier" id="cat-tier-1"><div class="lb-tier-header"><div class="lb-tier-num">1</div><div class="lb-tier-hdr-text"><h3>Circle Core</h3><div class="lb-tier-hdr-btn"><a href="#">Join for Free</a></div></div></div><div class="lb-tier-body"><div class="lb-tier-body-desc">Sign up for free to unlock our core benefits.</div><div class="lb-tier-perks"><div class="lb-tier-perk-pill">1X POINTS</div><div class="lb-tier-perk-pill">FREE SHIPPING</div><div class="lb-tier-more">+</div></div></div></div>
+      <div class="lb-tier" id="cat-tier-2"><div class="lb-tier-header"><div class="lb-tier-num">2</div><div class="lb-tier-hdr-text"><h3>Circle Premier</h3></div></div><div class="lb-tier-body"><div class="lb-tier-body-desc">Spend $350+ annually to unlock more benefits.</div><div class="lb-tier-perks"><div class="lb-tier-perk-pill">CREATE YOUR OWN SALE DAY</div><div class="lb-tier-perk-pill">EXTENDED RETURNS</div><div class="lb-tier-more">+</div></div></div></div>
+      <div class="lb-tier" id="cat-tier-3"><div class="lb-tier-header"><div class="lb-tier-num">3</div><div class="lb-tier-hdr-text"><h3>Circle All-Access</h3><div class="lb-tier-hdr-btn"><a href="#">Apply Now</a></div></div></div><div class="lb-tier-body"><div class="lb-tier-body-desc">Become an All-Access member to unlock everything.</div><div class="lb-tier-perks"><div class="lb-tier-perk-pill">5X POINTS</div><div class="lb-tier-perk-pill">EARLY ACCESS</div><div class="lb-tier-more">+</div></div><div class="lb-tier-card-badge">ALL-ACCESS</div><div class="lb-tier-card-note">Get an extra 20% off your first purchase with your new Aura Circle Credit Card.</div></div></div>
     </div>
   </div>
-  <footer><div class="footer-cols"><div class="fc"><h4>Customer Support</h4><a>Shipping</a><a>Returns</a></div><div class="fc"><h4>Encore Membership</h4><a>Points and Rewards</a></div><div class="fc"><h4>About Us</h4><a>Careers</a></div><div class="fc"><h4>Find Us</h4><a>Contact Us</a></div></div><div class="footer-bottom"><span>2026 Athleta LLC</span><div class="footer-bottom-links"><a>Privacy Policy</a><a>Terms of Use</a></div></div></footer>
+  <footer><div class="footer-cols"><div class="fc"><h4>Customer Support</h4><a>Shipping</a><a>Returns</a></div><div class="fc"><h4>Aura Circle</h4><a>Points and Rewards</a></div><div class="fc"><h4>About Us</h4><a>Our Story</a></div><div class="fc"><h4>Find Us</h4><a>Contact Us</a></div></div><div class="footer-bottom"><span>&copy; 2026 Aura Active, Inc. All Rights Reserved.</span><div class="footer-bottom-links"><a>Privacy Policy</a><a>Terms of Use</a></div></div></footer>
 </div>
 
 <!-- PDP PAGE -->
@@ -900,39 +891,39 @@ footer{background:#fff;padding:40px 0 0;}
     <div class="pdp-breadcrumb" onclick="showPage('category')">Back to <span id="pdp-breadcrumb-cat">Bottoms</span></div>
     <div class="pdp-grid">
       <div class="pdp-photos">
-        <div class="pdp-photo-main"><img src="https://athleta.gap.com/webcontent/0059/604/427/cn59604427.jpg" alt="" onerror="this.remove()"></div>
-        <div class="pdp-photo-thumb"><img src="https://athleta.gap.com/webcontent/0059/604/412/cn59604412.jpg" alt="" onerror="this.remove()"></div>
-        <div class="pdp-photo-thumb"><img src="https://athleta.gap.com/webcontent/0059/604/409/cn59604409.jpg" alt="" onerror="this.remove()"></div>
-        <div class="pdp-photo-thumb"><img src="https://athleta.gap.com/webcontent/0059/927/680/cn59927680.jpg" alt="" onerror="this.remove()"></div>
+        <div class="pdp-photo-main grad-1"></div>
+        <div class="pdp-photo-thumb grad-2"></div>
+        <div class="pdp-photo-thumb grad-3"></div>
+        <div class="pdp-photo-thumb grad-4"></div>
       </div>
       <div>
         <div class="pdp-eyebrow" id="pdp-eyebrow">Bottoms</div>
-        <h1 class="pdp-title" id="pdp-title">Elation High Rise Flare Pant</h1>
+        <h1 class="pdp-title" id="pdp-title">High Rise Flare Performance Pant</h1>
         <div class="pdp-price">$98</div>
-        <div class="pdp-member-price">Member Price $88</div>
+        <div class="pdp-member-price">Circle Member Price $88</div>
         <div class="pdp-rating"><span class="pdp-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span>4.8 (312 Reviews)</span></div>
-        <div class="pdp-color-label">Color: True Black</div>
+        <div class="pdp-color-label">Color: Midnight Black</div>
         <div class="pdp-swatches"><div class="pdp-swatch active" style="background:#1a1a1a"></div><div class="pdp-swatch" style="background:#2a5a8a"></div><div class="pdp-swatch" style="background:#8a2a2a"></div></div>
         <div class="pdp-size-label">Size <a>Size Chart</a></div>
         <div class="pdp-sizes"><div class="pdp-size-btn oos">XXS</div><div class="pdp-size-btn">XS</div><div class="pdp-size-btn active">S</div><div class="pdp-size-btn">M</div><div class="pdp-size-btn">L</div><div class="pdp-size-btn">XL</div></div>
-        <div class="pdp-loyalty-nudge"><div class="pln-icon" id="pln-icon">&#127885;</div><div class="pln-text" id="pln-text"><strong>Join Encore free</strong> and earn points on this purchase.</div><div class="pln-cta" id="pln-cta">Join Free</div></div>
+        <div class="pdp-loyalty-nudge"><div class="pln-icon" id="pln-icon">&#127885;</div><div class="pln-text" id="pln-text"><strong>Join Aura Circle free</strong> and earn points on this purchase.</div><div class="pln-cta" id="pln-cta">Join Free</div></div>
         <button class="pdp-atc" id="pdp-atc-btn">Add to Bag</button>
         <button class="pdp-fav">Save to Favorites</button>
         <div class="pdp-feature-row"><span>&#9654;</span><span>High rise with a wide, comfortable waistband</span></div>
         <div class="pdp-feature-row"><span>&#9654;</span><span>4-way stretch, moves with you, recovers instantly</span></div>
-        <div class="pdp-desc" id="pdp-desc">From the studio to the street, the Elation High Rise Flare Pant delivers a flattering silhouette with the performance you expect from Athleta.</div>
+        <div class="pdp-desc" id="pdp-desc">From the studio to the street, the High Rise Flare Performance Pant delivers a flattering silhouette with the performance you expect from Aura.</div>
       </div>
     </div>
     <div class="pdp-recs"><h2 id="pdp-recs-title">YOU MAY ALSO LIKE</h2>
       <div class="pdp-recs-grid">
-        <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo"><img src="https://athleta.gap.com/webcontent/0059/604/409/cn59604409.jpg" alt="" onerror="this.remove()"></div><div class="pt-name">Salutation Tight 7/8</div><div class="pt-price">$98</div><div class="pt-member-price">Member Price $88</div></div>
-        <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo"><img src="https://athleta.gap.com/webcontent/0059/472/069/cn59472069.jpg" alt="" onerror="this.remove()"></div><div class="pt-name">Brooklyn Jogger</div><div class="pt-price">$79</div><div class="pt-member-price">Member Price $71</div></div>
-        <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo"><img src="https://athleta.gap.com/webcontent/0059/470/432/cn59470432.jpg" alt="" onerror="this.remove()"></div><div class="pt-name">Skyline Barrel Pant</div><div class="pt-price">$118</div><div class="pt-member-price">Member Price $106</div></div>
-        <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo"><img src="https://athleta.gap.com/webcontent/0059/472/083/cn59472083.jpg" alt="" onerror="this.remove()"></div><div class="pt-name">Momentum Wide-Leg Pant</div><div class="pt-price">$108</div><div class="pt-member-price">Member Price $97</div></div>
+        <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo grad-5"></div><div class="pt-name">Performance Tight 7/8</div><div class="pt-price">$98</div><div class="pt-member-price">Circle Price $88</div></div>
+        <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo grad-3"></div><div class="pt-name">Studio Jogger</div><div class="pt-price">$79</div><div class="pt-member-price">Circle Price $71</div></div>
+        <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo grad-4"></div><div class="pt-name">Barrel Leg Pant</div><div class="pt-price">$118</div><div class="pt-member-price">Circle Price $106</div></div>
+        <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo grad-6"></div><div class="pt-name">Wide Leg Studio Pant</div><div class="pt-price">$108</div><div class="pt-member-price">Circle Price $97</div></div>
       </div>
     </div>
   </div>
-  <footer><div class="footer-cols"><div class="fc"><h4>Customer Support</h4><a>Shipping</a><a>Returns</a></div><div class="fc"><h4>Encore Membership</h4><a>Points and Rewards</a></div><div class="fc"><h4>About Us</h4><a>Careers</a></div><div class="fc"><h4>Find Us</h4><a>Contact Us</a></div></div><div class="footer-bottom"><span>2026 Athleta LLC</span><div class="footer-bottom-links"><a>Privacy Policy</a><a>Terms of Use</a></div></div></footer>
+  <footer><div class="footer-cols"><div class="fc"><h4>Customer Support</h4><a>Shipping</a><a>Returns</a></div><div class="fc"><h4>Aura Circle</h4><a>Points and Rewards</a></div><div class="fc"><h4>About Us</h4><a>Our Story</a></div><div class="fc"><h4>Find Us</h4><a>Contact Us</a></div></div><div class="footer-bottom"><span>&copy; 2026 Aura Active, Inc. All Rights Reserved.</span><div class="footer-bottom-links"><a>Privacy Policy</a><a>Terms of Use</a></div></div></footer>
 </div>
 
 <!-- CART PAGE -->
@@ -941,16 +932,16 @@ footer{background:#fff;padding:40px 0 0;}
     <div>
       <div id="cart-page-empty-state">
         <div class="cart-page-empty"><h2>Your bag is currently empty.</h2><p>Sign in to see any saved items.</p><button class="btn-pill btn-black btn-sm" onclick="showPage('home')">Continue Shopping</button></div>
-        <div class="cart-recs-section"><h3 id="cart-page-recs-title">More Styles We Think You'll Love</h3><div class="cart-recs-row" id="cart-page-recs-grid"></div></div>
+        <div class="cart-recs-section"><h3 id="cart-page-recs-title">Styles We Think You'll Love</h3><div class="cart-recs-row" id="cart-page-recs-grid"></div></div>
       </div>
       <div id="cart-page-filled-state" style="display:none;">
         <div class="cart-page-title">My Bag (1 item)</div>
         <div class="cart-page-item">
-          <div class="cart-page-item-img"><img id="cart-pg-img" src="https://athleta.gap.com/webcontent/0059/604/427/cn59604427.jpg" alt="" onerror="this.remove()"></div>
-          <div><div class="cart-page-item-name" id="cart-pg-name">Elation High Rise Flare Pant</div><div class="cart-page-item-detail" id="cart-pg-detail">Size: S · Color: True Black · Qty: 1</div><div class="cart-page-item-price" id="cart-pg-price">$98.00</div><div class="cart-page-item-member" id="cart-pg-member">Member Price $88.00</div><span class="cart-page-item-remove" onclick="emptyCart()">Remove</span></div>
+          <div class="cart-page-item-img grad-1"></div>
+          <div><div class="cart-page-item-name" id="cart-pg-name">High Rise Flare Performance Pant</div><div class="cart-page-item-detail" id="cart-pg-detail">Size: S · Color: Midnight Black · Qty: 1</div><div class="cart-page-item-price" id="cart-pg-price">$98.00</div><div class="cart-page-item-member" id="cart-pg-member">Circle Member Price $88.00</div><span class="cart-page-item-remove" onclick="emptyCart()">Remove</span></div>
           <div style="font-size:14px;font-weight:600;" id="cart-pg-total">$98.00</div>
         </div>
-        <div class="cart-recs-section"><h3 id="cart-pg-recs-title">More Styles We Think You'll Love</h3><div class="cart-recs-row" id="cart-pg-recs-grid"></div></div>
+        <div class="cart-recs-section"><h3 id="cart-pg-recs-title">Styles We Think You'll Love</h3><div class="cart-recs-row" id="cart-pg-recs-grid"></div></div>
       </div>
     </div>
     <div>
@@ -959,67 +950,62 @@ footer{background:#fff;padding:40px 0 0;}
         <div class="cart-summary-row"><span>Subtotal</span><span id="cart-pg-subtotal">$0.00</span></div>
         <div class="cart-summary-row"><span>Shipping</span><span id="cart-pg-shipping">Calculated at checkout</span></div>
         <div class="cart-summary-row total"><span>Estimated Total</span><span id="cart-pg-est-total">$0.00</span></div>
-        <div class="cart-summary-savings" id="cart-pg-savings" style="display:none;"></div>
         <button class="cart-page-checkout" onclick="showPage('home')">Checkout</button>
         <a class="cart-page-continue-link" onclick="showPage('home')">Continue Shopping</a>
       </div>
-      <div class="cart-loyalty-nudge"><div style="font-size:18px;flex-shrink:0;">&#11088;</div><div class="cart-loyalty-nudge-text" id="cart-pg-loyalty-text"><strong>Join Encore free</strong> and earn points on every purchase.</div></div>
+      <div class="cart-loyalty-nudge"><div style="font-size:18px;flex-shrink:0;">&#11088;</div><div class="cart-loyalty-nudge-text" id="cart-pg-loyalty-text"><strong>Join Aura Circle free</strong> and earn points on every purchase.</div></div>
     </div>
   </div>
-  <footer><div class="footer-cols"><div class="fc"><h4>Customer Support</h4><a>Shipping</a><a>Returns</a><a>Track Your Order</a></div><div class="fc"><h4>Encore Membership</h4><a>Points and Rewards</a><a>Account</a></div><div class="fc"><h4>About Us</h4><a>Careers</a></div><div class="fc"><h4>Find Us</h4><a>Contact Us</a><a>Store Locator</a></div></div><div class="footer-bottom"><span>2026 Athleta LLC</span><div class="footer-bottom-links"><a>Privacy Policy</a><a>Terms of Use</a></div></div></footer>
+  <footer><div class="footer-cols"><div class="fc"><h4>Customer Support</h4><a>Shipping</a><a>Returns</a><a>Track Your Order</a></div><div class="fc"><h4>Aura Circle</h4><a>Points and Rewards</a><a>Account</a></div><div class="fc"><h4>About Us</h4><a>Our Story</a></div><div class="fc"><h4>Find Us</h4><a>Contact Us</a><a>Store Locator</a></div></div><div class="footer-bottom"><span>&copy; 2026 Aura Active, Inc. All Rights Reserved.</span><div class="footer-bottom-links"><a>Privacy Policy</a><a>Terms of Use</a></div></div></footer>
 </div>
 
 <script>
-// ── SAFE CONSOLE SHIM ──────────────────────────────────────────
 (function(){var n=function(){};['log','warn','error','info','group','groupCollapsed','groupEnd','table','dir','time','timeEnd'].forEach(function(x){if(typeof console==='undefined')window.console={};if(typeof console[x]!=='function')console[x]=n;});})();
-
-// ── LINK INTERCEPTOR ──────────────────────────────────────────
 document.addEventListener('click',function(e){var a=e.target.closest('a');if(!a)return;var h=a.getAttribute('href');if(!h||h==='#'){var oc=a.getAttribute('onclick')||'';if(oc)return;e.preventDefault();}},true);
 
-// ── DATA ──────────────────────────────────────────────────────
 var PAYLOADS={
   def:{d:{data:{},response:'no_match',version:'1.0.0'}},
   maya:{d:{data:{'dentsu.id':'a1b2c3d4e5f6a7b8c9d0',hashed_email:'3f4a5b6c7d8e9f0a1b2c',confidence_score:1,match_type:'deterministic',first_name:'Maya',last_name:'Chen',age_range:'25-34',gender:'F',marital_status:'S',education_level:'GR',presence_of_children:'N',city:'San Francisco',state:'CA',zip:'94110',homeowner_flag:'N',household_income_range:'$100K-$150K',household_size:'1',length_of_residence:'3',purchase_frequency:'High',avg_order_value_range:'$150-$300',last_purchase_days:'12',preferred_channel:'Mobile',category_affinity_1:'Leggings',category_affinity_2:'Sports Bras',in_market_flag:'Y',lifestyle_segment:'Active Achiever',brand_loyalty_score:'5',email_engagement:'Active',social_influence_tier:'Micro',created_date:'2019-04-10 00:00:00',last_modified_date:'2026-02-22 00:00:00'},response:'match',version:'1.0.0'}},
-  rachel:{d:{data:{'dentsu.id':'b2c3d4e5f6a7b8c9d0e1',hashed_email:'4a5b6c7d8e9f0a1b2c3d',confidence_score:1,match_type:'deterministic',first_name:'Rachel',last_name:'Torres',age_range:'35-44',gender:'F',marital_status:'M',education_level:'BA',presence_of_children:'Y',city:'Denver',state:'CO',zip:'80203',homeowner_flag:'Y',household_income_range:'$100K-$150K',household_size:'3',length_of_residence:'5',purchase_frequency:'Low',avg_order_value_range:'$50-$150',last_purchase_days:'62',preferred_channel:'Online',category_affinity_1:'Tops',category_affinity_2:'Leggings',in_market_flag:'Y',lifestyle_segment:'Core Encore Member',brand_loyalty_score:'3',email_engagement:'Active',social_influence_tier:'Standard',created_date:'2021-11-03 00:00:00',last_modified_date:'2026-01-04 00:00:00'},response:'match',version:'1.0.0'}},
+  rachel:{d:{data:{'dentsu.id':'b2c3d4e5f6a7b8c9d0e1',hashed_email:'4a5b6c7d8e9f0a1b2c3d',confidence_score:1,match_type:'deterministic',first_name:'Rachel',last_name:'Torres',age_range:'35-44',gender:'F',marital_status:'M',education_level:'BA',presence_of_children:'Y',city:'Denver',state:'CO',zip:'80203',homeowner_flag:'Y',household_income_range:'$100K-$150K',household_size:'3',length_of_residence:'5',purchase_frequency:'Low',avg_order_value_range:'$50-$150',last_purchase_days:'62',preferred_channel:'Online',category_affinity_1:'Tops',category_affinity_2:'Leggings',in_market_flag:'Y',lifestyle_segment:'Circle Core Member',brand_loyalty_score:'3',email_engagement:'Active',social_influence_tier:'Standard',created_date:'2021-11-03 00:00:00',last_modified_date:'2026-01-04 00:00:00'},response:'match',version:'1.0.0'}},
   jennifer:{d:{data:{'dentsu.id':'c3d4e5f6a7b8c9d0e1f2',hashed_email:'5b6c7d8e9f0a1b2c3d4e',confidence_score:2,match_type:'deterministic',first_name:'Jennifer',last_name:'Walsh',age_range:'35-44',gender:'F',marital_status:'M',education_level:'BA',presence_of_children:'Y',city:'Naperville',state:'IL',zip:'60540',homeowner_flag:'Y',household_income_range:'$150K-$200K',household_size:'4',length_of_residence:'7',purchase_frequency:'Medium',avg_order_value_range:'$150-$300',last_purchase_days:'47',preferred_channel:'Omnichannel',category_affinity_1:'Jackets',category_affinity_2:'Dresses',in_market_flag:'Y',lifestyle_segment:'Weekend Warrior Mom',brand_loyalty_score:'4',email_engagement:'Lapsed',social_influence_tier:'Standard',created_date:'2020-08-19 00:00:00',last_modified_date:'2026-01-30 00:00:00'},response:'match',version:'1.0.0'}},
   danielle:{d:{data:{'dentsu.id':'e5f6a7b8c9d0e1f2a3b4',hashed_email:null,confidence_score:3,match_type:'probabilistic',first_name:null,last_name:null,age_range:'25-34',gender:'F',marital_status:'S',education_level:'BA',presence_of_children:'N',city:'Austin',state:'TX',zip:'78704',homeowner_flag:'N',household_income_range:'$75K-$100K',household_size:'2',length_of_residence:'1',purchase_frequency:'Low',avg_order_value_range:'$50-$150',last_purchase_days:'0',preferred_channel:'Mobile',category_affinity_1:'New Arrivals',category_affinity_2:'Swim',in_market_flag:'Y',lifestyle_segment:'Trend-Forward Newcomer',brand_loyalty_score:'2',email_engagement:'Active',social_influence_tier:'Micro',created_date:'2026-02-10 00:00:00',last_modified_date:'2026-02-25 00:00:00'},response:'match',version:'1.0.0'}}
 };
 
 var CONTENT={
-  def:{promoBar:'30% Off Your New Favorites <a onclick="showPage(\'category\')">Shop Women</a> <a onclick="showPage(\'category\')">Shop Girl</a>',heroEyebrow:'',heroH1Light:'MOVE IN WHAT',heroH1Bold:'MOVES YOU',heroSub:'How we are wearing and loving our latest styles.',heroCta1:'Shop Now',heroProductLabel:'Elation<br>Flare Pant',homeCatTitle:'TRENDING SILHOUETTES',catLabels:['Wide Leg','Legging','Jogger','Flare'],catSubs:['Relaxed and elevated','Your forever favorite','Effortless comfort','Studio to street'],pbEyebrow:'New Collection',pbH2:'The Skyline Barrel Pant',pbP:'Polished structure meets performance stretch.',pbCta:'Shop Now',lifeTitle:'MADE TO MOVE',lifeMainLabel:'STUDIO FAVORITES',lifeMainSub:'Top-rated by our community',lifeCards:['SWIM','DRESSES','JACKETS','BRAS'],loyaltyTitle:'Join and save instantly',loyaltySub:'Sign up for emails and get 20% off your next order.',encoreTitle:'Extra 20% off your first purchase',catPageTitle:'All Bottoms',catPageSub:'Performance meets style.',catResultCount:'342 Results',pdpTitle:'Elation High Rise Flare Pant',pdpDesc:'From the studio to the street, the Elation High Rise Flare Pant delivers a flattering silhouette.',pdpRecsTitle:'YOU MAY ALSO LIKE',pdpAtcBtn:'Add to Bag',pdpEyebrow:'Bottoms',pdpBreadcrumbCat:'Bottoms'},
-  maya:{promoBar:'Welcome back Maya - Encore member exclusive: extra 15% off <a onclick="showPage(\'category\')">Shop Now</a>',heroEyebrow:'Back For More',heroH1Light:'BACK FOR',heroH1Bold:'MORE. AS ALWAYS.',heroSub:'Your next obsession just landed. New leggings and bras made for how you move.',heroCta1:'Shop Leggings',heroProductLabel:'Salutation<br>Tight 7/8',homeCatTitle:'YOUR FAVORITES UPDATED',catLabels:['Legging','Sports Bra','High-Rise','Flare'],catSubs:['All-new prints','Buttery smooth','Extra support','Studio to street'],pbEyebrow:'Encore Members',pbH2:'Your exclusive early access',pbP:'New drops hit your feed first. As an Encore member you get first pick.',pbCta:'Shop My Picks',lifeTitle:'BUILT FOR YOUR PRACTICE',lifeMainLabel:'YOGA ESSENTIALS',lifeMainSub:'Curated for instructors like you',lifeCards:['LEGGINGS','BRAS','NEW IN','SALE'],loyaltyTitle:'Hi Maya, your points are waiting',loyaltySub:'You have 240 Encore points. Use them on your next order.',encoreTitle:'Encore member: extra 15% off today',catPageTitle:'Leggings',catPageSub:'Your forever favorites.',catResultCount:'89 Results',pdpTitle:'Salutation Stash Pocket II 7/8 Tight',pdpDesc:'The legging thousands of instructors keep coming back to.',pdpRecsTitle:'BECAUSE YOU LOVED THESE',pdpAtcBtn:'Add to Bag',pdpEyebrow:'Leggings',pdpBreadcrumbCat:'Leggings'},
-  rachel:{promoBar:'30% Off Your New Favorites <a onclick="showPage(\'category\')">Shop Women</a>',heroEyebrow:'Welcome Back',heroH1Light:'YOU ARE',heroH1Bold:'SO CLOSE.',heroSub:'You are $127 away from Premier status and the perks that come with it.',heroCta1:'Shop and Earn',heroProductLabel:'Elation<br>Flare Pant',homeCatTitle:'PICKED FOR YOU',catLabels:['Tops','Leggings','Jackets','New In'],catSubs:['Your most-viewed','Back in your size','Layer up','Just dropped'],pbEyebrow:'You Are Almost There',pbH2:'$127 away from Premier.',pbP:'Premier members unlock Create Your Own Sale Day and extended returns.',pbCta:'Shop and Earn Points',lifeTitle:'EARN WHILE YOU SHOP',lifeMainLabel:'CORE MEMBER PICKS',lifeMainSub:'Curated for your style',lifeCards:['TOPS','LEGGINGS','JACKETS','SALE'],loyaltyTitle:'Hi Rachel, keep earning.',loyaltySub:'You have 380 Core points. Shop $127 more to unlock Premier.',encoreTitle:'Upgrade to All-Access - apply for the Encore card',catPageTitle:'Tops',catPageSub:'Your most-viewed category.',catResultCount:'198 Results',pdpTitle:'Everyday Studio Tank',pdpDesc:'The tank you will reach for every time.',pdpRecsTitle:'EARN POINTS ON THESE TOO',pdpAtcBtn:'Add to Bag',pdpEyebrow:'Tops',pdpBreadcrumbCat:'Tops'},
-  jennifer:{promoBar:'Athleta Girl is here - shop the new drop <a onclick="showPage(\'category\')">Shop Now</a>',heroEyebrow:'For Every Moment',heroH1Light:'FROM THE MAT',heroH1Bold:'TO THE MOMENT.',heroSub:'Versatile pieces that work at school pickup, the gym, and everywhere in between.',heroCta1:'Shop Versatile Styles',heroProductLabel:'Restore<br>Softshell Jacket',homeCatTitle:'FROM ERRANDS TO EVERYTHING',catLabels:['Jackets','Dresses','Joggers','Legging'],catSubs:['Layer up','Polished and easy','All-day comfort','The classic'],pbEyebrow:'Athleta Girl',pbH2:'She moves. You move. Shop together.',pbP:'Athleta Girl is designed for the next generation of movers.',pbCta:'Shop Athleta Girl',lifeTitle:'WEAR IT EVERYWHERE',lifeMainLabel:'EVERYDAY ESSENTIALS',lifeMainSub:'From school run to yoga class',lifeCards:['JACKETS','DRESSES','ATHLETA GIRL','SALE'],loyaltyTitle:'We have missed you Jennifer',loyaltySub:'You are just a few points away from your next reward.',encoreTitle:'Welcome back bonus: 20% off your next purchase',catPageTitle:'Jackets',catPageSub:'Layer up for whatever the day brings.',catResultCount:'58 Results',pdpTitle:'Restore Softshell Jacket',pdpDesc:'Built for wherever the day takes you.',pdpRecsTitle:'COMPLETE THE LOOK',pdpAtcBtn:'Add to Bag',pdpEyebrow:'Jackets',pdpBreadcrumbCat:'Jackets'},
-  danielle:{promoBar:'New arrivals just dropped - free shipping on your first order <a onclick="showPage(\'category\')">Shop Now</a>',heroEyebrow:'New Here? Welcome.',heroH1Light:'YOUR NEW ERA',heroH1Bold:'STARTS HERE.',heroSub:'Discover the styles everyone is talking about and earn rewards from day one.',heroCta1:'Shop New Arrivals',heroProductLabel:'Skyline<br>Barrel Pant',homeCatTitle:'TRENDING RIGHT NOW',catLabels:['New Arrivals','Swim','Wide Leg','Barrel Pant'],catSubs:['Just dropped','Summer ready','The silhouette','Sell-out alert'],pbEyebrow:'Just Dropped',pbH2:'The Skyline Barrel Pant',pbP:'The new shape everyone is wearing.',pbCta:'Shop Now',lifeTitle:'THE LOOKS YOU HAVE BEEN SEEING',lifeMainLabel:'AS SEEN ON SOCIAL',lifeMainSub:'Most-saved styles this week',lifeCards:['NEW IN','SWIM','TRENDING','SALE'],loyaltyTitle:'Join Encore - it is free',loyaltySub:'Earn points on every purchase and get 20% off your first order.',encoreTitle:'Free shipping on your first order',catPageTitle:'New Arrivals',catPageSub:'The freshest drops all in one place.',catResultCount:'124 Results',pdpTitle:'Skyline Barrel Pant',pdpDesc:'The barrel pant shape that is everywhere right now.',pdpRecsTitle:'TRENDING WITH THIS',pdpAtcBtn:'Add to Bag - Ships Free',pdpEyebrow:'New Arrivals',pdpBreadcrumbCat:'New Arrivals'}
+  def:{promoBar:'30% Off Your New Favorites <a onclick="showPage(\'category\')">Shop Women</a>',heroEyebrow:'',heroH1Light:'MOVE IN WHAT',heroH1Bold:'MOVES YOU',heroSub:'Discover our latest collection — designed for every move you make.',heroCta1:'Shop Now',heroProductLabel:'High Rise<br>Flare Pant',homeCatTitle:'TRENDING SILHOUETTES',catLabels:['Wide Leg','Legging','Jogger','Flare'],catSubs:['Relaxed and elevated','Your forever favorite','Effortless comfort','Studio to street'],pbEyebrow:'New Collection',pbH2:'The Structured Barrel Pant',pbP:'Polished structure meets performance stretch.',pbCta:'Shop Now',lifeTitle:'MADE TO MOVE',lifeMainLabel:'STUDIO FAVORITES',lifeMainSub:'Top-rated by our community',lifeCards:['SWIM','DRESSES','JACKETS','BRAS'],loyaltyTitle:'Join Aura Circle free',loyaltySub:'Sign up for emails and get 20% off your next order.',encoreTitle:'Extra 20% off your first purchase',catPageTitle:'All Bottoms',catPageSub:'Performance meets style.',catResultCount:'342 Results',pdpTitle:'High Rise Flare Performance Pant',pdpDesc:'From the studio to the street, this pant delivers a flattering silhouette with the performance you expect from Aura.',pdpRecsTitle:'YOU MAY ALSO LIKE',pdpAtcBtn:'Add to Bag',pdpEyebrow:'Bottoms',pdpBreadcrumbCat:'Bottoms'},
+  maya:{promoBar:'Welcome back Maya - Circle All-Access exclusive: extra 15% off <a onclick="showPage(\'category\')">Shop Now</a>',heroEyebrow:'Back For More',heroH1Light:'BACK FOR',heroH1Bold:'MORE. AS ALWAYS.',heroSub:'Your next obsession just landed. New leggings and bras made for how you move.',heroCta1:'Shop Leggings',heroProductLabel:'Performance<br>Tight 7/8',homeCatTitle:'YOUR FAVORITES UPDATED',catLabels:['Legging','Sports Bra','High-Rise','Flare'],catSubs:['All-new prints','Buttery smooth','Extra support','Studio to street'],pbEyebrow:'Circle All-Access',pbH2:'Your exclusive early access',pbP:'New drops hit your feed first. As a Circle member you get first pick.',pbCta:'Shop My Picks',lifeTitle:'BUILT FOR YOUR PRACTICE',lifeMainLabel:'YOGA ESSENTIALS',lifeMainSub:'Curated for you',lifeCards:['LEGGINGS','BRAS','NEW IN','SALE'],loyaltyTitle:'Hi Maya, your points are waiting',loyaltySub:'You have 240 Aura Circle points. Use them on your next order.',encoreTitle:'Circle All-Access: extra 15% off today',catPageTitle:'Leggings',catPageSub:'Your forever favorites.',catResultCount:'89 Results',pdpTitle:'High Rise Performance Tight 7/8',pdpDesc:'The legging our most loyal members keep coming back to.',pdpRecsTitle:'BECAUSE YOU LOVED THESE',pdpAtcBtn:'Add to Bag',pdpEyebrow:'Leggings',pdpBreadcrumbCat:'Leggings'},
+  rachel:{promoBar:'30% Off Your New Favorites <a onclick="showPage(\'category\')">Shop Women</a>',heroEyebrow:'Welcome Back',heroH1Light:'YOU ARE',heroH1Bold:'SO CLOSE.',heroSub:'You are $127 away from Circle Premier status and the perks that come with it.',heroCta1:'Shop and Earn',heroProductLabel:'High Rise<br>Flare Pant',homeCatTitle:'PICKED FOR YOU',catLabels:['Tops','Leggings','Jackets','New In'],catSubs:['Your most-viewed','Back in your size','Layer up','Just dropped'],pbEyebrow:'You Are Almost There',pbH2:'$127 away from Circle Premier.',pbP:'Premier members unlock Create Your Own Sale Day and extended returns.',pbCta:'Shop and Earn Points',lifeTitle:'EARN WHILE YOU SHOP',lifeMainLabel:'CIRCLE CORE PICKS',lifeMainSub:'Curated for your style',lifeCards:['TOPS','LEGGINGS','JACKETS','SALE'],loyaltyTitle:'Hi Rachel, keep earning.',loyaltySub:'You have 380 Circle Core points. Shop $127 more to unlock Premier.',encoreTitle:'Upgrade to All-Access - apply for the Circle card',catPageTitle:'Tops',catPageSub:'Your most-viewed category.',catResultCount:'198 Results',pdpTitle:'Everyday Studio Tank',pdpDesc:'The tank you will reach for every time.',pdpRecsTitle:'EARN POINTS ON THESE TOO',pdpAtcBtn:'Add to Bag',pdpEyebrow:'Tops',pdpBreadcrumbCat:'Tops'},
+  jennifer:{promoBar:'New arrivals just landed - shop the drop <a onclick="showPage(\'category\')">Shop Now</a>',heroEyebrow:'For Every Moment',heroH1Light:'FROM THE MAT',heroH1Bold:'TO THE MOMENT.',heroSub:'Versatile pieces that work at school pickup, the gym, and everywhere in between.',heroCta1:'Shop Versatile Styles',heroProductLabel:'Performance<br>Softshell Jacket',homeCatTitle:'FROM ERRANDS TO EVERYTHING',catLabels:['Jackets','Dresses','Joggers','Legging'],catSubs:['Layer up','Polished and easy','All-day comfort','The classic'],pbEyebrow:'New In',pbH2:'The styles that do it all.',pbP:'Versatile, performance-ready pieces designed for wherever the day takes you.',pbCta:'Shop Now',lifeTitle:'WEAR IT EVERYWHERE',lifeMainLabel:'EVERYDAY ESSENTIALS',lifeMainSub:'From school run to yoga class',lifeCards:['JACKETS','DRESSES','NEW IN','SALE'],loyaltyTitle:'We have missed you Jennifer',loyaltySub:'You are just a few points away from your next reward.',encoreTitle:'Welcome back bonus: 20% off your next purchase',catPageTitle:'Jackets',catPageSub:'Layer up for whatever the day brings.',catResultCount:'58 Results',pdpTitle:'Performance Softshell Jacket',pdpDesc:'Built for wherever the day takes you.',pdpRecsTitle:'COMPLETE THE LOOK',pdpAtcBtn:'Add to Bag',pdpEyebrow:'Jackets',pdpBreadcrumbCat:'Jackets'},
+  danielle:{promoBar:'New arrivals just dropped - free shipping on your first order <a onclick="showPage(\'category\')">Shop Now</a>',heroEyebrow:'New Here? Welcome.',heroH1Light:'YOUR NEW ERA',heroH1Bold:'STARTS HERE.',heroSub:'Discover the styles everyone is talking about and earn rewards from day one.',heroCta1:'Shop New Arrivals',heroProductLabel:'Barrel<br>Leg Pant',homeCatTitle:'TRENDING RIGHT NOW',catLabels:['New Arrivals','Swim','Wide Leg','Barrel Pant'],catSubs:['Just dropped','Summer ready','The silhouette','Sell-out alert'],pbEyebrow:'Just Dropped',pbH2:'The Structured Barrel Pant',pbP:'The new shape everyone is wearing.',pbCta:'Shop Now',lifeTitle:'THE LOOKS YOU HAVE BEEN SEEING',lifeMainLabel:'AS SEEN ON SOCIAL',lifeMainSub:'Most-saved styles this week',lifeCards:['NEW IN','SWIM','TRENDING','SALE'],loyaltyTitle:'Join Aura Circle - it is free',loyaltySub:'Earn points on every purchase and get 20% off your first order.',encoreTitle:'Free shipping on your first order',catPageTitle:'New Arrivals',catPageSub:'The freshest drops all in one place.',catResultCount:'124 Results',pdpTitle:'Structured Barrel Leg Pant',pdpDesc:'The barrel pant shape that is everywhere right now.',pdpRecsTitle:'TRENDING WITH THIS',pdpAtcBtn:'Add to Bag - Ships Free',pdpEyebrow:'New Arrivals',pdpBreadcrumbCat:'New Arrivals'}
 };
 
 var MODALS={
-  maya:{headerBg:'linear-gradient(135deg,#1a5f6a,#0d3d45)',visitorState:'Authenticated - All-Access Cardmember',name:'Welcome back, Maya',tagline:'Yoga Instructor - San Francisco, CA - Encore Member',matchBadge:'Deterministic Match - Confidence 1',matchType:'Deterministic',matchClass:'det',confidence:'1 - Highest',offerBg:'#1a5f6a',offerHeader:'Encore Member Exclusive',offerHeadline:'Your extra 15% is waiting.',offerDesc:'As one of our most loyal members, you get early access to new leggings and bras plus an exclusive discount applied automatically at checkout.',offerCode:'MAYA15',dotColor:'#1a5f6a'},
-  rachel:{headerBg:'linear-gradient(135deg,#2a6a3a,#1a4a28)',visitorState:'Authenticated - Core Encore Member',name:'Welcome back, Rachel.',tagline:'Core Encore Member - Denver, CO - 380 points',matchBadge:'Deterministic Match - Confidence 1',matchType:'Deterministic',matchClass:'det',confidence:'1 - Highest',offerBg:'#2a6a3a',offerHeader:'You Are Almost Premier',offerHeadline:'$127 more to unlock Premier.',offerDesc:'Premier members get Create Your Own Sale Day, extended returns, and birthday bonuses. Here is 15% off to help get you there.',offerCode:'RACHEL15',dotColor:'#2a6a3a'},
-  jennifer:{headerBg:'linear-gradient(135deg,#6a3a1a,#3d1e0a)',visitorState:'Unauthenticated - Known Visitor',name:'Hi Jennifer, welcome back.',tagline:'Weekend Warrior Mom - Naperville, IL - Lapsed Member',matchBadge:'Deterministic Match - Confidence 2',matchType:'Deterministic',matchClass:'det',confidence:'2 - High',offerBg:'#8a4a1a',offerHeader:'We Have Missed You',offerHeadline:'20% off to welcome you back.',offerDesc:'It has been a while and we have new styles we think you will love. From versatile jackets to Athleta Girl for your little one.',offerCode:'WELCOME20',dotColor:'#8a4a1a'},
-  danielle:{headerBg:'linear-gradient(135deg,#3a1a6a,#1e0a3d)',visitorState:'Full Prospect - Anonymous Visitor',name:'Looks like you are new here.',tagline:'Probabilistic match via Merkury tag - Not on customer file',matchBadge:'Probabilistic Match - Confidence 3',matchType:'Probabilistic',matchClass:'prob',confidence:'3 - Moderate',offerBg:'#4a1a8a',offerHeader:'Identified via Merkury Tag',offerHeadline:'Free shipping on your first order.',offerDesc:'Merkury has identified this device as a likely in-market shopper based on behavioral signals.',offerCode:'FREESHIP',dotColor:'#4a1a8a'}
+  maya:{headerBg:'linear-gradient(135deg,#1a5f6a,#0d3d45)',visitorState:'Authenticated - Circle All-Access',name:'Welcome back, Maya',tagline:'Studio Instructor - San Francisco, CA - Aura Circle Member',matchBadge:'Deterministic Match - Confidence 1',matchType:'Deterministic',matchClass:'det',confidence:'1 - Highest',offerBg:'#1a5f6a',offerHeader:'Circle All-Access Exclusive',offerHeadline:'Your extra 15% is waiting.',offerDesc:'As one of our most loyal members, you get early access to new arrivals plus an exclusive discount applied automatically at checkout.',offerCode:'MAYA15',dotColor:'#1a5f6a'},
+  rachel:{headerBg:'linear-gradient(135deg,#2a6a3a,#1a4a28)',visitorState:'Authenticated - Circle Core Member',name:'Welcome back, Rachel.',tagline:'Circle Core Member - Denver, CO - 380 points',matchBadge:'Deterministic Match - Confidence 1',matchType:'Deterministic',matchClass:'det',confidence:'1 - Highest',offerBg:'#2a6a3a',offerHeader:'You Are Almost Premier',offerHeadline:'$127 more to unlock Circle Premier.',offerDesc:'Premier members get Create Your Own Sale Day, extended returns, and birthday bonuses. Here is 15% off to help get you there.',offerCode:'RACHEL15',dotColor:'#2a6a3a'},
+  jennifer:{headerBg:'linear-gradient(135deg,#6a3a1a,#3d1e0a)',visitorState:'Unauthenticated - Known Visitor',name:'Hi Jennifer, welcome back.',tagline:'Weekend Warrior Mom - Naperville, IL - Lapsed Member',matchBadge:'Deterministic Match - Confidence 2',matchType:'Deterministic',matchClass:'det',confidence:'2 - High',offerBg:'#8a4a1a',offerHeader:'We Have Missed You',offerHeadline:'20% off to welcome you back.',offerDesc:'It has been a while and we have new styles we think you will love. From versatile jackets to everything in between.',offerCode:'WELCOME20',dotColor:'#8a4a1a'},
+  danielle:{headerBg:'linear-gradient(135deg,#3a1a6a,#1e0a3d)',visitorState:'Full Prospect - New Visitor',name:'Looks like you are new here.',tagline:'Probabilistic match via Merkury tag - Not on customer file',matchBadge:'Probabilistic Match - Confidence 3',matchType:'Probabilistic',matchClass:'prob',confidence:'3 - Moderate',offerBg:'#4a1a8a',offerHeader:'Identified via Merkury Tag',offerHeadline:'Free shipping on your first order.',offerDesc:'Merkury has identified this device as a likely in-market shopper based on behavioral signals.',offerCode:'FREESHIP',dotColor:'#4a1a8a'}
 };
 
 var LOYALTY={
-  def:{iconHTML:'&#127885;',iconBg:'#f0ece8',eyebrow:'Encore Membership',headline:'Your membership for leveling up.',sub:'Join free and earn points on every purchase.',cta1:'Join for Free',cta2:'Explore Program',cta1Style:'btn-black',cta2Style:'btn-outline',activeTier:null,pdpIconHTML:'&#127885;',pdpText:'<strong>Join Encore free</strong> and earn points on this purchase.',pdpCta:'Join Free'},
-  maya:{iconHTML:'&#11088;',iconBg:'#e8f5f2',eyebrow:'All-Access Cardmember',headline:'You are at the top tier, Maya.',sub:'As an All-Access Cardmember you earn 25 points per $1. You have 240 points.',cta1:'Check My Points',cta2:'Pay Credit Card',cta1Style:'btn-black',cta2Style:'btn-outline',activeTier:3,pdpIconHTML:'&#11088;',pdpText:'<strong>All-Access member:</strong> You are earning 25 points per $1 on this purchase.',pdpCta:'View Points'},
-  rachel:{iconHTML:'&#127807;',iconBg:'#e8f5ec',eyebrow:'Core Encore Member',headline:'You are $127 from Premier.',sub:'Keep earning and hit $350 in annual spend to unlock Create Your Own Sale Day.',cta1:'Shop and Earn',cta2:'See Premier Benefits',cta1Style:'btn-black',cta2Style:'btn-outline',activeTier:1,pdpIconHTML:'&#127807;',pdpText:'<strong>Core member:</strong> You will earn points on this purchase. You are <strong>$127 away from Premier</strong>.',pdpCta:'See Benefits'},
-  jennifer:{iconHTML:'&#128179;',iconBg:'#fff4f0',eyebrow:'Upgrade to All-Access',headline:'One card away from everything.',sub:'You are a Premier member. Apply for the Encore card to unlock 25x points.',cta1:'Apply for Card',cta2:'See All Benefits',cta1Style:'btn-black',cta2Style:'btn-outline',activeTier:2,pdpIconHTML:'&#128179;',pdpText:'<strong>Premier member:</strong> Apply for the Encore card and get <strong>20% off this purchase</strong> instantly.',pdpCta:'Apply Now'},
-  danielle:{iconHTML:'&#127873;',iconBg:'#f4f0ff',eyebrow:'Join Encore - It Is Free',headline:'Earn rewards from your very first order.',sub:'Sign up in seconds and start earning 5 points per $1 at Athleta.',cta1:'Join for Free',cta2:'Learn More',cta1Style:'btn-black',cta2Style:'btn-outline',activeTier:null,pdpIconHTML:'&#127873;',pdpText:'<strong>First order?</strong> Join Encore free today and earn points on this purchase.',pdpCta:'Join Free'}
+  def:{iconHTML:'&#127885;',iconBg:'#f0ece8',eyebrow:'Aura Circle',headline:'Your membership for leveling up.',sub:'Join free and earn points on every purchase.',cta1:'Join for Free',cta2:'Explore Program',cta1Style:'btn-black',cta2Style:'btn-outline',activeTier:null,pdpIconHTML:'&#127885;',pdpText:'<strong>Join Aura Circle free</strong> and earn points on this purchase.',pdpCta:'Join Free'},
+  maya:{iconHTML:'&#11088;',iconBg:'#e8f5f2',eyebrow:'Circle All-Access',headline:'You are at the top tier, Maya.',sub:'As a Circle All-Access member you earn 25 points per $1. You have 240 points.',cta1:'Check My Points',cta2:'Pay Credit Card',cta1Style:'btn-black',cta2Style:'btn-outline',activeTier:3,pdpIconHTML:'&#11088;',pdpText:'<strong>Circle All-Access:</strong> You are earning 25 points per $1 on this purchase.',pdpCta:'View Points'},
+  rachel:{iconHTML:'&#127807;',iconBg:'#e8f5ec',eyebrow:'Circle Core Member',headline:'You are $127 from Circle Premier.',sub:'Keep earning and hit $350 in annual spend to unlock Create Your Own Sale Day.',cta1:'Shop and Earn',cta2:'See Premier Benefits',cta1Style:'btn-black',cta2Style:'btn-outline',activeTier:1,pdpIconHTML:'&#127807;',pdpText:'<strong>Circle Core:</strong> You will earn points on this purchase. You are <strong>$127 away from Premier</strong>.',pdpCta:'See Benefits'},
+  jennifer:{iconHTML:'&#128179;',iconBg:'#fff4f0',eyebrow:'Upgrade to All-Access',headline:'One card away from everything.',sub:'You are a Circle Premier member. Apply for the All-Access card to unlock 25x points.',cta1:'Apply for Card',cta2:'See All Benefits',cta1Style:'btn-black',cta2Style:'btn-outline',activeTier:2,pdpIconHTML:'&#128179;',pdpText:'<strong>Circle Premier:</strong> Apply for the All-Access card and get <strong>20% off this purchase</strong> instantly.',pdpCta:'Apply Now'},
+  danielle:{iconHTML:'&#127873;',iconBg:'#f4f0ff',eyebrow:'Join Aura Circle - Free',headline:'Earn rewards from your very first order.',sub:'Sign up in seconds and start earning 5 points per $1 at Aura.',cta1:'Join for Free',cta2:'Learn More',cta1Style:'btn-black',cta2Style:'btn-outline',activeTier:null,pdpIconHTML:'&#127873;',pdpText:'<strong>First order?</strong> Join Aura Circle free today and earn points on this purchase.',pdpCta:'Join Free'}
 };
 
 var PRODUCTS={
-  def:[{img:'0059/604/427/cn59604427',name:'Elation High Rise Flare Pant',price:'$98',member:'Member Price $88',badge:'Member Price',swatches:['#1a1a1a','#2a5a8a']},{img:'0059/604/412/cn59604412',name:'Salutation Stash Pocket 7/8 Tight',price:'$69',member:'Member Price $62',badge:'Sale',badgeSale:true,swatches:['#4a5a3a','#000']},{img:'0059/470/432/cn59470432',name:'Skyline Barrel Pant',price:'$118',member:'Member Price $106',swatches:['#7a4a8a','#2a4a6a']},{img:'0059/485/695/cn59485695',name:'Rainier Run Tight',price:'$88',member:'Member Price $79',badge:'New',swatches:['#1a1a1a','#c0a080']},{img:'0059/472/069/cn59472069',name:'Brooklyn Jogger',price:'$79',member:'Member Price $71',swatches:['#d0b090','#8a6a5a']},{img:'0059/472/076/cn59472076',name:'Trekkie North Jogger',price:'$59',member:'Member Price $53',badge:'Sale',badgeSale:true,swatches:['#4a6a8a','#1a1a1a']},{img:'0059/472/083/cn59472083',name:'Momentum Wide-Leg Pant',price:'$108',member:'Member Price $97',badge:'New',swatches:['#c8b8a0','#6a5a4a']},{img:'0059/472/090/cn59472090',name:'Traverse Legging',price:'$74',member:'Member Price $67',swatches:['#8a5a8a','#1a1a1a']}],
-  maya:[{img:'0059/604/427/cn59604427',name:'Salutation Stash High Rise Legging',price:'$109',member:'Member Price $98',badge:'Encore Pick',swatches:['#1a1a1a','#2a5a8a']},{img:'0059/604/409/cn59604409',name:'Elation Ultra High Rise 7/8 Legging',price:'$89',member:'Member Price $80',badge:'Top Rated',swatches:['#1a1a1a','#7a4a8a']},{img:'0059/538/226/cn59538226',name:'Interval Stash High Rise Legging',price:'$109',member:'Member Price $98',swatches:['#4a5a3a','#1a1a1a']},{img:'0059/606/052/cn59606052',name:'Everyday Studio Tank',price:'$49',member:'Member Price $44',badge:'Best Seller',swatches:['#1a1a1a','#fff']},{img:'0059/927/678/cn59927678',name:'Uptempo Longline Bra',price:'$59',member:'Member Price $53',swatches:['#1a1a1a','#8a2a2a']},{img:'0059/472/090/cn59472090',name:'Traverse Legging',price:'$74',member:'Member Price $67',badge:'New',swatches:['#8a5a8a','#1a1a1a']},{img:'0059/611/218/cn59611218',name:'Pranayama Restore Rib Wrap',price:'$89',member:'Member Price $80',swatches:['#c8b8a0','#1a1a1a']},{img:'0059/538/248/cn59538248',name:'Rainier Run Tight',price:'$88',member:'Member Price $79',badge:'New',swatches:['#1a1a1a','#c0a080']}],
-  rachel:[{img:'0059/606/052/cn59606052',name:'Everyday Studio Tank',price:'$49',member:'Member Price $44',badge:'Top Rated',swatches:['#1a1a1a','#fff']},{img:'0059/611/218/cn59611218',name:'Pranayama Restore Rib Wrap',price:'$89',member:'Member Price $80',swatches:['#c8b8a0','#1a1a1a']},{img:'0059/606/058/cn59606058',name:'Momentum Long Sleeve Top',price:'$59',member:'Member Price $53',badge:'New',swatches:['#fff','#1a1a1a']},{img:'0059/604/427/cn59604427',name:'Elation High Rise Flare Pant',price:'$98',member:'Member Price $88',swatches:['#1a1a1a','#2a5a8a']},{img:'0059/604/409/cn59604409',name:'Elation Ultra High Rise Legging',price:'$89',member:'Member Price $80',badge:'Best Seller',swatches:['#1a1a1a','#7a4a8a']},{img:'0059/368/467/cn59368467',name:'Utility Rain Jacket',price:'$189',member:'Member Price $170',swatches:['#1a1a1a','#4a5a3a']},{img:'0059/538/226/cn59538226',name:'Interval Stash High Rise Legging',price:'$109',member:'Member Price $98',swatches:['#4a5a3a','#1a1a1a']},{img:'0059/472/083/cn59472083',name:'Momentum Wide-Leg Pant',price:'$108',member:'Member Price $97',badge:'New',swatches:['#c8b8a0','#6a5a4a']}],
-  jennifer:[{img:'0059/368/467/cn59368467',name:'Utility Rain Jacket',price:'$189',member:'Member Price $170',badge:'New',swatches:['#1a1a1a','#4a5a3a']},{img:'0059/368/479/cn59368479',name:'Restore Softshell Jacket',price:'$148',member:'Member Price $133',swatches:['#1a1a1a','#2a4a6a']},{img:'0059/368/195/cn59368195',name:'Headlands Trail Jacket',price:'$178',member:'Member Price $160',badge:'Bestseller',swatches:['#4a5a3a','#1a1a1a']},{img:'0059/366/175/cn59366175',name:'Momentum Zip Jacket',price:'$138',member:'Member Price $124',swatches:['#c8b8a0','#1a1a1a']},{img:'0059/611/218/cn59611218',name:'Pranayama Restore Rib Wrap',price:'$89',member:'Member Price $80',badge:'New',swatches:['#c8b8a0','#1a1a1a']},{img:'0059/606/058/cn59606058',name:'Everyday Long Sleeve Top',price:'$59',member:'Member Price $53',swatches:['#fff','#1a1a1a']},{img:'0059/472/083/cn59472083',name:'Momentum Wide-Leg Pant',price:'$108',member:'Member Price $97',swatches:['#c8b8a0','#6a5a4a']},{img:'0059/472/076/cn59472076',name:'Trekkie North Jogger',price:'$59',member:'Member Price $53',badge:'Sale',badgeSale:true,swatches:['#4a6a8a','#1a1a1a']}],
-  danielle:[{img:'0059/470/432/cn59470432',name:'Skyline Barrel Pant',price:'$118',member:'Free Shipping on First Order',badge:'Trending',swatches:['#7a4a8a','#2a4a6a']},{img:'0059/927/680/cn59927680',name:'Venice Wide Leg Pant',price:'$108',member:'Free Shipping on First Order',badge:'New',swatches:['#c8b8a0','#1a1a1a']},{img:'0059/368/467/cn59368467',name:'Utility Rain Jacket',price:'$189',member:'Free Shipping on First Order',badge:'Just Dropped',swatches:['#1a1a1a','#4a5a3a']},{img:'0059/606/052/cn59606052',name:'Everyday Studio Tank',price:'$49',member:'Free Shipping on First Order',badge:'Top Rated',swatches:['#1a1a1a','#fff']},{img:'0059/604/427/cn59604427',name:'Elation High Rise Flare Pant',price:'$98',member:'Free Shipping on First Order',swatches:['#1a1a1a','#2a5a8a']},{img:'0059/611/218/cn59611218',name:'Pranayama Restore Rib Wrap',price:'$89',member:'Free Shipping on First Order',badge:'New',swatches:['#c8b8a0','#8a5a8a']},{img:'0059/485/695/cn59485695',name:'Rainier Run Tight',price:'$88',member:'Free Shipping on First Order',swatches:['#1a1a1a','#c0a080']},{img:'0059/927/678/cn59927678',name:'Uptempo Longline Bra',price:'$59',member:'Free Shipping on First Order',badge:'As Seen On Social',swatches:['#1a1a1a','#8a2a2a']}]
+  def:[{name:'High Rise Flare Performance Pant',price:'$98',member:'Circle Price $88',badge:'Member Price',g:'grad-1',swatches:['#1a1a1a','#2a5a8a']},{name:'Performance Tight 7/8',price:'$69',member:'Circle Price $62',badge:'Sale',badgeSale:true,g:'grad-2',swatches:['#4a5a3a','#000']},{name:'Structured Barrel Pant',price:'$118',member:'Circle Price $106',g:'grad-3',swatches:['#7a4a8a','#2a4a6a']},{name:'Trail Run Tight',price:'$88',member:'Circle Price $79',badge:'New',g:'grad-4',swatches:['#1a1a1a','#c0a080']},{name:'Studio Jogger',price:'$79',member:'Circle Price $71',g:'grad-5',swatches:['#d0b090','#8a6a5a']},{name:'Relaxed Jogger',price:'$59',member:'Circle Price $53',badge:'Sale',badgeSale:true,g:'grad-6',swatches:['#4a6a8a','#1a1a1a']},{name:'Wide Leg Studio Pant',price:'$108',member:'Circle Price $97',badge:'New',g:'grad-1',swatches:['#c8b8a0','#6a5a4a']},{name:'Everyday Legging',price:'$74',member:'Circle Price $67',g:'grad-2',swatches:['#8a5a8a','#1a1a1a']}],
+  maya:[{name:'High Rise Performance Legging',price:'$109',member:'Circle Price $98',badge:'Circle Pick',g:'grad-1',swatches:['#1a1a1a','#2a5a8a']},{name:'Ultra High Rise 7/8 Legging',price:'$89',member:'Circle Price $80',badge:'Top Rated',g:'grad-3',swatches:['#1a1a1a','#7a4a8a']},{name:'Interval High Rise Legging',price:'$109',member:'Circle Price $98',g:'grad-5',swatches:['#4a5a3a','#1a1a1a']},{name:'Everyday Studio Tank',price:'$49',member:'Circle Price $44',badge:'Best Seller',g:'grad-4',swatches:['#1a1a1a','#fff']},{name:'Longline Sports Bra',price:'$59',member:'Circle Price $53',g:'grad-6',swatches:['#1a1a1a','#8a2a2a']},{name:'Everyday Legging',price:'$74',member:'Circle Price $67',badge:'New',g:'grad-2',swatches:['#8a5a8a','#1a1a1a']},{name:'Studio Wrap Top',price:'$89',member:'Circle Price $80',g:'grad-3',swatches:['#c8b8a0','#1a1a1a']},{name:'Trail Run Tight',price:'$88',member:'Circle Price $79',badge:'New',g:'grad-1',swatches:['#1a1a1a','#c0a080']}],
+  rachel:[{name:'Everyday Studio Tank',price:'$49',member:'Circle Price $44',badge:'Top Rated',g:'grad-4',swatches:['#1a1a1a','#fff']},{name:'Studio Wrap Top',price:'$89',member:'Circle Price $80',g:'grad-3',swatches:['#c8b8a0','#1a1a1a']},{name:'Long Sleeve Studio Top',price:'$59',member:'Circle Price $53',badge:'New',g:'grad-5',swatches:['#fff','#1a1a1a']},{name:'High Rise Flare Pant',price:'$98',member:'Circle Price $88',g:'grad-1',swatches:['#1a1a1a','#2a5a8a']},{name:'Ultra High Rise Legging',price:'$89',member:'Circle Price $80',badge:'Best Seller',g:'grad-2',swatches:['#1a1a1a','#7a4a8a']},{name:'Performance Rain Jacket',price:'$189',member:'Circle Price $170',g:'grad-8',swatches:['#1a1a1a','#4a5a3a']},{name:'Interval Legging',price:'$109',member:'Circle Price $98',g:'grad-5',swatches:['#4a5a3a','#1a1a1a']},{name:'Wide Leg Studio Pant',price:'$108',member:'Circle Price $97',badge:'New',g:'grad-6',swatches:['#c8b8a0','#6a5a4a']}],
+  jennifer:[{name:'Performance Rain Jacket',price:'$189',member:'Circle Price $170',badge:'New',g:'grad-8',swatches:['#1a1a1a','#4a5a3a']},{name:'Softshell Performance Jacket',price:'$148',member:'Circle Price $133',g:'grad-7',swatches:['#1a1a1a','#2a4a6a']},{name:'Trail Jacket',price:'$178',member:'Circle Price $160',badge:'Bestseller',g:'grad-8',swatches:['#4a5a3a','#1a1a1a']},{name:'Zip Studio Jacket',price:'$138',member:'Circle Price $124',g:'grad-9',swatches:['#c8b8a0','#1a1a1a']},{name:'Studio Wrap Top',price:'$89',member:'Circle Price $80',badge:'New',g:'grad-3',swatches:['#c8b8a0','#1a1a1a']},{name:'Everyday Long Sleeve Top',price:'$59',member:'Circle Price $53',g:'grad-4',swatches:['#fff','#1a1a1a']},{name:'Wide Leg Studio Pant',price:'$108',member:'Circle Price $97',g:'grad-6',swatches:['#c8b8a0','#6a5a4a']},{name:'Relaxed Jogger',price:'$59',member:'Circle Price $53',badge:'Sale',badgeSale:true,g:'grad-5',swatches:['#4a6a8a','#1a1a1a']}],
+  danielle:[{name:'Structured Barrel Pant',price:'$118',member:'Free Shipping on First Order',badge:'Trending',g:'grad-3',swatches:['#7a4a8a','#2a4a6a']},{name:'Wide Leg Studio Pant',price:'$108',member:'Free Shipping on First Order',badge:'New',g:'grad-6',swatches:['#c8b8a0','#1a1a1a']},{name:'Performance Rain Jacket',price:'$189',member:'Free Shipping on First Order',badge:'Just Dropped',g:'grad-8',swatches:['#1a1a1a','#4a5a3a']},{name:'Everyday Studio Tank',price:'$49',member:'Free Shipping on First Order',badge:'Top Rated',g:'grad-4',swatches:['#1a1a1a','#fff']},{name:'High Rise Flare Pant',price:'$98',member:'Free Shipping on First Order',g:'grad-1',swatches:['#1a1a1a','#2a5a8a']},{name:'Studio Wrap Top',price:'$89',member:'Free Shipping on First Order',badge:'New',g:'grad-3',swatches:['#c8b8a0','#8a5a8a']},{name:'Trail Run Tight',price:'$88',member:'Free Shipping on First Order',g:'grad-5',swatches:['#1a1a1a','#c0a080']},{name:'Longline Sports Bra',price:'$59',member:'Free Shipping on First Order',badge:'As Seen On Social',g:'grad-2',swatches:['#1a1a1a','#8a2a2a']}]
 };
 
 var PERSONAS=[
   {key:'def',name:'Default View',title:'Anonymous - no identity match',avatar:'&#127760;',bg:'#f0ece8',tags:[{l:'No Match',c:''}]},
   {key:'maya',name:'Maya Chen, 34',title:'Authenticated - All-Access - SF, CA',avatar:'&#129338;',bg:'#e8f5f2',tags:[{l:'Active Achiever',c:'segment'},{l:'Authenticated',c:'state'}]},
-  {key:'rachel',name:'Rachel Torres, 38',title:'Authenticated - Core Member - Denver, CO',avatar:'&#127807;',bg:'#e8f5ec',tags:[{l:'Core Member',c:'segment'},{l:'Authenticated',c:'state'}]},
+  {key:'rachel',name:'Rachel Torres, 38',title:'Authenticated - Circle Core - Denver, CO',avatar:'&#127807;',bg:'#e8f5ec',tags:[{l:'Circle Core',c:'segment'},{l:'Authenticated',c:'state'}]},
   {key:'jennifer',name:'Jennifer Walsh, 42',title:'Unauthenticated - Known Lapsed - Chicago',avatar:'&#128105;',bg:'#fff4f0',tags:[{l:'Weekend Warrior',c:'segment'},{l:'Unauthenticated',c:'state'}]},
   {key:'danielle',name:'Danielle Brooks, 29',title:'Full Prospect - New Visitor - Austin TX',avatar:'&#10024;',bg:'#f4f0ff',tags:[{l:'Newcomer',c:'segment'},{l:'Full Prospect',c:'state'}]}
 ];
@@ -1029,13 +1015,13 @@ var TIMELINE_STAGES={
   danielle:{active:1,signals:['match_type: probabilistic','confidence_score: 3','age_range: 25-34','in_market_flag: Y']},
   jennifer:{active:2,signals:['match_type: deterministic','confidence_score: 2','last_purchase_days: 47','email_engagement: Lapsed']},
   maya:{active:3,signals:['match_type: deterministic','confidence_score: 1','brand_loyalty_score: 5','purchase_frequency: High']},
-  rachel:{active:3,signals:['match_type: deterministic','confidence_score: 1','lifestyle_segment: Core Encore Member','last_purchase_days: 62']}
+  rachel:{active:3,signals:['match_type: deterministic','confidence_score: 1','lifestyle_segment: Circle Core Member','last_purchase_days: 62']}
 };
 
 var OFFER_LIGHTBOX={
-  maya:{name:'Welcome back, Maya',headline:'Your extra 15% off is waiting.',desc:'As one of our most loyal members, you get early access to new leggings and bras plus an exclusive discount at checkout.',code:'MAYA15'},
-  rachel:{name:'You are almost there, Rachel',headline:'$127 more to unlock Premier.',desc:'Premier members get Create Your Own Sale Day, extended returns, and birthday bonuses. Here is 15% off to help get you there.',code:'RACHEL15'},
-  jennifer:{name:'We have missed you, Jennifer',headline:'20% off to welcome you back.',desc:'It has been a while and we have new styles we think you will love. From versatile jackets to Athleta Girl for your little one.',code:'WELCOME20'}
+  maya:{name:'Welcome back, Maya',headline:'Your extra 15% off is waiting.',desc:'As one of our most loyal members, you get early access to new arrivals plus an exclusive discount at checkout.',code:'MAYA15'},
+  rachel:{name:'You are almost there, Rachel',headline:'$127 more to unlock Circle Premier.',desc:'Premier members get Create Your Own Sale Day, extended returns, and birthday bonuses. Here is 15% off to help get you there.',code:'RACHEL15'},
+  jennifer:{name:'We have missed you, Jennifer',headline:'20% off to welcome you back.',desc:'It has been a while and we have new styles we think you will love.',code:'WELCOME20'}
 };
 
 var CONF_EXPLAIN={
@@ -1045,27 +1031,42 @@ var CONF_EXPLAIN={
 };
 
 var CART_CONFIG={
-  def:{itemName:'Elation High Rise Flare Pant',itemDetail:'Size: S - Color: True Black - Qty: 1',itemPrice:'$98.00',itemMember:'Member Price $88.00',itemImg:'0059/604/427/cn59604427',pointsText:'<strong>Join Encore free</strong> and earn points on this purchase.',recsTitle:'More Styles We Think You\'ll Love',subtotal:'$98.00',recs:[{img:'0059/604/409/cn59604409',name:'Salutation Tight 7/8',price:'$98'},{img:'0059/470/432/cn59470432',name:'Skyline Barrel Pant',price:'$118'},{img:'0059/472/069/cn59472069',name:'Brooklyn Jogger',price:'$79'}]},
-  maya:{itemName:'Salutation Stash Pocket II 7/8 Tight',itemDetail:'Size: S - Color: True Black - Qty: 1',itemPrice:'$109.00',itemMember:'Encore Member Price: $98.10',itemImg:'0059/604/427/cn59604427',pointsText:'<strong>All-Access member:</strong> You will earn <strong>545 points</strong> on this order.',recsTitle:'Because You Loved These',subtotal:'$98.10',recs:[{img:'0059/927/678/cn59927678',name:'Uptempo Longline Bra',price:'$59'},{img:'0059/472/090/cn59472090',name:'Traverse Legging',price:'$74'},{img:'0059/611/218/cn59611218',name:'Pranayama Rib Wrap',price:'$89'}]},
-  rachel:{itemName:'Everyday Studio Tank',itemDetail:'Size: M - Color: Black - Qty: 1',itemPrice:'$49.00',itemMember:'Core Member Price: $44.10',itemImg:'0059/606/052/cn59606052',pointsText:'<strong>Core member:</strong> This purchase earns <strong>245 points</strong>. You will be <strong>$78 from Premier</strong> after this order.',recsTitle:'Earn Points on These Too',subtotal:'$44.10',recs:[{img:'0059/604/427/cn59604427',name:'Elation Flare Pant',price:'$98'},{img:'0059/368/467/cn59368467',name:'Utility Rain Jacket',price:'$189'},{img:'0059/472/090/cn59472090',name:'Traverse Legging',price:'$74'}]},
-  jennifer:{itemName:'Restore Softshell Jacket',itemDetail:'Size: M - Color: Black - Qty: 1',itemPrice:'$148.00',itemMember:'Premier Member Price: $133.20',itemImg:'0059/368/467/cn59368467',pointsText:'<strong>Welcome back, Jennifer.</strong> This purchase earns <strong>740 points</strong> toward your next reward.',recsTitle:'Complete the Look',subtotal:'$133.20',recs:[{img:'0059/611/218/cn59611218',name:'Pranayama Rib Wrap',price:'$89'},{img:'0059/472/083/cn59472083',name:'Momentum Wide-Leg Pant',price:'$108'},{img:'0059/606/058/cn59606058',name:'Everyday L/S Top',price:'$59'}]},
-  danielle:{itemName:'Skyline Barrel Pant',itemDetail:'Size: S - Color: Deep Plum - Qty: 1',itemPrice:'$118.00',itemMember:'Free shipping on your first order',itemImg:'0059/470/432/cn59470432',pointsText:'<strong>Join Encore free</strong> - earn points starting with this order.',recsTitle:'Trending With This',subtotal:'$118.00',recs:[{img:'0059/927/680/cn59927680',name:'Venice Wide Leg Pant',price:'$108'},{img:'0059/606/052/cn59606052',name:'Everyday Studio Tank',price:'$49'},{img:'0059/368/467/cn59368467',name:'Utility Rain Jacket',price:'$189'}]}
+  def:{itemName:'High Rise Flare Performance Pant',itemDetail:'Size: S - Color: Midnight Black - Qty: 1',itemPrice:'$98.00',itemMember:'Circle Member Price $88.00',itemGrad:'grad-1',pointsText:'<strong>Join Aura Circle free</strong> and earn points on this purchase.',recsTitle:'Styles We Think You\'ll Love',subtotal:'$98.00',recs:[{name:'Performance Tight 7/8',price:'$98',g:'grad-2'},{name:'Barrel Leg Pant',price:'$118',g:'grad-3'},{name:'Studio Jogger',price:'$79',g:'grad-5'}]},
+  maya:{itemName:'High Rise Performance Tight 7/8',itemDetail:'Size: S - Color: Midnight Black - Qty: 1',itemPrice:'$109.00',itemMember:'Circle All-Access Price: $98.10',itemGrad:'grad-1',pointsText:'<strong>Circle All-Access:</strong> You will earn <strong>545 points</strong> on this order.',recsTitle:'Because You Loved These',subtotal:'$98.10',recs:[{name:'Longline Sports Bra',price:'$59',g:'grad-6'},{name:'Everyday Legging',price:'$74',g:'grad-2'},{name:'Studio Wrap Top',price:'$89',g:'grad-3'}]},
+  rachel:{itemName:'Everyday Studio Tank',itemDetail:'Size: M - Color: White - Qty: 1',itemPrice:'$49.00',itemMember:'Circle Core Price: $44.10',itemGrad:'grad-4',pointsText:'<strong>Circle Core:</strong> This purchase earns <strong>245 points</strong>. You will be <strong>$78 from Premier</strong> after this order.',recsTitle:'Earn Points on These Too',subtotal:'$44.10',recs:[{name:'High Rise Flare Pant',price:'$98',g:'grad-1'},{name:'Performance Rain Jacket',price:'$189',g:'grad-8'},{name:'Everyday Legging',price:'$74',g:'grad-2'}]},
+  jennifer:{itemName:'Performance Softshell Jacket',itemDetail:'Size: M - Color: Black - Qty: 1',itemPrice:'$148.00',itemMember:'Circle Premier Price: $133.20',itemGrad:'grad-7',pointsText:'<strong>Welcome back, Jennifer.</strong> This purchase earns <strong>740 points</strong> toward your next reward.',recsTitle:'Complete the Look',subtotal:'$133.20',recs:[{name:'Studio Wrap Top',price:'$89',g:'grad-3'},{name:'Wide Leg Studio Pant',price:'$108',g:'grad-6'},{name:'Everyday Long Sleeve Top',price:'$59',g:'grad-4'}]},
+  danielle:{itemName:'Structured Barrel Leg Pant',itemDetail:'Size: S - Color: Deep Plum - Qty: 1',itemPrice:'$118.00',itemMember:'Free shipping on your first order',itemGrad:'grad-3',pointsText:'<strong>Join Aura Circle free</strong> - earn points starting with this order.',recsTitle:'Trending With This',subtotal:'$118.00',recs:[{name:'Wide Leg Studio Pant',price:'$108',g:'grad-6'},{name:'Everyday Studio Tank',price:'$49',g:'grad-4'},{name:'Performance Rain Jacket',price:'$189',g:'grad-8'}]}
 };
 
 var CM_COPY={
-  urgent:['Athleta: Hi Jennifer! We have missed you. New jackets just dropped and we are holding 20% off just for you. Shop now > athleta.attn.tv/jennifer Code: WELCOME20','Athleta: Jennifer, your 20% off is waiting. The jackets you love are back but not for long > athleta.attn.tv/jennifer Code: WELCOME20'],
-  shorter:['Athleta: Jennifer, we miss you! 20% off new jackets today only > athleta.attn.tv/jennifer Code: WELCOME20','Athleta: Your 20% off expires soon. New jackets just in > athleta.attn.tv/jennifer Code: WELCOME20'],
-  casual:['Athleta: Hey Jennifer! Long time no see. New jackets plus 20% off just for you > athleta.attn.tv/jennifer Code: WELCOME20','Athleta: Jennifer! Your fave jackets got an update. 20% off saved for you > athleta.attn.tv/jennifer Code: WELCOME20']
+  urgent:['Aura: Hi Jennifer! We have missed you. New jackets just dropped and we are holding 20% off just for you. Shop now > aura.com/jennifer Code: WELCOME20','Aura: Jennifer, your 20% off is waiting. The jackets you love are back but not for long > aura.com/jennifer Code: WELCOME20'],
+  shorter:['Aura: Jennifer, we miss you! 20% off new jackets today only > aura.com/jennifer Code: WELCOME20','Aura: Your 20% off expires soon. New jackets just in > aura.com/jennifer Code: WELCOME20'],
+  casual:['Aura: Hey Jennifer! Long time no see. New jackets plus 20% off just for you > aura.com/jennifer Code: WELCOME20','Aura: Jennifer! Your fave jackets got an update. 20% off saved for you > aura.com/jennifer Code: WELCOME20']
 };
 
-// ── CHAT OPENERS ──────────────────────────────────────────────
-var CHAT_OPENERS={
-  def:'Hi, welcome to Athleta! What can I help you shop for today?',
-  maya:'Maya Chen resolved — deterministic, score 1, high-LTV Encore member, Leggings affinity. Ask how her signals drive this page.',
-  rachel:'Rachel Torres — score 1, Core member, $127 from Premier. Ask how her loyalty gap is driving her experience.',
-  jennifer:'Jennifer Walsh — score 2, known unauthenticated, lapsed 47 days, Jackets affinity. Ask about the win-back logic.',
-  danielle:'Danielle Brooks — probabilistic only, score 3, no PII. Ask what personalization is possible at this confidence level.'
-};
+// ── CONCIERGE ─────────────────────────────────────────────────
+function getConciergeOpener(key){
+  if(key==='maya') return 'Welcome back, Maya! So good to see you again. What can I help you shop for today?';
+  if(key==='rachel') return 'Hi Rachel, welcome back! What can I help you shop for today?';
+  if(key==='jennifer') return 'Hi Jennifer, so glad you are back! What can I help you shop for today?';
+  if(key==='danielle') return 'Hi, welcome to Aura! Tell me a little about yourself and I can help find the perfect styles for you.';
+  return 'Hi, welcome to Aura! Tell me a little about yourself and I can help find the perfect styles for you.';
+}
+
+function getChatSystem(){
+  var d=(PAYLOADS[activeKey]&&PAYLOADS[activeKey].d.response==='match')?PAYLOADS[activeKey].d.data:null;
+  var base='You are the Aura Style Concierge — a warm, knowledgeable associate who helps customers find the perfect activewear from Aura, a premium performance apparel brand. You are friendly, encouraging, and genuinely helpful. Keep responses to 2-4 sentences. Never be salesy or pushy. Help customers find the right product for their activity or fit needs, and explain Aura Circle loyalty perks when relevant. Aura\'s product range includes: leggings, sports bras, jackets, joggers, dresses, swim, and accessories. Always stay in character — never mention Merkury, identity resolution, data, or technical terms. Strip all markdown from responses.';
+  if(!d) return base+'\n\nNew guest visitor — no purchase history. Ask friendly questions to learn about their lifestyle and what they are shopping for.';
+  var loyalty={1:'Circle All-Access (top tier, 25pts per $1)',2:'Circle Premier',3:'Circle Core'};
+  var tier=loyalty[d.confidence_score]||'Aura Circle Member';
+  return base+'\n\nCustomer profile (use naturally, never recite):\n- Name: '+(d.first_name||'guest')+'\n- Aura Circle tier: '+tier+'\n- Top categories: '+d.category_affinity_1+', '+d.category_affinity_2+'\n- Lifestyle: '+d.lifestyle_segment+'\n- Days since last purchase: '+d.last_purchase_days+'\n- In-market: '+d.in_market_flag+'\n\nPersonalize naturally. If lapsed (days > 30), warmly acknowledge it has been a while. Reference Circle tier when discussing perks.';
+}
+
+function updateChatContext(){
+  var label=document.getElementById('chat-context-label');
+  var map={def:'Guest',maya:'Maya — Circle All-Access',rachel:'Rachel — Circle Core',jennifer:'Jennifer — Circle Premier',danielle:'New Visitor'};
+  if(label)label.textContent=map[activeKey]||'Guest';
+}
 
 // ── STATE ─────────────────────────────────────────────────────
 var activeKey='def', panelOpen=false, timelineOpen=false, chatOpen=false;
@@ -1093,7 +1094,7 @@ function merkuryResolve(key){
 // ── PAGE ──────────────────────────────────────────────────────
 function showPage(n){
   document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active');});
-  var p=document.getElementById('page-'+n); if(p)p.classList.add('active');
+  var p=document.getElementById('page-'+n);if(p)p.classList.add('active');
   window.scrollTo({top:0,behavior:'instant'});
   updatePageIndicator();
   if(activeKey!=='def')setTimeout(function(){applyContent(activeKey);},60);
@@ -1103,7 +1104,6 @@ function showPage(n){
   if(n==='pdp')setTimeout(wireATCButton,100);
   if(n==='cart')populateCartPage();
 }
-
 function goToCart(){populateCartPage();showPage('cart');}
 function set(id,val){var el=document.getElementById(id);if(el)el.textContent=val||'';}
 function setHTML(id,val){var el=document.getElementById(id);if(el)el.innerHTML=val||'';}
@@ -1111,72 +1111,69 @@ function setHTML(id,val){var el=document.getElementById(id);if(el)el.innerHTML=v
 function applyContent(key){
   var v=CONTENT[key]||CONTENT['def'];
   setHTML('promo-bar-text',v.promoBar);
-  var ey=document.getElementById('hero-eyebrow'); if(ey){ey.style.display=v.heroEyebrow?'block':'none';ey.textContent=v.heroEyebrow;}
-  set('hero-h1-light',v.heroH1Light); set('hero-h1-bold',v.heroH1Bold); set('hero-sub',v.heroSub);
-  var hc=document.getElementById('hero-cta1'); if(hc)hc.textContent=v.heroCta1;
+  var ey=document.getElementById('hero-eyebrow');if(ey){ey.style.display=v.heroEyebrow?'block':'none';ey.textContent=v.heroEyebrow;}
+  set('hero-h1-light',v.heroH1Light);set('hero-h1-bold',v.heroH1Bold);set('hero-sub',v.heroSub);
+  var hc=document.getElementById('hero-cta1');if(hc)hc.textContent=v.heroCta1;
   setHTML('hero-product-label',v.heroProductLabel);
   set('home-cat-title',v.homeCatTitle);
   for(var i=0;i<4;i++){set('cat-label-'+(i+1),v.catLabels[i]);set('cat-sub-'+(i+1),v.catSubs[i]);}
-  set('pb-eyebrow',v.pbEyebrow); set('pb-h2',v.pbH2); set('pb-p',v.pbP);
-  var pc=document.getElementById('pb-cta'); if(pc)pc.textContent=v.pbCta;
-  set('life-title',v.lifeTitle); set('life-main-label',v.lifeMainLabel); set('life-main-sub',v.lifeMainSub);
+  set('pb-eyebrow',v.pbEyebrow);set('pb-h2',v.pbH2);set('pb-p',v.pbP);
+  var pc=document.getElementById('pb-cta');if(pc)pc.textContent=v.pbCta;
+  set('life-title',v.lifeTitle);set('life-main-label',v.lifeMainLabel);set('life-main-sub',v.lifeMainSub);
   for(var j=0;j<4;j++){set('life-card-'+(j+1),v.lifeCards[j]);}
-  set('loyalty-title',v.loyaltyTitle); set('loyalty-sub',v.loyaltySub); set('encore-title',v.encoreTitle);
-  set('cat-page-title',v.catPageTitle); set('cat-page-name',v.catPageTitle); set('cat-page-sub',v.catPageSub); set('cat-result-count',v.catResultCount);
-  set('pdp-title',v.pdpTitle); set('pdp-desc',v.pdpDesc); set('pdp-recs-title',v.pdpRecsTitle);
-  var atc=document.getElementById('pdp-atc-btn'); if(atc)atc.textContent=v.pdpAtcBtn;
+  set('loyalty-title',v.loyaltyTitle);set('loyalty-sub',v.loyaltySub);set('encore-title',v.encoreTitle);
+  set('cat-page-title',v.catPageTitle);set('cat-page-name',v.catPageTitle);set('cat-page-sub',v.catPageSub);set('cat-result-count',v.catResultCount);
+  set('pdp-title',v.pdpTitle);set('pdp-desc',v.pdpDesc);set('pdp-recs-title',v.pdpRecsTitle);
+  var atc=document.getElementById('pdp-atc-btn');if(atc)atc.textContent=v.pdpAtcBtn;
   set('pdp-eyebrow',v.pdpEyebrow);
-  var pbc=document.getElementById('pdp-breadcrumb-cat'); if(pbc)pbc.textContent=v.pdpBreadcrumbCat;
-  renderProductGrid(key); applyLoyalty(key);
+  var pbc=document.getElementById('pdp-breadcrumb-cat');if(pbc)pbc.textContent=v.pdpBreadcrumbCat;
+  renderProductGrid(key);applyLoyalty(key);
 }
 
 function renderProductGrid(key){
-  var grid=document.getElementById('cat-product-grid'); if(!grid)return;
+  var grid=document.getElementById('cat-product-grid');if(!grid)return;
   var products=PRODUCTS[key]||PRODUCTS['def'];
   grid.innerHTML=products.map(function(p){
     var badge=p.badge?'<div class="pt-badge'+(p.badgeSale?' sale':'')+'">'+p.badge+'</div>':'';
     var swatches=(p.swatches||[]).map(function(c){return '<div class="pt-swatch" style="background:'+c+'"></div>';}).join('');
-    return '<div class="product-tile" onclick="showPage(\'pdp\')">'+'<div class="pt-photo"><img src="https://athleta.gap.com/webcontent/'+p.img+'.jpg" alt="" onerror="this.remove()">'+badge+'</div>'+'<div class="pt-colors">'+swatches+'</div>'+'<div class="pt-name">'+p.name+'</div>'+'<div class="pt-price">'+p.price+'</div>'+'<div class="pt-member-price">'+p.member+'</div></div>';
+    return '<div class="product-tile" onclick="showPage(\'pdp\')">'+'<div class="pt-photo '+p.g+'">'+badge+'</div>'+'<div class="pt-colors">'+swatches+'</div>'+'<div class="pt-name">'+p.name+'</div>'+'<div class="pt-price">'+p.price+'</div>'+'<div class="pt-member-price">'+p.member+'</div></div>';
   }).join('');
 }
 
 function applyLoyalty(key){
   var v=LOYALTY[key]||LOYALTY['def'];
-  var icon=document.getElementById('cat-lb-icon'); if(icon){icon.innerHTML=v.iconHTML;icon.style.background=v.iconBg;}
-  set('cat-lb-eyebrow',v.eyebrow); set('cat-lb-headline',v.headline); set('cat-lb-sub',v.sub);
-  var c1=document.getElementById('cat-lb-cta1'); if(c1){c1.textContent=v.cta1;c1.className='btn-pill '+v.cta1Style+' btn-sm';}
-  var c2=document.getElementById('cat-lb-cta2'); if(c2){c2.textContent=v.cta2;c2.className='btn-pill '+v.cta2Style+' btn-sm';}
+  var icon=document.getElementById('cat-lb-icon');if(icon){icon.innerHTML=v.iconHTML;icon.style.background=v.iconBg;}
+  set('cat-lb-eyebrow',v.eyebrow);set('cat-lb-headline',v.headline);set('cat-lb-sub',v.sub);
+  var c1=document.getElementById('cat-lb-cta1');if(c1){c1.textContent=v.cta1;c1.className='btn-pill '+v.cta1Style+' btn-sm';}
+  var c2=document.getElementById('cat-lb-cta2');if(c2){c2.textContent=v.cta2;c2.className='btn-pill '+v.cta2Style+' btn-sm';}
   [1,2,3].forEach(function(n){var t=document.getElementById('cat-tier-'+n);if(t)t.classList.toggle('active',v.activeTier===n);});
-  var picon=document.getElementById('pln-icon'); if(picon)picon.innerHTML=v.pdpIconHTML;
-  setHTML('pln-text',v.pdpText); set('pln-cta',v.pdpCta);
+  var picon=document.getElementById('pln-icon');if(picon)picon.innerHTML=v.pdpIconHTML;
+  setHTML('pln-text',v.pdpText);set('pln-cta',v.pdpCta);
 }
 
 // ── CART ──────────────────────────────────────────────────────
 function populateCartPage(){
   var cfg=CART_CONFIG[activeKey]||CART_CONFIG['def'];
-  var empty=document.getElementById('cart-page-empty-state'), filled=document.getElementById('cart-page-filled-state');
-  var recsGrid=document.getElementById('cart-page-recs-grid'), recsTitle=document.getElementById('cart-page-recs-title');
+  var empty=document.getElementById('cart-page-empty-state'),filled=document.getElementById('cart-page-filled-state');
+  var recsGrid=document.getElementById('cart-page-recs-grid'),recsTitle=document.getElementById('cart-page-recs-title');
   if(recsTitle)recsTitle.textContent=cfg.recsTitle;
-  if(recsGrid)recsGrid.innerHTML=cfg.recs.map(function(r){return '<div class="cart-rec-tile" onclick="showPage(\'pdp\')">'+'<div class="cart-rec-tile-img"><img src="https://athleta.gap.com/webcontent/'+r.img+'.jpg" alt="" onerror="this.remove()"></div>'+'<div class="cart-rec-tile-name">'+r.name+'</div>'+'<div class="cart-rec-tile-price">'+r.price+'</div></div>';}).join('');
+  if(recsGrid)recsGrid.innerHTML=cfg.recs.map(function(r){return '<div class="cart-rec-tile" onclick="showPage(\'pdp\')">'+'<div class="cart-rec-tile-img '+r.g+'"></div>'+'<div class="cart-rec-tile-name">'+r.name+'</div>'+'<div class="cart-rec-tile-price">'+r.price+'</div></div>';}).join('');
   if(cartHasItem){
-    if(empty)empty.style.display='none'; if(filled)filled.style.display='block';
-    var img=document.getElementById('cart-pg-img'); if(img)img.src='https://athleta.gap.com/webcontent/'+cfg.itemImg+'.jpg';
-    set('cart-pg-name',cfg.itemName); set('cart-pg-detail',cfg.itemDetail);
-    set('cart-pg-price',cfg.itemPrice); set('cart-pg-member',cfg.itemMember);
-    set('cart-pg-total',cfg.subtotal); set('cart-pg-subtotal',cfg.subtotal); set('cart-pg-est-total',cfg.subtotal);
+    if(empty)empty.style.display='none';if(filled)filled.style.display='block';
+    var imgDiv=document.getElementById('cart-pg-img-div');
+    if(!imgDiv){var item=document.querySelector('.cart-page-item-img');if(item){item.className='cart-page-item-img '+cfg.itemGrad;}}
+    set('cart-pg-name',cfg.itemName);set('cart-pg-detail',cfg.itemDetail);
+    set('cart-pg-price',cfg.itemPrice);set('cart-pg-member',cfg.itemMember);
+    set('cart-pg-total',cfg.subtotal);set('cart-pg-subtotal',cfg.subtotal);set('cart-pg-est-total',cfg.subtotal);
     set('cart-pg-recs-title',cfg.recsTitle);
     var rg=document.getElementById('cart-pg-recs-grid');
-    if(rg)rg.innerHTML=cfg.recs.map(function(r){return '<div class="cart-rec-tile" onclick="showPage(\'pdp\')">'+'<div class="cart-rec-tile-img"><img src="https://athleta.gap.com/webcontent/'+r.img+'.jpg" alt="" onerror="this.remove()"></div>'+'<div class="cart-rec-tile-name">'+r.name+'</div>'+'<div class="cart-rec-tile-price">'+r.price+'</div></div>';}).join('');
-  } else {
-    if(empty)empty.style.display='block'; if(filled)filled.style.display='none';
-    set('cart-pg-subtotal','$0.00'); set('cart-pg-est-total','$0.00');
-  }
-  var loy=document.getElementById('cart-pg-loyalty-text');
-  if(loy){var vl=LOYALTY[activeKey]||LOYALTY['def'];loy.innerHTML=vl.pdpText;}
+    if(rg)rg.innerHTML=cfg.recs.map(function(r){return '<div class="cart-rec-tile" onclick="showPage(\'pdp\')">'+'<div class="cart-rec-tile-img '+r.g+'"></div>'+'<div class="cart-rec-tile-name">'+r.name+'</div>'+'<div class="cart-rec-tile-price">'+r.price+'</div></div>';}).join('');
+  }else{if(empty)empty.style.display='block';if(filled)filled.style.display='none';set('cart-pg-subtotal','$0.00');set('cart-pg-est-total','$0.00');}
+  var loy=document.getElementById('cart-pg-loyalty-text');if(loy){var vl=LOYALTY[activeKey]||LOYALTY['def'];loy.innerHTML=vl.pdpText;}
 }
 function emptyCart(){cartHasItem=false;populateCartPage();}
 function applyPromo(){
-  var inp=document.getElementById('cart-promo-input'), msg=document.getElementById('cart-promo-msg'); if(!inp||!msg)return;
+  var inp=document.getElementById('cart-promo-input'),msg=document.getElementById('cart-promo-msg');if(!inp||!msg)return;
   var code=inp.value.trim().toUpperCase();
   var valid={MAYA15:'15% off applied!',RACHEL15:'15% off applied!',WELCOME20:'20% off applied!',FREESHIP:'Free shipping applied!'};
   if(valid[code]){msg.textContent=valid[code];msg.style.color='#1a5f6a';msg.style.display='block';}
@@ -1193,56 +1190,41 @@ function closeTimeline(){timelineOpen=false;var p=document.getElementById('id-ti
 function updateTimeline(key){
   var cfg=TIMELINE_STAGES[key]||TIMELINE_STAGES['def'];
   for(var i=0;i<4;i++){var s=document.getElementById('itp-s'+i);if(!s)continue;s.classList.remove('active','passed');if(i===cfg.active)s.classList.add('active');else if(i<cfg.active)s.classList.add('passed');}
-  var list=document.getElementById('itp-signals-list'), card=document.getElementById('itp-merkury-card');
-  if(list&&card){
-    if(cfg.signals.length){card.style.display='block';list.innerHTML=cfg.signals.map(function(s){var parts=s.split(': ');return '<div class="itp-signal"><div class="itp-signal-dot"></div>'+parts[0]+': <strong>'+(parts[1]||'')+'</strong></div>';}).join('');}
-    else{card.style.display='none';}
-  }
+  var list=document.getElementById('itp-signals-list'),card=document.getElementById('itp-merkury-card');
+  if(list&&card){if(cfg.signals.length){card.style.display='block';list.innerHTML=cfg.signals.map(function(s){var parts=s.split(': ');return '<div class="itp-signal"><div class="itp-signal-dot"></div>'+parts[0]+': <strong>'+(parts[1]||'')+'</strong></div>';}).join('');}else{card.style.display='none';}}
 }
 
-// ── AI CHATBOT ────────────────────────────────────────────────
-function getChatSystem(){
-  var d=(PAYLOADS[activeKey]&&PAYLOADS[activeKey].d.response==='match')?PAYLOADS[activeKey].d.data:null;
-  if(!d) return 'You are Merkury AI, a concise assistant explaining Merkury identity resolution to a marketing audience. This visitor is ANONYMOUS — no match. Answer in 1-3 sentences only. Be specific.';
-  return 'You are Merkury AI, a concise assistant explaining Merkury identity resolution to a marketing audience. Answer in 1-3 sentences only. Be specific and cite field names.\n\nVisitor: match_type='+d.match_type+', confidence='+d.confidence_score+', affinity1='+d.category_affinity_1+', affinity2='+d.category_affinity_2+', segment='+d.lifestyle_segment+', purchase_freq='+d.purchase_frequency+', last_purchase_days='+d.last_purchase_days+', email_engagement='+d.email_engagement+', loyalty='+d.brand_loyalty_score+', in_market='+d.in_market_flag+', income='+d.household_income_range+', city='+d.city+' '+d.state;
-}
-
+// ── CHAT ──────────────────────────────────────────────────────
 function toggleChat(){
   chatOpen=!chatOpen;
-  var w=document.getElementById('chat-window'); if(w)w.classList.toggle('open',chatOpen);
-  if(chatOpen&&chatHistory.length===0)initChat();
+  var w=document.getElementById('chat-window');if(w)w.classList.toggle('open',chatOpen);
+  if(chatOpen&&chatHistory.length===0)initChat(activeKey);
 }
-function initChat(){
-  chatHistory=[];
-  var msgs=document.getElementById('chat-messages'); if(msgs)msgs.innerHTML='';
+function initChat(key){
+  key=key||activeKey;chatHistory=[];
+  var msgs=document.getElementById('chat-messages');if(msgs)msgs.innerHTML='';
   updateChatContext();
-  var opener=CHAT_OPENERS[activeKey]||'Hi, welcome to Athleta! What can I help you shop for today?';
-  appendChatMsg('bot',opener);
-}
-function updateChatContext(){
-  var label=document.getElementById('chat-context-label');
-  var map={def:'Anonymous',maya:'Maya Chen — Score 1',rachel:'Rachel Torres — Score 1',jennifer:'Jennifer Walsh — Score 2',danielle:'Danielle Brooks — Score 3'};
-  if(label)label.textContent=map[activeKey]||'Anonymous';
+  appendChatMsg('bot',getConciergeOpener(key));
 }
 function appendChatMsg(role,text){
-  var msgs=document.getElementById('chat-messages'); if(!msgs)return;
-  var div=document.createElement('div'); div.className='chat-msg '+role;
-  var bubble=document.createElement('div'); bubble.className='chat-msg-bubble'; bubble.textContent=text;
-  div.appendChild(bubble); msgs.appendChild(div); msgs.scrollTop=msgs.scrollHeight;
+  var msgs=document.getElementById('chat-messages');if(!msgs)return;
+  var div=document.createElement('div');div.className='chat-msg '+role;
+  var bubble=document.createElement('div');bubble.className='chat-msg-bubble';bubble.textContent=text;
+  div.appendChild(bubble);msgs.appendChild(div);msgs.scrollTop=msgs.scrollHeight;
   chatHistory.push({role:role==='bot'?'assistant':'user',content:text});
 }
 function showTyping(){
-  var msgs=document.getElementById('chat-messages'); if(!msgs)return;
-  var div=document.createElement('div'); div.className='chat-typing'; div.id='chat-typing-indicator';
-  div.innerHTML='<span></span><span></span><span></span>'; msgs.appendChild(div); msgs.scrollTop=msgs.scrollHeight;
+  var msgs=document.getElementById('chat-messages');if(!msgs)return;
+  var div=document.createElement('div');div.className='chat-typing';div.id='chat-typing-indicator';
+  div.innerHTML='<span></span><span></span><span></span>';msgs.appendChild(div);msgs.scrollTop=msgs.scrollHeight;
 }
 function hideTyping(){var el=document.getElementById('chat-typing-indicator');if(el)el.remove();}
 function sendChat(){
-  var inp=document.getElementById('chat-input'), btn=document.getElementById('chat-send-btn');
+  var inp=document.getElementById('chat-input'),btn=document.getElementById('chat-send-btn');
   if(!inp||!inp.value.trim())return;
-  var msg=inp.value.trim(); inp.value='';
+  var msg=inp.value.trim();inp.value='';
   appendChatMsg('user',msg);
-  inp.disabled=true; btn.disabled=true; showTyping();
+  inp.disabled=true;btn.disabled=true;showTyping();
   var messages=chatHistory.slice(-6).filter(function(m){return m.role==='user'||m.role==='assistant';});
   fetch('https://api.anthropic.com/v1/messages',{
     method:'POST',
@@ -1252,9 +1234,9 @@ function sendChat(){
   .then(function(r){return r.json();})
   .then(function(data){
     hideTyping();
-    var text=(data.content&&data.content[0]&&data.content[0].text)?data.content[0].text:'Sorry, I could not generate a response.';
+    var text=(data.content&&data.content[0]&&data.content[0].text)?data.content[0].text.replace(/\*\*(.*?)\*\*/g,'$1').replace(/\*(.*?)\*/g,'$1'):'Sorry, I could not generate a response.';
     appendChatMsg('bot',text);
-    inp.disabled=false; btn.disabled=false; inp.focus();
+    inp.disabled=false;btn.disabled=false;inp.focus();
   })
   .catch(function(){hideTyping();appendChatMsg('bot','Something went wrong. Please try again.');inp.disabled=false;btn.disabled=false;});
 }
@@ -1262,18 +1244,18 @@ document.addEventListener('click',function(e){if(!e.target.closest('#chat-window
 
 // ── STICKY PILL ───────────────────────────────────────────────
 function updateStickyPill(key){
-  var btn=document.getElementById('sticky-20-btn'), label=document.getElementById('sticky-20-label'); if(!btn||!label)return;
+  var btn=document.getElementById('sticky-20-btn'),label=document.getElementById('sticky-20-label');if(!btn||!label)return;
   btn.classList.remove('hidden');
   var configs={maya:{text:'Your 15% Off is Ready',bg:'#1a5f6a'},rachel:{text:'You are $127 from Premier',bg:'#2a6a3a'},jennifer:{text:'Welcome Back - 20% Off',bg:'#6a3a1a'},danielle:{text:'Get 20% Off',bg:'#0d0d0d'},def:{text:'Get 20% Off',bg:'#0d0d0d'}};
-  var cfg=configs[key]||configs['def']; label.textContent=cfg.text; btn.style.background=cfg.bg;
+  var cfg=configs[key]||configs['def'];label.textContent=cfg.text;btn.style.background=cfg.bg;
 }
 function onStickyPillClick(){if(['maya','rachel','jennifer'].indexOf(activeKey)!==-1){openOfferLightbox();}else{openSignupModal();}}
 
 // ── OFFER LIGHTBOX ────────────────────────────────────────────
 function openOfferLightbox(){
-  var cfg=OFFER_LIGHTBOX[activeKey]; if(!cfg)return;
-  set('offer-lb-name',cfg.name); set('offer-lb-headline',cfg.headline); set('offer-lb-desc',cfg.desc); set('offer-lb-code',cfg.code);
-  var o=document.getElementById('offer-lightbox-overlay'); if(o){o.classList.add('open');document.body.style.overflow='hidden';}
+  var cfg=OFFER_LIGHTBOX[activeKey];if(!cfg)return;
+  set('offer-lb-name',cfg.name);set('offer-lb-headline',cfg.headline);set('offer-lb-desc',cfg.desc);set('offer-lb-code',cfg.code);
+  var o=document.getElementById('offer-lightbox-overlay');if(o){o.classList.add('open');document.body.style.overflow='hidden';}
 }
 function closeOfferLightbox(){var o=document.getElementById('offer-lightbox-overlay');if(o){o.classList.remove('open');document.body.style.overflow='';}}
 
@@ -1284,24 +1266,24 @@ function dismissModal(){
   if(activeKey==='danielle'){var btn=document.getElementById('pers-reopen-btn');if(btn)btn.classList.add('visible');}
 }
 function populateModal(key){
-  var v=MODALS[key]; if(!v)return;
+  var v=MODALS[key];if(!v)return;
   var d=PAYLOADS[key].d.data;
-  var hdr=document.getElementById('pm-header'); if(hdr)hdr.style.background=v.headerBg;
-  set('pm-visitor-state',v.visitorState); set('pm-name',v.name); set('pm-tagline',v.tagline); set('pm-match-badge',v.matchBadge);
-  var mt=document.getElementById('pm-match-type'); if(mt){mt.textContent=v.matchType;mt.className='pers-id-value '+v.matchClass;}
+  var hdr=document.getElementById('pm-header');if(hdr)hdr.style.background=v.headerBg;
+  set('pm-visitor-state',v.visitorState);set('pm-name',v.name);set('pm-tagline',v.tagline);set('pm-match-badge',v.matchBadge);
+  var mt=document.getElementById('pm-match-type');if(mt){mt.textContent=v.matchType;mt.className='pers-id-value '+v.matchClass;}
   set('pm-confidence',v.confidence);
-  var confEl=document.getElementById('pm-conf-exp'); var ck=CONF_EXPLAIN[String(d.confidence_score).charAt(0)];
+  var confEl=document.getElementById('pm-conf-exp');var ck=CONF_EXPLAIN[String(d.confidence_score).charAt(0)];
   if(confEl&&ck){confEl.textContent=ck.text;confEl.style.display='block';confEl.style.background=ck.bg;confEl.style.color=ck.color;confEl.style.borderLeft='3px solid '+ck.border;}
-  set('pm-age',d.age_range); set('pm-location',d.city+', '+d.state);
-  set('pm-income',d.household_income_range); set('pm-pfreq',d.purchase_frequency);
-  set('pm-aff1',d.category_affinity_1); set('pm-aff2',d.category_affinity_2);
-  set('pm-segment',d.lifestyle_segment); set('pm-email',d.email_engagement);
-  var oh=document.getElementById('pm-offer-header'); if(oh){oh.textContent=v.offerHeader;oh.style.background=v.offerBg;}
-  set('pm-offer-headline',v.offerHeadline); set('pm-offer-desc',v.offerDesc); set('pm-offer-code',v.offerCode);
-  var dot=document.getElementById('pers-reopen-dot'); if(dot)dot.style.background=v.dotColor;
-  var row=document.getElementById('pm-campaign-row'); if(row)row.style.display=key==='jennifer'?'block':'none';
-  var emailrow=document.getElementById('pm-email-row'); if(emailrow)emailrow.style.display=key==='maya'?'block':'none';
-  var pushrow=document.getElementById('pm-push-row'); if(pushrow)pushrow.style.display=key==='rachel'?'block':'none';
+  set('pm-age',d.age_range);set('pm-location',d.city+', '+d.state);
+  set('pm-income',d.household_income_range);set('pm-pfreq',d.purchase_frequency);
+  set('pm-aff1',d.category_affinity_1);set('pm-aff2',d.category_affinity_2);
+  set('pm-segment',d.lifestyle_segment);set('pm-email',d.email_engagement);
+  var oh=document.getElementById('pm-offer-header');if(oh){oh.textContent=v.offerHeader;oh.style.background=v.offerBg;}
+  set('pm-offer-headline',v.offerHeadline);set('pm-offer-desc',v.offerDesc);set('pm-offer-code',v.offerCode);
+  var dot=document.getElementById('pers-reopen-dot');if(dot)dot.style.background=v.dotColor;
+  var row=document.getElementById('pm-campaign-row');if(row)row.style.display=key==='jennifer'?'block':'none';
+  var emailrow=document.getElementById('pm-email-row');if(emailrow)emailrow.style.display=key==='maya'?'block':'none';
+  var pushrow=document.getElementById('pm-push-row');if(pushrow)pushrow.style.display=key==='rachel'?'block':'none';
 }
 document.getElementById('pers-modal-overlay').addEventListener('click',function(e){if(e.target===this)dismissModal();});
 function openSignupModal(){var o=document.getElementById('signup-modal-overlay');if(o){o.style.display='flex';document.body.style.overflow='hidden';}}
@@ -1322,7 +1304,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeShipFl
 // ── PUSH ──────────────────────────────────────────────────────
 function showPush(title,msg){var w=document.getElementById('push-notif-wrap');var t=document.getElementById('push-title');var m=document.getElementById('push-msg');if(t)t.textContent=title;if(m)m.textContent=msg;if(w)w.classList.add('visible');clearTimeout(pushTimer);pushTimer=setTimeout(dismissPush,7000);}
 function dismissPush(){var w=document.getElementById('push-notif-wrap');if(w)w.classList.remove('visible');}
-function showPushNotifRachel(){showPush('Rachel, your 15% off is ready','You are $127 away from Premier. Use your discount now.');}
+function showPushNotifRachel(){showPush('Rachel, your 15% off is ready','You are $127 away from Circle Premier. Use your discount now.');}
 
 // ── MEGA NAV ──────────────────────────────────────────────────
 var megaNavOpen=false;
@@ -1338,12 +1320,12 @@ function selectSendTime(idx){[0,1].forEach(function(n){var r=document.getElement
 
 // ── PERSONA SWITCHER ──────────────────────────────────────────
 function buildPersonaList(){
-  var list=document.getElementById('ps-persona-list'); if(!list)return; list.innerHTML='';
+  var list=document.getElementById('ps-persona-list');if(!list)return;list.innerHTML='';
   PERSONAS.forEach(function(p){
     var tags=p.tags.map(function(t){return '<span class="ps-tag '+t.c+'">'+t.l+'</span>';}).join('');
-    var el=document.createElement('div'); el.className='ps-persona'+(p.key===activeKey?' active':''); el.setAttribute('data-key',p.key);
+    var el=document.createElement('div');el.className='ps-persona'+(p.key===activeKey?' active':'');el.setAttribute('data-key',p.key);
     el.innerHTML='<div class="ps-persona-avatar" style="background:'+p.bg+'">'+p.avatar+'</div><div class="ps-persona-info"><div class="ps-persona-name">'+p.name+'</div><div class="ps-persona-title">'+p.title+'</div><div class="ps-persona-tags">'+tags+'</div></div><span class="ps-persona-check">&#10003;</span>';
-    el.addEventListener('click',function(){applyPersona(p.key);}); list.appendChild(el);
+    el.addEventListener('click',function(){applyPersona(p.key);});list.appendChild(el);
   });
 }
 function toggleSwitcher(){panelOpen=!panelOpen;document.getElementById('ps-panel').classList.toggle('open',panelOpen);document.getElementById('ps-toggle').classList.toggle('open',panelOpen);updatePageIndicator();}
@@ -1352,32 +1334,32 @@ function currentPage(){var a=document.querySelector('.page.active');return a?a.i
 function updatePageIndicator(){var L={home:'Home',category:'Category',pdp:'Product',cart:'Cart'};var el=document.getElementById('ps-page-name');if(el)el.textContent=L[currentPage()]||currentPage();}
 
 function applyPersona(key){
-  activeKey=key; window._merkuryPersona=key;
+  activeKey=key;window._merkuryPersona=key;
   document.querySelectorAll('.ps-persona').forEach(function(el){el.classList.toggle('active',el.getAttribute('data-key')===key);});
-  var persona=null; for(var i=0;i<PERSONAS.length;i++){if(PERSONAS[i].key===key){persona=PERSONAS[i];break;}}
-  var nameEl=document.getElementById('ps-active-name'); if(nameEl&&persona)nameEl.textContent=persona.name;
-  updateTimeline(key); updateStickyPill(key); applyContent(key); merkuryResolve(key); dismissPush();
+  var persona=null;for(var i=0;i<PERSONAS.length;i++){if(PERSONAS[i].key===key){persona=PERSONAS[i];break;}}
+  var nameEl=document.getElementById('ps-active-name');if(nameEl&&persona)nameEl.textContent=persona.name;
+  updateTimeline(key);updateStickyPill(key);applyContent(key);merkuryResolve(key);dismissPush();
+  chatOpen=false;chatHistory=[];
+  var w=document.getElementById('chat-window');if(w)w.classList.remove('open');
+  var msgs=document.getElementById('chat-messages');if(msgs)msgs.innerHTML='';
   updateChatContext();
-  if(chatOpen){chatHistory=[];var msgs=document.getElementById('chat-messages');if(msgs)msgs.innerHTML='';updateChatContext();appendChatMsg('bot',getConciergeOpener(key));}
-  var reopenBtn=document.getElementById('pers-reopen-btn'); if(reopenBtn)reopenBtn.classList.remove('visible');
+  var reopenBtn=document.getElementById('pers-reopen-btn');if(reopenBtn)reopenBtn.classList.remove('visible');
   setTimeout(function(){panelOpen=false;var pan=document.getElementById('ps-panel'),tog=document.getElementById('ps-toggle');if(pan)pan.classList.remove('open');if(tog)tog.classList.remove('open');},300);
   if(key!=='def'){
     populateModal(key);
     if(key==='danielle'){setTimeout(function(){openSignupModal();},380);}
     else{setTimeout(function(){openModal();},380);}
-  } else {
-    dismissModal(); if(reopenBtn)reopenBtn.classList.remove('visible');
-  }
+  }else{dismissModal();if(reopenBtn)reopenBtn.classList.remove('visible');}
 }
 function resetPersona(){applyPersona('def');}
 
 document.addEventListener('click',function(e){
-  var sb=e.target.closest('.pdp-size-btn'); if(sb&&!sb.classList.contains('oos')){document.querySelectorAll('.pdp-size-btn').forEach(function(b){b.classList.remove('active');});sb.classList.add('active');}
-  var sw=e.target.closest('.pdp-swatch'); if(sw){document.querySelectorAll('.pdp-swatch').forEach(function(s){s.classList.remove('active');});sw.classList.add('active');}
+  var sb=e.target.closest('.pdp-size-btn');if(sb&&!sb.classList.contains('oos')){document.querySelectorAll('.pdp-size-btn').forEach(function(b){b.classList.remove('active');});sb.classList.add('active');}
+  var sw=e.target.closest('.pdp-swatch');if(sw){document.querySelectorAll('.pdp-swatch').forEach(function(s){s.classList.remove('active');});sw.classList.add('active');}
 });
 
 document.addEventListener('DOMContentLoaded',function(){
-  buildPersonaList(); updateTimeline('def'); updatePageIndicator(); renderProductGrid('def'); applyLoyalty('def'); wireATCButton();
+  buildPersonaList();updateTimeline('def');updatePageIndicator();renderProductGrid('def');applyLoyalty('def');wireATCButton();
   setTimeout(function(){merkuryResolve('def');},120);
 });
 </script>
