@@ -67,7 +67,7 @@ img{display:block;width:100%;height:100%;object-fit:cover;}
 .hero{overflow:hidden;}
 .hero-split{display:grid;grid-template-columns:1fr 1fr 1fr;min-height:580px;}
 .hero-photo-left{background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/yogi.sunrise.webp') center/cover no-repeat;}
-.hero-photo-right{background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/yogi.sunrise.webp') center/cover no-repeat;}
+.hero-photo-right{background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/workout.1.webp') center/cover no-repeat;}
 .hero-center{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 40px;text-align:center;background:#fff;}
 .hero-eyebrow{font-size:11px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--text3);margin-bottom:16px;display:none;}
 .hero-h1-light{font-family:var(--font-serif);font-size:clamp(32px,3.2vw,50px);font-weight:400;color:#0d0d0d;letter-spacing:3px;text-transform:uppercase;line-height:1.1;display:block;}
@@ -455,7 +455,8 @@ footer{background:#fff;padding:40px 0 0;}
 .cm-footer{padding:16px 24px;border-top:1px solid rgba(0,0,0,.08);display:flex;align-items:center;justify-content:space-between;background:#f5f0ff;border-radius:0 0 16px 16px;flex-wrap:wrap;gap:10px;}
 .cm-footer-left{font-size:12px;color:var(--text3);}
 .cm-footer-left strong{color:#0d0d0d;}
-.cm-schedule-btn{background:#f5d800;color:#1a1a1a;border:none;border-radius:10px;padding:13px 24px;font-size:14px;font-weight:700;font-family:var(--font);cursor:pointer;}
+.cm-schedule-btn{background:#1a5f6a;color:#fff;border:none;border-radius:10px;padding:13px 24px;font-size:14px;font-weight:700;font-family:var(--font);cursor:pointer;transition:background .15s;}
+.cm-schedule-btn:hover{background:#145059;}
 
 /* PUSH */
 #push-notif-wrap{position:fixed;top:24px;right:24px;z-index:9200;opacity:0;transform:translateY(-10px) scale(.97);transition:opacity .35s ease,transform .35s ease;pointer-events:none;width:340px;}
@@ -558,7 +559,7 @@ footer{background:#fff;padding:40px 0 0;}
 .ps-persona-tags{display:flex;gap:4px;margin-top:4px;flex-wrap:wrap;}
 .ps-tag{font-size:9px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:2px 6px;border-radius:3px;background:var(--off);color:var(--text3);}
 .ps-tag.segment{background:#e8f5f2;color:#1a5f6a;}
-.ps-tag.state{background:#fff0ec;color:#c0392b;}
+.ps-tag.state{background:#e8f0f4;color:#2a4a5a;}
 .ps-persona-check{font-size:14px;color:#1a5f6a;opacity:0;}
 .ps-persona.active .ps-persona-check{opacity:1;}
 .ps-footer{border-top:1px solid var(--border);padding:10px 18px;display:flex;align-items:center;justify-content:space-between;}
@@ -824,7 +825,7 @@ footer{background:#fff;padding:40px 0 0;}
         <div class="cm-section-label">Send Time</div>
         <div class="cm-sendtime">
           <div class="cm-st-option" onclick="selectSendTime(0)"><div class="cm-st-radio selected" id="cm-st-0"></div><div><div class="cm-st-label">Use Send Time AI <span class="cm-st-badge">AI optimized</span></div><div class="cm-st-detail">Sent at each subscriber's optimal send time</div></div></div>
-          <div class="cm-st-option" onclick="selectSendTime(1)"><div class="cm-st-radio" id="cm-st-1"></div><div><div class="cm-st-label">Use specified time</div><div class="cm-st-detail">Wed, Mar 19 at 8:30 PM</div></div></div>
+          <div class="cm-st-option" onclick="selectSendTime(1)"><div class="cm-st-radio" id="cm-st-1"></div><div><div class="cm-st-label">Use specified time</div><div class="cm-st-detail">Wed, Apr 23 at 8:30 PM</div></div></div>
         </div>
       </div>
       <div class="cm-right">
@@ -905,7 +906,7 @@ footer{background:#fff;padding:40px 0 0;}
   </div></div>
 
   <div class="cat-section"><div class="w">
-    <div class="cat-section-hdr"><h2 id="home-cat-title">MOVE IN WHAT MOVES YOU</h2><a onclick="showPage('category')">View All</a></div>
+    <div class="cat-section-hdr"><h2 id="home-cat-title">SHOP THE COLLECTION</h2><a onclick="showPage('category')">View All</a></div>
     <div class="cat-grid">
       <div class="cat-tile" onclick="showPage('pdp')"><div class="cat-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/workout.1.webp') center/cover no-repeat;"><div class="cat-badge">New</div></div><div class="cat-label" id="cat-label-1">Matching Sets</div><div class="cat-sub" id="cat-sub-1">Effortlessly coordinated</div></div>
       <div class="cat-tile" onclick="showPage('pdp')"><div class="cat-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/sports.bra.webp') center/cover no-repeat;"></div><div class="cat-label" id="cat-label-2">Flow State</div><div class="cat-sub" id="cat-sub-2">Built for your practice</div></div>
@@ -935,7 +936,7 @@ footer{background:#fff;padding:40px 0 0;}
   </div></div>
 
   <div class="loyalty-strip"><div class="loyalty-inner">
-    <div class="ls-col"><div class="ls-eyebrow">Score 20% Off</div><div class="ls-title" id="loyalty-title">Join Aura Circle free</div><div class="ls-sub" id="loyalty-sub">Sign up for emails and get 20% off your next order.</div><div class="ls-email-row"><input class="ls-email-input" type="email" placeholder="Enter your email address"><button class="btn-pill btn-white btn-sm">Sign Up</button></div></div>
+    <div class="ls-col"><div class="ls-eyebrow">Earn 20% Off</div><div class="ls-title" id="loyalty-title">Join Aura Circle free</div><div class="ls-sub" id="loyalty-sub">Sign up for emails and get 20% off your next order.</div><div class="ls-email-row"><input class="ls-email-input" type="email" placeholder="Enter your email address"><button class="btn-pill btn-white btn-sm">Sign Up</button></div></div>
     <div class="ls-divider"></div>
     <div class="ls-col"><div class="ls-eyebrow">Aura Circle</div><div class="ls-title" id="encore-title">Extra 20% off your first purchase</div><div class="ls-sub">When you open and shop with your new Aura Circle card.</div><div style="display:flex;gap:10px;"><button class="btn-pill btn-white btn-sm">Apply</button><button class="btn-pill btn-sm" style="color:#fff;border:2px solid rgba(255,255,255,.4);background:transparent">Learn More</button></div></div>
     <div class="ls-divider"></div>
@@ -948,12 +949,12 @@ footer{background:#fff;padding:40px 0 0;}
 <!-- CATEGORY PAGE -->
 <div id="page-category" class="page">
   <div class="cat-page-hero"><div class="cat-page-hero-inner">
-    <div class="breadcrumb" onclick="showPage('home')">Home / <span id="cat-page-name">All Bottoms</span></div>
-    <h1 class="cat-page-title" id="cat-page-title">All Bottoms</h1>
-    <p class="cat-page-sub" id="cat-page-sub">Performance meets style.</p>
+    <div class="breadcrumb" onclick="showPage('home')">Home / <span id="cat-page-name">New Arrivals</span></div>
+    <h1 class="cat-page-title" id="cat-page-title">New Arrivals</h1>
+    <p class="cat-page-sub" id="cat-page-sub">The freshest styles, just landed.</p>
     <div class="cat-page-filters"><div class="filter-chip active">Filter and Sort</div><div class="filter-chip">Category</div><div class="filter-chip">Color</div><div class="filter-chip">Size</div><div class="filter-chip">Activity</div></div>
   </div></div>
-  <div class="cat-page-grid-wrap"><div class="w"><div class="cat-page-result-count" id="cat-result-count">342 Results</div><div class="product-grid" id="cat-product-grid"></div></div></div>
+  <div class="cat-page-grid-wrap"><div class="w"><div class="cat-page-result-count" id="cat-result-count">218 Results</div><div class="product-grid" id="cat-product-grid"></div></div></div>
   <div class="loyalty-banner">
     <div class="loyalty-banner-inner"><div class="lb-icon" id="cat-lb-icon" style="background:#f0ece8;">&#127885;</div><div><div class="lb-eyebrow" id="cat-lb-eyebrow">Aura Circle</div><div class="lb-headline" id="cat-lb-headline">Your membership for leveling up.</div><div class="lb-sub" id="cat-lb-sub">Join free and earn points on every purchase.</div></div><div class="lb-actions"><button class="btn-pill btn-black btn-sm" id="cat-lb-cta1">Join for Free</button><button class="btn-pill btn-outline btn-sm" id="cat-lb-cta2">Explore Program</button></div></div>
     <div class="lb-tiers">
@@ -1045,12 +1046,1520 @@ document.addEventListener('click',function(e){var a=e.target.closest('a');if(!a)
 var PAYLOADS={
   def:{d:{data:{},response:'no_match',version:'1.0.0'}},
   maya:{d:{data:{'dentsu.id':'a1b2c3d4e5f6a7b8c9d0',hashed_email:'3f4a5b6c7d8e9f0a1b2c',CRM_ID:'10048293',confidence_score:1,match_type:'deterministic',first_name:'Maya',last_name:'Chen',age_range:'25-34',gender:'F',marital_status:'S',education_level:'GR',presence_of_children:'N',city:'San Francisco',state:'CA',zip:'94110',homeowner_flag:'N',household_income_range:'$100K-$150K',household_size:'1',length_of_residence:'3',purchase_frequency:'High',avg_order_value_range:'$150-$300',last_purchase_days:'12',preferred_channel:'Mobile',category_affinity_1:'Leggings',category_affinity_2:'Sports Bras',in_market_flag:'Y',lifestyle_segment:'Active Achiever',brand_loyalty_score:'5',email_engagement:'Active',social_influence_tier:'Micro',created_date:'2019-04-10 00:00:00',last_modified_date:'2026-02-22 00:00:00'},response:'match',version:'1.0.0'}},
-  jennifer:{d:{data:{'dentsu.id':'c3d4e5f6a7b8c9d0e1f2',hashed_email:'5b6c7d8e9f0a1b2c3d4e',CRM_ID:'10031847',confidence_score:2,match_type:'deterministic',first_name:'Jennifer',last_name:'Walsh',age_range:'35-44',gender:'F',marital_status:'M',education_level:'BA',presence_of_children:'Y',city:'Naperville',state:'IL',zip:'60540',homeowner_flag:'Y',household_income_range:'$150K-$200K',household_size:'4',length_of_residence:'7',purchase_frequency:'Medium',avg_order_value_range:'$150-$300',last_purchase_days:'47',preferred_channel:'Omnichannel',category_affinity_1:'Jackets',category_affinity_2:'Dresses',in_market_flag:'Y',lifestyle_segment:'Weekend Warrior Mom',brand_loyalty_score:'4',email_engagement:'Lapsed',social_influence_tier:'Standard',created_date:'2020-08-19 00:00:00',last_modified_date:'2026-01-30 00:00:00'},response:'match',version:'1.0.0'}},
+  jennifer:{d:{data:{'dentsu.id':'c3d4e5f6a7b8c9d0e1f2',hashed_email:'5b6c7d8e9f0a1b2c3d4e',CRM_ID:'10031847',confidence_score:2,match_type:'deterministic',first_name:'Jennifer',last_name:'Walsh',age_range:'35-44',gender:'F',marital_status:'M',education_level:'BA',presence_of_children:'Y',city:'Naperville',state:'IL',zip:'60540',homeowner_flag:'Y',household_income_range:'$150K-$200K',household_size:'4',length_of_residence:'7',purchase_frequency:'Medium',avg_order_value_range:'$150-$300',last_purchase_days:'47',preferred_channel:'Omnichannel',category_affinity_1:'Jackets',category_affinity_2:'Wide Leg',in_market_flag:'Y',lifestyle_segment:'Weekend Warrior Mom',brand_loyalty_score:'4',email_engagement:'Lapsed',social_influence_tier:'Standard',created_date:'2020-08-19 00:00:00',last_modified_date:'2026-02-22 00:00:00'},response:'match',version:'1.0.0'}},
   danielle:{d:{data:{'dentsu.id':'e5f6a7b8c9d0e1f2a3b4',hashed_email:'7c8d9e0f1a2b3c4d5e6f',CRM_ID:null,confidence_score:3,match_type:'probabilistic',first_name:null,last_name:null,age_range:'25-34',gender:'F',marital_status:'S',education_level:'BA',presence_of_children:'N',city:'Austin',state:'TX',zip:'78701',homeowner_flag:'N',household_income_range:'$75K-$100K',household_size:'1',length_of_residence:'2',purchase_frequency:'Medium',avg_order_value_range:'$50-$150',last_purchase_days:null,preferred_channel:'Online',category_affinity_1:'Yoga & Studio',category_affinity_2:'Swim',in_market_flag:'Y',lifestyle_segment:'Active Wellness Seeker',brand_loyalty_score:null,email_engagement:null,social_influence_tier:'Nano',swim_propensity_score:'82',swim_in_market:'Y',created_date:'2025-11-04 00:00:00',last_modified_date:'2026-03-01 00:00:00'},response:'match',version:'1.0.0'}}
 };
 
 var CONTENT={
-  def:{promoBar:'30% Off Your New Favorites <a onclick="showPage(\'category\')">Shop Women</a>',heroEyebrow:'',heroH1Light:'MOVE IN WHAT',heroH1Bold:'MOVES YOU',heroSub:'Discover our latest collection — designed for every move you make.',heroCta1:'Shop Now',homeCatTitle:'MOVE IN WHAT MOVES YOU',catLabels:['Matching Sets','Flow State','Studio Fits','On the Mat'],catSubs:['Effortlessly coordinated','Built for your practice','From class to everywhere','Your go-to studio layer'],pbEyebrow:'New Collection',pbH2:'Your Mat, Your Practice',pbP:'Built for every pose, every flow. Studio-ready styles designed to move with you.',pbCta:'Shop Now',lifeTitle:'MADE FOR THE MAT',lifeMainLabel:'STUDIO FAVORITES',lifeMainSub:'Top-rated by our community',lifeCards:['ON THE MAT','FLOW STATE','STUDIO FITS','MINDFUL MOVEMENT'],loyaltyTitle:'Join Aura Circle free',loyaltySub:'Sign up for emails and get 20% off your next order.',encoreTitle:'Extra 20% off your first purchase',catPageTitle:'All Bottoms',catPageSub:'Performance meets style.',catResultCount:'342 Results',pdpTitle:'High Rise Flare Performance Pant',pdpDesc:'From the studio to the street, this pant delivers a flattering silhouette with the performance you expect from Aura.',pdpRecsTitle:'YOU MAY ALSO LIKE',pdpAtcBtn:'Add to Bag',pdpEyebrow:'Bottoms',pdpBreadcrumbCat:'Bottoms'},
+  def:{promoBar:'30% Off Your New Favorites <a onclick="showPage(\'category\')">Shop Women</a>',heroEyebrow:'',heroH1Light:'MOVE IN WHAT',heroH1Bold:'MOVES YOU',heroSub:'Discover our latest collection — designed for every move you make.',heroCta1:'Shop Now',homeCatTitle:'SHOP THE COLLECTION',catLabels:['Matching Sets','Flow State','Studio Fits','On the Mat'],catSubs:['Effortlessly coordinated','Built for your practice','From class to everywhere','Your go-to studio layer'],pbEyebrow:'New Collection',pbH2:'Your Mat, Your Practice',pbP:'Built for every pose, every flow. Studio-ready styles designed to move with you.',pbCta:'Shop Now',lifeTitle:'MADE FOR THE MAT',lifeMainLabel:'STUDIO FAVORITES',lifeMainSub:'Top-rated by our community',lifeCards:['ON THE MAT','FLOW STATE','STUDIO FITS','MINDFUL MOVEMENT'],loyaltyTitle:'Join Aura Circle free',loyaltySub:'Sign up for emails and get 20% off your next order.',encoreTitle:'Extra 20% off your first purchase',catPageTitle:'New Arrivals',catPageSub:'The freshest styles, just landed.',catResultCount:'218 Results',pdpTitle:'High Rise Flare Performance Pant',pdpDesc:'From the studio to the street, this pant delivers a flattering silhouette with the performance you expect from Aura.',pdpRecsTitle:'YOU MAY ALSO LIKE',pdpAtcBtn:'Add to Bag',pdpEyebrow:'Bottoms',pdpBreadcrumbCat:'Bottoms'},
+  maya:{promoBar:'Welcome back Maya - Circle All-Access exclusive: extra 15% off <a onclick="showPage(\'category\')">Shop Now</a>',heroEyebrow:'Back For More',heroH1Light:'BACK FOR',heroH1Bold:'MORE. AS ALWAYS.',heroSub:'Your next obsession just landed. New leggings and bras made for how you move.',heroCta1:'Shop Leggings',homeCatTitle:'YOUR FAVORITES UPDATED',catLabels:['Matching Sets','Flow State','New Leggings','On the Mat'],catSubs:['Fresh drops','Your go-to','Just landed','Studio essentials'],pbEyebrow:'Circle All-Access',pbH2:'Your exclusive early access',pbP:'New drops hit your feed first. As a Circle member you get first pick.',pbCta:'Shop My Picks',lifeTitle:'BUILT FOR YOUR PRACTICE',lifeMainLabel:'YOGA ESSENTIALS',lifeMainSub:'Curated for you',lifeCards:['ON THE MAT','FLOW STATE','STUDIO FITS','MINDFUL MOVEMENT'],loyaltyTitle:'Hi Maya, your points are waiting',loyaltySub:'You have 240 Aura Circle points. Use them on your next order.',encoreTitle:'Circle All-Access: extra 15% off today',catPageTitle:'Leggings',catPageSub:'Your forever favorites.',catResultCount:'89 Results',pdpTitle:'High Rise Performance Tight 7/8',pdpDesc:'The legging our most loyal members keep coming back to.',pdpRecsTitle:'BECAUSE YOU LOVED THESE',pdpAtcBtn:'Add to Bag',pdpEyebrow:'Leggings',pdpBreadcrumbCat:'Leggings'},
+  jennifer:{promoBar:'New arrivals just landed - shop the drop <a onclick="showPage(\'category\')">Shop Now</a>',heroEyebrow:'For Every Moment',heroH1Light:'FROM THE MAT',heroH1Bold:'TO THE MOMENT.',heroSub:'Versatile pieces that work at school pickup, the gym, and everywhere in between.',heroCta1:'Shop Versatile Styles',homeCatTitle:'FROM ERRANDS TO EVERYTHING',catLabels:['Studio Fits','Matching Sets','Flow State','On the Mat'],catSubs:['Polished and easy','Layer up','All-day comfort','The classic'],pbEyebrow:'New In',pbH2:'The styles that do it all.',pbP:'Versatile, performance-ready pieces designed for wherever the day takes you.',pbCta:'Shop Now',lifeTitle:'WEAR IT EVERYWHERE',lifeMainLabel:'EVERYDAY ESSENTIALS',lifeMainSub:'From school run to yoga class',lifeCards:['STUDIO FITS','ON THE MAT','FLOW STATE','MINDFUL MOVEMENT'],loyaltyTitle:'We have missed you Jennifer',loyaltySub:'You are just a few points away from your next reward.',encoreTitle:'Welcome back bonus: 20% off your next purchase',catPageTitle:'Jackets',catPageSub:'Layer up for whatever the day brings.',catResultCount:'58 Results',pdpTitle:'Performance Softshell Jacket',pdpDesc:'Built for wherever the day takes you.',pdpRecsTitle:'COMPLETE THE LOOK',pdpAtcBtn:'Add to Bag',pdpEyebrow:'Jackets',pdpBreadcrumbCat:'Jackets'},
+  danielle:{promoBar:'New in swim — styles made for your next adventure <a onclick="showPage(\'category\')">Shop Swim</a>',heroEyebrow:'Just For You',heroH1Light:'YOUR PRACTICE.',heroH1Bold:'YOUR NEXT MOVE.',heroSub:'You love the studio. Now dive into our swim collection — built with the same performance you trust.',heroCta1:'Explore Swim',homeCatTitle:'MADE FOR HOW YOU MOVE',catLabels:['Flow State','Matching Sets','Studio Fits','On the Mat'],catSubs:['Your yoga go-to','New for you','Performance ready','Dive in'],pbEyebrow:'New Arrival',pbH2:'Find Your Flow',pbP:'New studio styles made for every practice. Discover what moves you.',pbCta:'Shop Now',lifeTitle:'BUILT FOR YOUR ACTIVE LIFE',lifeMainLabel:'STUDIO FAVORITES',lifeMainSub:'Your most-loved category',lifeCards:['ON THE MAT','FLOW STATE','STUDIO FITS','MINDFUL MOVEMENT'],loyaltyTitle:'Join Aura Circle — it is free',loyaltySub:'Earn points on every purchase and get 20% off your first order.',encoreTitle:'Free shipping on your first order',catPageTitle:'Yoga & Swim',catPageSub:'Performance made for every practice.',catResultCount:'186 Results',pdpTitle:'High Rise Performance Tight 7/8',pdpDesc:'Your go-to studio tight, now in new colourways. Built for flow, stretch, and everything in between.',pdpRecsTitle:'COMPLETE YOUR PRACTICE',pdpAtcBtn:'Add to Bag',pdpEyebrow:'Yoga & Studio',pdpBreadcrumbCat:'Yoga & Studio'}
+};
+
+var MODALS={
+  maya:{headerBg:'linear-gradient(135deg,#1a5f6a,#0d3d45)',visitorState:'Authenticated - Circle All-Access',tagline:'Studio Instructor - San Francisco, CA - Aura Circle Member',matchBadge:'Deterministic Match - Confidence 1',matchType:'Deterministic',matchClass:'det',confidence:'1 - Highest',offerBg:'#1a5f6a',offerHeader:'Circle All-Access Exclusive',offerHeadline:'Your extra 15% is waiting.',offerDesc:'As one of our most loyal members, you get early access to new arrivals plus an exclusive discount applied automatically at checkout.',offerCode:'MAYA15'},
+  jennifer:{headerBg:'linear-gradient(135deg,#2a3a5a,#151f35)',visitorState:'Unauthenticated - Known Visitor',tagline:'Weekend Warrior Mom - Naperville, IL - Lapsed Member',matchBadge:'Deterministic Match - Confidence 2',matchType:'Deterministic',matchClass:'det',confidence:'2 - High',offerBg:'#2a3a5a',offerHeader:'We Have Missed You',offerHeadline:'20% off to welcome you back.',offerDesc:'It has been a while and we have new styles we think you will love. From versatile jackets to everything in between.',offerCode:'WELCOME20'},
+  danielle:{headerBg:'linear-gradient(135deg,#3a1a6a,#1e0a3d)',visitorState:'Probabilistic Match - Cross-Sell Signal',tagline:'Yoga Buyer — Merkury 3P swim propensity detected',matchBadge:'Probabilistic Match - Confidence 3',matchType:'Probabilistic',matchClass:'prob',confidence:'3 - Medium',offerBg:'#4a1a8a',offerHeader:'Identified via Merkury Tag',offerHeadline:'Dive into our swim collection.',offerDesc:'Merkury signals show this visitor has strong swim purchase propensity — a category she has never bought from Aura.',offerCode:'SWIM20'}
+};
+
+var LOYALTY={
+  def:{iconHTML:'&#127885;',iconBg:'#f0ece8',eyebrow:'Aura Circle',headline:'Your membership for leveling up.',sub:'Join free and earn points on every purchase.',cta1:'Join for Free',cta2:'Explore Program',cta1Style:'btn-black',cta2Style:'btn-outline',activeTier:null,pdpIconHTML:'&#127885;',pdpText:'<strong>Join Aura Circle free</strong> and earn points on this purchase.',pdpCta:'Join Free'},
+  maya:{iconHTML:'&#11088;',iconBg:'#e8f5f2',eyebrow:'Circle All-Access',headline:'You are at the top tier, Maya.',sub:'As a Circle All-Access member you earn 25 points per $1. You have 240 points.',cta1:'Check My Points',cta2:'Pay Credit Card',cta1Style:'btn-black',cta2Style:'btn-outline',activeTier:3,pdpIconHTML:'&#11088;',pdpText:'<strong>Circle All-Access:</strong> You are earning 25 points per $1 on this purchase.',pdpCta:'View Points'},
+  jennifer:{iconHTML:'&#128179;',iconBg:'#fff4f0',eyebrow:'Upgrade to All-Access',headline:'One card away from everything.',sub:'You are a Circle Premier member. Apply for the All-Access card to unlock 25x points.',cta1:'Apply for Card',cta2:'See All Benefits',cta1Style:'btn-black',cta2Style:'btn-outline',activeTier:2,pdpIconHTML:'&#128179;',pdpText:'<strong>Circle Premier:</strong> Apply for the All-Access card and get <strong>20% off this purchase</strong> instantly.',pdpCta:'Apply Now'},
+  danielle:{iconHTML:'&#127873;',iconBg:'#f4f0ff',eyebrow:'Join Aura Circle - Free',headline:'Earn rewards from your very first order.',sub:'Sign up in seconds and start earning 5 points per $1 at Aura.',cta1:'Join for Free',cta2:'Learn More',cta1Style:'btn-black',cta2Style:'btn-outline',activeTier:null,pdpIconHTML:'&#127873;',pdpText:'<strong>First order?</strong> Join Aura Circle free today and earn points on this purchase.',pdpCta:'Join Free'}
+};
+
+var PRODUCTS={
+  def:[{name:'High Rise Flare Performance Pant',price:'$98',member:'Circle Price $88',badge:'Member Price',g:'grad-1',swatches:['#1a1a1a','#2a5a8a']},{name:'Performance Tight 7/8',price:'$69',member:'Circle Price $62',badge:'Sale',badgeSale:true,g:'grad-2',swatches:['#4a5a3a','#000']},{name:'Structured Barrel Pant',price:'$118',member:'Circle Price $106',g:'grad-3',swatches:['#7a4a8a','#2a4a6a']},{name:'Trail Run Tight',price:'$88',member:'Circle Price $79',badge:'New',g:'grad-4',swatches:['#1a1a1a','#c0a080']},{name:'Studio Jogger',price:'$79',member:'Circle Price $71',g:'grad-5',swatches:['#d0b090','#8a6a5a']},{name:'Relaxed Jogger',price:'$59',member:'Circle Price $53',badge:'Sale',badgeSale:true,g:'grad-6',swatches:['#4a6a8a','#1a1a1a']},{name:'Wide Leg Studio Pant',price:'$108',member:'Circle Price $97',badge:'New',g:'grad-1',swatches:['#c8b8a0','#6a5a4a']},{name:'Everyday Legging',price:'$74',member:'Circle Price $67',g:'grad-2',swatches:['#8a5a8a','#1a1a1a']}],
+  maya:[{name:'High Rise Performance Legging',price:'$109',member:'Circle Price $98',badge:'Circle Pick',g:'grad-1',swatches:['#1a1a1a','#2a5a8a']},{name:'Ultra High Rise 7/8 Legging',price:'$89',member:'Circle Price $80',badge:'Top Rated',g:'grad-3',swatches:['#1a1a1a','#7a4a8a']},{name:'Interval High Rise Legging',price:'$109',member:'Circle Price $98',g:'grad-5',swatches:['#4a5a3a','#1a1a1a']},{name:'Everyday Studio Tank',price:'$49',member:'Circle Price $44',badge:'Best Seller',g:'grad-4',swatches:['#1a1a1a','#fff']},{name:'Longline Sports Bra',price:'$59',member:'Circle Price $53',g:'grad-6',swatches:['#1a1a1a','#8a2a2a']},{name:'Everyday Legging',price:'$74',member:'Circle Price $67',badge:'New',g:'grad-2',swatches:['#8a5a8a','#1a1a1a']},{name:'Studio Wrap Top',price:'$89',member:'Circle Price $80',g:'grad-3',swatches:['#c8b8a0','#1a1a1a']},{name:'Trail Run Tight',price:'$88',member:'Circle Price $79',badge:'New',g:'grad-1',swatches:['#1a1a1a','#c0a080']}],
+  jennifer:[{name:'Performance Rain Jacket',price:'$189',member:'Circle Price $170',badge:'New',g:'grad-8',swatches:['#1a1a1a','#4a5a3a']},{name:'Softshell Performance Jacket',price:'$148',member:'Circle Price $133',g:'grad-7',swatches:['#1a1a1a','#2a4a6a']},{name:'Trail Jacket',price:'$178',member:'Circle Price $160',badge:'Bestseller',g:'grad-8',swatches:['#4a5a3a','#1a1a1a']},{name:'Zip Studio Jacket',price:'$138',member:'Circle Price $124',g:'grad-3',swatches:['#c8b8a0','#1a1a1a']},{name:'Studio Wrap Top',price:'$89',member:'Circle Price $80',badge:'New',g:'grad-3',swatches:['#c8b8a0','#1a1a1a']},{name:'Everyday Long Sleeve Top',price:'$59',member:'Circle Price $53',g:'grad-4',swatches:['#fff','#1a1a1a']},{name:'Wide Leg Studio Pant',price:'$108',member:'Circle Price $97',g:'grad-6',swatches:['#c8b8a0','#6a5a4a']},{name:'Relaxed Jogger',price:'$59',member:'Circle Price $53',badge:'Sale',badgeSale:true,g:'grad-5',swatches:['#4a6a8a','#1a1a1a']}],
+  danielle:[{name:'Structured Barrel Pant',price:'$118',member:'Free Shipping on First Order',badge:'Trending',g:'grad-3',swatches:['#7a4a8a','#2a4a6a']},{name:'Wide Leg Studio Pant',price:'$108',member:'Free Shipping on First Order',badge:'New',g:'grad-6',swatches:['#c8b8a0','#1a1a1a']},{name:'Performance Rain Jacket',price:'$189',member:'Free Shipping on First Order',badge:'Just Dropped',g:'grad-8',swatches:['#1a1a1a','#4a5a3a']},{name:'Everyday Studio Tank',price:'$49',member:'Free Shipping on First Order',badge:'Top Rated',g:'grad-4',swatches:['#1a1a1a','#fff']},{name:'High Rise Flare Pant',price:'$98',member:'Free Shipping on First Order',g:'grad-1',swatches:['#1a1a1a','#2a5a8a']},{name:'Studio Wrap Top',price:'$89',member:'Free Shipping on First Order',badge:'New',g:'grad-3',swatches:['#c8b8a0','#8a5a8a']},{name:'Trail Run Tight',price:'$88',member:'Free Shipping on First Order',g:'grad-5',swatches:['#1a1a1a','#c0a080']},{name:'Longline Sports Bra',price:'$59',member:'Free Shipping on First Order',badge:'As Seen On Social',g:'grad-2',swatches:['#1a1a1a','#8a2a2a']}]
+};
+
+var PERSONAS=[
+  {key:'def',name:'Default View',title:'Anonymous - no identity match',avatar:'&#127760;',bg:'#f0ece8',tags:[{l:'No Match',c:''}]},
+  {key:'maya',name:'Maya Chen, 34',title:'Authenticated - All-Access - SF, CA',avatar:'&#129338;',bg:'#e8f5f2',tags:[{l:'Active Achiever',c:'segment'},{l:'Authenticated',c:'state'}]},
+  {key:'jennifer',name:'Jennifer Walsh, 42',title:'Unauthenticated - Known Lapsed - Chicago',avatar:'&#128105;',bg:'#fff4f0',tags:[{l:'Weekend Warrior',c:'segment'},{l:'Unauthenticated',c:'state'}]},
+  {key:'danielle',name:'Danielle Brooks, 29',title:'Yoga Buyer — 3P Swim Cross-Sell Signal',avatar:'&#127940;',bg:'#f0eaff',tags:[{l:'Yoga Affinity',c:'segment'},{l:'Swim Signal',c:'state'}]}
+];
+
+var OFFER_LIGHTBOX={
+  maya:{name:'Welcome back, Maya',headline:'Your extra 15% off is waiting.',desc:'As one of our most loyal members, you get early access to new arrivals plus an exclusive discount at checkout.',code:'MAYA15'},
+  jennifer:{name:'We have missed you, Jennifer',headline:'20% off to welcome you back.',desc:'It has been a while and we have new styles we think you will love.',code:'WELCOME20'},
+  danielle:{name:'We found your next obsession',headline:'Dive into Aura Swim.',desc:'Based on your activity, we think you will love our swim collection. New styles just landed — built with the same performance fabric you trust from the studio.',code:'SWIM20'}
+};
+
+var CONF_EXPLAIN={
+  '1':{text:'Score 1 - Highest confidence. Deterministic match via confirmed email or login.',bg:'#e8f5f2',color:'#1a5f6a',border:'#1a5f6a'},
+  '2':{text:'Score 2 - High confidence. Deterministic match from third-party data.',bg:'#fff8e8',color:'#6a4a10',border:'#c8a040'},
+  '3':{text:'Score 3 - Medium confidence. Probabilistic match with rich 3P signal data.',bg:'#f0eaff',color:'#4a1a8a',border:'#8a5aaa'},
+  '5':{text:'Score 5 - Lowest confidence. Probabilistic match via device signals only.',bg:'#fff0e8',color:'#6a2a10',border:'#c06030'}
+};
+
+var CART_CONFIG={
+  def:{itemName:'High Rise Flare Performance Pant',itemDetail:'Size: S - Color: Midnight Black - Qty: 1',itemPrice:'$98.00',itemMember:'Circle Member Price $88.00',itemGrad:'grad-1',pointsText:'<strong>Join Aura Circle free</strong> and earn points on this purchase.',recsTitle:"Styles We Think You'll Love",subtotal:'$98.00',recs:[{name:'Performance Tight 7/8',price:'$98',g:'grad-2'},{name:'Barrel Leg Pant',price:'$118',g:'grad-3'},{name:'Studio Jogger',price:'$79',g:'grad-5'}]},
+  maya:{itemName:'High Rise Performance Tight 7/8',itemDetail:'Size: S - Color: Midnight Black - Qty: 1',itemPrice:'$109.00',itemMember:'Circle All-Access Price: $98.10',itemGrad:'grad-1',pointsText:'<strong>Circle All-Access:</strong> You will earn <strong>545 points</strong> on this order.',recsTitle:'Because You Loved These',subtotal:'$98.10',recs:[{name:'Longline Sports Bra',price:'$59',g:'grad-6'},{name:'Everyday Legging',price:'$74',g:'grad-2'},{name:'Studio Wrap Top',price:'$89',g:'grad-3'}]},
+  jennifer:{itemName:'Performance Softshell Jacket',itemDetail:'Size: M - Color: Black - Qty: 1',itemPrice:'$148.00',itemMember:'Circle Premier Price: $133.20',itemGrad:'grad-7',pointsText:'<strong>Welcome back, Jennifer.</strong> This purchase earns <strong>740 points</strong> toward your next reward.',recsTitle:'Complete the Look',subtotal:'$133.20',recs:[{name:'Studio Wrap Top',price:'$89',g:'grad-3'},{name:'Wide Leg Studio Pant',price:'$108',g:'grad-6'},{name:'Everyday Long Sleeve Top',price:'$59',g:'grad-4'}]},
+  danielle:{itemName:'Structured Barrel Leg Pant',itemDetail:'Size: S - Color: Deep Plum - Qty: 1',itemPrice:'$118.00',itemMember:'Free shipping on your first order',itemGrad:'grad-3',pointsText:'<strong>Join Aura Circle free</strong> - earn points starting with this order.',subtotal:'$118.00',recs:[{name:'Wide Leg Studio Pant',price:'$108',g:'grad-6'},{name:'Everyday Studio Tank',price:'$49',g:'grad-4'},{name:'Performance Rain Jacket',price:'$189',g:'grad-8'}]}
+};
+
+var CM_COPY={
+  urgent:['Aura: Hi Jennifer! We have missed you. New jackets just dropped and we are holding 20% off just for you. Shop now > aura.com/jennifer Code: WELCOME20','Aura: Jennifer, your 20% off is waiting. The jackets you love are back but not for long > aura.com/jennifer Code: WELCOME20'],
+  shorter:['Aura: Jennifer, we miss you! 20% off new jackets today only > aura.com/jennifer Code: WELCOME20','Aura: Your 20% off expires soon. New jackets just in > aura.com/jennifer Code: WELCOME20'],
+  casual:['Aura: Hey Jennifer! Long time no see. New jackets plus 20% off just for you > aura.com/jennifer Code: WELCOME20','Aura: Jennifer! Your fave jackets got an update. 20% off saved for you > aura.com/jennifer Code: WELCOME20']
+};
+
+var SCRIPTS={
+  def:[
+    {bot:"Welcome to Aura. I'm your Style Concierge — here to help you find exactly what you're looking for. What can I help you with today?",replies:["Show me what's new in leggings","Tell me about jackets","What's the Aura Circle?"]}
+  ],
+  maya:[
+    {bot:"Maya, welcome back. Your Circle All-Access 15% discount is active today and you have 240 points ready to redeem. What can I help you find?",replies:["Show me new leggings","What's new in bras","What are my perks today?"]}
+  ],
+  jennifer:[
+    {bot:"Jennifer, welcome back — we've missed you. Your 20% off with code WELCOME20 is ready to use today. We have beautiful new arrivals in jackets and dresses. What can I help you find?",replies:["Tell me about the new jackets","What's new in dresses","How do I use my discount?"]}
+  ],
+  danielle:[
+    {bot:"Welcome back to Aura. We have been curating something new for you — our swim collection just landed, and based on your love of our studio styles, we think you are going to love it. Want to take a look?",replies:['Yes, show me swim','Tell me more about swim','I am here for yoga today']}
+  ]
+};
+
+var chatStep={def:0,maya:0,jennifer:0,danielle:0};
+var activeKey='def',panelOpen=false,timelineOpen=false,chatOpen=false;
+var cartHasItem=false,cmActiveTone='urgent',cmActiveVariant=0,pushTimer=null;
+var chatHistory=[];
+window._svq=window._svq||[];
+window._merkuryPersona='def';
+
+function merkuryResolve(key){
+  key=key||'def';window._merkuryPersona=key;
+  var latency=key==='maya'?112:key==='jennifer'?143:key==='danielle'?178:95+Math.floor(Math.random()*80);
+  var now=Date.now();
+  setTimeout(function(){
+    var payload=PAYLOADS[key]||PAYLOADS['def'];
+    var resolved={d:{data:Object.assign({},payload.d.data),response:payload.d.response,version:payload.d.version},t:now,e:now+latency};
+    window.merkuryData=resolved;
+    var isMatch=resolved.d.response==='match',d=isMatch?resolved.d.data:null;
+    window._svdatalayer=null;
+    if(isMatch){window._svdatalayer={'dentsu.id':d['dentsu.id'],hashed_email:d.hashed_email,CRM_ID:d.CRM_ID||null,confidence_score:d.confidence_score,match_type:d.match_type,first_name:d.first_name,last_name:d.last_name,age_range:d.age_range,gender:d.gender,city:d.city,state:d.state,household_income_range:d.household_income_range,purchase_frequency:d.purchase_frequency,last_purchase_days:d.last_purchase_days,category_affinity_1:d.category_affinity_1,category_affinity_2:d.category_affinity_2,in_market_flag:d.in_market_flag,lifestyle_segment:d.lifestyle_segment,brand_loyalty_score:d.brand_loyalty_score,email_engagement:d.email_engagement,_t:resolved.t,_e:resolved.e};}
+    window._svq.push(['_identityResolved',{hashed_email:isMatch?d.hashed_email:null,confidence_score:isMatch?d.confidence_score:null,response:resolved.d.response}]);
+    document.dispatchEvent(new CustomEvent('merkury:resolved',{detail:resolved}));
+  },latency);
+}
+
+function showPage(n){
+  document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active');});
+  var p=document.getElementById('page-'+n);if(p)p.classList.add('active');
+  window.scrollTo({top:0,behavior:'instant'});
+  updatePageIndicator();
+  if(activeKey!=='def')setTimeout(function(){applyContent(activeKey);},60);
+  window._svq.push(['_trackPageView']);
+  setTimeout(function(){merkuryResolve(window._merkuryPersona||'def');},90);
+  closeMegaNav();
+  if(n==='pdp')setTimeout(wireATCButton,100);
+  if(n==='cart')populateCartPage();
+}
+function goToCart(){populateCartPage();showPage('cart');}
+function set(id,val){var el=document.getElementById(id);if(el)el.textContent=val||'';}
+function setHTML(id,val){var el=document.getElementById(id);if(el)el.innerHTML=val||'';}
+
+function applyContent(key){
+  var v=CONTENT[key]||CONTENT['def'];
+  setHTML('promo-bar-text',v.promoBar);
+  var ey=document.getElementById('hero-eyebrow');if(ey){ey.style.display=v.heroEyebrow?'block':'none';ey.textContent=v.heroEyebrow;}
+  set('hero-h1-light',v.heroH1Light);set('hero-h1-bold',v.heroH1Bold);set('hero-sub',v.heroSub);
+  var hc=document.getElementById('hero-cta1');if(hc)hc.textContent=v.heroCta1;
+  set('home-cat-title',v.homeCatTitle);
+  for(var i=0;i<4;i++){set('cat-label-'+(i+1),v.catLabels[i]);set('cat-sub-'+(i+1),v.catSubs[i]);}
+  set('pb-eyebrow',v.pbEyebrow);set('pb-h2',v.pbH2);set('pb-p',v.pbP);
+  var pc=document.getElementById('pb-cta');if(pc)pc.textContent=v.pbCta;
+  set('life-title',v.lifeTitle);set('life-main-label',v.lifeMainLabel);set('life-main-sub',v.lifeMainSub);
+  for(var j=0;j<4;j++){set('life-card-'+(j+1),v.lifeCards[j]);}
+  set('loyalty-title',v.loyaltyTitle);set('loyalty-sub',v.loyaltySub);set('encore-title',v.encoreTitle);
+  set('cat-page-title',v.catPageTitle);set('cat-page-name',v.catPageTitle);set('cat-page-sub',v.catPageSub);set('cat-result-count',v.catResultCount);
+  set('pdp-title',v.pdpTitle);set('pdp-desc',v.pdpDesc);set('pdp-recs-title',v.pdpRecsTitle);
+  var atc=document.getElementById('pdp-atc-btn');if(atc)atc.textContent=v.pdpAtcBtn;
+  set('pdp-eyebrow',v.pdpEyebrow);
+  var pbc=document.getElementById('pdp-breadcrumb-cat');if(pbc)pbc.textContent=v.pdpBreadcrumbCat;
+  renderProductGrid(key);applyLoyalty(key);
+}
+
+function renderProductGrid(key){
+  var grid=document.getElementById('cat-product-grid');if(!grid)return;
+  var products=PRODUCTS[key]||PRODUCTS['def'];
+  grid.innerHTML=products.map(function(p){
+    var badge=p.badge?'<div class="pt-badge'+(p.badgeSale?' sale':'')+'">'+p.badge+'</div>':'';
+    var swatches=(p.swatches||[]).map(function(c){return '<div class="pt-swatch" style="background:'+c+'"></div>';}).join('');
+    return '<div class="product-tile" onclick="showPage(\'pdp\')">'+'<div class="pt-photo '+p.g+'">'+badge+'</div>'+'<div class="pt-colors">'+swatches+'</div>'+'<div class="pt-name">'+p.name+'</div>'+'<div class="pt-price">'+p.price+'</div>'+'<div class="pt-member-price">'+p.member+'</div></div>';
+  }).join('');
+}
+
+function applyLoyalty(key){
+  var v=LOYALTY[key]||LOYALTY['def'];
+  var icon=document.getElementById('cat-lb-icon');if(icon){icon.innerHTML=v.iconHTML;icon.style.background=v.iconBg;}
+  set('cat-lb-eyebrow',v.eyebrow);set('cat-lb-headline',v.headline);set('cat-lb-sub',v.sub);
+  var c1=document.getElementById('cat-lb-cta1');if(c1){c1.textContent=v.cta1;c1.className='btn-pill '+v.cta1Style+' btn-sm';}
+  var c2=document.getElementById('cat-lb-cta2');if(c2){c2.textContent=v.cta2;c2.className='btn-pill '+v.cta2Style+' btn-sm';}
+  [1,2,3].forEach(function(n){var t=document.getElementById('cat-tier-'+n);if(t)t.classList.toggle('active',v.activeTier===n);});
+  var picon=document.getElementById('pln-icon');if(picon)picon.innerHTML=v.pdpIconHTML;
+  setHTML('pln-text',v.pdpText);set('pln-cta',v.pdpCta);
+}
+
+function populateCartPage(){
+  var cfg=CART_CONFIG[activeKey]||CART_CONFIG['def'];
+  var empty=document.getElementById('cart-page-empty-state'),filled=document.getElementById('cart-page-filled-state');
+  var recsGrid=document.getElementById('cart-page-recs-grid'),recsTitle=document.getElementById('cart-page-recs-title');
+  if(recsTitle)recsTitle.textContent=cfg.recsTitle;
+  if(recsGrid)recsGrid.innerHTML=cfg.recs.map(function(r){return '<div class="cart-rec-tile" onclick="showPage(\'pdp\')">'+'<div class="cart-rec-tile-img '+r.g+'"></div>'+'<div class="cart-rec-tile-name">'+r.name+'</div>'+'<div class="cart-rec-tile-price">'+r.price+'</div></div>';}).join('');
+  if(cartHasItem){
+    if(empty)empty.style.display='none';if(filled)filled.style.display='block';
+    set('cart-pg-name',cfg.itemName);set('cart-pg-detail',cfg.itemDetail);
+    set('cart-pg-price',cfg.itemPrice);set('cart-pg-member',cfg.itemMember);
+    set('cart-pg-total',cfg.subtotal);set('cart-pg-subtotal',cfg.subtotal);set('cart-pg-est-total',cfg.subtotal);
+    set('cart-pg-recs-title',cfg.recsTitle);
+    var rg=document.getElementById('cart-pg-recs-grid');
+    if(rg)rg.innerHTML=cfg.recs.map(function(r){return '<div class="cart-rec-tile" onclick="showPage(\'pdp\')">'+'<div class="cart-rec-tile-img '+r.g+'"></div>'+'<div class="cart-rec-tile-name">'+r.name+'</div>'+'<div class="cart-rec-tile-price">'+r.price+'</div></div>';}).join('');
+  }else{if(empty)empty.style.display='block';if(filled)filled.style.display='none';set('cart-pg-subtotal','$0.00');set('cart-pg-est-total','$0.00');}
+  var loy=document.getElementById('cart-pg-loyalty-text');if(loy){var vl=LOYALTY[activeKey]||LOYALTY['def'];loy.innerHTML=vl.pdpText;}
+}
+function emptyCart(){cartHasItem=false;populateCartPage();}
+function applyPromo(){
+  var inp=document.getElementById('cart-promo-input'),msg=document.getElementById('cart-promo-msg');if(!inp||!msg)return;
+  var code=inp.value.trim().toUpperCase();
+  var valid={MAYA15:'15% off applied!',WELCOME20:'20% off applied!',FREESHIP:'Free shipping applied!'};
+  if(valid[code]){msg.textContent=valid[code];msg.style.color='#1a5f6a';msg.style.display='block';}
+  else{msg.textContent='Invalid promo code.';msg.style.color='#c0392b';msg.style.display='block';}
+}
+function wireATCButton(){
+  var btn=document.getElementById('pdp-atc-btn');
+  if(btn&&!btn._wired){btn.addEventListener('click',function(){cartHasItem=true;goToCart();});btn._wired=true;}
+}
+
+function updateTimeline(key){
+  var body=document.getElementById('itp-identity-body');
+  var resolveBar=document.getElementById('itp-resolve-bar');
+  var resolveMs=document.getElementById('itp-resolve-ms');
+  if(!body)return;
+  var d=(PAYLOADS[key]&&PAYLOADS[key].d.response==='match')?PAYLOADS[key].d.data:null;
+  if(!d){body.innerHTML='<div style="font-size:13px;color:var(--text3);line-height:1.6;">Select a persona to see live Merkury tag data.</div>';if(resolveBar)resolveBar.style.display='none';return;}
+  function fmt(v){if(v===null||v===undefined)return{text:'null',cls:'itp-signal-null'};if(typeof v==='number')return{text:String(v),cls:'itp-signal-num'};return{text:"'"+v+"'",cls:'itp-signal-str'};}
+  function row(label,val){var v=fmt(val);return '<div class="itp-signal"><span style="color:#5588dd;font-size:11px;font-weight:600;">'+label+'</span><span style="color:rgba(0,0,0,.4);margin:0 4px;font-size:11px;">:</span><span class="'+v.cls+'" style="font-size:11px;">'+v.text+'</span></div>';}
+  // Obfuscate PII — replace real values with realistic-length hash placeholders
+  function obfuscate(val,len){
+    if(val===null||val===undefined)return null;
+    var chars='abcdef0123456789';var out='';
+    // Use the real value as a seed so it's stable per persona but looks like a hash
+    var seed=0;for(var i=0;i<String(val).length;i++)seed=(seed*31+String(val).charCodeAt(i))&0xffffffff;
+    for(var j=0;j<(len||String(val).length);j++){seed=(seed*1664525+1013904223)&0xffffffff;out+=chars[(seed>>>0)%chars.length];}
+    return out;
+  }
+  function rowPII(label,val,len){
+    var obf=obfuscate(val,len);
+    if(obf===null)return row(label,null);
+    return '<div class="itp-signal"><span style="color:#5588dd;font-size:11px;font-weight:600;">'+label+'</span><span style="color:rgba(0,0,0,.4);margin:0 4px;font-size:11px;">:</span><span class="itp-signal-str" style="font-size:11px;letter-spacing:.5px;">\''+obf+'\'</span><span style="font-size:9px;color:#aaa;margin-left:6px;font-style:italic;">obfuscated</span></div>';
+  }
+  var idRows=rowPII('dentsu_id',d['dentsu.id'],32)+rowPII('hashed_email',d.hashed_email,40)+row('confidence_score',d.confidence_score)+row('match_type',d.match_type)+rowPII('CRM_ID',d.CRM_ID,8);
+  var thirdRows=row('age_range',d.age_range)+row('gender',d.gender)+row('city',d.city)+row('state',d.state)+row('household_income_range',d.household_income_range)+row('homeowner_flag',d.homeowner_flag)+row('lifestyle_segment',d.lifestyle_segment);
+  var firstBlock='';
+  if(d.CRM_ID){
+    var firstRows=row('purchase_frequency',d.purchase_frequency)+row('last_purchase_days',d.last_purchase_days)+row('category_affinity_1',d.category_affinity_1)+row('category_affinity_2',d.category_affinity_2)+row('avg_order_value_range',d.avg_order_value_range)+row('brand_loyalty_score',d.brand_loyalty_score)+row('email_engagement',d.email_engagement)+row('in_market_flag',d.in_market_flag);
+    firstBlock='<div class="itp-merkury-card" style="margin-top:10px;"><div class="itp-merkury-card-title" style="color:#c07820;border-color:#c07820;">1P Data \u2014 CRM Match</div>'+firstRows+'</div>';
+  }
+  body.innerHTML='<div class="itp-merkury-card"><div class="itp-merkury-card-title">Identity Resolution</div>'+idRows+'</div>'+'<div class="itp-merkury-card" style="margin-top:10px;"><div class="itp-merkury-card-title" style="color:#6a3aaa;border-color:#6a3aaa;">3P Data \u2014 Merkury Graph</div>'+thirdRows+'</div>'+firstBlock;
+  if(resolveBar&&resolveMs){
+    resolveBar.style.display='none';
+    var ms=key==='maya'?112:key==='jennifer'?143:key==='danielle'?178:95+Math.floor(Math.random()*80);
+    setTimeout(function(){resolveMs.textContent=ms+'ms';resolveBar.style.display='flex';},ms);
+  }
+}
+
+function toggleTimeline(){timelineOpen=!timelineOpen;var p=document.getElementById('id-timeline-panel');if(p)p.classList.toggle('open',timelineOpen);}
+function closeTimeline(){timelineOpen=false;var p=document.getElementById('id-timeline-panel');if(p)p.classList.remove('open');}
+
+function toggleChat(){
+  if(chatOpen){chatOpen=false;var w=document.getElementById('chat-window');if(w)w.classList.remove('open');return;}
+  closeAllPanels();
+  chatOpen=true;var w=document.getElementById('chat-window');if(w)w.classList.add('open');
+  if(chatHistory.length===0)initChat(activeKey);
+}
+function initChat(key){
+  key=key||activeKey;chatHistory=[];chatStep[key]=0;
+  var msgs=document.getElementById('chat-messages');if(msgs)msgs.innerHTML='';
+  updateChatContext();
+  var script=SCRIPTS[key]||SCRIPTS['def'];
+  if(script&&script[0]){appendChatMsg('bot',script[0].bot);renderReplies(key,0);}
+}
+function appendChatMsg(role,text){
+  var msgs=document.getElementById('chat-messages');if(!msgs)return;
+  var div=document.createElement('div');div.className='chat-msg '+role;
+  var bubble=document.createElement('div');bubble.className='chat-msg-bubble';bubble.textContent=text;
+  div.appendChild(bubble);msgs.appendChild(div);msgs.scrollTop=msgs.scrollHeight;
+  chatHistory.push({role:role==='bot'?'assistant':'user',content:text});
+}
+function renderReplies(key,step){
+  var msgs=document.getElementById('chat-messages');if(!msgs)return;
+  var script=SCRIPTS[key]||SCRIPTS['def'];
+  var replies=script[step]?script[step].replies:[];
+  if(!replies||replies.length===0)return;
+  var wrap=document.createElement('div');wrap.className='chat-replies';wrap.id='chat-replies-wrap';
+  replies.forEach(function(r){
+    var btn=document.createElement('button');btn.className='chat-reply-btn';btn.textContent=r;
+    btn.addEventListener('click',function(){handleReply(key,step,r);});
+    wrap.appendChild(btn);
+  });
+  msgs.appendChild(wrap);msgs.scrollTop=msgs.scrollHeight;
+}
+function handleReply(key,step,text){
+  var wrap=document.getElementById('chat-replies-wrap');if(wrap)wrap.remove();
+  appendChatMsg('user',text);
+  // After the opening exchange, always route through keyword handler for relevant responses
+  var reply=getChatReply(text,key);
+  setTimeout(function(){appendChatMsg('bot',reply);},480);
+}
+function sendChat(){
+  var inp=document.getElementById('chat-input');if(!inp||!inp.value.trim())return;
+  var msg=inp.value.trim();inp.value='';
+  var wrap=document.getElementById('chat-replies-wrap');if(wrap)wrap.remove();
+  appendChatMsg('user',msg);
+  var reply=getChatReply(msg,activeKey);
+  setTimeout(function(){appendChatMsg('bot',reply);},480);
+}
+
+function getChatReply(msg,key){
+  var m=msg.toLowerCase();
+  // Loyalty / points
+  if(/point|reward|circle|loyalty|tier|all.access|premier|core|member|earn/i.test(m)){
+    if(key==='maya')return "As a Circle All-Access member you earn 25 points per dollar — our highest rate. You currently have 240 points ready to redeem. Your exclusive 15% off applies automatically at checkout.";
+    if(key==='jennifer')return "You're a Circle Premier member, which means you earn enhanced points and have access to extended returns and Create Your Own Sale Day. Apply for the All-Access card to unlock our 5x points tier.";
+    return "Aura Circle is free to join and starts earning you points from your very first purchase. Core members earn 1x points, Premier members unlock more perks at $350+ annually, and All-Access card members earn 25 points per dollar.";
+  }
+  // Shipping
+  if(/ship|deliver|free ship|how long|arrival|arrive/i.test(m)){
+    if(key==='maya')return "As a Circle All-Access member, you enjoy free shipping on orders $35 and over. Most orders arrive within 3–5 business days, and expedited options are available at checkout.";
+    if(key==='jennifer')return "Circle Premier members receive free shipping on orders of $50 and over. Your order typically arrives within 3–5 business days.";
+    return "Free shipping is available for Aura Circle members on orders $50 and over. Standard delivery takes 3–5 business days. Join Circle free to unlock the benefit.";
+  }
+  // Returns
+  if(/return|exchange|refund|send back/i.test(m)){
+    if(key==='maya')return "All-Access members enjoy extended returns — you can return most items within 60 days by mail or in store. Items must have original tags attached.";
+    if(key==='jennifer')return "As a Circle Premier member you have extended return windows. Most items can be returned within 60 days by mail or in store with original tags.";
+    return "Most Aura items can be returned within 30 days of purchase with original tags. Circle members receive extended return windows. Returns are free in store.";
+  }
+  // Size / fit
+  if(/size|fit|sizing|chart|small|large|xs|xxs|petite|tall|measure/i.test(m)){
+    return "Aura runs true to size for most styles. For leggings and tights we recommend sizing down one if you prefer a more compressive fit. Our size chart is available on each product page, and we offer Petite and Tall cuts in select styles.";
+  }
+  // Leggings
+  if(/legging|tight|high rise|7\/8|full length/i.test(m)){
+    if(key==='maya')return "Our newest legging is the Interval High Rise — it comes in three new colourways this season and your All-Access 15% discount applies automatically. It pairs beautifully with the Longline Sports Bra.";
+    return "Our bestselling leggings are the High Rise Performance Tight 7/8 and the Everyday Legging. Both offer 4-way stretch, a wide waistband, and are available in XS–XL. Circle members receive member pricing on all styles.";
+  }
+  // Jackets
+  if(/jacket|outerwear|softshell|rain jacket|layer/i.test(m)){
+    if(key==='jennifer')return "The Performance Softshell Jacket is one of our most beloved pieces this season — it moves beautifully from morning school runs to weekend travel. It pairs effortlessly with the Studio Wrap Top. Your 20% off applies at checkout with code WELCOME20.";
+    return "Our jacket collection includes the Performance Softshell, the Performance Rain Jacket, and the Zip Studio Jacket. All are designed to layer over our performance pieces for a complete look.";
+  }
+  // Sports bras / tops
+  if(/bra|sports bra|top|tank|longline/i.test(m)){
+    if(key==='maya')return "The Longline Sports Bra is a favourite among our most dedicated members and pairs beautifully with the Interval Tight. Your Circle discount applies to both.";
+    return "Our Longline Sports Bra and Everyday Studio Tank are top-rated across our community. Both offer medium support and come in multiple colourways. Member pricing applies for Circle members.";
+  }
+  // Dresses
+  if(/dress|dresse/i.test(m)){
+    if(key==='jennifer')return "Our newest dresses blend performance fabric with an elevated silhouette — perfect from the studio straight through to an evening out. They pair beautifully with the Softshell Jacket. Your 20% off with code WELCOME20 applies to all dress styles.";
+    return "Our dress collection blends performance fabric with elevated silhouettes — designed to take you from practice to wherever the evening leads. Available in XS–XL.";
+  }
+  // Promo / discount codes
+  if(/promo|code|discount|off|coupon|deal|sale/i.test(m)){
+    if(key==='maya')return "Your exclusive Circle All-Access code is MAYA15 — 15% off applies automatically for you. You can also use this code at checkout to make sure it's applied.";
+    if(key==='jennifer')return "Your welcome-back code is WELCOME20 for 20% off your next purchase. It applies to all full-price and sale styles including the new jackets.";
+    if(key==='danielle')return "Our swim collection is brand new at Aura — built with the same performance fabric you love from our studio range. Use code SWIM20 for 20% off your first swim purchase. Want me to show you what just landed?";
+    return "Joining Aura Circle is free and unlocks 20% off your first purchase. Sign up with your email in the banner above to receive your code instantly.";
+  }
+  // Gift cards
+  if(/gift|gift card/i.test(m)){
+    return "Aura gift cards are available in amounts from $25 to $500 and can be used online or in store. They make a wonderful gift for anyone who loves to move.";
+  }
+  // Store locations
+  if(/store|location|near me|find a store|in.store/i.test(m)){
+    return "Aura has over 200 store locations across the US. You can find your nearest store using the Store Locator in the footer, or shop our full collection online with free shipping for Circle members.";
+  }
+  // General greeting / hi
+  if(/^(hi|hello|hey|good morning|good afternoon|good evening)[\s!?.,]*$/i.test(m)){
+    if(key==='maya')return "Hi Maya! Great to see you again. What are you shopping for today — new leggings, a sports bra, or something else?";
+    if(key==='jennifer')return "Hi Jennifer! Welcome back. We have some beautiful new arrivals I think you will love. Can I help you find something specific?";
+    return "Hello! I'm your Aura Style Concierge. I'm here to help you find the perfect piece. Are you shopping for something specific, or would you like some inspiration?";
+  }
+  // Help
+  if(/help|what can you|what do you/i.test(m)){
+    return "I can help you with product questions, sizing, fit, loyalty points, shipping, returns, and promo codes. What would you like to know?";
+  }
+  // Fallback
+  var fallbacks={
+    maya:["Happy to help with that, Maya. Could you tell me a little more so I can point you to exactly the right style?","As a Circle All-Access member you have access to our full collection at member pricing. What can I help you find today?"],
+    jennifer:["Of course — let me help with that, Jennifer. Could you share a bit more about what you're looking for?","We have wonderful new arrivals across jackets, dresses, and more. What can I help you with today?"],
+    danielle:["Happy to help! Could you tell me a little more about what you're looking for — a specific style, category, or occasion?","We have beautiful pieces across every category right now. What can I point you toward?"],
+    def:["Happy to help with that. Could you tell me a little more so I can point you to exactly the right style?","I'd love to help. Could you share a bit more about what you're looking for — a specific category, fit, or occasion?"]
+  };
+  var opts=fallbacks[key]||fallbacks['def'];
+  return opts[Math.floor(Math.random()*opts.length)];
+}
+function updateChatContext(){
+  var label=document.getElementById('chat-context-label');
+  var map={def:'Guest',maya:'Maya — Circle All-Access',jennifer:'Jennifer — Circle Premier',danielle:'Danielle — Yoga Buyer'};
+  if(label)label.textContent=map[activeKey]||'Guest';
+}
+
+function updateStickyPill(key){
+  var btn=document.getElementById('sticky-20-btn'),label=document.getElementById('sticky-20-label');if(!btn||!label)return;
+  btn.classList.remove('hidden');
+  var configs={maya:{text:'Your 15% Off is Ready',bg:'#1a5f6a'},jennifer:{text:'Welcome Back - 20% Off',bg:'#2a3a5a'},danielle:{text:'New — Aura Swim for You',bg:'#3a1a6a'},def:{text:'Get 20% Off',bg:'#0d0d0d'}};
+  var cfg=configs[key]||configs['def'];label.textContent=cfg.text;btn.style.background=cfg.bg;
+}
+function onStickyPillClick(){if(activeKey==='maya'||activeKey==='jennifer'||activeKey==='danielle'){openOfferLightbox();}else{openSignupModal();}}
+
+function closeAllPanels(){
+  // Floating panels
+  chatOpen=false;var w=document.getElementById('chat-window');if(w)w.classList.remove('open');
+  panelOpen=false;var pan=document.getElementById('ps-panel'),tog=document.getElementById('ps-toggle');if(pan)pan.classList.remove('open');if(tog)tog.classList.remove('open');
+  // Modals / overlays
+  var ol=document.getElementById('offer-lightbox-overlay');if(ol)ol.classList.remove('open');
+  var pm=document.getElementById('pers-modal-overlay');if(pm)pm.style.display='none';
+  var sm=document.getElementById('signup-modal-overlay');if(sm)sm.style.display='none';
+  var em=document.getElementById('email-modal-overlay');if(em)em.style.display='none';
+  var cm=document.getElementById('campaign-modal-overlay');if(cm)cm.style.display='none';
+  var sf=document.getElementById('ship-flyout-overlay');if(sf)sf.classList.remove('open');
+  document.body.style.overflow='';
+}
+
+function openOfferLightbox(){
+  var cfg=OFFER_LIGHTBOX[activeKey];if(!cfg)return;
+  closeAllPanels();
+  set('offer-lb-name',cfg.name);set('offer-lb-headline',cfg.headline);set('offer-lb-desc',cfg.desc);set('offer-lb-code',cfg.code);
+  var o=document.getElementById('offer-lightbox-overlay');if(o){o.classList.add('open');document.body.style.overflow='hidden';}
+}
+function closeOfferLightbox(){var o=document.getElementById('offer-lightbox-overlay');if(o){o.classList.remove('open');document.body.style.overflow='';}}
+
+function openModal(){closeAllPanels();var o=document.getElementById('pers-modal-overlay');if(o){o.style.display='flex';document.body.style.overflow='hidden';}}
+function dismissModal(){var o=document.getElementById('pers-modal-overlay');if(o){o.style.display='none';document.body.style.overflow='';}}
+
+function populateModal(key){
+  var v=MODALS[key];if(!v)return;
+  var d=PAYLOADS[key].d.data;
+  var hdr=document.getElementById('pm-header');if(hdr)hdr.style.background=v.headerBg;
+  set('pm-visitor-state',v.visitorState);set('pm-tagline',v.tagline);set('pm-match-badge',v.matchBadge);
+  var idCard=document.getElementById('pm-id-card');
+  if(key==='danielle'){
+    if(idCard)idCard.innerHTML='<div class="pers-id-card-title">Resolved Identity</div><div class="pers-id-grid"><div class="pers-id-field"><div class="pers-id-label">Match Type</div><div class="pers-id-value prob">Probabilistic</div></div><div class="pers-id-field"><div class="pers-id-label">Confidence Score</div><div class="pers-id-value">3 - Medium</div><div class="conf-explainer" style="display:block;background:#f0eaff;color:#4a1a8a;border-left:3px solid #8a5aaa;">Score 3 - Medium confidence. Probabilistic match with rich 3P signal data.</div></div><div class="pers-id-field"><div class="pers-id-label">Age Range</div><div class="pers-id-value">25-34</div></div><div class="pers-id-field"><div class="pers-id-label">Location</div><div class="pers-id-value">Austin, TX</div></div><div class="pers-id-field"><div class="pers-id-label">HH Income</div><div class="pers-id-value">$75K-$100K</div></div><div class="pers-id-field"><div class="pers-id-label">Lifestyle Segment</div><div class="pers-id-value">Active Wellness Seeker</div></div><div class="pers-id-field" style="grid-column:1/-1;border-top:2px solid #8a5aaa;padding-top:10px;margin-top:4px;"><div class="pers-id-label" style="color:#4a1a8a;font-weight:700;letter-spacing:1px;">&#9889; MERKURY 3P CROSS-SELL SIGNAL</div></div><div class="pers-id-field"><div class="pers-id-label">Known Affinity</div><div class="pers-id-value">Yoga &amp; Studio</div></div><div class="pers-id-field"><div class="pers-id-label">3P Signal</div><div class="pers-id-value" style="color:#4a1a8a;font-weight:700;">Swim — propensity 82%</div></div><div class="pers-id-field"><div class="pers-id-label">Swim In-Market</div><div class="pers-id-value" style="color:#1a5f6a;font-weight:700;">Y</div></div><div class="pers-id-field"><div class="pers-id-label">Not in Aura 1P Data</div><div class="pers-id-value" style="color:#c07820;">Category never purchased</div></div></div>';
+  }else{
+    var ck=CONF_EXPLAIN[String(d.confidence_score)];
+    if(idCard)idCard.innerHTML='<div class="pers-id-card-title">Resolved Identity</div><div class="pers-id-grid"><div class="pers-id-field"><div class="pers-id-label">Match Type</div><div class="pers-id-value '+v.matchClass+'">'+v.matchType+'</div></div><div class="pers-id-field"><div class="pers-id-label">Confidence Score</div><div class="pers-id-value">'+v.confidence+'</div>'+(ck?'<div class="conf-explainer" style="display:block;background:'+ck.bg+';color:'+ck.color+';border-left:3px solid '+ck.border+';">'+ck.text+'</div>':'')+'</div><div class="pers-id-field"><div class="pers-id-label">Age Range</div><div class="pers-id-value">'+d.age_range+'</div></div><div class="pers-id-field"><div class="pers-id-label">Location</div><div class="pers-id-value">'+d.city+', '+d.state+'</div></div><div class="pers-id-field"><div class="pers-id-label">HH Income</div><div class="pers-id-value">'+d.household_income_range+'</div></div><div class="pers-id-field"><div class="pers-id-label">Purchase Frequency</div><div class="pers-id-value">'+d.purchase_frequency+'</div></div><div class="pers-id-field"><div class="pers-id-label">Category Affinity 1</div><div class="pers-id-value">'+d.category_affinity_1+'</div></div><div class="pers-id-field"><div class="pers-id-label">Category Affinity 2</div><div class="pers-id-value">'+d.category_affinity_2+'</div></div><div class="pers-id-field"><div class="pers-id-label">Lifestyle Segment</div><div class="pers-id-value">'+d.lifestyle_segment+'</div></div><div class="pers-id-field"><div class="pers-id-label">Email Engagement</div><div class="pers-id-value">'+d.email_engagement+'</div></div></div>';
+  }
+  var row=document.getElementById('pm-campaign-row');if(row)row.style.display=key==='jennifer'?'block':'none';
+  var emailrow=document.getElementById('pm-email-row');if(emailrow)emailrow.style.display=key==='maya'?'block':'none';
+
+}
+document.getElementById('pers-modal-overlay').addEventListener('click',function(e){if(e.target===this)dismissModal();});
+function openSignupModal(){closeAllPanels();var o=document.getElementById('signup-modal-overlay');if(o){o.style.display='flex';document.body.style.overflow='hidden';}}
+function dismissSignupModal(){var o=document.getElementById('signup-modal-overlay');if(o){o.style.display='none';document.body.style.overflow='';}}
+function submitSignupModal(){var inp=document.getElementById('signup-email-input');if(inp&&inp.value.trim()){dismissSignupModal();}else{if(inp)inp.style.borderColor='#c9231a';setTimeout(function(){if(inp)inp.style.borderColor='';},1200);}}
+document.getElementById('signup-modal-overlay').addEventListener('click',function(e){if(e.target===this)dismissSignupModal();});
+document.getElementById('offer-lightbox-overlay').addEventListener('click',function(e){if(e.target===this)closeOfferLightbox();});
+function openShipFlyout(){closeAllPanels();document.getElementById('ship-flyout-overlay').classList.add('open');document.body.style.overflow='hidden';}
+function closeShipFlyout(){document.getElementById('ship-flyout-overlay').classList.remove('open');document.body.style.overflow='';}
+function openEmailModal(){
+  var o=document.getElementById('email-modal-overlay');if(!o)return;
+  closeAllPanels();
+  var d=(PAYLOADS[activeKey]&&PAYLOADS[activeKey].d.response==='match')?PAYLOADS[activeKey].d.data:null;
+  var toEl=document.getElementById('email-modal-to');
+  var subEl=document.getElementById('email-modal-subject');
+  if(toEl&&d&&d.email_addr)toEl.textContent=d.email_addr;
+  if(subEl&&d&&d.first_name)subEl.textContent=d.first_name+', you left something behind';
+  o.style.display='flex';document.body.style.overflow='hidden';
+}
+function closeEmailModal(){var o=document.getElementById('email-modal-overlay');if(o){o.style.display='none';document.body.style.overflow='';}}
+document.getElementById('email-modal-overlay').addEventListener('click',function(e){if(e.target===this)closeEmailModal();});
+function openCampaignModal(){closeAllPanels();var o=document.getElementById('campaign-modal-overlay');if(o){o.style.display='flex';document.body.style.overflow='hidden';}}
+function closeCampaignModal(){var o=document.getElementById('campaign-modal-overlay');if(o){o.style.display='none';document.body.style.overflow='';}}
+document.getElementById('campaign-modal-overlay').addEventListener('click',function(e){if(e.target===this)closeCampaignModal();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeShipFlyout();dismissModal();dismissSignupModal();closeCampaignModal();closeEmailModal();closeOfferLightbox();dismissPush();closeTimeline();}});
+
+function showPush(title,msg){var w=document.getElementById('push-notif-wrap');var t=document.getElementById('push-title');var m=document.getElementById('push-msg');if(t)t.textContent=title;if(m)m.textContent=msg;if(w)w.classList.add('visible');clearTimeout(pushTimer);pushTimer=setTimeout(dismissPush,7000);}
+function dismissPush(){var w=document.getElementById('push-notif-wrap');if(w)w.classList.remove('visible');}
+
+var megaNavOpen=false;
+function toggleMegaNav(){megaNavOpen=!megaNavOpen;document.getElementById('mega-nav-new').classList.toggle('open',megaNavOpen);document.getElementById('nav-new-link').classList.toggle('active',megaNavOpen);}
+function closeMegaNav(){megaNavOpen=false;var m=document.getElementById('mega-nav-new');if(m)m.classList.remove('open');var l=document.getElementById('nav-new-link');if(l)l.classList.remove('active');}
+document.addEventListener('click',function(e){if(!e.target.closest('.main-nav')&&!e.target.closest('#mega-nav-new'))closeMegaNav();});
+
+function setCmTone(btn,tone){document.querySelectorAll('.cm-tone-pill').forEach(function(p){p.classList.remove('active');});btn.classList.add('active');cmActiveTone=tone;var v=CM_COPY[tone]||CM_COPY['urgent'];var t0=document.getElementById('cv-text-0');if(t0)t0.textContent=v[0];var t1=document.getElementById('cv-text-1');if(t1)t1.textContent=v[1];updatePhonePreview();}
+function selectVariant(el,idx){cmActiveVariant=idx;document.querySelectorAll('.cm-variant').forEach(function(v){v.classList.remove('active');});el.classList.add('active');updatePhonePreview();}
+function updatePhonePreview(){var v=CM_COPY[cmActiveTone]||CM_COPY['urgent'];var t=v[cmActiveVariant]||v[0];var p=document.getElementById('cm-phone-preview');if(p)p.textContent=t;}
+function selectSendTime(idx){[0,1].forEach(function(n){var r=document.getElementById('cm-st-'+n);if(r)r.classList.toggle('selected',n===idx);});}
+
+function buildPersonaList(){
+  var list=document.getElementById('ps-persona-list');if(!list)return;list.innerHTML='';
+  PERSONAS.forEach(function(p){
+    var tags=p.tags.map(function(t){return '<span class="ps-tag '+t.c+'">'+t.l+'</span>';}).join('');
+    var el=document.createElement('div');el.className='ps-persona'+(p.key===activeKey?' active':'');el.setAttribute('data-key',p.key);
+    el.innerHTML='<div class="ps-persona-avatar" style="background:'+p.bg+'">'+p.avatar+'</div><div class="ps-persona-info"><div class="ps-persona-name">'+p.name+'</div><div class="ps-persona-title">'+p.title+'</div><div class="ps-persona-tags">'+tags+'</div></div><span class="ps-persona-check">&#10003;</span>';
+    el.addEventListener('click',function(){applyPersona(p.key);});list.appendChild(el);
+  });
+}<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aura | Performance Apparel for Women</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<!--MERKURY TAG START. PLACE AT START OF DOCUMENT HEAD. DO NOT CHANGE-->
+<script>
+window._svq=window._svq||[];
+window._svq.push(['_trackPageView']);
+(function(d,c){var sv=d.createElement(c);sv.type='text/javascript';sv.async=true;sv.src='data:text/javascript,/* Merkury sv.js stub */';var s=d.getElementsByTagName(c)[0];s.parentNode.insertBefore(sv,s);})(document,'script');
+</script>
+<!--MERKURY TAG END. DO NOT CHANGE-->
+<style>
+:root{--black:#0d0d0d;--white:#fff;--off:#f7f4f0;--teal:#1a5f6a;--border:#e8e4de;--text:#1a1a1a;--text2:#4a4a4a;--text3:#888;--purple:#6a3aaa;--font-serif:'Libre Baskerville',Georgia,serif;--font:'Inter','Helvetica Neue',sans-serif;--mw:1440px;--g:48px;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-font-smoothing:antialiased;}
+body{font-family:var(--font);color:var(--text);background:#fff;line-height:1.5;overflow-x:hidden;}
+a{text-decoration:none;color:inherit;cursor:pointer;}
+button{font-family:var(--font);cursor:pointer;border:0;background:none;}
+img{display:block;width:100%;height:100%;object-fit:cover;}
+.w{max-width:var(--mw);margin:0 auto;padding:0 var(--g);}
+.page{display:none;}.page.active{display:block;}
+.btn-pill{display:inline-flex;align-items:center;justify-content:center;padding:14px 32px;border-radius:50px;font-family:var(--font);font-size:14px;font-weight:500;letter-spacing:.5px;cursor:pointer;transition:all .18s;border:2px solid transparent;}
+.btn-black{background:#0d0d0d;color:#fff;border-color:#0d0d0d;}.btn-black:hover{background:#333;}
+.btn-outline{background:transparent;color:#0d0d0d;border-color:#0d0d0d;}.btn-outline:hover{background:#0d0d0d;color:#fff;}
+.btn-white{background:#fff;color:#0d0d0d;}
+.btn-sm{padding:10px 22px;font-size:13px;}
+
+/* DEMO BANNER */
+.demo-banner{background:#1a5f6a;text-align:center;padding:9px;font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#fff;}
+
+/* UTIL BAR */
+.util-bar{background:#0d0d0d;height:36px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;}
+.util-center{font-size:12px;color:rgba(255,255,255,.85);display:flex;align-items:center;gap:16px;white-space:nowrap;}
+.util-center a{color:#fff;text-decoration:underline;font-size:12px;cursor:pointer;white-space:nowrap;}
+.util-right{display:flex;gap:16px;flex-shrink:0;}
+.util-icon{color:rgba(255,255,255,.7);font-size:18px;cursor:pointer;}
+
+/* PROMO BAR */
+.promo-bar{background:#1a5f6a;height:40px;display:flex;align-items:center;justify-content:space-between;padding:0 24px;}
+.promo-bar-text{font-size:13px;color:#fff;flex:1;text-align:center;}
+.promo-bar-text a{color:#fff;font-weight:600;text-decoration:underline;margin-left:8px;cursor:pointer;}
+.promo-bar-right{flex-shrink:0;}
+.promo-bar-right a{color:rgba(255,255,255,.9);text-decoration:underline;font-size:12px;cursor:pointer;}
+
+/* NAV */
+.main-nav{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:900;}
+.nav-inner{max-width:var(--mw);margin:0 auto;padding:0 32px;display:flex;align-items:center;height:64px;}
+.nav-logo{font-family:var(--font-serif);font-size:24px;font-weight:700;letter-spacing:6px;text-transform:uppercase;color:#0d0d0d;cursor:pointer;flex-shrink:0;margin-right:40px;}
+.nav-links{display:flex;align-items:center;flex:1;}
+.nav-link{font-family:var(--font-serif);font-size:13px;font-weight:400;color:var(--text);letter-spacing:.5px;padding:0 14px;height:64px;display:flex;align-items:center;border-bottom:2px solid transparent;transition:all .15s;white-space:nowrap;cursor:pointer;}
+.nav-link:hover,.nav-link.active{border-bottom-color:#0d0d0d;}
+.nav-link.sale{color:#c0392b;}
+.nav-search{margin-left:auto;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border);padding:4px 0;}
+.nav-search input{border:none;outline:none;font-family:var(--font);font-size:13px;color:var(--text);background:transparent;width:160px;}
+.mega-nav-dropdown{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;border-top:1px solid var(--border);border-bottom:1px solid var(--border);box-shadow:0 8px 24px rgba(0,0,0,.08);z-index:800;padding:28px 0;}
+.mega-nav-dropdown.open{display:block;}
+.mega-nav-inner{max-width:var(--mw);margin:0 auto;padding:0 32px;display:grid;grid-template-columns:repeat(4,1fr);gap:32px;}
+.mega-col h4{font-family:var(--font-serif);font-size:13px;font-weight:700;color:#0d0d0d;margin-bottom:12px;}
+.mega-col a{display:block;font-size:13px;color:var(--text2);padding:3px 0;cursor:pointer;}
+.mega-col a:hover{color:#0d0d0d;}
+
+/* HERO */
+.hero{overflow:hidden;}
+.hero-split{display:grid;grid-template-columns:1fr 1fr 1fr;min-height:580px;}
+.hero-photo-left{background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/yogi.sunrise.webp') center/cover no-repeat;}
+.hero-photo-right{background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/workout.1.webp') center/cover no-repeat;}
+.hero-center{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 40px;text-align:center;background:#fff;}
+.hero-eyebrow{font-size:11px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--text3);margin-bottom:16px;display:none;}
+.hero-h1-light{font-family:var(--font-serif);font-size:clamp(32px,3.2vw,50px);font-weight:400;color:#0d0d0d;letter-spacing:3px;text-transform:uppercase;line-height:1.1;display:block;}
+.hero-h1-bold{font-family:var(--font-serif);font-size:clamp(32px,3.2vw,50px);font-weight:700;color:#0d0d0d;letter-spacing:3px;text-transform:uppercase;line-height:1.1;display:block;}
+.hero-sub{font-size:14px;color:var(--text2);line-height:1.7;margin:16px 0 28px;max-width:260px;}
+
+/* GRADIENTS */
+.grad-1{background:linear-gradient(160deg,#c8c0b8,#a0988e);}
+.grad-2{background:linear-gradient(160deg,#b8c4c8,#90a8b4);}
+.grad-3{background:linear-gradient(160deg,#c4b8c8,#a098b0);}
+.grad-4{background:linear-gradient(160deg,#c8c4b8,#b0a898);}
+.grad-5{background:linear-gradient(160deg,#b8c4b8,#98b098);}
+.grad-6{background:linear-gradient(160deg,#c8b8b8,#b09898);}
+.grad-7{background:linear-gradient(135deg,#1a2a3a,#0d1828);}
+.grad-8{background:linear-gradient(135deg,#1a2820,#0d1a10);}
+
+/* SECTIONS */
+.cat-section{padding:56px 0;border-bottom:1px solid var(--border);}
+.cat-section-hdr{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:28px;}
+.cat-section-hdr h2{font-family:var(--font-serif);font-size:26px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0d0d0d;}
+.cat-section-hdr a{font-size:13px;color:var(--text2);text-decoration:underline;cursor:pointer;}
+.cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.cat-tile{cursor:pointer;}
+.cat-photo{aspect-ratio:3/4;overflow:hidden;position:relative;}
+.cat-badge{position:absolute;bottom:12px;left:12px;background:rgba(255,255,255,.92);padding:4px 10px;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;border-radius:2px;}
+.cat-label{font-family:var(--font-serif);font-size:14px;font-weight:400;color:var(--text);margin-top:10px;letter-spacing:.5px;}
+.cat-sub{font-size:12px;color:var(--text3);margin-top:2px;}
+
+/* PROMO BAND */
+.promo-band{background:var(--off);}
+.promo-band-inner{max-width:var(--mw);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;min-height:360px;}
+.pb-photo{overflow:hidden;background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/yoga.mat.webp') center/cover no-repeat;}
+.pb-text{display:flex;flex-direction:column;justify-content:center;padding:48px 64px;}
+.pb-eyebrow{font-size:11px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--text3);margin-bottom:12px;}
+.pb-h2{font-family:var(--font-serif);font-size:clamp(26px,2.3vw,38px);font-weight:400;color:#0d0d0d;line-height:1.2;margin-bottom:16px;}
+.pb-p{font-size:14px;color:var(--text2);line-height:1.7;margin-bottom:28px;max-width:380px;}
+
+/* LIFE SECTION */
+.life-section{padding:56px 0;border-bottom:1px solid var(--border);}
+.life-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:16px;min-height:420px;}
+.life-main{position:relative;overflow:hidden;cursor:pointer;background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/yoga.meditate.webp') center/cover no-repeat;}
+.life-main-label{position:absolute;bottom:24px;left:24px;}
+.life-main-label h3{font-family:var(--font-serif);font-size:26px;font-weight:700;color:#fff;letter-spacing:2px;text-transform:uppercase;text-shadow:0 2px 10px rgba(0,0,0,.4);}
+.life-main-label p{font-size:13px;color:rgba(255,255,255,.85);margin-top:4px;}
+.life-side{display:grid;grid-template-rows:1fr 1fr;gap:16px;}
+.life-card{position:relative;overflow:hidden;cursor:pointer;}
+.life-card-label{position:absolute;bottom:14px;left:14px;font-family:var(--font-serif);font-size:12px;font-weight:700;color:#fff;letter-spacing:2px;text-transform:uppercase;text-shadow:0 1px 6px rgba(0,0,0,.5);}
+
+/* LOYALTY STRIP */
+.loyalty-strip{background:#0d0d0d;padding:48px 0;}
+.loyalty-inner{max-width:var(--mw);margin:0 auto;padding:0 var(--g);display:grid;grid-template-columns:1fr 2px 1fr 2px 1fr;align-items:center;}
+.ls-divider{background:rgba(255,255,255,.15);height:80px;}
+.ls-col{padding:0 48px;text-align:center;}
+.ls-col:first-child{padding-left:0;}.ls-col:last-child{padding-right:0;}
+.ls-eyebrow{font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:8px;}
+.ls-title{font-family:var(--font-serif);font-size:15px;font-weight:700;color:#fff;margin-bottom:6px;}
+.ls-sub{font-size:13px;color:rgba(255,255,255,.6);margin-bottom:16px;line-height:1.5;}
+.ls-email-row{display:flex;gap:8px;}
+.ls-email-input{flex:1;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);color:#fff;padding:11px 14px;border-radius:50px;font-size:13px;font-family:var(--font);outline:none;}
+.ls-email-input::placeholder{color:rgba(255,255,255,.4);}
+
+/* FOOTER */
+footer{background:#fff;padding:40px 0 0;}
+.footer-cols{max-width:var(--mw);margin:0 auto;padding:0 var(--g);display:grid;grid-template-columns:repeat(4,1fr);gap:40px;margin-bottom:40px;}
+.fc h4{font-family:var(--font-serif);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0d0d0d;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid var(--border);}
+.fc a{display:block;font-size:13px;color:var(--text2);padding:4px 0;cursor:pointer;}
+.fc a:hover{color:#0d0d0d;}
+.footer-bottom{border-top:1px solid var(--border);padding:16px var(--g);display:flex;justify-content:space-between;align-items:center;font-size:11px;color:var(--text3);flex-wrap:wrap;gap:8px;}
+.footer-bottom-links a{color:var(--text3);padding:0 10px;border-right:1px solid var(--border);font-size:11px;cursor:pointer;}
+.footer-bottom-links a:last-child{border-right:none;}
+.footer-social{display:flex;gap:10px;}
+.footer-social a{width:32px;height:32px;border-radius:50%;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--text2);cursor:pointer;}
+
+/* CATEGORY PAGE */
+.cat-page-hero{background:#f0ece8;padding:32px 0 0;}
+.cat-page-hero-inner{max-width:var(--mw);margin:0 auto;padding:0 var(--g);}
+.breadcrumb{font-size:12px;color:var(--text3);margin-bottom:12px;cursor:pointer;}
+.cat-page-title{font-family:var(--font-serif);font-size:clamp(28px,3.5vw,48px);font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0d0d0d;margin-bottom:8px;}
+.cat-page-sub{font-size:14px;color:var(--text2);margin-bottom:24px;}
+.cat-page-filters{display:flex;gap:10px;flex-wrap:wrap;padding-bottom:20px;}
+.filter-chip{padding:9px 20px;border-radius:50px;border:1.5px solid var(--border);font-size:13px;color:var(--text);cursor:pointer;background:#fff;}
+.filter-chip.active{border-color:#0d0d0d;}
+.cat-page-grid-wrap{padding:32px 0 0;}
+.cat-page-result-count{font-size:13px;color:var(--text3);margin-bottom:24px;}
+.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+.product-tile{cursor:pointer;}
+.pt-photo{aspect-ratio:3/4;overflow:hidden;position:relative;}
+.pt-badge{position:absolute;bottom:10px;left:10px;background:rgba(255,255,255,.9);padding:3px 8px;font-size:11px;font-weight:600;border-radius:2px;color:#0d0d0d;}
+.pt-badge.sale{background:#c0392b;color:#fff;}
+.pt-colors{display:flex;gap:4px;margin-top:10px;}
+.pt-swatch{width:14px;height:14px;border-radius:50%;border:1px solid rgba(0,0,0,.12);}
+.pt-name{font-family:var(--font-serif);font-size:13px;font-weight:400;color:var(--text);margin-top:8px;line-height:1.3;}
+.pt-price{font-size:14px;color:var(--text);margin-top:4px;}
+.pt-member-price{font-size:12px;color:#c0392b;margin-top:2px;font-weight:500;}
+
+/* LOYALTY BANNER */
+.loyalty-banner{background:var(--off);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.loyalty-banner-inner{max-width:var(--mw);margin:0 auto;padding:32px var(--g);display:grid;grid-template-columns:auto 1fr auto;gap:32px;align-items:center;}
+.lb-icon{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;}
+.lb-eyebrow{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text3);margin-bottom:4px;}
+.lb-headline{font-family:var(--font-serif);font-size:19px;font-weight:700;color:#0d0d0d;margin-bottom:4px;}
+.lb-sub{font-size:13px;color:var(--text2);line-height:1.5;}
+.lb-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;flex-shrink:0;}
+.lb-tiers{max-width:var(--mw);margin:0 auto;padding:0 var(--g) 32px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.lb-tier{border:1px solid var(--border);border-radius:4px;overflow:hidden;background:#fff;position:relative;}
+.lb-tier.active{border-color:#0d0d0d;}
+.lb-tier.active::before{content:'YOUR TIER';position:absolute;top:-10px;left:16px;background:#0d0d0d;color:#fff;font-size:9px;font-weight:700;letter-spacing:1.5px;padding:2px 8px;border-radius:2px;}
+.lb-tier-header{background:#f0ece8;padding:20px;display:flex;align-items:center;gap:14px;}
+.lb-tier-num{width:44px;height:44px;border-radius:50%;border:2px solid #0d0d0d;display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:18px;font-weight:700;color:#0d0d0d;flex-shrink:0;}
+.lb-tier-hdr-text h3{font-family:var(--font-serif);font-size:17px;font-weight:700;color:#0d0d0d;line-height:1.1;}
+.lb-tier-hdr-btn{margin-top:10px;}
+.lb-tier-hdr-btn a{display:inline-flex;align-items:center;padding:10px 20px;background:#1a5f6a;color:#fff;border-radius:50px;font-size:13px;font-weight:600;cursor:pointer;}
+.lb-tier-body{padding:16px 20px;}
+.lb-tier-body-desc{font-size:13px;color:var(--text2);line-height:1.55;margin-bottom:14px;}
+.lb-tier-perks{display:flex;flex-wrap:wrap;gap:8px;}
+.lb-tier-perk-pill{border:1px solid var(--border);border-radius:50px;padding:6px 14px;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text2);}
+.lb-tier-more{width:28px;height:28px;border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--text3);cursor:pointer;}
+.lb-tier-card-badge{display:inline-block;background:#d4f020;color:#1a1a1a;font-size:11px;font-weight:700;letter-spacing:.5px;padding:3px 10px;border-radius:2px;margin:8px 0 6px;}
+.lb-tier-card-note{font-size:12px;color:var(--text2);line-height:1.5;}
+
+/* PDP */
+.pdp-wrap{max-width:var(--mw);margin:0 auto;padding:32px var(--g) 64px;}
+.pdp-breadcrumb{font-size:12px;color:var(--text3);margin-bottom:24px;cursor:pointer;}
+.pdp-grid{display:grid;grid-template-columns:1fr 420px;gap:48px;}
+.pdp-photos{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.pdp-photo-main{aspect-ratio:3/4;overflow:hidden;grid-column:span 2;}
+.pdp-photo-thumb{aspect-ratio:3/4;overflow:hidden;}
+.pdp-eyebrow{font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--text3);margin-bottom:8px;}
+.pdp-title{font-family:var(--font-serif);font-size:clamp(22px,2.3vw,30px);font-weight:700;color:#0d0d0d;line-height:1.2;margin-bottom:8px;}
+.pdp-price{font-size:18px;font-weight:500;color:#0d0d0d;margin-bottom:4px;}
+.pdp-member-price{font-size:13px;color:#c0392b;font-weight:500;margin-bottom:20px;}
+.pdp-rating{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--text2);margin-bottom:20px;}
+.pdp-stars{color:#c0392b;letter-spacing:2px;}
+.pdp-color-label{font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--text2);margin-bottom:8px;}
+.pdp-swatches{display:flex;gap:8px;margin-bottom:20px;}
+.pdp-swatch{width:28px;height:28px;border-radius:50%;cursor:pointer;border:2px solid transparent;transition:border-color .15s;}
+.pdp-swatch.active{border-color:#0d0d0d;outline:2px solid #0d0d0d;outline-offset:2px;}
+.pdp-size-label{font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--text2);margin-bottom:8px;display:flex;justify-content:space-between;}
+.pdp-size-label a{font-weight:400;text-decoration:underline;color:var(--text3);}
+.pdp-sizes{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px;}
+.pdp-size-btn{padding:10px 16px;border:1.5px solid var(--border);border-radius:3px;font-size:13px;cursor:pointer;transition:all .15s;background:#fff;}
+.pdp-size-btn:hover,.pdp-size-btn.active{border-color:#0d0d0d;background:#0d0d0d;color:#fff;}
+.pdp-size-btn.oos{color:var(--text3);text-decoration:line-through;cursor:not-allowed;}
+.pdp-loyalty-nudge{background:var(--off);border:1.5px solid var(--border);border-radius:4px;padding:14px 16px;margin-bottom:20px;display:flex;align-items:center;gap:12px;}
+.pln-icon{font-size:20px;flex-shrink:0;}
+.pln-text{font-size:13px;color:var(--text2);line-height:1.5;flex:1;}
+.pln-text strong{color:#0d0d0d;}
+.pln-cta{font-size:12px;font-weight:600;color:#1a5f6a;white-space:nowrap;text-decoration:underline;cursor:pointer;flex-shrink:0;}
+.pdp-atc{width:100%;padding:16px;background:#0d0d0d;color:#fff;border:none;border-radius:50px;font-size:15px;font-weight:500;font-family:var(--font);cursor:pointer;transition:background .15s;margin-bottom:12px;}
+.pdp-atc:hover{background:#333;}
+.pdp-fav{width:100%;padding:14px;background:transparent;color:#0d0d0d;border:2px solid #0d0d0d;border-radius:50px;font-size:14px;font-weight:500;font-family:var(--font);cursor:pointer;transition:all .15s;margin-bottom:24px;}
+.pdp-fav:hover{background:#0d0d0d;color:#fff;}
+.pdp-feature-row{display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;font-size:14px;color:var(--text2);line-height:1.5;border-top:1px solid var(--border);padding-top:14px;}
+.pdp-desc{font-size:14px;color:var(--text2);line-height:1.7;border-top:1px solid var(--border);padding-top:20px;margin-top:4px;}
+.pdp-recs{padding:48px 0;border-top:1px solid var(--border);}
+.pdp-recs h2{font-family:var(--font-serif);font-size:22px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0d0d0d;margin-bottom:24px;}
+.pdp-recs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+
+/* CART */
+.cart-page-wrap{max-width:1100px;margin:0 auto;padding:32px 48px 64px;display:grid;grid-template-columns:1fr 340px;gap:40px;align-items:start;}
+.cart-page-empty{background:#fff;border:1px solid var(--border);border-radius:4px;padding:40px 36px;}
+.cart-page-empty h2{font-family:var(--font-serif);font-size:22px;font-weight:700;color:#0d0d0d;margin-bottom:10px;}
+.cart-page-empty p{font-size:14px;color:var(--text3);margin-bottom:24px;}
+.cart-page-title{font-family:var(--font-serif);font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0d0d0d;margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid #0d0d0d;}
+.cart-page-item{display:grid;grid-template-columns:100px 1fr auto;gap:16px;padding:20px 0;border-bottom:1px solid var(--border);align-items:start;}
+.cart-page-item-img{aspect-ratio:3/4;overflow:hidden;border-radius:3px;}
+.cart-page-item-name{font-family:var(--font-serif);font-size:14px;font-weight:700;color:#0d0d0d;margin-bottom:4px;}
+.cart-page-item-detail{font-size:12px;color:var(--text3);margin-bottom:8px;}
+.cart-page-item-price{font-size:14px;font-weight:600;color:#0d0d0d;}
+.cart-page-item-member{font-size:12px;color:#c0392b;font-weight:500;margin-top:2px;}
+.cart-page-item-remove{font-size:11px;color:var(--text3);text-decoration:underline;cursor:pointer;margin-top:8px;display:inline-block;}
+.cart-page-promos{background:#fff;border:1px solid var(--border);border-radius:4px;padding:20px;margin-bottom:16px;}
+.cart-page-promos h3{font-family:var(--font-serif);font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#0d0d0d;margin-bottom:14px;}
+.promo-input-row{display:flex;gap:8px;}
+.promo-input-row input{flex:1;border:1.5px solid var(--border);border-radius:3px;padding:10px 12px;font-size:13px;font-family:inherit;outline:none;}
+.promo-apply-btn{padding:10px 18px;background:#0d0d0d;color:#fff;border:none;border-radius:3px;font-size:13px;font-weight:600;font-family:inherit;cursor:pointer;}
+.cart-page-summary{background:#fff;border:1px solid var(--border);border-radius:4px;padding:20px;}
+.cart-summary-row{display:flex;justify-content:space-between;font-size:13px;color:var(--text2);margin-bottom:10px;}
+.cart-summary-row.total{font-size:15px;font-weight:700;color:#0d0d0d;border-top:1px solid var(--border);padding-top:12px;margin-top:4px;}
+.cart-page-checkout{width:100%;padding:15px;background:#0d0d0d;color:#fff;border:none;border-radius:3px;font-size:15px;font-weight:600;font-family:inherit;cursor:pointer;margin-bottom:10px;margin-top:14px;}
+.cart-page-checkout:hover{background:#333;}
+.cart-page-continue-link{display:block;text-align:center;font-size:13px;color:var(--text3);text-decoration:underline;cursor:pointer;margin-top:6px;}
+.cart-loyalty-nudge{background:#f0faf9;border:1.5px solid #1a5f6a;border-radius:4px;padding:14px 16px;margin-top:16px;display:flex;align-items:flex-start;gap:10px;}
+.cart-loyalty-nudge-text{font-size:12px;color:#1a5f6a;line-height:1.5;}
+.cart-loyalty-nudge-text strong{color:#0d0d0d;}
+.cart-recs-section{margin-top:32px;}
+.cart-recs-section h3{font-family:var(--font-serif);font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0d0d0d;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--border);}
+.cart-recs-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.cart-rec-tile{cursor:pointer;}
+.cart-rec-tile-img{aspect-ratio:3/4;overflow:hidden;border-radius:3px;margin-bottom:8px;}
+.cart-rec-tile-name{font-family:var(--font-serif);font-size:13px;font-weight:400;color:#0d0d0d;line-height:1.3;margin-bottom:3px;}
+.cart-rec-tile-price{font-size:12px;color:var(--text3);}
+
+/* ANIMATIONS */
+@keyframes modalIn{from{opacity:0;transform:translateY(-14px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes flyoutIn{from{transform:translateX(40px);opacity:0}to{transform:translateX(0);opacity:1}}
+@keyframes psDotPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.7)}}
+@keyframes typingBounce{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-5px)}}
+
+/* EMAIL MODAL */
+#email-modal-overlay{display:none;position:fixed;inset:0;z-index:9100;background:rgba(10,10,10,.65);backdrop-filter:blur(4px);align-items:center;justify-content:center;padding:20px;}
+#email-modal-overlay.open{display:flex;}
+.email-modal{background:#f0f0f5;border-radius:12px;width:100%;max-width:680px;max-height:92vh;overflow-y:auto;box-shadow:0 24px 64px rgba(0,0,0,.3);animation:modalIn .22s ease;position:relative;}
+.email-modal-close{position:absolute;top:14px;right:16px;font-size:22px;color:var(--text3);cursor:pointer;background:none;border:none;font-family:var(--font);z-index:2;line-height:1;}
+.email-modal-topbar{background:#1a1a2e;padding:14px 20px;border-radius:12px 12px 0 0;display:flex;align-items:center;justify-content:space-between;}
+.email-modal-subject-bar{background:#2a2a3e;padding:10px 20px;}
+.email-subject-row{display:flex;align-items:center;gap:8px;margin-bottom:4px;}
+.email-subject-label{font-size:11px;color:rgba(255,255,255,.4);width:40px;flex-shrink:0;}
+.email-subject-value{font-size:12px;color:rgba(255,255,255,.85);}
+.email-body{background:#f7f4f0;}
+.email-header-band{background:#0d0d0d;padding:20px;text-align:center;}
+.email-logo{font-family:var(--font-serif);font-size:18px;font-weight:700;letter-spacing:6px;text-transform:uppercase;color:#fff;}
+.email-hero{background:linear-gradient(160deg,#1a5f6a,#0d3d45);padding:32px 40px;text-align:center;}
+.email-hero-eyebrow{font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:10px;}
+.email-hero-h1{font-family:var(--font-serif);font-size:30px;font-weight:700;color:#fff;line-height:1.2;margin-bottom:8px;}
+.email-hero-sub{font-size:14px;color:rgba(255,255,255,.75);line-height:1.6;}
+.email-content{padding:32px 40px;background:#fff;}
+.email-product-card{border:1px solid var(--border);border-radius:6px;overflow:hidden;display:grid;grid-template-columns:160px 1fr;margin-bottom:24px;}
+.email-product-img{background:linear-gradient(160deg,#c8c0b8,#a0988e);min-height:160px;}
+.email-product-info{padding:20px;}
+.email-product-eyebrow{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#1a5f6a;margin-bottom:6px;}
+.email-product-name{font-family:var(--font-serif);font-size:17px;font-weight:700;color:#0d0d0d;margin-bottom:6px;line-height:1.2;}
+.email-product-detail{font-size:12px;color:var(--text3);margin-bottom:12px;}
+.email-product-price{font-size:16px;font-weight:600;color:#0d0d0d;}
+.email-product-member{font-size:12px;color:#c0392b;font-weight:600;}
+.email-product-points{font-size:12px;color:#1a5f6a;margin-top:4px;}
+.email-cta-wrap{text-align:center;margin-bottom:24px;}
+.email-cta-btn{display:inline-block;background:#0d0d0d;color:#fff;padding:14px 40px;border-radius:50px;font-size:14px;font-weight:600;}
+.email-body-copy{font-size:14px;color:var(--text2);line-height:1.7;margin-bottom:24px;text-align:center;}
+.email-encore-strip{background:var(--off);border-radius:6px;padding:16px 20px;margin-bottom:24px;display:flex;align-items:center;gap:14px;}
+.email-encore-text{font-size:13px;color:var(--text2);line-height:1.5;}
+.email-encore-text strong{color:#0d0d0d;}
+.email-footer-band{background:#0d0d0d;padding:20px 40px;text-align:center;}
+.email-footer-logo{font-family:var(--font-serif);font-size:14px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#fff;margin-bottom:8px;}
+.email-footer-links{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-bottom:8px;}
+.email-footer-links a{font-size:11px;color:rgba(255,255,255,.5);text-decoration:underline;}
+.email-footer-legal{font-size:10px;color:rgba(255,255,255,.3);line-height:1.5;}
+.email-merkury-strip{background:#f7f4f0;border-top:1px solid var(--border);padding:14px 20px;}
+.email-merkury-title{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#1a5f6a;margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+.email-merkury-title::after{content:'';flex:1;height:1px;background:var(--border);}
+.email-merkury-pills{display:flex;flex-wrap:wrap;gap:6px;}
+.email-merkury-pill{background:#fff;border:1px solid var(--border);border-radius:50px;padding:4px 12px;font-size:11px;color:var(--text2);display:flex;align-items:center;gap:5px;}
+.email-merkury-pill span{font-weight:700;color:#0d0d0d;}
+.email-merkury-pill.trigger{border-color:#1a5f6a;background:#e8f5f2;}
+.email-merkury-pill.trigger span{color:#1a5f6a;}
+
+/* SHIPPING FLYOUT */
+#ship-flyout-overlay{display:none;position:fixed;inset:0;z-index:8000;background:rgba(10,10,10,.3);}
+#ship-flyout-overlay.open{display:block;}
+.ship-flyout{position:fixed;top:0;right:0;bottom:0;width:360px;background:#fff;box-shadow:-8px 0 32px rgba(0,0,0,.15);overflow-y:auto;padding:32px 28px;z-index:8001;animation:flyoutIn .2s ease;}
+.ship-flyout-close{position:absolute;top:14px;right:16px;font-size:22px;color:var(--text3);cursor:pointer;background:none;border:none;font-family:var(--font);}
+.ship-flyout h2{font-family:var(--font-serif);font-size:17px;font-weight:700;color:#0d0d0d;margin-bottom:16px;}
+.ship-flyout h3{font-family:var(--font-serif);font-size:14px;font-weight:700;color:#0d0d0d;margin:20px 0 10px;}
+.ship-flyout ul{padding-left:18px;margin-bottom:8px;}
+.ship-flyout ul li{font-size:13px;color:var(--text2);line-height:1.65;margin-bottom:6px;}
+.ship-flyout-legal{font-size:11px;color:var(--text3);line-height:1.6;margin-top:20px;padding-top:16px;border-top:1px solid var(--border);}
+
+/* SIGNUP MODAL */
+#signup-modal-overlay{display:none;position:fixed;inset:0;z-index:8500;background:rgba(10,10,10,.55);backdrop-filter:blur(3px);align-items:center;justify-content:center;padding:20px;}
+#signup-modal-overlay.open{display:flex;}
+.signup-modal{background:#fff;border-radius:6px;width:100%;max-width:400px;padding:40px 36px 32px;position:relative;box-shadow:0 24px 64px rgba(0,0,0,.2);animation:modalIn .22s ease;}
+.signup-modal-close{position:absolute;top:14px;right:16px;font-size:22px;color:var(--text3);cursor:pointer;background:none;border:none;font-family:var(--font);}
+.signup-step{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text3);margin-bottom:14px;}
+.signup-headline{font-family:var(--font-serif);font-size:24px;font-weight:700;color:#0d0d0d;line-height:1.2;margin-bottom:10px;}
+.signup-sub{font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:24px;}
+.signup-input{width:100%;border:1.5px solid var(--border);border-radius:3px;padding:13px 14px;font-size:14px;font-family:var(--font);color:var(--text);outline:none;transition:border-color .15s;margin-bottom:14px;}
+.signup-input:focus{border-color:#0d0d0d;}
+.signup-btn{width:100%;padding:14px;background:#0d0d0d;color:#fff;border:none;border-radius:50px;font-size:14px;font-weight:600;font-family:var(--font);cursor:pointer;}
+.signup-legal{font-size:11px;color:var(--text3);margin-top:14px;display:flex;gap:14px;flex-wrap:wrap;}
+.signup-legal a{color:var(--text3);text-decoration:underline;}
+
+/* PERSONALIZATION MODAL */
+#pers-modal-overlay{display:none;position:fixed;inset:0;z-index:8000;background:rgba(10,10,10,.3);backdrop-filter:blur(2px);align-items:flex-end;justify-content:flex-end;padding:0 24px 80px 0;}
+#pers-modal-overlay.open{display:flex;}
+.pers-modal{background:#fff;border-radius:8px 8px 4px 8px;width:100%;max-width:460px;overflow:hidden;box-shadow:0 -4px 40px rgba(0,0,0,.18);animation:modalIn .22s ease;position:relative;max-height:85vh;overflow-y:auto;}
+.pers-modal-close{position:absolute;top:14px;right:16px;font-size:24px;color:rgba(255,255,255,.8);cursor:pointer;background:none;border:none;line-height:1;z-index:2;font-family:var(--font);}
+.pers-modal-header{padding:28px 28px 22px;}
+.pers-modal-eyebrow{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:6px;}
+.pers-modal-visitor-state{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.9);background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);border-radius:3px;padding:3px 10px;display:inline-block;margin-bottom:10px;}
+.pers-modal-tagline{font-size:13px;color:rgba(255,255,255,.72);margin-bottom:10px;}
+.pers-modal-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);border-radius:50px;padding:5px 14px;font-size:11px;font-weight:600;color:#fff;}
+.pers-modal-badge-dot{width:7px;height:7px;border-radius:50%;background:#00e8a8;flex-shrink:0;}
+.pers-modal-body{padding:20px 28px 28px;}
+.pers-id-card{background:var(--off);border-radius:4px;padding:16px 20px;margin-bottom:16px;border:1px solid var(--border);}
+.pers-id-card-title{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text3);margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+.pers-id-card-title::after{content:'';flex:1;height:1px;background:var(--border);}
+.pers-id-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.pers-id-field{display:flex;flex-direction:column;}
+.pers-id-label{font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--text3);margin-bottom:2px;}
+.pers-id-value{font-size:13px;font-weight:500;color:var(--text);}
+.pers-id-value.det::before{content:'● ';color:#1a8a5a;font-size:10px;}
+.pers-id-value.prob::before{content:'● ';color:#e8a020;font-size:10px;}
+.conf-explainer{font-size:11px;line-height:1.5;margin-top:4px;padding:6px 8px;border-radius:3px;display:none;}
+.pers-offer-card{border-radius:4px;overflow:hidden;border:1px solid var(--border);}
+.pers-offer-header{padding:12px 18px;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#fff;}
+.pers-offer-body{padding:16px 18px;}
+.pers-offer-headline{font-family:var(--font-serif);font-size:19px;font-weight:700;color:#0d0d0d;margin-bottom:8px;line-height:1.2;}
+.pers-offer-desc{font-size:13px;color:var(--text2);line-height:1.6;margin-bottom:16px;}
+.pers-offer-footer{display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.pers-offer-code{background:var(--off);border:1.5px dashed var(--border);border-radius:3px;padding:7px 14px;font-size:13px;font-weight:700;letter-spacing:2px;color:#0d0d0d;}
+.pm-campaign-row{display:none;margin-top:14px;padding-top:14px;border-top:1px solid var(--border);}
+.pm-campaign-label{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);margin-bottom:8px;}
+.pm-campaign-btn{width:100%;padding:12px;background:var(--purple);color:#fff;border:none;border-radius:50px;font-size:13px;font-weight:600;font-family:var(--font);cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;}
+.pm-campaign-btn:hover{background:#5a2a9a;}
+
+/* OFFER LIGHTBOX */
+#offer-lightbox-overlay{display:none;position:fixed;inset:0;z-index:8400;background:rgba(10,10,10,.55);backdrop-filter:blur(3px);align-items:center;justify-content:center;padding:20px;}
+#offer-lightbox-overlay.open{display:flex;}
+.offer-lightbox{background:#fff;border-radius:8px;width:100%;max-width:400px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,.25);animation:modalIn .22s ease;position:relative;}
+.offer-lb-accent{height:5px;background:#0d0d0d;}
+.offer-lb-close{position:absolute;top:16px;right:18px;font-size:20px;color:var(--text3);cursor:pointer;background:none;border:none;font-family:inherit;line-height:1;}
+.offer-lb-header{padding:28px 32px 0;text-align:center;}
+.offer-lb-name{font-family:var(--font-serif);font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);margin-bottom:6px;}
+.offer-lb-body{padding:12px 32px 32px;text-align:center;}
+.offer-lb-headline{font-family:var(--font-serif);font-size:24px;font-weight:700;color:#0d0d0d;line-height:1.2;margin-bottom:10px;}
+.offer-lb-desc{font-size:14px;color:var(--text2);line-height:1.65;margin-bottom:24px;}
+.offer-lb-footer{display:flex;flex-direction:column;align-items:center;gap:12px;}
+.offer-lb-code{background:var(--off);border:1.5px dashed var(--border);border-radius:4px;padding:10px 24px;font-size:15px;font-weight:700;letter-spacing:3px;color:#0d0d0d;width:100%;text-align:center;}
+.offer-lb-cta{width:100%;padding:14px;background:#0d0d0d;color:#fff;border:none;border-radius:50px;font-size:14px;font-weight:600;font-family:inherit;cursor:pointer;}
+.offer-lb-cta:hover{background:#333;}
+
+/* STICKY PILL */
+#sticky-20-btn{position:fixed;bottom:24px;left:24px;z-index:7000;color:#fff;border:none;border-radius:50px;padding:10px 16px;font-size:13px;font-weight:600;font-family:var(--font);cursor:pointer;display:flex;align-items:center;gap:10px;box-shadow:0 4px 16px rgba(0,0,0,.25);transition:background .15s;background:#0d0d0d;}
+#sticky-20-btn.hidden{display:none;}
+.s20-close{font-size:16px;color:rgba(255,255,255,.6);line-height:1;}
+
+/* CAMPAIGN */
+#campaign-modal-overlay{display:none;position:fixed;inset:0;z-index:9100;background:rgba(10,10,10,.65);backdrop-filter:blur(4px);align-items:center;justify-content:center;padding:20px;}
+#campaign-modal-overlay.open{display:flex;}
+.campaign-modal{background:#f5f0ff;border-radius:16px;width:100%;max-width:900px;max-height:92vh;overflow-y:auto;box-shadow:0 24px 64px rgba(0,0,0,.3);animation:modalIn .22s ease;position:relative;}
+.campaign-modal-close{position:absolute;top:16px;right:18px;font-size:22px;color:var(--text3);cursor:pointer;background:none;border:none;font-family:var(--font);z-index:2;line-height:1;}
+.cm-header{padding:22px 28px 16px;border-bottom:1px solid rgba(0,0,0,.08);}
+.cm-header-top{display:flex;align-items:center;gap:10px;margin-bottom:4px;}
+.cm-header-icon{width:32px;height:32px;background:#0d0d0d;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;}
+.cm-header-title{font-family:var(--font-serif);font-size:16px;font-weight:700;color:#0d0d0d;}
+.cm-header-sub{font-size:13px;color:var(--text3);}
+.cm-body{display:grid;grid-template-columns:1fr 260px;min-height:480px;}
+.cm-left{padding:20px 24px;border-right:1px solid rgba(0,0,0,.08);}
+.cm-section-label{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text3);margin-bottom:10px;}
+.cm-audience-card{background:#fff;border-radius:10px;padding:14px 16px;margin-bottom:18px;border:1px solid rgba(0,0,0,.07);display:flex;align-items:flex-start;gap:12px;}
+.cm-aud-icon{font-size:22px;flex-shrink:0;margin-top:2px;}
+.cm-aud-name{font-family:var(--font-serif);font-size:14px;font-weight:700;color:#0d0d0d;margin-bottom:2px;}
+.cm-aud-size{font-size:12px;color:var(--text3);}
+.cm-aud-signals{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;}
+.cm-signal-pill{background:#f0eaff;border:1px solid #d4c5ff;border-radius:50px;padding:3px 10px;font-size:11px;font-weight:600;color:#6a3aaa;}
+.cm-signal-pill.trigger{background:#e8f5ec;border-color:#b4dfc4;color:#1a6a3a;}
+.cm-ai-bar{background:#fff;border-radius:10px;padding:10px 14px;margin-bottom:14px;border:1px solid rgba(0,0,0,.07);display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.cm-ai-bar-label{font-size:13px;font-weight:600;color:#0d0d0d;flex-shrink:0;}
+.cm-tone-pills{display:flex;gap:6px;flex-wrap:wrap;}
+.cm-tone-pill{padding:5px 12px;border:1.5px solid var(--border);border-radius:50px;font-size:12px;font-weight:500;color:var(--text2);cursor:pointer;background:#fff;transition:all .15s;font-family:var(--font);}
+.cm-tone-pill.active{background:#0d0d0d;color:#fff;border-color:#0d0d0d;}
+.cm-variants{display:flex;flex-direction:column;gap:10px;margin-bottom:18px;}
+.cm-variant{background:#fff;border-radius:10px;padding:14px 16px;border:1.5px solid var(--border);cursor:pointer;transition:border-color .15s;}
+.cm-variant.active{border-color:var(--purple);background:#fdfbff;}
+.cm-variant-label{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#9a7adf;margin-bottom:8px;}
+.cm-variant-text{font-size:13px;color:var(--text);line-height:1.6;margin-bottom:8px;}
+.cm-add-msg{font-size:12px;color:#9a7adf;font-weight:600;cursor:pointer;}
+.cm-sendtime{background:#fff;border-radius:10px;padding:14px 16px;border:1px solid rgba(0,0,0,.07);}
+.cm-st-option{display:flex;align-items:flex-start;gap:10px;padding:10px 0;cursor:pointer;}
+.cm-st-option:not(:last-child){border-bottom:1px solid var(--border);}
+.cm-st-radio{width:18px;height:18px;border-radius:50%;border:2px solid var(--border);flex-shrink:0;margin-top:2px;display:flex;align-items:center;justify-content:center;transition:all .15s;}
+.cm-st-radio.selected{border-color:var(--purple);background:var(--purple);}
+.cm-st-radio.selected::after{content:'';width:6px;height:6px;border-radius:50%;background:#fff;}
+.cm-st-label{font-size:13px;font-weight:600;color:#0d0d0d;}
+.cm-st-badge{display:inline-block;background:var(--purple);color:#fff;font-size:10px;font-weight:700;letter-spacing:.5px;padding:2px 8px;border-radius:50px;margin-left:6px;}
+.cm-st-detail{font-size:12px;color:var(--text3);margin-top:4px;}
+.cm-right{padding:20px;display:flex;flex-direction:column;align-items:center;}
+.cm-phone{background:#1c1c1e;border-radius:36px;padding:12px;width:210px;box-shadow:0 8px 32px rgba(0,0,0,.25);border:2px solid #3a3a3c;flex-shrink:0;}
+.cm-phone-screen{background:#f2f2f7;border-radius:26px;overflow:hidden;}
+.cm-phone-notch{width:80px;height:22px;background:#1c1c1e;border-radius:0 0 12px 12px;margin:0 auto;}
+.cm-phone-status{padding:6px 16px;display:flex;justify-content:space-between;}
+.cm-phone-status-time{font-size:11px;font-weight:700;color:#1a1a1a;}
+.cm-phone-header{background:#f2f2f7;padding:8px 14px;text-align:center;border-bottom:1px solid #e5e5ea;}
+.cm-phone-avatar{width:34px;height:34px;border-radius:50%;background:#1a5f6a;display:flex;align-items:center;justify-content:center;margin:0 auto 4px;}
+.cm-phone-avatar svg{width:18px;height:18px;fill:#fff;}
+.cm-phone-sender{font-size:11px;font-weight:700;color:#1a1a1a;}
+.cm-phone-type{font-size:10px;color:#8e8e93;}
+.cm-phone-thread{padding:10px;background:#fff;min-height:140px;}
+.cm-phone-bubble{background:#e9e9eb;color:#1a1a1a;border-radius:12px 12px 12px 3px;padding:8px 10px;font-size:11px;line-height:1.5;}
+.cm-perf-card{margin-top:14px;background:#fff;border-radius:10px;padding:12px 14px;border:1px solid rgba(0,0,0,.07);width:100%;}
+.cm-perf-label{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#9a7adf;margin-bottom:8px;}
+.cm-perf-row{display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin-bottom:6px;}
+.cm-perf-row strong{color:#0d0d0d;}
+.cm-perf-row.green strong{color:#1a6a3a;}
+.cm-footer{padding:16px 24px;border-top:1px solid rgba(0,0,0,.08);display:flex;align-items:center;justify-content:space-between;background:#f5f0ff;border-radius:0 0 16px 16px;flex-wrap:wrap;gap:10px;}
+.cm-footer-left{font-size:12px;color:var(--text3);}
+.cm-footer-left strong{color:#0d0d0d;}
+.cm-schedule-btn{background:#1a5f6a;color:#fff;border:none;border-radius:10px;padding:13px 24px;font-size:14px;font-weight:700;font-family:var(--font);cursor:pointer;transition:background .15s;}
+.cm-schedule-btn:hover{background:#145059;}
+
+/* PUSH */
+#push-notif-wrap{position:fixed;top:24px;right:24px;z-index:9200;opacity:0;transform:translateY(-10px) scale(.97);transition:opacity .35s ease,transform .35s ease;pointer-events:none;width:340px;}
+#push-notif-wrap.visible{opacity:1;transform:translateY(0) scale(1);pointer-events:auto;}
+.push-iphone{background:rgba(255,255,255,.84);backdrop-filter:blur(20px) saturate(180%);border-radius:16px;box-shadow:0 8px 40px rgba(0,0,0,.22);overflow:hidden;}
+.push-iph-header{display:flex;align-items:center;gap:8px;padding:12px 14px 6px;}
+.push-iph-appicon{width:28px;height:28px;border-radius:8px;background:#0d0d0d;display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:9px;font-weight:700;color:#fff;flex-shrink:0;letter-spacing:1px;}
+.push-iph-appname{font-size:12px;font-weight:600;color:rgba(0,0,0,.5);flex:1;}
+.push-iph-time{font-size:12px;color:rgba(0,0,0,.4);font-weight:500;}
+.push-iph-dismiss{width:20px;height:20px;border-radius:50%;background:rgba(0,0,0,.1);display:flex;align-items:center;justify-content:center;font-size:13px;color:rgba(0,0,0,.4);cursor:pointer;border:none;line-height:1;flex-shrink:0;}
+.push-iph-body{display:flex;align-items:flex-start;gap:10px;padding:2px 14px 14px;}
+.push-iph-icon{width:44px;height:44px;border-radius:10px;flex-shrink:0;background:#1a5f6a;display:flex;align-items:center;justify-content:center;font-size:20px;}
+.push-iph-text{flex:1;}
+.push-iph-title{font-size:14px;font-weight:700;color:rgba(0,0,0,.85);margin-bottom:2px;line-height:1.3;}
+.push-iph-msg{font-size:13px;color:rgba(0,0,0,.6);line-height:1.4;}
+.push-iph-footer{display:flex;align-items:center;gap:6px;padding:8px 14px;background:rgba(0,0,0,.04);border-top:1px solid rgba(0,0,0,.06);}
+.push-iph-via{font-size:10px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:rgba(0,0,0,.35);}
+.push-iph-badge{font-size:10px;font-weight:700;color:#fff;background:#f46600;padding:2px 7px;border-radius:3px;}
+
+/* IDENTITY SAMPLE */
+#id-timeline-btn{position:fixed;left:0;top:120px;z-index:8500;background:#0d0d0d;color:#fff;border:none;border-radius:0 6px 6px 0;padding:12px 10px;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;font-family:var(--font);writing-mode:vertical-rl;display:flex;align-items:center;gap:6px;box-shadow:4px 0 16px rgba(0,0,0,.2);}
+.itb-dot{width:7px;height:7px;border-radius:50%;background:#00c8a0;flex-shrink:0;animation:psDotPulse 2s ease-in-out infinite;}
+#id-timeline-panel{position:fixed;left:-320px;top:0;width:300px;background:#fff;z-index:8600;box-shadow:8px 0 40px rgba(0,0,0,.18);transition:left .3s ease;overflow-y:auto;display:inline-flex;flex-direction:column;max-height:100vh;height:fit-content;}
+#id-timeline-panel.open{left:0;}
+.itp-header{background:#0d0d0d;padding:16px 18px 12px;flex-shrink:0;}
+.itp-header-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:2px;}
+.itp-title{font-family:var(--font-serif);font-size:13px;font-weight:700;color:#fff;}
+.itp-close{font-size:18px;color:rgba(255,255,255,.6);cursor:pointer;background:none;border:none;font-family:var(--font);line-height:1;}
+.itp-sub{font-size:10px;color:rgba(255,255,255,.4);}
+.itp-body{padding:14px 16px;flex:0 0 auto;}
+.itp-merkury-card{background:var(--off);border-radius:6px;padding:12px 14px;border-left:3px solid #1a5f6a;}
+.itp-merkury-card-title{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#1a5f6a;margin-bottom:8px;}
+.itp-signal{display:flex;align-items:baseline;gap:4px;margin-bottom:5px;font-family:'Menlo','Monaco','Courier New',monospace;}
+.itp-signal-dot{display:none;}
+.itp-signal strong{color:#0d0d0d;}
+.itp-signal-str{color:#1a7a3a;font-weight:500;}
+.itp-signal-null{color:#888;font-style:italic;}
+.itp-signal-num{color:#b06010;font-weight:500;}
+.itp-resolve-bar{display:flex;align-items:center;gap:8px;padding:8px 14px;background:#0d0d0d;border-top:1px solid rgba(255,255,255,.08);}
+.itp-resolve-dot{width:6px;height:6px;border-radius:50%;background:#00c8a0;flex-shrink:0;}
+.itp-resolve-text{font-size:10px;color:rgba(255,255,255,.5);font-family:'Menlo',monospace;}
+.itp-resolve-time{color:#00c8a0;font-weight:700;}
+
+/* RETAIL CONCIERGE */
+#chat-bubble{position:fixed;bottom:72px;right:24px;z-index:8400;background:#1a5f6a;color:#fff;border:none;border-radius:50px;padding:12px 20px;font-size:13px;font-weight:600;font-family:var(--font);cursor:pointer;display:flex;align-items:center;gap:10px;box-shadow:0 4px 24px rgba(0,0,0,.3);transition:background .15s;white-space:nowrap;}
+#chat-bubble:hover{background:#145059;}
+#chat-bubble .cb-dot{width:8px;height:8px;border-radius:50%;background:#00e8a8;flex-shrink:0;animation:psDotPulse 2s ease-in-out infinite;}
+#chat-window{display:none;position:fixed;bottom:120px;right:24px;z-index:8401;width:360px;max-height:520px;background:#fff;border-radius:12px;box-shadow:0 16px 48px rgba(0,0,0,.22);flex-direction:column;overflow:hidden;}
+#chat-window.open{display:flex;}
+.chat-header{background:#0d0d0d;padding:14px 18px;display:flex;align-items:center;gap:10px;flex-shrink:0;}
+.chat-header-icon{width:32px;height:32px;border-radius:50%;background:#1a5f6a;display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:12px;font-weight:700;color:#fff;flex-shrink:0;}
+.chat-header-info{flex:1;}
+.chat-header-name{font-family:var(--font-serif);font-size:13px;font-weight:700;color:#fff;}
+.chat-header-sub{font-size:11px;color:rgba(255,255,255,.5);margin-top:1px;}
+.chat-header-close{font-size:20px;color:rgba(255,255,255,.5);cursor:pointer;background:none;border:none;line-height:1;}
+.chat-header-close:hover{color:#fff;}
+.chat-context-bar{background:var(--off);border-bottom:1px solid var(--border);padding:8px 14px;font-size:11px;color:var(--text3);display:flex;align-items:center;gap:6px;flex-shrink:0;}
+.chat-context-dot{width:6px;height:6px;border-radius:50%;background:#1a5f6a;flex-shrink:0;}
+.chat-context-text{font-weight:600;color:#0d0d0d;}
+.chat-messages{flex:1;overflow-y:auto;padding:16px 14px;display:flex;flex-direction:column;gap:12px;min-height:200px;}
+.chat-msg{display:flex;flex-direction:column;max-width:85%;}
+.chat-msg.bot{align-self:flex-start;}
+.chat-msg.user{align-self:flex-end;}
+.chat-msg-bubble{padding:10px 14px;border-radius:14px;font-size:13px;line-height:1.55;}
+.chat-msg.bot .chat-msg-bubble{background:#f0f0f0;color:#1a1a1a;border-radius:14px 14px 14px 3px;}
+.chat-msg.user .chat-msg-bubble{background:#0d0d0d;color:#fff;border-radius:14px 14px 3px 14px;}
+.chat-replies{display:flex;flex-direction:column;gap:6px;align-self:flex-start;width:100%;margin-top:4px;}
+.chat-reply-btn{background:#fff;border:1.5px solid var(--border);border-radius:50px;padding:8px 14px;font-size:12px;font-family:var(--font);color:var(--text);cursor:pointer;text-align:left;transition:all .15s;line-height:1.4;}
+.chat-reply-btn:hover{border-color:#0d0d0d;background:#f7f4f0;}
+.chat-input-row{display:flex;gap:8px;padding:12px 14px;border-top:1px solid var(--border);flex-shrink:0;background:#fff;}
+.chat-input{flex:1;border:1.5px solid var(--border);border-radius:50px;padding:9px 14px;font-size:13px;font-family:var(--font);color:var(--text);outline:none;transition:border-color .15s;}
+.chat-input:focus{border-color:#0d0d0d;}
+.chat-send{background:#0d0d0d;color:#fff;border:none;border-radius:50px;padding:9px 18px;font-size:13px;font-weight:600;font-family:var(--font);cursor:pointer;white-space:nowrap;}
+.chat-send:hover{background:#333;}
+
+/* PERSONA SWITCHER */
+#persona-switcher{position:fixed;top:124px;right:24px;z-index:8500;font-family:var(--font);}
+#ps-toggle{display:flex;align-items:center;gap:8px;background:#0d0d0d;color:#fff;padding:10px 16px;border-radius:24px;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 20px rgba(0,0,0,.3);border:2px solid rgba(255,255,255,.2);user-select:none;}
+#ps-toggle .ps-dot{width:8px;height:8px;border-radius:50%;background:#00c8a0;flex-shrink:0;animation:psDotPulse 2s ease-in-out infinite;}
+#ps-toggle .ps-chevron{font-size:9px;opacity:.7;transition:transform .2s;}
+#ps-toggle.open .ps-chevron{transform:rotate(180deg);}
+#ps-panel{display:none;position:absolute;top:calc(100% + 10px);right:0;background:#fff;border:1.5px solid var(--border);border-radius:10px;box-shadow:0 12px 40px rgba(0,0,0,.15);width:340px;overflow:hidden;}
+#ps-panel.open{display:block;}
+.ps-header{background:#0d0d0d;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;}
+.ps-header-left h3{font-family:var(--font-serif);font-size:13px;font-weight:700;color:#fff;margin-bottom:2px;}
+.ps-header-left p{font-size:11px;color:rgba(255,255,255,.45);}
+.ps-badge-pill{background:#1a5f6a;color:#fff;font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:3px 8px;border-radius:3px;}
+.ps-active-bar{background:var(--off);padding:10px 18px;border-bottom:1px solid var(--border);font-size:11px;color:var(--text3);display:flex;align-items:center;gap:8px;}
+.ps-active-bar strong{color:#0d0d0d;font-size:12px;}
+.ps-active-dot{width:8px;height:8px;border-radius:50%;background:#00c8a0;flex-shrink:0;}
+.ps-section-label{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);padding:12px 18px 6px;}
+.ps-persona-list{padding:0 10px 10px;}
+.ps-persona{display:flex;align-items:center;gap:12px;padding:10px;border-radius:6px;cursor:pointer;transition:background .12s;border:1.5px solid transparent;}
+.ps-persona:hover{background:var(--off);}
+.ps-persona.active{background:#f0faf8;border-color:#1a5f6a;}
+.ps-persona-avatar{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;}
+.ps-persona-info{flex:1;min-width:0;}
+.ps-persona-name{font-family:var(--font-serif);font-size:13px;font-weight:700;color:#0d0d0d;}
+.ps-persona-title{font-size:11px;color:var(--text3);margin-top:1px;}
+.ps-persona-tags{display:flex;gap:4px;margin-top:4px;flex-wrap:wrap;}
+.ps-tag{font-size:9px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:2px 6px;border-radius:3px;background:var(--off);color:var(--text3);}
+.ps-tag.segment{background:#e8f5f2;color:#1a5f6a;}
+.ps-tag.state{background:#e8f0f4;color:#2a4a5a;}
+.ps-persona-check{font-size:14px;color:#1a5f6a;opacity:0;}
+.ps-persona.active .ps-persona-check{opacity:1;}
+.ps-footer{border-top:1px solid var(--border);padding:10px 18px;display:flex;align-items:center;justify-content:space-between;}
+.ps-reset{font-size:11px;font-weight:600;color:var(--text3);cursor:pointer;}
+.ps-reset:hover{color:#0d0d0d;}
+.ps-page-indicator{font-size:11px;color:var(--text3);}
+.ps-page-indicator strong{color:#1a5f6a;}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  :root{--g:24px;}
+  .hero-split{grid-template-columns:1fr 1fr;}
+  .hero-photo-right{display:none;}
+  .cat-grid,.product-grid,.pdp-recs-grid{grid-template-columns:repeat(2,1fr);}
+  .pdp-grid{grid-template-columns:1fr;}
+  .footer-cols{grid-template-columns:repeat(2,1fr);}
+  .life-grid,.promo-band-inner{grid-template-columns:1fr;}
+  .loyalty-inner{grid-template-columns:1fr;}
+  .ls-divider{display:none;}
+  .loyalty-banner-inner{grid-template-columns:1fr;}
+  .lb-tiers{grid-template-columns:1fr;}
+  .cm-body{grid-template-columns:1fr;}
+  .cm-right{display:none;}
+  .cart-page-wrap{grid-template-columns:1fr;padding:24px;}
+}
+@media(max-width:768px){
+  :root{--g:16px;}
+  .demo-banner{font-size:9px;padding:4px 8px;}
+  .util-bar{padding:0 12px;height:auto;min-height:36px;}
+  .util-center{font-size:11px;gap:8px;}
+  .promo-bar{padding:0 12px;height:auto;min-height:36px;}
+  .promo-bar-text{font-size:11px;}
+  .promo-bar-right{display:none;}
+  .nav-links{display:none;}
+  .nav-inner{padding:0 16px;}
+  .nav-logo{font-size:20px;letter-spacing:4px;}
+  .hero-split{grid-template-columns:1fr 1fr;}
+  .hero-photo-right{display:none;}
+  .hero-center{padding:32px 20px;}
+  .hero-h1-light,.hero-h1-bold{font-size:28px;letter-spacing:2px;}
+  .hero-sub{font-size:13px;}
+  .cat-section{padding:32px 0;}
+  .cat-grid{grid-template-columns:repeat(2,1fr);gap:10px;}
+  .promo-band-inner{grid-template-columns:1fr;}
+  .pb-photo{min-height:200px;}
+  .pb-text{padding:24px 20px;}
+  .pb-h2{font-size:22px;}
+  .life-grid{grid-template-columns:1fr;gap:10px;}
+  .life-main{min-height:220px;}
+  .life-side{grid-template-rows:unset;grid-template-columns:1fr 1fr;gap:10px;}
+  .life-card{min-height:120px;}
+  .loyalty-strip{padding:28px 0;}
+  .loyalty-inner{grid-template-columns:1fr;padding:0 16px;}
+  .ls-col{padding:0 0 24px;}
+  .ls-email-row{flex-direction:column;gap:8px;}
+  .ls-email-input{width:100%;}
+  .loyalty-banner-inner{grid-template-columns:1fr;gap:12px;padding:16px;}
+  .lb-tiers{grid-template-columns:1fr;padding:0 16px 20px;}
+  .lb-actions{justify-content:flex-start;}
+  .footer-cols{grid-template-columns:1fr 1fr;gap:16px;padding:0 16px;}
+  .footer-bottom{padding:12px 16px;font-size:10px;}
+  .product-grid{grid-template-columns:repeat(2,1fr);gap:12px;}
+  .pdp-recs-grid{grid-template-columns:repeat(2,1fr);}
+  .pdp-wrap{padding:16px 16px 40px;}
+  .pdp-grid{grid-template-columns:1fr;}
+  .pdp-photos{grid-template-columns:1fr 1fr;}
+  .cart-page-wrap{padding:16px;grid-template-columns:1fr;}
+  .cart-recs-row{grid-template-columns:repeat(2,1fr);}
+  .cat-page-hero-inner{padding:0 16px;}
+  .filter-chip{padding:7px 12px;font-size:11px;}
+  #persona-switcher{top:96px;right:12px;}
+  #ps-toggle{font-size:11px;padding:8px 12px;}
+  #ps-panel{width:calc(100vw - 24px);right:0;}
+  #sticky-20-btn{bottom:12px;left:12px;font-size:11px;padding:8px 12px;}
+  #chat-bubble{bottom:58px;right:12px;font-size:12px;padding:9px 14px;}
+  #chat-window{width:calc(100vw - 24px);right:12px;bottom:104px;max-height:55vh;}
+  #id-timeline-btn{top:88px;padding:9px 7px;font-size:9px;}
+  #id-timeline-panel{width:min(280px,88vw);}
+  .pers-modal{max-width:calc(100vw - 24px);}
+  #pers-modal-overlay{padding:0 12px 66px 0;}
+  .signup-modal{padding:24px 18px 20px;}
+  .email-content{padding:16px;}
+  .email-hero{padding:16px;}
+  .offer-lightbox{max-width:calc(100vw - 32px);}
+  .w{padding:0 16px;}
+}
+</style>
+</head>
+<body>
+
+<!-- PUSH NOTIFICATION -->
+<div id="push-notif-wrap">
+  <div class="push-iphone">
+    <div class="push-iph-header">
+      <div class="push-iph-appicon">AURA</div>
+      <div class="push-iph-appname">AURA</div>
+      <div class="push-iph-time" id="push-time">now</div>
+      <button class="push-iph-dismiss" onclick="dismissPush()">&#215;</button>
+    </div>
+    <div class="push-iph-body">
+      <div class="push-iph-icon">&#128722;</div>
+      <div class="push-iph-text">
+        <div class="push-iph-title" id="push-title">Your cart is waiting</div>
+        <div class="push-iph-msg" id="push-msg">Complete your purchase and earn Aura Circle points.</div>
+      </div>
+    </div>
+    <div class="push-iph-footer"><span class="push-iph-via">Delivered via</span><span class="push-iph-badge">Braze</span></div>
+  </div>
+</div>
+
+<!-- IDENTITY SAMPLE -->
+<button id="id-timeline-btn" onclick="toggleTimeline()"><div class="itb-dot"></div>Identity Sample</button>
+<div id="id-timeline-panel">
+  <div class="itp-header">
+    <div class="itp-header-top"><div class="itp-title">Real-Time Identity Sample</div><button class="itp-close" onclick="closeTimeline()">&#215;</button></div>
+    <div class="itp-sub">Merkury Consumer Identity — Schema B</div>
+  </div>
+  <div class="itp-body" id="itp-identity-body">
+    <div style="font-size:13px;color:var(--text3);line-height:1.6;">Select a persona to see live Merkury tag data.</div>
+  </div>
+  <div class="itp-resolve-bar" id="itp-resolve-bar" style="display:none;">
+    <div class="itp-resolve-dot"></div>
+    <div class="itp-resolve-text">Resolved in <span class="itp-resolve-time" id="itp-resolve-ms">—</span></div>
+  </div>
+</div>
+
+<!-- RETAIL CONCIERGE -->
+<button id="chat-bubble" onclick="toggleChat()"><div class="cb-dot"></div><span>Retail Concierge</span></button>
+<div id="chat-window">
+  <div class="chat-header">
+    <div class="chat-header-icon">A</div>
+    <div class="chat-header-info"><div class="chat-header-name">Aura Style Concierge</div><div class="chat-header-sub">Personalized by Merkury</div></div>
+    <button class="chat-header-close" onclick="toggleChat()">&#215;</button>
+  </div>
+  <div class="chat-context-bar"><div class="chat-context-dot"></div>Shopping as: <span class="chat-context-text" id="chat-context-label">Guest</span></div>
+  <div class="chat-messages" id="chat-messages"></div>
+  <div class="chat-input-row">
+    <input class="chat-input" id="chat-input" type="text" placeholder="Ask me anything..." onkeydown="if(event.key==='Enter')sendChat()">
+    <button class="chat-send" id="chat-send-btn" onclick="sendChat()">Send</button>
+  </div>
+</div>
+
+<!-- EMAIL MODAL -->
+<div id="email-modal-overlay">
+  <div class="email-modal">
+    <button class="email-modal-close" onclick="closeEmailModal()">&#215;</button>
+    <div class="email-modal-topbar"><div style="width:48px"></div><div style="font-size:11px;color:rgba(255,255,255,.4);letter-spacing:1px;">MAIL PREVIEW</div><div style="width:48px"></div></div>
+    <div class="email-modal-subject-bar">
+      <div class="email-subject-row"><div class="email-subject-label">From:</div><div class="email-subject-value">Aura &lt;<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bcd2d3ced9ccd0c5fcddc9cedd92dfd3d1">[email&#160;protected]</a>&gt;</div></div>
+      <div class="email-subject-row"><div class="email-subject-label">To:</div><div class="email-subject-value" id="email-modal-to"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="573a362e3679343f323917303a363e3b7934383a">[email&#160;protected]</a></div></div>
+      <div class="email-subject-row"><div class="email-subject-label">Subject:</div><div class="email-subject-value" id="email-modal-subject" style="color:#fff;font-weight:600;">Maya, you left something behind</div></div>
+    </div>
+    <div class="email-body">
+      <div class="email-header-band"><div class="email-logo">AURA</div></div>
+      <div class="email-hero"><div class="email-hero-eyebrow">Still thinking it over?</div><div class="email-hero-h1">Maya, you left something behind.</div><div class="email-hero-sub">Your cart is saved. As an Aura Circle member, your exclusive discount is still applied.</div></div>
+      <div class="email-content">
+        <div class="email-product-card">
+          <div class="email-product-img"></div>
+          <div class="email-product-info"><div class="email-product-eyebrow">In Your Cart</div><div class="email-product-name">High Rise Performance Tight 7/8</div><div class="email-product-detail">Size: S | Color: Midnight Black | Qty: 1</div><div class="email-product-price">$109</div><div class="email-product-member">Circle Member Price: $98.10</div><div class="email-product-points">You will earn 545 points on this order</div></div>
+        </div>
+        <div class="email-body-copy">These sell out fast, Maya. Your size is still available.</div>
+        <div class="email-cta-wrap"><div class="email-cta-btn">Complete My Purchase</div></div>
+        <div class="email-encore-strip"><div style="font-size:24px;flex-shrink:0;">&#11088;</div><div class="email-encore-text"><strong>Aura Circle All-Access perk:</strong> You are earning 25 points per $1 on this purchase.</div></div>
+      </div>
+      <div class="email-footer-band"><div class="email-footer-logo">AURA</div><div class="email-footer-links"><a>Unsubscribe</a><a>Privacy Policy</a><a>Help Center</a></div><div class="email-footer-legal">&copy; 2026 Aura Active, Inc. All Rights Reserved.</div></div>
+      <div class="email-merkury-strip"><div class="email-merkury-title">Merkury signals - email partner</div><div class="email-merkury-pills"><div class="email-merkury-pill trigger"><span>email_engagement:</span> Active</div><div class="email-merkury-pill trigger"><span>last_purchase_days:</span> 12</div><div class="email-merkury-pill"><span>category_affinity_1:</span> Leggings</div><div class="email-merkury-pill"><span>match_type:</span> Deterministic</div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- SHIPPING FLYOUT -->
+<div id="ship-flyout-overlay" onclick="closeShipFlyout()">
+  <div class="ship-flyout" onclick="event.stopPropagation()">
+    <button class="ship-flyout-close" onclick="closeShipFlyout()">&#215;</button>
+    <h2>Aura Circle Members, Shipping is on Us!</h2>
+    <ul><li>Free shipping for Core and Premier Members on orders of $50+</li><li>All-Access Members get free shipping on orders $35+</li></ul>
+    <h3>Free Returns</h3>
+    <ul><li>Qualifying items can be returned free by mail or in store</li></ul>
+    <div class="ship-flyout-legal">Must be signed into your online account to receive offer.</div>
+  </div>
+</div>
+
+<!-- MEGA NAV -->
+<div class="mega-nav-dropdown" id="mega-nav-new">
+  <div class="mega-nav-inner">
+    <div class="mega-col"><h4>Featured</h4><a onclick="showPage('category');closeMegaNav()">New Arrivals</a><a onclick="showPage('category');closeMegaNav()">Shop All Women</a><a onclick="showPage('category');closeMegaNav()">Best Sellers</a></div>
+    <div class="mega-col"><h4>Shop By Activity</h4><a onclick="showPage('category');closeMegaNav()">Yoga &amp; Studio</a><a onclick="showPage('category');closeMegaNav()">Run &amp; Train</a><a onclick="showPage('category');closeMegaNav()">Swim</a></div>
+    <div class="mega-col"><h4>Shop By Category</h4><a onclick="showPage('category');closeMegaNav()">Bottoms</a><a onclick="showPage('category');closeMegaNav()">Tops</a><a onclick="showPage('category');closeMegaNav()">Bras</a><a onclick="showPage('category');closeMegaNav()">Jackets</a></div>
+    <div class="mega-col"><h4>Extended Sizes</h4><a onclick="showPage('category');closeMegaNav()">Petite</a><a onclick="showPage('category');closeMegaNav()">Tall</a></div>
+  </div>
+</div>
+
+<!-- SIGNUP MODAL -->
+<div id="signup-modal-overlay">
+  <div class="signup-modal">
+    <button class="signup-modal-close" onclick="dismissSignupModal()">&#215;</button>
+    <div class="signup-step">STEP 1</div>
+    <div class="signup-headline">Score 20% off* when you join Aura.</div>
+    <div class="signup-sub">Get the latest on new arrivals, exclusive offers, and more.</div>
+    <input class="signup-input" type="email" id="signup-email-input" placeholder="Enter your email address">
+    <button class="signup-btn" onclick="submitSignupModal()">Join Now</button>
+    <div class="signup-legal"><a href="#">Restrictions apply</a><a href="#">Privacy policy</a></div>
+  </div>
+</div>
+
+<!-- PERSONALIZATION MODAL -->
+<div id="pers-modal-overlay">
+  <div class="pers-modal">
+    <button class="pers-modal-close" onclick="dismissModal()">&#215;</button>
+    <div class="pers-modal-header" id="pm-header">
+      <div class="pers-modal-eyebrow">Merkury Identity Resolved</div>
+      <div class="pers-modal-visitor-state" id="pm-visitor-state"></div>
+      <div class="pers-modal-tagline" id="pm-tagline"></div>
+      <div class="pers-modal-badge"><div class="pers-modal-badge-dot"></div><span id="pm-match-badge"></span></div>
+    </div>
+    <div class="pers-modal-body">
+      <div class="pers-id-card" id="pm-id-card">
+        <div class="pers-id-card-title">Resolved Identity</div>
+        <div class="pers-id-grid"></div>
+      </div>
+      <div class="pm-campaign-row" id="pm-campaign-row">
+        <div class="pm-campaign-label">She left the site - build a re-engagement campaign via messaging partner</div>
+        <button class="pm-campaign-btn" onclick="dismissModal();setTimeout(openCampaignModal,200)">Build SMS Re-engagement Campaign</button>
+      </div>
+      <div class="pm-campaign-row" id="pm-email-row" style="display:none;">
+        <div class="pm-campaign-label">She left items in her cart - trigger an abandoned cart email via email partner</div>
+        <button class="pm-campaign-btn" style="background:#1a5f6a;" onclick="dismissModal();setTimeout(openEmailModal,200)">Preview Abandoned Cart Email</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- OFFER LIGHTBOX -->
+<div id="offer-lightbox-overlay">
+  <div class="offer-lightbox">
+    <div class="offer-lb-accent"></div>
+    <button class="offer-lb-close" onclick="closeOfferLightbox()">&#215;</button>
+    <div class="offer-lb-header"><div class="offer-lb-name" id="offer-lb-name"></div></div>
+    <div class="offer-lb-body">
+      <div class="offer-lb-headline" id="offer-lb-headline"></div>
+      <div class="offer-lb-desc" id="offer-lb-desc"></div>
+      <div class="offer-lb-footer"><div class="offer-lb-code" id="offer-lb-code"></div><button class="offer-lb-cta" onclick="closeOfferLightbox()">Shop Now</button></div>
+    </div>
+  </div>
+</div>
+
+<!-- CAMPAIGN BUILDER -->
+<div id="campaign-modal-overlay">
+  <div class="campaign-modal">
+    <button class="campaign-modal-close" onclick="closeCampaignModal()">&#215;</button>
+    <div class="cm-header"><div class="cm-header-top"><div class="cm-header-icon">&#128242;</div><div class="cm-header-title">SMS Re-engagement Campaign</div></div><div class="cm-header-sub">Powered by Merkury - messaging partner - Triggered by lapsed visitor signal</div></div>
+    <div class="cm-body">
+      <div class="cm-left">
+        <div class="cm-section-label">Audience</div>
+        <div class="cm-audience-card"><div class="cm-aud-icon">&#128105;</div><div><div class="cm-aud-name">Lapsed Circle Members - Jackets Affinity</div><div class="cm-aud-size">4,284 subscribers matched via Merkury signals</div><div class="cm-aud-signals"><div class="cm-signal-pill trigger">last_purchase_days: 47</div><div class="cm-signal-pill trigger">email_engagement: Lapsed</div><div class="cm-signal-pill">category_affinity_1: Jackets</div><div class="cm-signal-pill">in_market_flag: Y</div></div></div></div>
+        <div class="cm-section-label">AI Copy Assistant</div>
+        <div class="cm-ai-bar"><div class="cm-ai-bar-label">AI copy assistant</div><div class="cm-tone-pills"><button class="cm-tone-pill" onclick="setCmTone(this,'shorter')">Make shorter</button><button class="cm-tone-pill active" onclick="setCmTone(this,'urgent')">Add urgency</button><button class="cm-tone-pill" onclick="setCmTone(this,'casual')">Make casual</button></div></div>
+        <div class="cm-variants">
+          <div class="cm-variant active" onclick="selectVariant(this,0)"><div class="cm-variant-label">Variant A</div><div class="cm-variant-text" id="cv-text-0">Aura: Hi Jennifer! We have missed you. New jackets just dropped and we are holding 20% off just for you. Shop now > aura.com/jennifer Code: WELCOME20</div><div class="cm-add-msg">+ Add message</div></div>
+          <div class="cm-variant" onclick="selectVariant(this,1)"><div class="cm-variant-label">Variant B</div><div class="cm-variant-text" id="cv-text-1">Aura: Jennifer, your 20% off is waiting. The jackets you love are back but not for long > aura.com/jennifer Code: WELCOME20</div><div class="cm-add-msg">+ Add message</div></div>
+        </div>
+        <div class="cm-section-label">Send Time</div>
+        <div class="cm-sendtime">
+          <div class="cm-st-option" onclick="selectSendTime(0)"><div class="cm-st-radio selected" id="cm-st-0"></div><div><div class="cm-st-label">Use Send Time AI <span class="cm-st-badge">AI optimized</span></div><div class="cm-st-detail">Sent at each subscriber's optimal send time</div></div></div>
+          <div class="cm-st-option" onclick="selectSendTime(1)"><div class="cm-st-radio" id="cm-st-1"></div><div><div class="cm-st-label">Use specified time</div><div class="cm-st-detail">Wed, Apr 23 at 8:30 PM</div></div></div>
+        </div>
+      </div>
+      <div class="cm-right">
+        <div class="cm-section-label" style="align-self:flex-start;margin-bottom:12px;">Preview</div>
+        <div class="cm-phone"><div class="cm-phone-screen"><div class="cm-phone-notch"></div><div class="cm-phone-status"><span class="cm-phone-status-time">9:41</span></div><div class="cm-phone-header"><div class="cm-phone-avatar"><svg viewBox="0 0 40 40"><path d="M20 4 L24 14 L34 10 L28 20 L34 30 L24 26 L20 36 L16 26 L6 30 L12 20 L6 10 L16 14 Z" fill="white"/></svg></div><div class="cm-phone-sender">Aura</div><div class="cm-phone-type">Text Message</div></div><div class="cm-phone-thread"><div class="cm-phone-bubble" id="cm-phone-preview">Aura: Hi Jennifer! New jackets just dropped. 20% off just for you > aura.com/jennifer Code: WELCOME20</div></div></div></div>
+        <div class="cm-perf-card"><div class="cm-perf-label">Est. Performance</div><div class="cm-perf-row"><span>Audience size</span><strong>4,284</strong></div><div class="cm-perf-row"><span>Est. click rate</span><strong>18-24%</strong></div><div class="cm-perf-row green"><span>Est. revenue</span><strong>$12,400-$18,600</strong></div></div>
+      </div>
+    </div>
+    <div class="cm-footer"><div class="cm-footer-left">Sending to <strong>4,284 subscribers</strong> - Merkury-matched lapsed segment</div><button class="cm-schedule-btn" onclick="closeCampaignModal()">Review and schedule campaign</button></div>
+  </div>
+</div>
+
+<!-- STICKY PILL -->
+<button id="sticky-20-btn" onclick="onStickyPillClick()">
+  <span id="sticky-20-label">Get 20% Off</span>
+  <span class="s20-close" onclick="event.stopPropagation();document.getElementById('sticky-20-btn').classList.add('hidden')">&#215;</span>
+</button>
+
+<!-- PERSONA SWITCHER -->
+<div id="persona-switcher">
+  <div id="ps-toggle" onclick="toggleSwitcher()"><div class="ps-dot"></div><span>Demo Persona</span><span class="ps-chevron">&#9662;</span></div>
+  <div id="ps-panel">
+    <div class="ps-header"><div class="ps-header-left"><h3>Merkury Demo Switcher</h3><p>Swap visitor state in real time</p></div><span class="ps-badge-pill">Live</span></div>
+    <div class="ps-active-bar"><div class="ps-active-dot"></div>Active: <strong id="ps-active-name">Default</strong></div>
+    <div class="ps-section-label">Select a Visitor State</div>
+    <div class="ps-persona-list" id="ps-persona-list"></div>
+    <div class="ps-footer"><span class="ps-reset" onclick="resetPersona()">Reset to default</span><span class="ps-page-indicator">Page: <strong id="ps-page-name">Home</strong></span></div>
+  </div>
+</div>
+
+<!-- DEMO BANNER -->
+<div class="demo-banner">Demo Purposes Only &mdash; Merkury Tag Data</div>
+
+<!-- UTIL BAR -->
+<div class="util-bar">
+  <div style="width:40px;flex-shrink:0;"></div>
+  <div class="util-center"><span>FREE SHIPPING ON $50+ FOR AURA CIRCLE MEMBERS</span><a onclick="openShipFlyout()">Join Now</a><a onclick="openShipFlyout()">Details</a></div>
+  <div class="util-right"><span class="util-icon" onclick="showPage('home')" style="cursor:pointer;">&#128100;</span><span class="util-icon" onclick="goToCart()" style="cursor:pointer;">&#128722;</span></div>
+</div>
+
+<!-- PROMO BAR -->
+<div class="promo-bar">
+  <div style="width:80px;flex-shrink:0;"></div>
+  <div class="promo-bar-text" id="promo-bar-text">30% Off Your New Favorites <a onclick="showPage('category')">Shop Women</a></div>
+  <div class="promo-bar-right"><a href="#">Exclusions Apply</a></div>
+</div>
+
+<!-- MAIN NAV -->
+<div class="main-nav">
+  <div class="nav-inner">
+    <div class="nav-logo" onclick="showPage('home')">AURA</div>
+    <div class="nav-links">
+      <span class="nav-link" onclick="toggleMegaNav()" id="nav-new-link">New</span>
+      <span class="nav-link" onclick="showPage('category')">Bottoms</span>
+      <span class="nav-link" onclick="showPage('category')">Tops</span>
+      <span class="nav-link" onclick="showPage('category')">Bras</span>
+      <span class="nav-link" onclick="showPage('category')">Studio</span>
+      <span class="nav-link" onclick="showPage('category')">Jackets</span>
+      <span class="nav-link" onclick="showPage('category')">Swim</span>
+      <span class="nav-link sale" onclick="showPage('category')">Sale</span>
+    </div>
+    <div class="nav-search"><input type="text" placeholder="Search"><span style="color:var(--text3)">&#128269;</span></div>
+  </div>
+</div>
+
+<!-- HOME PAGE -->
+<div id="page-home" class="page active">
+  <div class="hero"><div class="hero-split">
+    <div class="hero-photo-left"></div>
+    <div class="hero-center">
+      <p class="hero-eyebrow" id="hero-eyebrow"></p>
+      <span class="hero-h1-light" id="hero-h1-light">MOVE IN WHAT</span>
+      <span class="hero-h1-bold" id="hero-h1-bold">MOVES YOU</span>
+      <p class="hero-sub" id="hero-sub">Discover our latest collection — designed for every move you make.</p>
+      <a class="btn-pill btn-black" id="hero-cta1" onclick="showPage('category')">Shop Now</a>
+    </div>
+    <div class="hero-photo-right"></div>
+  </div></div>
+
+  <div class="cat-section"><div class="w">
+    <div class="cat-section-hdr"><h2 id="home-cat-title">SHOP THE COLLECTION</h2><a onclick="showPage('category')">View All</a></div>
+    <div class="cat-grid">
+      <div class="cat-tile" onclick="showPage('pdp')"><div class="cat-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/workout.1.webp') center/cover no-repeat;"><div class="cat-badge">New</div></div><div class="cat-label" id="cat-label-1">Matching Sets</div><div class="cat-sub" id="cat-sub-1">Effortlessly coordinated</div></div>
+      <div class="cat-tile" onclick="showPage('pdp')"><div class="cat-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/sports.bra.webp') center/cover no-repeat;"></div><div class="cat-label" id="cat-label-2">Flow State</div><div class="cat-sub" id="cat-sub-2">Built for your practice</div></div>
+      <div class="cat-tile" onclick="showPage('pdp')"><div class="cat-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/yoga.class.webp') center/cover no-repeat;"></div><div class="cat-label" id="cat-label-3">Studio Fits</div><div class="cat-sub" id="cat-sub-3">From class to everywhere</div></div>
+      <div class="cat-tile" onclick="showPage('pdp')"><div class="cat-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/workout.fit.webp') center/cover no-repeat;"></div><div class="cat-label" id="cat-label-4">On the Mat</div><div class="cat-sub" id="cat-sub-4">Your go-to studio layer</div></div>
+    </div>
+  </div></div>
+
+  <div class="promo-band"><div class="promo-band-inner">
+    <div class="pb-photo"></div>
+    <div class="pb-text"><p class="pb-eyebrow" id="pb-eyebrow">New Collection</p><h2 class="pb-h2" id="pb-h2">Your Mat, Your Practice</h2><p class="pb-p" id="pb-p">Built for every pose, every flow. Studio-ready styles designed to move with you.</p><a class="btn-pill btn-black" onclick="showPage('pdp')" id="pb-cta">Shop Now</a></div>
+  </div></div>
+
+  <div class="life-section"><div class="w">
+    <div class="cat-section-hdr" style="margin-bottom:20px"><h2 id="life-title">MADE FOR THE MAT</h2><a onclick="showPage('category')">Shop All</a></div>
+    <div class="life-grid">
+      <div class="life-main" onclick="showPage('category')"><div class="life-main-label"><h3 id="life-main-label">STUDIO FAVORITES</h3><p id="life-main-sub">Top-rated by our community</p></div></div>
+      <div class="life-side">
+        <div class="life-card" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/yoga.mat.webp') center/cover no-repeat;" onclick="showPage('category')"><div class="life-card-label" id="life-card-1">ON THE MAT</div></div>
+        <div class="life-card" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/yoga.meditate.webp') center/cover no-repeat;" onclick="showPage('category')"><div class="life-card-label" id="life-card-2">FLOW STATE</div></div>
+      </div>
+      <div class="life-side">
+        <div class="life-card" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/workout.fit.webp') center/cover no-repeat;" onclick="showPage('category')"><div class="life-card-label" id="life-card-3">STUDIO FITS</div></div>
+        <div class="life-card" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/yoga.girl.webp') center/cover no-repeat;" onclick="showPage('category')"><div class="life-card-label" id="life-card-4">MINDFUL MOVEMENT</div></div>
+      </div>
+    </div>
+  </div></div>
+
+  <div class="loyalty-strip"><div class="loyalty-inner">
+    <div class="ls-col"><div class="ls-eyebrow">Earn 20% Off</div><div class="ls-title" id="loyalty-title">Join Aura Circle free</div><div class="ls-sub" id="loyalty-sub">Sign up for emails and get 20% off your next order.</div><div class="ls-email-row"><input class="ls-email-input" type="email" placeholder="Enter your email address"><button class="btn-pill btn-white btn-sm">Sign Up</button></div></div>
+    <div class="ls-divider"></div>
+    <div class="ls-col"><div class="ls-eyebrow">Aura Circle</div><div class="ls-title" id="encore-title">Extra 20% off your first purchase</div><div class="ls-sub">When you open and shop with your new Aura Circle card.</div><div style="display:flex;gap:10px;"><button class="btn-pill btn-white btn-sm">Apply</button><button class="btn-pill btn-sm" style="color:#fff;border:2px solid rgba(255,255,255,.4);background:transparent">Learn More</button></div></div>
+    <div class="ls-divider"></div>
+    <div class="ls-col"><div class="ls-eyebrow">Our Mission</div><div class="ls-title">MOVE WITH PURPOSE</div><div class="ls-sub">We believe in performance, sustainability, and inclusivity in everything we make.</div><a style="color:rgba(255,255,255,.8);font-size:13px;text-decoration:underline" href="#">Learn More</a></div>
+  </div></div>
+
+  <footer><div class="footer-cols"><div class="fc"><h4>Customer Support</h4><a>Shipping</a><a>Returns and Exchanges</a><a>Track Your Order</a><a>Gift Cards</a></div><div class="fc"><h4>Aura Circle</h4><a>Points and Rewards</a><a>Account</a><a>Pay Credit Card</a><a>Become a Circle Member</a></div><div class="fc"><h4>About Us</h4><a>Our Story</a><a>Sustainability</a><a>Careers</a></div><div class="fc"><h4>Find Us</h4><a>Contact Us</a><a>Store Locator</a><a>Aura App</a></div></div><div class="footer-bottom"><span>&copy; 2026 Aura Active, Inc. All Rights Reserved.</span><div class="footer-bottom-links"><a>Privacy Policy</a><a>Terms of Use</a><a>Accessibility</a></div><div class="footer-social"><a>IG</a><a>TT</a><a>FB</a><a>YT</a></div></div></footer>
+</div>
+
+<!-- CATEGORY PAGE -->
+<div id="page-category" class="page">
+  <div class="cat-page-hero"><div class="cat-page-hero-inner">
+    <div class="breadcrumb" onclick="showPage('home')">Home / <span id="cat-page-name">New Arrivals</span></div>
+    <h1 class="cat-page-title" id="cat-page-title">New Arrivals</h1>
+    <p class="cat-page-sub" id="cat-page-sub">The freshest styles, just landed.</p>
+    <div class="cat-page-filters"><div class="filter-chip active">Filter and Sort</div><div class="filter-chip">Category</div><div class="filter-chip">Color</div><div class="filter-chip">Size</div><div class="filter-chip">Activity</div></div>
+  </div></div>
+  <div class="cat-page-grid-wrap"><div class="w"><div class="cat-page-result-count" id="cat-result-count">218 Results</div><div class="product-grid" id="cat-product-grid"></div></div></div>
+  <div class="loyalty-banner">
+    <div class="loyalty-banner-inner"><div class="lb-icon" id="cat-lb-icon" style="background:#f0ece8;">&#127885;</div><div><div class="lb-eyebrow" id="cat-lb-eyebrow">Aura Circle</div><div class="lb-headline" id="cat-lb-headline">Your membership for leveling up.</div><div class="lb-sub" id="cat-lb-sub">Join free and earn points on every purchase.</div></div><div class="lb-actions"><button class="btn-pill btn-black btn-sm" id="cat-lb-cta1">Join for Free</button><button class="btn-pill btn-outline btn-sm" id="cat-lb-cta2">Explore Program</button></div></div>
+    <div class="lb-tiers">
+      <div class="lb-tier" id="cat-tier-1"><div class="lb-tier-header"><div class="lb-tier-num">1</div><div class="lb-tier-hdr-text"><h3>Circle Core</h3><div class="lb-tier-hdr-btn"><a href="#">Join for Free</a></div></div></div><div class="lb-tier-body"><div class="lb-tier-body-desc">Sign up for free to unlock our core benefits.</div><div class="lb-tier-perks"><div class="lb-tier-perk-pill">1X POINTS</div><div class="lb-tier-perk-pill">FREE SHIPPING</div><div class="lb-tier-more">+</div></div></div></div>
+      <div class="lb-tier" id="cat-tier-2"><div class="lb-tier-header"><div class="lb-tier-num">2</div><div class="lb-tier-hdr-text"><h3>Circle Premier</h3></div></div><div class="lb-tier-body"><div class="lb-tier-body-desc">Spend $350+ annually to unlock more benefits.</div><div class="lb-tier-perks"><div class="lb-tier-perk-pill">CREATE YOUR OWN SALE DAY</div><div class="lb-tier-perk-pill">EXTENDED RETURNS</div><div class="lb-tier-more">+</div></div></div></div>
+      <div class="lb-tier" id="cat-tier-3"><div class="lb-tier-header"><div class="lb-tier-num">3</div><div class="lb-tier-hdr-text"><h3>Circle All-Access</h3><div class="lb-tier-hdr-btn"><a href="#">Apply Now</a></div></div></div><div class="lb-tier-body"><div class="lb-tier-body-desc">Become an All-Access member to unlock everything.</div><div class="lb-tier-perks"><div class="lb-tier-perk-pill">5X POINTS</div><div class="lb-tier-perk-pill">EARLY ACCESS</div><div class="lb-tier-more">+</div></div><div class="lb-tier-card-badge">ALL-ACCESS</div><div class="lb-tier-card-note">Get an extra 20% off your first purchase with your new Aura Circle Credit Card.</div></div></div>
+    </div>
+  </div>
+  <footer><div class="footer-cols"><div class="fc"><h4>Customer Support</h4><a>Shipping</a><a>Returns</a></div><div class="fc"><h4>Aura Circle</h4><a>Points and Rewards</a></div><div class="fc"><h4>About Us</h4><a>Our Story</a></div><div class="fc"><h4>Find Us</h4><a>Contact Us</a></div></div><div class="footer-bottom"><span>&copy; 2026 Aura Active, Inc. All Rights Reserved.</span><div class="footer-bottom-links"><a>Privacy Policy</a><a>Terms of Use</a></div></div></footer>
+</div>
+
+<!-- PDP PAGE -->
+<div id="page-pdp" class="page">
+  <div class="pdp-wrap">
+    <div class="pdp-breadcrumb" onclick="showPage('category')">Back to <span id="pdp-breadcrumb-cat">Bottoms</span></div>
+    <div class="pdp-grid">
+      <div class="pdp-photos">
+        <div class="pdp-photo-main grad-1"></div>
+        <div class="pdp-photo-thumb grad-2"></div>
+        <div class="pdp-photo-thumb grad-3"></div>
+        <div class="pdp-photo-thumb grad-4"></div>
+      </div>
+      <div>
+        <div class="pdp-eyebrow" id="pdp-eyebrow">Bottoms</div>
+        <h1 class="pdp-title" id="pdp-title">High Rise Flare Performance Pant</h1>
+        <div class="pdp-price">$98</div>
+        <div class="pdp-member-price">Circle Member Price $88</div>
+        <div class="pdp-rating"><span class="pdp-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span>4.8 (312 Reviews)</span></div>
+        <div class="pdp-color-label">Color: Midnight Black</div>
+        <div class="pdp-swatches"><div class="pdp-swatch active" style="background:#1a1a1a"></div><div class="pdp-swatch" style="background:#2a5a8a"></div><div class="pdp-swatch" style="background:#8a2a2a"></div></div>
+        <div class="pdp-size-label">Size <a>Size Chart</a></div>
+        <div class="pdp-sizes"><div class="pdp-size-btn oos">XXS</div><div class="pdp-size-btn">XS</div><div class="pdp-size-btn active">S</div><div class="pdp-size-btn">M</div><div class="pdp-size-btn">L</div><div class="pdp-size-btn">XL</div></div>
+        <div class="pdp-loyalty-nudge"><div class="pln-icon" id="pln-icon">&#127885;</div><div class="pln-text" id="pln-text"><strong>Join Aura Circle free</strong> and earn points on this purchase.</div><div class="pln-cta" id="pln-cta">Join Free</div></div>
+        <button class="pdp-atc" id="pdp-atc-btn">Add to Bag</button>
+        <button class="pdp-fav">Save to Favorites</button>
+        <div class="pdp-feature-row"><span>&#9654;</span><span>High rise with a wide, comfortable waistband</span></div>
+        <div class="pdp-feature-row"><span>&#9654;</span><span>4-way stretch, moves with you, recovers instantly</span></div>
+        <div class="pdp-desc" id="pdp-desc">From the studio to the street, the High Rise Flare Performance Pant delivers a flattering silhouette with the performance you expect from Aura.</div>
+      </div>
+    </div>
+    <div class="pdp-recs"><h2 id="pdp-recs-title">YOU MAY ALSO LIKE</h2>
+      <div class="pdp-recs-grid">
+        <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo grad-5"></div><div class="pt-name">Performance Tight 7/8</div><div class="pt-price">$98</div><div class="pt-member-price">Circle Price $88</div></div>
+        <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo grad-3"></div><div class="pt-name">Studio Jogger</div><div class="pt-price">$79</div><div class="pt-member-price">Circle Price $71</div></div>
+        <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo grad-4"></div><div class="pt-name">Barrel Leg Pant</div><div class="pt-price">$118</div><div class="pt-member-price">Circle Price $106</div></div>
+        <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo grad-6"></div><div class="pt-name">Wide Leg Studio Pant</div><div class="pt-price">$108</div><div class="pt-member-price">Circle Price $97</div></div>
+      </div>
+    </div>
+  </div>
+  <footer><div class="footer-cols"><div class="fc"><h4>Customer Support</h4><a>Shipping</a><a>Returns</a></div><div class="fc"><h4>Aura Circle</h4><a>Points and Rewards</a></div><div class="fc"><h4>About Us</h4><a>Our Story</a></div><div class="fc"><h4>Find Us</h4><a>Contact Us</a></div></div><div class="footer-bottom"><span>&copy; 2026 Aura Active, Inc. All Rights Reserved.</span><div class="footer-bottom-links"><a>Privacy Policy</a><a>Terms of Use</a></div></div></footer>
+</div>
+
+<!-- CART PAGE -->
+<div id="page-cart" class="page">
+  <div class="cart-page-wrap">
+    <div>
+      <div id="cart-page-empty-state">
+        <div class="cart-page-empty"><h2>Your bag is currently empty.</h2><p>Sign in to see any saved items.</p><button class="btn-pill btn-black btn-sm" onclick="showPage('home')">Continue Shopping</button></div>
+        <div class="cart-recs-section"><h3 id="cart-page-recs-title">Styles We Think You'll Love</h3><div class="cart-recs-row" id="cart-page-recs-grid"></div></div>
+      </div>
+      <div id="cart-page-filled-state" style="display:none;">
+        <div class="cart-page-title">My Bag (1 item)</div>
+        <div class="cart-page-item">
+          <div class="cart-page-item-img grad-1"></div>
+          <div><div class="cart-page-item-name" id="cart-pg-name">High Rise Flare Performance Pant</div><div class="cart-page-item-detail" id="cart-pg-detail">Size: S · Color: Midnight Black · Qty: 1</div><div class="cart-page-item-price" id="cart-pg-price">$98.00</div><div class="cart-page-item-member" id="cart-pg-member">Circle Member Price $88.00</div><span class="cart-page-item-remove" onclick="emptyCart()">Remove</span></div>
+          <div style="font-size:14px;font-weight:600;" id="cart-pg-total">$98.00</div>
+        </div>
+        <div class="cart-recs-section"><h3 id="cart-pg-recs-title">Styles We Think You'll Love</h3><div class="cart-recs-row" id="cart-pg-recs-grid"></div></div>
+      </div>
+    </div>
+    <div>
+      <div class="cart-page-promos"><h3>Promos</h3><div class="promo-input-row"><input type="text" placeholder="Enter Promo Code" id="cart-promo-input"><button class="promo-apply-btn" onclick="applyPromo()">Apply</button></div><div id="cart-promo-msg" style="font-size:12px;margin-top:8px;display:none;"></div></div>
+      <div class="cart-page-summary">
+        <div class="cart-summary-row"><span>Subtotal</span><span id="cart-pg-subtotal">$0.00</span></div>
+        <div class="cart-summary-row"><span>Shipping</span><span id="cart-pg-shipping">Calculated at checkout</span></div>
+        <div class="cart-summary-row total"><span>Estimated Total</span><span id="cart-pg-est-total">$0.00</span></div>
+        <button class="cart-page-checkout" onclick="showPage('home')">Checkout</button>
+        <a class="cart-page-continue-link" onclick="showPage('home')">Continue Shopping</a>
+      </div>
+      <div class="cart-loyalty-nudge"><div style="font-size:18px;flex-shrink:0;">&#11088;</div><div class="cart-loyalty-nudge-text" id="cart-pg-loyalty-text"><strong>Join Aura Circle free</strong> and earn points on every purchase.</div></div>
+    </div>
+  </div>
+  <footer><div class="footer-cols"><div class="fc"><h4>Customer Support</h4><a>Shipping</a><a>Returns</a><a>Track Your Order</a></div><div class="fc"><h4>Aura Circle</h4><a>Points and Rewards</a><a>Account</a></div><div class="fc"><h4>About Us</h4><a>Our Story</a></div><div class="fc"><h4>Find Us</h4><a>Contact Us</a><a>Store Locator</a></div></div><div class="footer-bottom"><span>&copy; 2026 Aura Active, Inc. All Rights Reserved.</span><div class="footer-bottom-links"><a>Privacy Policy</a><a>Terms of Use</a></div></div></footer>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+document.addEventListener('click',function(e){var a=e.target.closest('a');if(!a)return;var h=a.getAttribute('href');if(!h||h==='#'){var oc=a.getAttribute('onclick')||'';if(oc)return;e.preventDefault();}},true);
+
+var PAYLOADS={
+  def:{d:{data:{},response:'no_match',version:'1.0.0'}},
+  maya:{d:{data:{'dentsu.id':'a1b2c3d4e5f6a7b8c9d0',hashed_email:'3f4a5b6c7d8e9f0a1b2c',CRM_ID:'10048293',confidence_score:1,match_type:'deterministic',first_name:'Maya',last_name:'Chen',age_range:'25-34',gender:'F',marital_status:'S',education_level:'GR',presence_of_children:'N',city:'San Francisco',state:'CA',zip:'94110',homeowner_flag:'N',household_income_range:'$100K-$150K',household_size:'1',length_of_residence:'3',purchase_frequency:'High',avg_order_value_range:'$150-$300',last_purchase_days:'12',preferred_channel:'Mobile',category_affinity_1:'Leggings',category_affinity_2:'Sports Bras',in_market_flag:'Y',lifestyle_segment:'Active Achiever',brand_loyalty_score:'5',email_engagement:'Active',social_influence_tier:'Micro',created_date:'2019-04-10 00:00:00',last_modified_date:'2026-02-22 00:00:00'},response:'match',version:'1.0.0'}},
+  jennifer:{d:{data:{'dentsu.id':'c3d4e5f6a7b8c9d0e1f2',hashed_email:'5b6c7d8e9f0a1b2c3d4e',CRM_ID:'10031847',confidence_score:2,match_type:'deterministic',first_name:'Jennifer',last_name:'Walsh',age_range:'35-44',gender:'F',marital_status:'M',education_level:'BA',presence_of_children:'Y',city:'Naperville',state:'IL',zip:'60540',homeowner_flag:'Y',household_income_range:'$150K-$200K',household_size:'4',length_of_residence:'7',purchase_frequency:'Medium',avg_order_value_range:'$150-$300',last_purchase_days:'47',preferred_channel:'Omnichannel',category_affinity_1:'Jackets',category_affinity_2:'Wide Leg',in_market_flag:'Y',lifestyle_segment:'Weekend Warrior Mom',brand_loyalty_score:'4',email_engagement:'Lapsed',social_influence_tier:'Standard',created_date:'2020-08-19 00:00:00',last_modified_date:'2026-02-22 00:00:00'},response:'match',version:'1.0.0'}},
+  danielle:{d:{data:{'dentsu.id':'e5f6a7b8c9d0e1f2a3b4',hashed_email:'7c8d9e0f1a2b3c4d5e6f',CRM_ID:null,confidence_score:3,match_type:'probabilistic',first_name:null,last_name:null,age_range:'25-34',gender:'F',marital_status:'S',education_level:'BA',presence_of_children:'N',city:'Austin',state:'TX',zip:'78701',homeowner_flag:'N',household_income_range:'$75K-$100K',household_size:'1',length_of_residence:'2',purchase_frequency:'Medium',avg_order_value_range:'$50-$150',last_purchase_days:null,preferred_channel:'Online',category_affinity_1:'Yoga & Studio',category_affinity_2:'Swim',in_market_flag:'Y',lifestyle_segment:'Active Wellness Seeker',brand_loyalty_score:null,email_engagement:null,social_influence_tier:'Nano',swim_propensity_score:'82',swim_in_market:'Y',created_date:'2025-11-04 00:00:00',last_modified_date:'2026-03-01 00:00:00'},response:'match',version:'1.0.0'}}
+};
+
+var CONTENT={
+  def:{promoBar:'30% Off Your New Favorites <a onclick="showPage(\'category\')">Shop Women</a>',heroEyebrow:'',heroH1Light:'MOVE IN WHAT',heroH1Bold:'MOVES YOU',heroSub:'Discover our latest collection — designed for every move you make.',heroCta1:'Shop Now',homeCatTitle:'SHOP THE COLLECTION',catLabels:['Matching Sets','Flow State','Studio Fits','On the Mat'],catSubs:['Effortlessly coordinated','Built for your practice','From class to everywhere','Your go-to studio layer'],pbEyebrow:'New Collection',pbH2:'Your Mat, Your Practice',pbP:'Built for every pose, every flow. Studio-ready styles designed to move with you.',pbCta:'Shop Now',lifeTitle:'MADE FOR THE MAT',lifeMainLabel:'STUDIO FAVORITES',lifeMainSub:'Top-rated by our community',lifeCards:['ON THE MAT','FLOW STATE','STUDIO FITS','MINDFUL MOVEMENT'],loyaltyTitle:'Join Aura Circle free',loyaltySub:'Sign up for emails and get 20% off your next order.',encoreTitle:'Extra 20% off your first purchase',catPageTitle:'New Arrivals',catPageSub:'The freshest styles, just landed.',catResultCount:'218 Results',pdpTitle:'High Rise Flare Performance Pant',pdpDesc:'From the studio to the street, this pant delivers a flattering silhouette with the performance you expect from Aura.',pdpRecsTitle:'YOU MAY ALSO LIKE',pdpAtcBtn:'Add to Bag',pdpEyebrow:'Bottoms',pdpBreadcrumbCat:'Bottoms'},
   maya:{promoBar:'Welcome back Maya - Circle All-Access exclusive: extra 15% off <a onclick="showPage(\'category\')">Shop Now</a>',heroEyebrow:'Back For More',heroH1Light:'BACK FOR',heroH1Bold:'MORE. AS ALWAYS.',heroSub:'Your next obsession just landed. New leggings and bras made for how you move.',heroCta1:'Shop Leggings',homeCatTitle:'YOUR FAVORITES UPDATED',catLabels:['Matching Sets','Flow State','New Leggings','On the Mat'],catSubs:['Fresh drops','Your go-to','Just landed','Studio essentials'],pbEyebrow:'Circle All-Access',pbH2:'Your exclusive early access',pbP:'New drops hit your feed first. As a Circle member you get first pick.',pbCta:'Shop My Picks',lifeTitle:'BUILT FOR YOUR PRACTICE',lifeMainLabel:'YOGA ESSENTIALS',lifeMainSub:'Curated for you',lifeCards:['ON THE MAT','FLOW STATE','STUDIO FITS','MINDFUL MOVEMENT'],loyaltyTitle:'Hi Maya, your points are waiting',loyaltySub:'You have 240 Aura Circle points. Use them on your next order.',encoreTitle:'Circle All-Access: extra 15% off today',catPageTitle:'Leggings',catPageSub:'Your forever favorites.',catResultCount:'89 Results',pdpTitle:'High Rise Performance Tight 7/8',pdpDesc:'The legging our most loyal members keep coming back to.',pdpRecsTitle:'BECAUSE YOU LOVED THESE',pdpAtcBtn:'Add to Bag',pdpEyebrow:'Leggings',pdpBreadcrumbCat:'Leggings'},
   jennifer:{promoBar:'New arrivals just landed - shop the drop <a onclick="showPage(\'category\')">Shop Now</a>',heroEyebrow:'For Every Moment',heroH1Light:'FROM THE MAT',heroH1Bold:'TO THE MOMENT.',heroSub:'Versatile pieces that work at school pickup, the gym, and everywhere in between.',heroCta1:'Shop Versatile Styles',homeCatTitle:'FROM ERRANDS TO EVERYTHING',catLabels:['Studio Fits','Matching Sets','Flow State','On the Mat'],catSubs:['Polished and easy','Layer up','All-day comfort','The classic'],pbEyebrow:'New In',pbH2:'The styles that do it all.',pbP:'Versatile, performance-ready pieces designed for wherever the day takes you.',pbCta:'Shop Now',lifeTitle:'WEAR IT EVERYWHERE',lifeMainLabel:'EVERYDAY ESSENTIALS',lifeMainSub:'From school run to yoga class',lifeCards:['STUDIO FITS','ON THE MAT','FLOW STATE','MINDFUL MOVEMENT'],loyaltyTitle:'We have missed you Jennifer',loyaltySub:'You are just a few points away from your next reward.',encoreTitle:'Welcome back bonus: 20% off your next purchase',catPageTitle:'Jackets',catPageSub:'Layer up for whatever the day brings.',catResultCount:'58 Results',pdpTitle:'Performance Softshell Jacket',pdpDesc:'Built for wherever the day takes you.',pdpRecsTitle:'COMPLETE THE LOOK',pdpAtcBtn:'Add to Bag',pdpEyebrow:'Jackets',pdpBreadcrumbCat:'Jackets'},
   danielle:{promoBar:'New in swim — styles made for your next adventure <a onclick="showPage(\'category\')">Shop Swim</a>',heroEyebrow:'Just For You',heroH1Light:'YOUR PRACTICE.',heroH1Bold:'YOUR NEXT MOVE.',heroSub:'You love the studio. Now dive into our swim collection — built with the same performance you trust.',heroCta1:'Explore Swim',homeCatTitle:'MADE FOR HOW YOU MOVE',catLabels:['Flow State','Matching Sets','Studio Fits','On the Mat'],catSubs:['Your yoga go-to','New for you','Performance ready','Dive in'],pbEyebrow:'New Arrival',pbH2:'Find Your Flow',pbP:'New studio styles made for every practice. Discover what moves you.',pbCta:'Shop Now',lifeTitle:'BUILT FOR YOUR ACTIVE LIFE',lifeMainLabel:'STUDIO FAVORITES',lifeMainSub:'Your most-loved category',lifeCards:['ON THE MAT','FLOW STATE','STUDIO FITS','MINDFUL MOVEMENT'],loyaltyTitle:'Join Aura Circle — it is free',loyaltySub:'Earn points on every purchase and get 20% off your first order.',encoreTitle:'Free shipping on your first order',catPageTitle:'Yoga & Swim',catPageSub:'Performance made for every practice.',catResultCount:'186 Results',pdpTitle:'High Rise Performance Tight 7/8',pdpDesc:'Your go-to studio tight, now in new colourways. Built for flow, stretch, and everything in between.',pdpRecsTitle:'COMPLETE YOUR PRACTICE',pdpAtcBtn:'Add to Bag',pdpEyebrow:'Yoga & Studio',pdpBreadcrumbCat:'Yoga & Studio'}
@@ -1506,6 +3015,50 @@ function buildPersonaList(){
     el.addEventListener('click',function(){applyPersona(p.key);});list.appendChild(el);
   });
 }
+function toggleSwitcher(){
+  if(panelOpen){panelOpen=false;var pan=document.getElementById('ps-panel'),tog=document.getElementById('ps-toggle');if(pan)pan.classList.remove('open');if(tog)tog.classList.remove('open');return;}
+  closeAllPanels();
+  panelOpen=true;var pan=document.getElementById('ps-panel'),tog=document.getElementById('ps-toggle');if(pan)pan.classList.add('open');if(tog)tog.classList.add('open');
+  updatePageIndicator();
+}
+document.addEventListener('click',function(e){if(!e.target.closest('#persona-switcher')&&!e.target.closest('#pers-modal-overlay')&&!e.target.closest('#offer-lightbox-overlay')&&!e.target.closest('#campaign-modal-overlay')&&!e.target.closest('#signup-modal-overlay')&&!e.target.closest('#email-modal-overlay')){panelOpen=false;var pan=document.getElementById('ps-panel'),tog=document.getElementById('ps-toggle');if(pan)pan.classList.remove('open');if(tog)tog.classList.remove('open');}});
+function currentPage(){var a=document.querySelector('.page.active');return a?a.id.replace('page-',''):'home';}
+function updatePageIndicator(){var L={home:'Home',category:'Category',pdp:'Product',cart:'Cart'};var el=document.getElementById('ps-page-name');if(el)el.textContent=L[currentPage()]||currentPage();}
+
+function applyPersona(key){
+  activeKey=key;window._merkuryPersona=key;
+  document.querySelectorAll('.ps-persona').forEach(function(el){el.classList.toggle('active',el.getAttribute('data-key')===key);});
+  var persona=null;for(var i=0;i<PERSONAS.length;i++){if(PERSONAS[i].key===key){persona=PERSONAS[i];break;}}
+  var nameEl=document.getElementById('ps-active-name');if(nameEl&&persona)nameEl.textContent=persona.name;
+  updateTimeline(key);updateStickyPill(key);applyContent(key);merkuryResolve(key);dismissPush();
+  chatHistory=[];
+  var msgs=document.getElementById('chat-messages');if(msgs)msgs.innerHTML='';
+  updateChatContext();
+  var reopenBtn=document.getElementById('pers-reopen-btn');if(reopenBtn)reopenBtn.classList.remove('visible');
+  setTimeout(function(){panelOpen=false;var pan=document.getElementById('ps-panel'),tog=document.getElementById('ps-toggle');if(pan)pan.classList.remove('open');if(tog)tog.classList.remove('open');},300);
+  if(key!=='def'){
+    populateModal(key);
+    setTimeout(function(){openModal();},380);
+  }else{
+    dismissModal();
+  }
+}
+function resetPersona(){applyPersona('def');}
+
+document.addEventListener('click',function(e){
+  var sb=e.target.closest('.pdp-size-btn');if(sb&&!sb.classList.contains('oos')){document.querySelectorAll('.pdp-size-btn').forEach(function(b){b.classList.remove('active');});sb.classList.add('active');}
+  var sw=e.target.closest('.pdp-swatch');if(sw){document.querySelectorAll('.pdp-swatch').forEach(function(b){b.classList.remove('active');});sw.classList.add('active');}
+});
+
+document.addEventListener('DOMContentLoaded',function(){
+  buildPersonaList();
+  updatePageIndicator();
+  merkuryResolve('def');
+  setTimeout(function(){updateStickyPill('def');},200);
+});
+</script>
+</body>
+</html>
 function toggleSwitcher(){
   if(panelOpen){panelOpen=false;var pan=document.getElementById('ps-panel'),tog=document.getElementById('ps-toggle');if(pan)pan.classList.remove('open');if(tog)tog.classList.remove('open');return;}
   closeAllPanels();
