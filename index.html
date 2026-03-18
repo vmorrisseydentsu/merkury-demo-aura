@@ -1164,7 +1164,7 @@ function showPage(n){
   if(n==='pdp')setTimeout(wireATCButton,100);
   if(n==='cart')populateCartPage();
 }
-function goToCart(){populateCartPage();showPage('cart');}
+function goToCart(){if(activeKey==='maya')cartHasItem=true;populateCartPage();showPage('cart');}
 function set(id,val){var el=document.getElementById(id);if(el)el.textContent=val||'';}
 function setHTML(id,val){var el=document.getElementById(id);if(el)el.innerHTML=val||'';}
 
@@ -1534,6 +1534,7 @@ function applyPersona(key){
   var persona=null;for(var i=0;i<PERSONAS.length;i++){if(PERSONAS[i].key===key){persona=PERSONAS[i];break;}}
   var nameEl=document.getElementById('ps-active-name');if(nameEl&&persona)nameEl.textContent=persona.name;
   updateTimeline(key);updateStickyPill(key);applyContent(key);merkuryResolve(key);dismissPush();
+  cartHasItem=false;
   chatHistory=[];
   var msgs=document.getElementById('chat-messages');if(msgs)msgs.innerHTML='';
   updateChatContext();
