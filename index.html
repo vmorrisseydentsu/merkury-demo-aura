@@ -66,11 +66,8 @@ img{display:block;width:100%;height:100%;object-fit:cover;}
 /* HERO */
 .hero{overflow:hidden;}
 .hero-split{display:grid;grid-template-columns:1fr 1fr 1fr;min-height:580px;}
-.hero-photo-left{position:relative;overflow:hidden;}
-.hero-photo-right{position:relative;overflow:hidden;}
-.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
-.hero-video-fallback{position:absolute;inset:0;width:100%;height:100%;background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/yogi.sunrise.webp') center/cover no-repeat;}
-.hero-video-fallback-right{position:absolute;inset:0;width:100%;height:100%;background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/workout.1.webp') center/cover no-repeat;}
+.hero-photo-left{background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/yogi.sunrise.webp') center/cover no-repeat;}
+.hero-photo-right{background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/workout.1.webp') center/cover no-repeat;}
 .hero-center{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 40px;text-align:center;background:#fff;}
 .hero-eyebrow{font-size:11px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--text3);margin-bottom:16px;display:none;}
 .hero-h1-light{font-family:var(--font-serif);font-size:clamp(32px,3.2vw,50px);font-weight:400;color:#0d0d0d;letter-spacing:3px;text-transform:uppercase;line-height:1.1;display:block;}
@@ -901,12 +898,7 @@ footer{background:#fff;padding:40px 0 0;}
 <!-- HOME PAGE -->
 <div id="page-home" class="page active">
   <div class="hero"><div class="hero-split">
-    <div class="hero-photo-left">
-      <div class="hero-video-fallback"></div>
-      <video class="hero-video" autoplay muted loop playsinline poster="https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/yogi.sunrise.webp">
-        <source src="/hero-left.mp4" type="video/mp4">
-      </video>
-    </div>
+    <div class="hero-photo-left"></div>
     <div class="hero-center">
       <p class="hero-eyebrow" id="hero-eyebrow"></p>
       <span class="hero-h1-light" id="hero-h1-light">MOVE IN WHAT</span>
@@ -914,12 +906,7 @@ footer{background:#fff;padding:40px 0 0;}
       <p class="hero-sub" id="hero-sub">Discover our latest collection — designed for every move you make.</p>
       <a class="btn-pill btn-black" id="hero-cta1" onclick="showPage('category')">Shop Now</a>
     </div>
-    <div class="hero-photo-right">
-      <div class="hero-video-fallback-right"></div>
-      <video class="hero-video" autoplay muted loop playsinline poster="https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/workout.1.webp">
-        <source src="/hero-right.mp4" type="video/mp4">
-      </video>
-    </div>
+    <div class="hero-photo-right"></div>
   </div></div>
 
   <div class="cat-section"><div class="w">
