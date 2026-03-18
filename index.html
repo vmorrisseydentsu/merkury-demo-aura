@@ -340,9 +340,9 @@ footer{background:#fff;padding:40px 0 0;}
 .signup-legal a{color:var(--text3);text-decoration:underline;}
 
 /* PERSONALIZATION MODAL */
-#pers-modal-overlay{display:none;position:fixed;inset:0;z-index:8000;background:rgba(10,10,10,.3);backdrop-filter:blur(2px);align-items:flex-end;justify-content:flex-end;padding:0 24px 80px 0;}
+#pers-modal-overlay{display:none;position:fixed;inset:0;z-index:8000;background:rgba(10,10,10,.3);backdrop-filter:blur(2px);align-items:flex-end;justify-content:center;padding:0 24px 80px 24px;}
 #pers-modal-overlay.open{display:flex;}
-.pers-modal{background:#fff;border-radius:8px 8px 4px 8px;width:100%;max-width:460px;overflow:hidden;box-shadow:0 -4px 40px rgba(0,0,0,.18);animation:modalIn .22s ease;position:relative;max-height:85vh;overflow-y:auto;}
+.pers-modal{background:#fff;border-radius:8px 8px 4px 8px;width:100%;max-width:500px;overflow:hidden;box-shadow:0 -4px 40px rgba(0,0,0,.18);animation:modalIn .22s ease;position:relative;max-height:85vh;overflow-y:auto;}
 .pers-modal-close{position:absolute;top:14px;right:16px;font-size:24px;color:rgba(255,255,255,.8);cursor:pointer;background:none;border:none;line-height:1;z-index:2;font-family:var(--font);}
 .pers-modal-header{padding:28px 28px 22px;}
 .pers-modal-eyebrow{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:6px;}
@@ -1534,7 +1534,7 @@ function applyPersona(key){
   var persona=null;for(var i=0;i<PERSONAS.length;i++){if(PERSONAS[i].key===key){persona=PERSONAS[i];break;}}
   var nameEl=document.getElementById('ps-active-name');if(nameEl&&persona)nameEl.textContent=persona.name;
   updateTimeline(key);updateStickyPill(key);applyContent(key);merkuryResolve(key);dismissPush();
-  cartHasItem=false;
+  cartHasItem=(key==='maya');
   chatHistory=[];
   var msgs=document.getElementById('chat-messages');if(msgs)msgs.innerHTML='';
   updateChatContext();
