@@ -1022,7 +1022,7 @@ footer{background:#fff;padding:40px 0 0;}
       <div id="cart-page-filled-state" style="display:none;">
         <div class="cart-page-title">My Bag (1 item)</div>
         <div class="cart-page-item">
-          <div class="cart-page-item-img grad-1"></div>
+          <div class="cart-page-item-img" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/yoga.girl.webp') center/cover no-repeat;"></div>
           <div><div class="cart-page-item-name" id="cart-pg-name">High Rise Flare Performance Pant</div><div class="cart-page-item-detail" id="cart-pg-detail">Size: S · Color: Midnight Black · Qty: 1</div><div class="cart-page-item-price" id="cart-pg-price">$98.00</div><div class="cart-page-item-member" id="cart-pg-member">Circle Member Price $88.00</div><span class="cart-page-item-remove" onclick="emptyCart()">Remove</span></div>
           <div style="font-size:14px;font-weight:600;" id="cart-pg-total">$98.00</div>
         </div>
@@ -1278,7 +1278,11 @@ function updateTimeline(key){
   }
 }
 
-function toggleTimeline(){timelineOpen=!timelineOpen;var p=document.getElementById('id-timeline-panel');if(p)p.classList.toggle('open',timelineOpen);}
+function toggleTimeline(){
+  if(timelineOpen){timelineOpen=false;var p=document.getElementById('id-timeline-panel');if(p)p.classList.remove('open');return;}
+  closeAllPanels();
+  timelineOpen=true;var p=document.getElementById('id-timeline-panel');if(p)p.classList.add('open');
+}
 function closeTimeline(){timelineOpen=false;var p=document.getElementById('id-timeline-panel');if(p)p.classList.remove('open');}
 
 function toggleChat(){
@@ -1425,9 +1429,11 @@ function updateStickyPill(key){
 function onStickyPillClick(){if(activeKey==='maya'||activeKey==='jennifer'||activeKey==='danielle'){openOfferLightbox();}else{openSignupModal();}}
 
 function closeAllPanels(){
-  // Floating panels
+  // Floating panels — right side
   chatOpen=false;var w=document.getElementById('chat-window');if(w)w.classList.remove('open');
   panelOpen=false;var pan=document.getElementById('ps-panel'),tog=document.getElementById('ps-toggle');if(pan)pan.classList.remove('open');if(tog)tog.classList.remove('open');
+  // Floating panels — left side
+  timelineOpen=false;var tp=document.getElementById('id-timeline-panel');if(tp)tp.classList.remove('open');
   // Modals / overlays
   var ol=document.getElementById('offer-lightbox-overlay');if(ol)ol.classList.remove('open');
   var pm=document.getElementById('pers-modal-overlay');if(pm)pm.style.display='none';
