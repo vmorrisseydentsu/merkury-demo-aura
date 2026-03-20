@@ -489,7 +489,7 @@ footer{background:#fff;padding:40px 0 0;}
 .itp-body{padding:14px 16px;flex:0 0 auto;}
 .itp-merkury-card{background:var(--off);border-radius:6px;padding:12px 14px;border-left:3px solid #1a5f6a;}
 .itp-merkury-card-title{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#1a5f6a;margin-bottom:8px;}
-.itp-signal{display:flex;align-items:baseline;gap:4px;margin-bottom:5px;font-family:'Menlo','Monaco','Courier New',monospace;}
+.itp-signal{display:flex;align-items:baseline;gap:4px;margin-bottom:5px;font-family:'Menlo','Monaco','Courier New',monospace;flex-wrap:wrap;word-break:break-all;}
 .itp-signal-dot{display:none;}
 .itp-signal strong{color:#0d0d0d;}
 .itp-signal-str{color:#1a7a3a;font-weight:500;}
@@ -1051,7 +1051,7 @@ var PAYLOADS={
   def:{d:{data:{},response:'no_match',version:'1.0.0'}},
   maya:{d:{data:{'dentsu.id':'a1b2c3d4e5f6a7b8c9d0',hashed_email:'3f4a5b6c7d8e9f0a1b2c',CRM_ID:'10048293',confidence_score:1,match_type:'deterministic',first_name:'Maya',last_name:'Chen',age_range:'25-34',gender:'F',marital_status:'S',education_level:'GR',presence_of_children:'N',city:'San Francisco',state:'CA',zip:'94110',homeowner_flag:'N',household_income_range:'$100K-$150K',household_size:'1',length_of_residence:'3',purchase_frequency:'High',avg_order_value_range:'$150-$300',last_purchase_days:'12',preferred_channel:'Mobile',category_affinity_1:'Leggings',category_affinity_2:'Sports Bras',in_market_flag:'Y',lifestyle_segment:'Active Achiever',brand_loyalty_score:'5',email_engagement:'Active',social_influence_tier:'Micro',created_date:'2019-04-10 00:00:00',last_modified_date:'2026-02-22 00:00:00'},response:'match',version:'1.0.0'}},
   jennifer:{d:{data:{'dentsu.id':'c3d4e5f6a7b8c9d0e1f2',hashed_email:'5b6c7d8e9f0a1b2c3d4e',CRM_ID:'10031847',confidence_score:2,match_type:'deterministic',first_name:'Jennifer',last_name:'Walsh',age_range:'35-44',gender:'F',marital_status:'M',education_level:'BA',presence_of_children:'Y',city:'Naperville',state:'IL',zip:'60540',homeowner_flag:'Y',household_income_range:'$150K-$200K',household_size:'4',length_of_residence:'7',purchase_frequency:'Medium',avg_order_value_range:'$150-$300',last_purchase_days:'47',preferred_channel:'Omnichannel',category_affinity_1:'Jackets',category_affinity_2:'Wide Leg',in_market_flag:'Y',lifestyle_segment:'Weekend Warrior Mom',brand_loyalty_score:'4',email_engagement:'Lapsed',social_influence_tier:'Standard',created_date:'2020-08-19 00:00:00',last_modified_date:'2026-02-22 00:00:00'},response:'match',version:'1.0.0'}},
-  danielle:{d:{data:{'dentsu.id':'e5f6a7b8c9d0e1f2a3b4',hashed_email:'7c8d9e0f1a2b3c4d5e6f',CRM_ID:null,confidence_score:3,match_type:'probabilistic',first_name:null,last_name:null,age_range:'25-34',gender:'F',marital_status:'S',education_level:'BA',presence_of_children:'N',city:'Austin',state:'TX',zip:'78701',homeowner_flag:'N',household_income_range:'$75K-$100K',household_size:'1',length_of_residence:'2',purchase_frequency:'Medium',avg_order_value_range:'$50-$150',last_purchase_days:null,preferred_channel:'Online',category_affinity_1:'Yoga & Studio',category_affinity_2:'Swim',in_market_flag:'Y',lifestyle_segment:'Active Wellness Seeker',brand_loyalty_score:null,email_engagement:null,social_influence_tier:'Nano',swim_propensity_score:'82',swim_in_market:'Y',created_date:'2025-11-04 00:00:00',last_modified_date:'2026-03-01 00:00:00'},response:'match',version:'1.0.0'}}
+  danielle:{d:{data:{'dentsu.id':'e5f6a7b8c9d0e1f2a3b4',hashed_email:null,CRM_ID:null,confidence_score:3,match_type:'probabilistic',first_name:null,last_name:null,age_range:'25-34',gender:'F',marital_status:'S',education_level:'BA',presence_of_children:'N',city:'Austin',state:'TX',zip:'78701',homeowner_flag:'N',household_income_range:'$75K-$100K',household_size:'1',length_of_residence:'2',purchase_frequency:'Medium',avg_order_value_range:'$50-$150',last_purchase_days:null,preferred_channel:'Online',category_affinity_1:'Yoga & Studio',category_affinity_2:'Swim',in_market_flag:'Y',lifestyle_segment:'Active Wellness Seeker',brand_loyalty_score:null,email_engagement:null,social_influence_tier:'Nano',swim_propensity_score:'82',swim_in_market:'Y',created_date:'2025-11-04 00:00:00',last_modified_date:'2026-03-01 00:00:00'},response:'match',version:'1.0.0'}}
 };
 
 var CONTENT={
@@ -1261,9 +1261,9 @@ function updateTimeline(key){
   function rowPII(label,val,len){
     var obf=obfuscate(val,len);
     if(obf===null)return row(label,null);
-    return '<div class="itp-signal"><span style="color:#5588dd;font-size:11px;font-weight:600;">'+label+'</span><span style="color:rgba(0,0,0,.4);margin:0 4px;font-size:11px;">:</span><span class="itp-signal-str" style="font-size:11px;letter-spacing:.5px;">\''+obf+'\'</span><span style="font-size:9px;color:#aaa;margin-left:6px;font-style:italic;">obfuscated</span></div>';
+    return '<div class="itp-signal"><span style="color:#5588dd;font-size:11px;font-weight:600;">'+label+'</span><span style="color:rgba(0,0,0,.4);margin:0 4px;font-size:11px;">:</span><span class="itp-signal-str" style="font-size:11px;letter-spacing:.5px;">\''+obf+'\'</span></div>';
   }
-  var idRows=rowPII('dentsu_id',d['dentsu.id'],32)+rowPII('hashed_email',d.hashed_email,40)+row('confidence_score',d.confidence_score)+row('match_type',d.match_type)+rowPII('CRM_ID',d.CRM_ID,8);
+  var idRows=rowPII('dentsu_id',d['dentsu.id'],16)+rowPII('hashed_email',d.hashed_email,16)+row('confidence_score',d.confidence_score)+row('match_type',d.match_type)+rowPII('CRM_ID',d.CRM_ID,8);
   var thirdRows=row('age_range',d.age_range)+row('gender',d.gender)+row('city',d.city)+row('state',d.state)+row('household_income_range',d.household_income_range)+row('homeowner_flag',d.homeowner_flag)+row('lifestyle_segment',d.lifestyle_segment);
   var firstBlock='';
   if(d.CRM_ID){
@@ -1421,10 +1421,9 @@ function updateChatContext(){
 
 function updateStickyPill(key){
   var btn=document.getElementById('sticky-20-btn'),label=document.getElementById('sticky-20-label');if(!btn||!label)return;
-  if(key==='def'){btn.classList.add('hidden');return;}
   btn.classList.remove('hidden');
-  var configs={maya:{text:'Your 15% Off is Ready',bg:'#1a5f6a'},jennifer:{text:'Welcome Back - 20% Off',bg:'#2a3a5a'},danielle:{text:'New — Aura Swim for You',bg:'#3a1a6a'}};
-  var cfg=configs[key]||{text:'Get 20% Off',bg:'#0d0d0d'};label.textContent=cfg.text;btn.style.background=cfg.bg;
+  var configs={maya:{text:'Your 15% Off is Ready',bg:'#1a5f6a'},jennifer:{text:'Welcome Back - 20% Off',bg:'#2a3a5a'},danielle:{text:'New — Aura Swim for You',bg:'#3a1a6a'},def:{text:'Get 20% Off',bg:'#0d0d0d'}};
+  var cfg=configs[key]||configs['def'];label.textContent=cfg.text;btn.style.background=cfg.bg;
 }
 function onStickyPillClick(){if(activeKey==='maya'||activeKey==='jennifer'||activeKey==='danielle'){openOfferLightbox();}else{openSignupModal();}}
 
