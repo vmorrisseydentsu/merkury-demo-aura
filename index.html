@@ -1303,7 +1303,7 @@ footer{background:#fff;padding:40px 0 0;}
       <div class="lb-tier" id="circle-tier-3">
         <div class="lb-tier-header">
           <div class="lb-tier-num">3</div>
-          <div class="lb-tier-hdr-text"><h3>Circle All-Access</h3><div class="lb-tier-hdr-btn"><a href="#">Apply Now</a></div></div>
+          <div class="lb-tier-hdr-text"><h3>Circle All-Access</h3><div class="lb-tier-hdr-btn" id="circle-tier-3-btn"><a href="#">Apply Now</a></div></div>
         </div>
         <div class="lb-tier-body">
           <div class="lb-tier-body-desc">Open the Aura Circle Credit Card to unlock maximum points, exclusive events, and extra discounts.</div>
@@ -1679,14 +1679,32 @@ function applyContent(key){
   var circleSub=document.getElementById('circle-hero-sub');
   var circleCta1=document.getElementById('circle-cta1');
   if(key==='maya'){
-    if(memberBar){memberBar.style.display='flex';memberBar.style.background='linear-gradient(135deg,var(--teal),#0d3d45)';}
+    if(memberBar){
+      memberBar.style.display='flex';
+      memberBar.style.background='linear-gradient(135deg,#0d7a5a,#0a5a42)';
+      // Update member bar stats to Maya's data
+      var mbPoints=memberBar.querySelector('[id="mb-points"]');
+      var mbNextReward=memberBar.querySelector('[id="mb-next-reward"]');
+      var mbTier=memberBar.querySelector('[id="mb-tier"]');
+      // Update via innerHTML search — find the stat numbers
+      var statDivs=memberBar.querySelectorAll('div[style*="font-size:28px"]');
+      if(statDivs[0])statDivs[0].textContent='240';
+      if(statDivs[1])statDivs[1].textContent='$60';
+      if(statDivs[2])statDivs[2].textContent='Tier 3';
+      var tierLabel=memberBar.querySelectorAll('div[style*="font-size:11px"]');
+      if(tierLabel[2])tierLabel[2].textContent='CIRCLE ALL-ACCESS';
+      var welcomeDiv=memberBar.querySelector('div[style*="font-size:18px"]');
+      if(welcomeDiv)welcomeDiv.textContent='Maya Chen';
+    }
     if(merkuryBar)merkuryBar.style.display='flex';
     var tier3=document.getElementById('circle-tier-3');if(tier3)tier3.classList.add('active');
+    var tier3Btn=document.getElementById('circle-tier-3-btn');if(tier3Btn)tier3Btn.style.display='none';
     if(tier1Btn)tier1Btn.style.display='none';
     if(tier1Desc)tier1Desc.textContent='Included in your All-Access membership.';
+    var tier2Desc=document.getElementById('circle-tier-2-desc');if(tier2Desc)tier2Desc.textContent='Included in your All-Access membership.';
     if(circleH1)circleH1.textContent='Welcome back, Maya.';
     if(circleSub)circleSub.textContent='You are a Circle All-Access member — our highest tier. Your points and perks are ready.';
-    if(circleCta1){circleCta1.textContent='View My Rewards';circleCta1.style.background='var(--teal)';circleCta1.style.borderColor='var(--teal)';}
+    if(circleCta1){circleCta1.textContent='View My Rewards';circleCta1.style.background='#0d7a5a';circleCta1.style.borderColor='#0d7a5a';}
   }else if(key==='jennifer'){
     if(memberBar)memberBar.style.display='flex';
     if(merkuryBar)merkuryBar.style.display='flex';
@@ -1701,8 +1719,10 @@ function applyContent(key){
     if(merkuryBar)merkuryBar.style.display='none';
     if(tier2)tier2.classList.remove('active');
     var tier3r=document.getElementById('circle-tier-3');if(tier3r)tier3r.classList.remove('active');
+    var tier3BtnR=document.getElementById('circle-tier-3-btn');if(tier3BtnR)tier3BtnR.style.display='';
     if(tier1Btn)tier1Btn.style.display='';
     if(tier1Desc)tier1Desc.textContent='Sign up for free to unlock our core benefits. Start earning points from your very first purchase.';
+    var tier2DescR=document.getElementById('circle-tier-2-desc');if(tier2DescR)tier2DescR.textContent='Spend $350+ annually to unlock more benefits.';
     if(circleH1)circleH1.textContent='Earn rewards for every move.';
     if(circleSub)circleSub.textContent='Join Aura Circle free and start earning points on every purchase. The more you move, the more you earn.';
     if(circleCta1){circleCta1.textContent='Join for Free';circleCta1.style.background='var(--teal)';circleCta1.style.borderColor='var(--teal)';}
