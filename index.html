@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aura | Performance Apparel for Women</title>
+<title>Aura × Merkury | Presenter Demo Guide</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
 <!--MERKURY TAG START. PLACE AT START OF DOCUMENT HEAD. DO NOT CHANGE-->
 <script>
 window._svq=window._svq||[];
@@ -14,7 +14,7 @@ window._svq.push(['_trackPageView']);
 </script>
 <!--MERKURY TAG END. DO NOT CHANGE-->
 <style>
-:root{--black:#0d0d0d;--white:#fff;--off:#f7f4f0;--teal:#1a5f6a;--border:#e8e4de;--text:#1a1a1a;--text2:#4a4a4a;--text3:#888;--purple:#6a3aaa;--font-serif:'Libre Baskerville',Georgia,serif;--font:'Inter','Helvetica Neue',sans-serif;--mw:1440px;--g:48px;}
+:root{--black:#1c1612;--white:#fff;--off:#f2f4ee;--teal:#6b7c4a;--teal-h:#5a6a3c;--border:#dde2d4;--text:#1c1612;--text2:#4a3f33;--text3:#8a7d6e;--purple:#6a3aaa;--font-serif:'Playfair Display',Georgia,serif;--font:'Inter','Helvetica Neue',sans-serif;--mw:1440px;--g:48px;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{-webkit-font-smoothing:antialiased;}
 body{font-family:var(--font);color:var(--text);background:#fff;line-height:1.5;overflow-x:hidden;}
@@ -24,30 +24,125 @@ img{display:block;width:100%;height:100%;object-fit:cover;}
 .w{max-width:var(--mw);margin:0 auto;padding:0 var(--g);}
 .page{display:none;}.page.active{display:block;}
 .btn-pill{display:inline-flex;align-items:center;justify-content:center;padding:14px 32px;border-radius:50px;font-family:var(--font);font-size:14px;font-weight:500;letter-spacing:.5px;cursor:pointer;transition:all .18s;border:2px solid transparent;}
-.btn-black{background:#0d0d0d;color:#fff;border-color:#0d0d0d;}.btn-black:hover{background:#333;}
+.btn-black{background:var(--black);color:#fff;border-color:var(--black);}.btn-black:hover{background:#333;}
 .btn-outline{background:transparent;color:#0d0d0d;border-color:#0d0d0d;}.btn-outline:hover{background:#0d0d0d;color:#fff;}
 .btn-white{background:#fff;color:#0d0d0d;}
 .btn-sm{padding:10px 22px;font-size:13px;}
 
 /* DEMO BANNER */
-.demo-banner{background:#1a5f6a;text-align:center;padding:9px;font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#fff;}
+.demo-banner{background:#5a6e3a;text-align:center;padding:9px;font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#fff;}
+
+/* Integration tab below Demo Persona */
+#ps-integration-tab{display:none;position:absolute;top:calc(100% + 6px);right:0;background:var(--black);border:1.5px solid rgba(255,255,255,.12);border-radius:8px;width:240px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.25);z-index:8700;}
+#ps-integration-tab.open{display:block;}
+.ps-int-tab-header{padding:10px 14px;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.35);border-bottom:1px solid rgba(255,255,255,.08);}
+.ps-int-tab-btn{width:100%;padding:10px 14px;text-align:left;font-size:12px;font-weight:600;font-family:var(--font);cursor:pointer;border:none;border-bottom:1px solid rgba(255,255,255,.06);display:flex;align-items:center;gap:8px;transition:background .15s;color:inherit;}
+.ps-int-tab-btn:last-child{border-bottom:none;}
+.ps-int-tab-btn.sms{background:rgba(106,58,170,.2);color:#c8a8ff;}
+.ps-int-tab-btn.sms:hover{background:rgba(106,58,170,.35);}
+.ps-int-tab-btn.email{background:rgba(26,95,106,.15);color:#7ad8e0;}
+.ps-int-tab-btn.email:hover{background:rgba(26,95,106,.3);}
+.ps-int-tab-btn .ps-int-icon{font-size:14px;flex-shrink:0;}
+
+/* Display ad modal */
+#display-ad-modal{display:none;position:fixed;inset:0;z-index:9500;background:rgba(0,0,0,.75);align-items:center;justify-content:center;padding:20px;}
+#display-ad-modal.open{display:flex;}
+.dam-box{background:#1a1a2e;border-radius:10px;width:100%;max-width:900px;max-height:90vh;overflow-y:auto;box-shadow:0 24px 64px rgba(0,0,0,.5);}
+.dam-header{background:#12122a;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;border-radius:10px 10px 0 0;border-bottom:1px solid rgba(255,255,255,.08);}
+.dam-header h3{font-size:14px;font-weight:700;color:#fff;}
+.dam-header p{font-size:11px;color:rgba(255,255,255,.4);margin-top:2px;}
+.dam-close{font-size:20px;color:rgba(255,255,255,.5);cursor:pointer;background:none;border:none;line-height:1;}
+.dam-close:hover{color:#fff;}
+.dam-body{display:grid;grid-template-columns:1fr 1fr;gap:0;}
+.dam-left{padding:24px;border-right:1px solid rgba(255,255,255,.07);}
+.dam-right{padding:24px;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+.dam-section-label{font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:12px;}
+.dam-audience-row{display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.06);}
+.dam-audience-label{font-size:11px;color:rgba(255,255,255,.55);}
+.dam-audience-val{font-size:11px;font-weight:700;color:#fff;}
+.dam-signal-pills{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0;}
+.dam-signal-pill{background:rgba(106,58,170,.3);border:1px solid rgba(106,58,170,.5);border-radius:50px;padding:4px 12px;font-size:10px;font-weight:700;color:#c8a8ff;}
+.dam-signal-pill.merkury{background:rgba(26,95,106,.3);border-color:rgba(26,95,106,.5);color:#7ad8e0;}
+.dam-reach-bar{background:rgba(255,255,255,.06);border-radius:6px;padding:12px 14px;margin-top:12px;}
+.dam-reach-label{font-size:10px;color:rgba(255,255,255,.4);margin-bottom:6px;}
+.dam-reach-track{height:8px;background:rgba(255,255,255,.08);border-radius:4px;overflow:hidden;margin-bottom:4px;}
+.dam-reach-fill{height:100%;border-radius:4px;}
+.dam-reach-nums{display:flex;justify-content:space-between;font-size:10px;}
+/* Aura display ad creative */
+.dam-ad-frame{width:300px;background:#0d0d0d;border-radius:8px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.4);}
+.dam-ad-img{height:180px;background:linear-gradient(135deg,#1a3a4a 0%,#0d2535 40%,#1a4a3a 100%);position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.dam-ad-img::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 40%,rgba(26,95,106,.4),transparent 65%);}
+.dam-ad-figure{position:absolute;right:20px;bottom:0;width:120px;height:160px;background:linear-gradient(180deg,transparent,rgba(26,95,106,.2));border-radius:8px 8px 0 0;}
+.dam-ad-headline{position:relative;z-index:2;padding:0 20px;}
+.dam-ad-headline h2{font-family:var(--font-serif);font-size:22px;font-weight:700;color:#fff;line-height:1.15;margin-bottom:6px;}
+.dam-ad-headline p{font-size:11px;color:rgba(255,255,255,.65);line-height:1.4;}
+.dam-ad-body{padding:14px 16px;background:#0d0d0d;}
+.dam-ad-logo{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:10px;}
+.dam-ad-sub{font-size:11px;color:rgba(255,255,255,.6);line-height:1.5;margin-bottom:12px;}
+.dam-ad-cta{width:100%;padding:10px;background:var(--teal);color:#fff;border:none;border-radius:4px;font-size:12px;font-weight:700;font-family:var(--font);cursor:pointer;letter-spacing:.5px;}
+.dam-ad-label{font-size:9px;color:rgba(255,255,255,.25);text-align:center;margin-top:6px;letter-spacing:.5px;}
+/* Push notification modal */
+#push-modal{display:none;position:fixed;inset:0;z-index:9500;background:rgba(0,0,0,.65);align-items:center;justify-content:center;padding:20px;}
+#push-modal.open{display:flex;}
+.push-modal-box{background:#1a1a2e;border-radius:10px;width:100%;max-width:500px;box-shadow:0 24px 64px rgba(0,0,0,.5);}
+.push-modal-header{background:#12122a;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;border-radius:10px 10px 0 0;border-bottom:1px solid rgba(255,255,255,.08);}
+.push-modal-header h3{font-size:14px;font-weight:700;color:#fff;}
+.push-modal-close{font-size:20px;color:rgba(255,255,255,.5);cursor:pointer;background:none;border:none;line-height:1;}
+.push-modal-body{padding:24px;}
+.push-device-frame{background:#1a1a2e;border:2px solid rgba(255,255,255,.1);border-radius:16px;padding:16px;margin-bottom:20px;}
+.push-notif-preview{background:#fff;border-radius:12px;padding:12px 14px;display:flex;align-items:flex-start;gap:10px;}
+.push-notif-icon{width:36px;height:36px;border-radius:8px;background:#0d0d0d;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
+.push-notif-content{flex:1;}
+.push-notif-app{font-size:10px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:.5px;margin-bottom:2px;}
+.push-notif-title{font-size:13px;font-weight:700;color:#0d0d0d;margin-bottom:2px;}
+.push-notif-body{font-size:12px;color:#444;line-height:1.4;}
+.push-notif-time{font-size:10px;color:#aaa;margin-top:4px;}
+.push-signals-row{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;}
+.push-signal-pill{background:rgba(26,95,106,.2);border:1px solid rgba(26,95,106,.35);border-radius:50px;padding:3px 10px;font-size:10px;color:rgba(255,255,255,.7);}
+.push-send-btn{width:100%;padding:10px;background:var(--teal);color:#fff;border:none;border-radius:6px;font-size:13px;font-weight:700;font-family:var(--font);cursor:pointer;}
+/* Jennifer email modal */
+#jennifer-email-modal{display:none;position:fixed;inset:0;z-index:9500;background:rgba(0,0,0,.65);align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto;}
+#jennifer-email-modal.open{display:flex;}
+.jem-box{background:#fff;border-radius:10px;width:100%;max-width:560px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,.35);}
+.jem-chrome{background:#f5f5f5;border-bottom:1px solid #e0e0e0;padding:10px 16px;}
+.jem-chrome-close{display:inline-flex;gap:6px;margin-bottom:8px;}
+.jem-chrome-dot{width:12px;height:12px;border-radius:50%;}
+.jem-subject-row{display:flex;gap:8px;font-size:12px;color:#444;padding:3px 0;border-bottom:1px solid #e8e8e8;}
+.jem-subject-label{font-weight:700;color:#888;width:40px;flex-shrink:0;}
+.jem-header{background:linear-gradient(160deg,#b5717a,#9a5a68);padding:28px 32px;text-align:center;}
+.jem-header-eyebrow{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.75);margin-bottom:8px;}
+.jem-header-h1{font-family:var(--font-serif);font-size:24px;color:#fff;line-height:1.2;margin-bottom:6px;}
+.jem-header-sub{font-size:13px;color:rgba(255,255,255,.65);}
+.jem-body{padding:24px 32px;}
+.jem-product{display:flex;gap:16px;padding:16px;background:#f7f4f0;border-radius:8px;margin-bottom:20px;}
+.jem-product-img{width:80px;height:80px;border-radius:6px;background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-aura-demo/main/jacket.grey.model.png') center top/cover no-repeat;flex-shrink:0;}
+.jem-product-name{font-size:14px;font-weight:700;color:#0d0d0d;margin-bottom:3px;}
+.jem-product-detail{font-size:12px;color:#888;margin-bottom:6px;}
+.jem-product-price{font-size:16px;font-weight:700;color:#0d0d0d;}
+.jem-product-member{font-size:12px;color:#c0392b;font-weight:600;}
+.jem-cta{display:block;width:100%;padding:14px;background:#0d0d0d;color:#fff;text-align:center;font-size:14px;font-weight:700;border-radius:50px;margin-bottom:16px;cursor:pointer;}
+.jem-merkury-strip{background:#f0faf9;border:1px solid #c0e8e4;border-radius:6px;padding:12px 16px;}
+.jem-merkury-title{font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);margin-bottom:8px;}
+.jem-merkury-pills{display:flex;flex-wrap:wrap;gap:5px;}
+.jem-merkury-pill{background:#fff;border:1px solid #c0e8e4;border-radius:50px;padding:3px 10px;font-size:10px;color:#444;display:flex;align-items:center;gap:4px;}
+.jem-merkury-pill span{font-weight:700;color:#0d0d0d;}
 
 /* UTIL BAR */
-.util-bar{background:#0d0d0d;height:36px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;}
+.util-bar{background:#2e3a28;height:36px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;}
 .util-center{font-size:12px;color:rgba(255,255,255,.85);display:flex;align-items:center;gap:16px;white-space:nowrap;}
 .util-center a{color:#fff;text-decoration:underline;font-size:12px;cursor:pointer;white-space:nowrap;}
 .util-right{display:flex;gap:16px;flex-shrink:0;}
 .util-icon{color:rgba(255,255,255,.7);font-size:18px;cursor:pointer;}
 
 /* PROMO BAR */
-.promo-bar{background:#1a5f6a;height:40px;display:flex;align-items:center;justify-content:space-between;padding:0 24px;}
+.promo-bar{background:#7a8e5a;height:40px;display:flex;align-items:center;justify-content:space-between;padding:0 24px;}
 .promo-bar-text{font-size:13px;color:#fff;flex:1;text-align:center;}
 .promo-bar-text a{color:#fff;font-weight:600;text-decoration:underline;margin-left:8px;cursor:pointer;}
 .promo-bar-right{flex-shrink:0;}
 .promo-bar-right a{color:rgba(255,255,255,.9);text-decoration:underline;font-size:12px;cursor:pointer;}
 
 /* NAV */
-.main-nav{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:900;}
+.main-nav{background:#fff;border-bottom:1px solid var(--border);position:relative;z-index:900;}
 .nav-inner{max-width:var(--mw);margin:0 auto;padding:0 32px;display:flex;align-items:center;height:64px;}
 .nav-logo{font-family:var(--font-serif);font-size:24px;font-weight:700;letter-spacing:6px;text-transform:uppercase;color:#0d0d0d;cursor:pointer;flex-shrink:0;margin-right:40px;}
 .nav-links{display:flex;align-items:center;flex:1;}
@@ -66,10 +161,10 @@ img{display:block;width:100%;height:100%;object-fit:cover;}
 /* HERO */
 .hero{overflow:hidden;}
 .hero-split{display:grid;grid-template-columns:1fr 1fr 1fr;min-height:580px;}
-.hero-photo-left{background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/yogi.sunrise.webp') center/cover no-repeat;}
+.hero-photo-left{background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/yogi.sunrise.webp') center/cover no-repeat;background-size:cover;}
 .hero-photo-right{background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/workout.1.webp') center/cover no-repeat;}
 .hero-center{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 40px;text-align:center;background:#fff;}
-.hero-eyebrow{font-size:11px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--text3);margin-bottom:16px;display:none;}
+.hero-eyebrow{font-family:var(--font-serif);font-size:15px;font-weight:400;font-style:italic;color:var(--text3);margin-bottom:12px;display:none;letter-spacing:.5px;}
 .hero-h1-light{font-family:var(--font-serif);font-size:clamp(32px,3.2vw,50px);font-weight:400;color:#0d0d0d;letter-spacing:3px;text-transform:uppercase;line-height:1.1;display:block;}
 .hero-h1-bold{font-family:var(--font-serif);font-size:clamp(32px,3.2vw,50px);font-weight:700;color:#0d0d0d;letter-spacing:3px;text-transform:uppercase;line-height:1.1;display:block;}
 .hero-sub{font-size:14px;color:var(--text2);line-height:1.7;margin:16px 0 28px;max-width:260px;}
@@ -156,7 +251,7 @@ footer{background:#fff;padding:40px 0 0;}
 .product-tile{cursor:pointer;}
 .pt-photo{aspect-ratio:3/4;overflow:hidden;position:relative;}
 .pt-badge{position:absolute;bottom:10px;left:10px;background:rgba(255,255,255,.9);padding:3px 8px;font-size:11px;font-weight:600;border-radius:2px;color:#0d0d0d;}
-.pt-badge.sale{background:#c0392b;color:#fff;}
+.pt-badge.sale,.pt-badge-sale{background:#c0392b;color:#fff;position:absolute;bottom:10px;left:10px;padding:3px 8px;font-size:11px;font-weight:600;border-radius:2px;}
 .pt-colors{display:flex;gap:4px;margin-top:10px;}
 .pt-swatch{width:14px;height:14px;border-radius:50%;border:1px solid rgba(0,0,0,.12);}
 .pt-name{font-family:var(--font-serif);font-size:13px;font-weight:400;color:var(--text);margin-top:8px;line-height:1.3;}
@@ -179,7 +274,7 @@ footer{background:#fff;padding:40px 0 0;}
 .lb-tier-num{width:44px;height:44px;border-radius:50%;border:2px solid #0d0d0d;display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:18px;font-weight:700;color:#0d0d0d;flex-shrink:0;}
 .lb-tier-hdr-text h3{font-family:var(--font-serif);font-size:17px;font-weight:700;color:#0d0d0d;line-height:1.1;}
 .lb-tier-hdr-btn{margin-top:10px;}
-.lb-tier-hdr-btn a{display:inline-flex;align-items:center;padding:10px 20px;background:#1a5f6a;color:#fff;border-radius:50px;font-size:13px;font-weight:600;cursor:pointer;}
+.lb-tier-hdr-btn a{display:inline-flex;align-items:center;padding:10px 20px;background:var(--teal);color:#fff;border-radius:50px;font-size:13px;font-weight:600;cursor:pointer;}
 .lb-tier-body{padding:16px 20px;}
 .lb-tier-body-desc{font-size:13px;color:var(--text2);line-height:1.55;margin-bottom:14px;}
 .lb-tier-perks{display:flex;flex-wrap:wrap;gap:8px;}
@@ -215,7 +310,7 @@ footer{background:#fff;padding:40px 0 0;}
 .pln-icon{font-size:20px;flex-shrink:0;}
 .pln-text{font-size:13px;color:var(--text2);line-height:1.5;flex:1;}
 .pln-text strong{color:#0d0d0d;}
-.pln-cta{font-size:12px;font-weight:600;color:#1a5f6a;white-space:nowrap;text-decoration:underline;cursor:pointer;flex-shrink:0;}
+.pln-cta{font-size:12px;font-weight:600;color:var(--teal);white-space:nowrap;text-decoration:underline;cursor:pointer;flex-shrink:0;}
 .pdp-atc{width:100%;padding:16px;background:#0d0d0d;color:#fff;border:none;border-radius:50px;font-size:15px;font-weight:500;font-family:var(--font);cursor:pointer;transition:background .15s;margin-bottom:12px;}
 .pdp-atc:hover{background:#333;}
 .pdp-fav{width:100%;padding:14px;background:transparent;color:#0d0d0d;border:2px solid #0d0d0d;border-radius:50px;font-size:14px;font-weight:500;font-family:var(--font);cursor:pointer;transition:all .15s;margin-bottom:24px;}
@@ -250,8 +345,8 @@ footer{background:#fff;padding:40px 0 0;}
 .cart-page-checkout{width:100%;padding:15px;background:#0d0d0d;color:#fff;border:none;border-radius:3px;font-size:15px;font-weight:600;font-family:inherit;cursor:pointer;margin-bottom:10px;margin-top:14px;}
 .cart-page-checkout:hover{background:#333;}
 .cart-page-continue-link{display:block;text-align:center;font-size:13px;color:var(--text3);text-decoration:underline;cursor:pointer;margin-top:6px;}
-.cart-loyalty-nudge{background:#f0faf9;border:1.5px solid #1a5f6a;border-radius:4px;padding:14px 16px;margin-top:16px;display:flex;align-items:flex-start;gap:10px;}
-.cart-loyalty-nudge-text{font-size:12px;color:#1a5f6a;line-height:1.5;}
+.cart-loyalty-nudge{background:#f0faf9;border:1.5px solid var(--teal);border-radius:4px;padding:14px 16px;margin-top:16px;display:flex;align-items:flex-start;gap:10px;}
+.cart-loyalty-nudge-text{font-size:12px;color:var(--teal);line-height:1.5;}
 .cart-loyalty-nudge-text strong{color:#0d0d0d;}
 .cart-recs-section{margin-top:32px;}
 .cart-recs-section h3{font-family:var(--font-serif);font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0d0d0d;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--border);}
@@ -280,7 +375,7 @@ footer{background:#fff;padding:40px 0 0;}
 .email-body{background:#f7f4f0;}
 .email-header-band{background:#0d0d0d;padding:20px;text-align:center;}
 .email-logo{font-family:var(--font-serif);font-size:18px;font-weight:700;letter-spacing:6px;text-transform:uppercase;color:#fff;}
-.email-hero{background:linear-gradient(160deg,#1a5f6a,#0d3d45);padding:32px 40px;text-align:center;}
+.email-hero{background:linear-gradient(160deg,var(--teal),#0d3d45);padding:32px 40px;text-align:center;}
 .email-hero-eyebrow{font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:10px;}
 .email-hero-h1{font-family:var(--font-serif);font-size:30px;font-weight:700;color:#fff;line-height:1.2;margin-bottom:8px;}
 .email-hero-sub{font-size:14px;color:rgba(255,255,255,.75);line-height:1.6;}
@@ -288,12 +383,12 @@ footer{background:#fff;padding:40px 0 0;}
 .email-product-card{border:1px solid var(--border);border-radius:6px;overflow:hidden;display:grid;grid-template-columns:160px 1fr;margin-bottom:24px;}
 .email-product-img{background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/yoga.girl.webp') center/cover no-repeat;min-height:160px;}
 .email-product-info{padding:20px;}
-.email-product-eyebrow{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#1a5f6a;margin-bottom:6px;}
+.email-product-eyebrow{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--teal);margin-bottom:6px;}
 .email-product-name{font-family:var(--font-serif);font-size:17px;font-weight:700;color:#0d0d0d;margin-bottom:6px;line-height:1.2;}
 .email-product-detail{font-size:12px;color:var(--text3);margin-bottom:12px;}
 .email-product-price{font-size:16px;font-weight:600;color:#0d0d0d;}
 .email-product-member{font-size:12px;color:#c0392b;font-weight:600;}
-.email-product-points{font-size:12px;color:#1a5f6a;margin-top:4px;}
+.email-product-points{font-size:12px;color:var(--teal);margin-top:4px;}
 .email-cta-wrap{text-align:center;margin-bottom:24px;}
 .email-cta-btn{display:inline-block;background:#0d0d0d;color:#fff;padding:14px 40px;border-radius:50px;font-size:14px;font-weight:600;}
 .email-body-copy{font-size:14px;color:var(--text2);line-height:1.7;margin-bottom:24px;text-align:center;}
@@ -306,13 +401,13 @@ footer{background:#fff;padding:40px 0 0;}
 .email-footer-links a{font-size:11px;color:rgba(255,255,255,.5);text-decoration:underline;}
 .email-footer-legal{font-size:10px;color:rgba(255,255,255,.3);line-height:1.5;}
 .email-merkury-strip{background:#f7f4f0;border-top:1px solid var(--border);padding:14px 20px;}
-.email-merkury-title{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#1a5f6a;margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+.email-merkury-title{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--teal);margin-bottom:10px;display:flex;align-items:center;gap:8px;}
 .email-merkury-title::after{content:'';flex:1;height:1px;background:var(--border);}
 .email-merkury-pills{display:flex;flex-wrap:wrap;gap:6px;}
 .email-merkury-pill{background:#fff;border:1px solid var(--border);border-radius:50px;padding:4px 12px;font-size:11px;color:var(--text2);display:flex;align-items:center;gap:5px;}
 .email-merkury-pill span{font-weight:700;color:#0d0d0d;}
-.email-merkury-pill.trigger{border-color:#1a5f6a;background:#e8f5f2;}
-.email-merkury-pill.trigger span{color:#1a5f6a;}
+.email-merkury-pill.trigger{border-color:var(--teal);background:#e8f5f2;}
+.email-merkury-pill.trigger span{color:var(--teal);}
 
 /* SHIPPING FLYOUT */
 #ship-flyout-overlay{display:none;position:fixed;inset:0;z-index:8000;background:rgba(10,10,10,.3);}
@@ -340,10 +435,12 @@ footer{background:#fff;padding:40px 0 0;}
 .signup-legal a{color:var(--text3);text-decoration:underline;}
 
 /* PERSONALIZATION MODAL */
-#pers-modal-overlay{display:none;position:fixed;inset:0;z-index:8000;background:rgba(10,10,10,.3);backdrop-filter:blur(2px);align-items:flex-end;justify-content:center;padding:0 24px 80px 24px;}
+#pers-modal-overlay{display:none;position:fixed;top:120px;right:24px;z-index:8000;align-items:flex-start;justify-content:flex-end;padding:0;}
 #pers-modal-overlay.open{display:flex;}
-.pers-modal{background:#fff;border-radius:8px 8px 4px 8px;width:100%;max-width:500px;overflow:hidden;box-shadow:0 -4px 40px rgba(0,0,0,.18);animation:modalIn .22s ease;position:relative;max-height:85vh;overflow-y:auto;}
+.pers-modal{background:#fff;border-radius:8px;width:100%;max-width:420px;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,.18);animation:modalIn .22s ease;position:relative;max-height:72vh;overflow-y:auto;}
 .pers-modal-close{position:absolute;top:14px;right:16px;font-size:24px;color:rgba(255,255,255,.8);cursor:pointer;background:none;border:none;line-height:1;z-index:2;font-family:var(--font);}
+.pers-modal-data-link{position:absolute;bottom:14px;right:16px;font-size:11px;font-weight:600;color:rgba(255,255,255,.5);cursor:pointer;background:none;border:none;font-family:var(--font);transition:color .15s;z-index:2;}
+.pers-modal-data-link:hover{color:#fff;}
 .pers-modal-header{padding:28px 28px 22px;}
 .pers-modal-eyebrow{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:6px;}
 .pers-modal-visitor-state{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.9);background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);border-radius:3px;padding:3px 10px;display:inline-block;margin-bottom:10px;}
@@ -372,6 +469,8 @@ footer{background:#fff;padding:40px 0 0;}
 .pm-campaign-label{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);margin-bottom:8px;}
 .pm-campaign-btn{width:100%;padding:12px;background:var(--purple);color:#fff;border:none;border-radius:50px;font-size:13px;font-weight:600;font-family:var(--font);cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;}
 .pm-campaign-btn:hover{background:#5a2a9a;}
+/* Presenter version — campaign actions live in Step 3, hide from persona modal */
+/* campaign rows shown per persona via JS */
 
 /* OFFER LIGHTBOX */
 #offer-lightbox-overlay{display:none;position:fixed;inset:0;z-index:8400;background:rgba(10,10,10,.55);backdrop-filter:blur(3px);align-items:center;justify-content:center;padding:20px;}
@@ -418,7 +517,7 @@ footer{background:#fff;padding:40px 0 0;}
 .cm-ai-bar-label{font-size:13px;font-weight:600;color:#0d0d0d;flex-shrink:0;}
 .cm-tone-pills{display:flex;gap:6px;flex-wrap:wrap;}
 .cm-tone-pill{padding:5px 12px;border:1.5px solid var(--border);border-radius:50px;font-size:12px;font-weight:500;color:var(--text2);cursor:pointer;background:#fff;transition:all .15s;font-family:var(--font);}
-.cm-tone-pill.active{background:#0d0d0d;color:#fff;border-color:#0d0d0d;}
+.cm-tone-pill.active{background:var(--black);color:#fff;border-color:var(--black);}
 .cm-variants{display:flex;flex-direction:column;gap:10px;margin-bottom:18px;}
 .cm-variant{background:#fff;border-radius:10px;padding:14px 16px;border:1.5px solid var(--border);cursor:pointer;transition:border-color .15s;}
 .cm-variant.active{border-color:var(--purple);background:#fdfbff;}
@@ -441,7 +540,7 @@ footer{background:#fff;padding:40px 0 0;}
 .cm-phone-status{padding:6px 16px;display:flex;justify-content:space-between;}
 .cm-phone-status-time{font-size:11px;font-weight:700;color:#1a1a1a;}
 .cm-phone-header{background:#f2f2f7;padding:8px 14px;text-align:center;border-bottom:1px solid #e5e5ea;}
-.cm-phone-avatar{width:34px;height:34px;border-radius:50%;background:#1a5f6a;display:flex;align-items:center;justify-content:center;margin:0 auto 4px;}
+.cm-phone-avatar{width:34px;height:34px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;margin:0 auto 4px;}
 .cm-phone-avatar svg{width:18px;height:18px;fill:#fff;}
 .cm-phone-sender{font-size:11px;font-weight:700;color:#1a1a1a;}
 .cm-phone-type{font-size:10px;color:#8e8e93;}
@@ -455,8 +554,8 @@ footer{background:#fff;padding:40px 0 0;}
 .cm-footer{padding:16px 24px;border-top:1px solid rgba(0,0,0,.08);display:flex;align-items:center;justify-content:space-between;background:#f5f0ff;border-radius:0 0 16px 16px;flex-wrap:wrap;gap:10px;}
 .cm-footer-left{font-size:12px;color:var(--text3);}
 .cm-footer-left strong{color:#0d0d0d;}
-.cm-schedule-btn{background:#1a5f6a;color:#fff;border:none;border-radius:10px;padding:13px 24px;font-size:14px;font-weight:700;font-family:var(--font);cursor:pointer;transition:background .15s;}
-.cm-schedule-btn:hover{background:#145059;}
+.cm-schedule-btn{background:var(--teal);color:#fff;border:none;border-radius:10px;padding:13px 24px;font-size:14px;font-weight:700;font-family:var(--font);cursor:pointer;transition:background .15s;}
+.cm-schedule-btn:hover{background:var(--teal-h);}
 
 /* PUSH */
 #push-notif-wrap{position:fixed;top:24px;right:24px;z-index:9200;opacity:0;transform:translateY(-10px) scale(.97);transition:opacity .35s ease,transform .35s ease;pointer-events:none;width:340px;}
@@ -468,7 +567,7 @@ footer{background:#fff;padding:40px 0 0;}
 .push-iph-time{font-size:12px;color:rgba(0,0,0,.4);font-weight:500;}
 .push-iph-dismiss{width:20px;height:20px;border-radius:50%;background:rgba(0,0,0,.1);display:flex;align-items:center;justify-content:center;font-size:13px;color:rgba(0,0,0,.4);cursor:pointer;border:none;line-height:1;flex-shrink:0;}
 .push-iph-body{display:flex;align-items:flex-start;gap:10px;padding:2px 14px 14px;}
-.push-iph-icon{width:44px;height:44px;border-radius:10px;flex-shrink:0;background:#1a5f6a;display:flex;align-items:center;justify-content:center;font-size:20px;}
+.push-iph-icon{width:44px;height:44px;border-radius:10px;flex-shrink:0;background:var(--teal);display:flex;align-items:center;justify-content:center;font-size:20px;}
 .push-iph-text{flex:1;}
 .push-iph-title{font-size:14px;font-weight:700;color:rgba(0,0,0,.85);margin-bottom:2px;line-height:1.3;}
 .push-iph-msg{font-size:13px;color:rgba(0,0,0,.6);line-height:1.4;}
@@ -478,7 +577,7 @@ footer{background:#fff;padding:40px 0 0;}
 
 /* IDENTITY SAMPLE */
 #id-timeline-btn{position:fixed;left:0;top:120px;z-index:8500;background:#0d0d0d;color:#fff;border:none;border-radius:0 6px 6px 0;padding:12px 10px;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;font-family:var(--font);writing-mode:vertical-rl;display:flex;align-items:center;gap:6px;box-shadow:4px 0 16px rgba(0,0,0,.2);}
-.itb-dot{width:7px;height:7px;border-radius:50%;background:#00c8a0;flex-shrink:0;animation:psDotPulse 2s ease-in-out infinite;}
+.itb-dot{width:7px;height:7px;border-radius:50%;background:var(--teal);flex-shrink:0;animation:psDotPulse 2s ease-in-out infinite;}
 #id-timeline-panel{position:fixed;left:-320px;top:0;width:300px;background:#fff;z-index:8600;box-shadow:8px 0 40px rgba(0,0,0,.18);transition:left .3s ease;overflow-y:auto;display:inline-flex;flex-direction:column;max-height:100vh;height:fit-content;}
 #id-timeline-panel.open{left:0;}
 .itp-header{background:#0d0d0d;padding:16px 18px 12px;flex-shrink:0;}
@@ -487,8 +586,8 @@ footer{background:#fff;padding:40px 0 0;}
 .itp-close{font-size:18px;color:rgba(255,255,255,.6);cursor:pointer;background:none;border:none;font-family:var(--font);line-height:1;}
 .itp-sub{font-size:10px;color:rgba(255,255,255,.4);}
 .itp-body{padding:14px 16px;flex:0 0 auto;}
-.itp-merkury-card{background:var(--off);border-radius:6px;padding:12px 14px;border-left:3px solid #1a5f6a;}
-.itp-merkury-card-title{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#1a5f6a;margin-bottom:8px;}
+.itp-merkury-card{background:var(--off);border-radius:6px;padding:12px 14px;border-left:3px solid var(--teal);}
+.itp-merkury-card-title{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--teal);margin-bottom:8px;}
 .itp-signal{display:flex;align-items:baseline;gap:4px;margin-bottom:5px;font-family:'Menlo','Monaco','Courier New',monospace;flex-wrap:wrap;word-break:break-all;}
 .itp-signal-dot{display:none;}
 .itp-signal strong{color:#0d0d0d;}
@@ -501,20 +600,20 @@ footer{background:#fff;padding:40px 0 0;}
 .itp-resolve-time{color:#00c8a0;font-weight:700;}
 
 /* RETAIL CONCIERGE */
-#chat-bubble{position:fixed;bottom:72px;right:24px;z-index:7500;background:#1a5f6a;color:#fff;border:none;border-radius:50px;padding:12px 20px;font-size:13px;font-weight:600;font-family:var(--font);cursor:pointer;display:flex;align-items:center;gap:10px;box-shadow:0 4px 24px rgba(0,0,0,.3);transition:background .15s;white-space:nowrap;}
-#chat-bubble:hover{background:#145059;}
+#chat-bubble{position:fixed;bottom:72px;right:24px;z-index:7500;background:var(--teal);color:#fff;border:none;border-radius:50px;padding:12px 20px;font-size:13px;font-weight:600;font-family:var(--font);cursor:pointer;display:flex;align-items:center;gap:10px;box-shadow:0 4px 24px rgba(0,0,0,.3);transition:background .15s;white-space:nowrap;}
+#chat-bubble:hover{background:var(--teal-h);}
 #chat-bubble .cb-dot{width:8px;height:8px;border-radius:50%;background:#00e8a8;flex-shrink:0;animation:psDotPulse 2s ease-in-out infinite;}
 #chat-window{display:none;position:fixed;bottom:120px;right:24px;z-index:7501;width:360px;max-height:520px;background:#fff;border-radius:12px;box-shadow:0 16px 48px rgba(0,0,0,.22);flex-direction:column;overflow:hidden;}
 #chat-window.open{display:flex;}
 .chat-header{background:#0d0d0d;padding:14px 18px;display:flex;align-items:center;gap:10px;flex-shrink:0;}
-.chat-header-icon{width:32px;height:32px;border-radius:50%;background:#1a5f6a;display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:12px;font-weight:700;color:#fff;flex-shrink:0;}
+.chat-header-icon{width:32px;height:32px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:12px;font-weight:700;color:#fff;flex-shrink:0;}
 .chat-header-info{flex:1;}
 .chat-header-name{font-family:var(--font-serif);font-size:13px;font-weight:700;color:#fff;}
 .chat-header-sub{font-size:11px;color:rgba(255,255,255,.5);margin-top:1px;}
 .chat-header-close{font-size:20px;color:rgba(255,255,255,.5);cursor:pointer;background:none;border:none;line-height:1;}
 .chat-header-close:hover{color:#fff;}
 .chat-context-bar{background:var(--off);border-bottom:1px solid var(--border);padding:8px 14px;font-size:11px;color:var(--text3);display:flex;align-items:center;gap:6px;flex-shrink:0;}
-.chat-context-dot{width:6px;height:6px;border-radius:50%;background:#1a5f6a;flex-shrink:0;}
+.chat-context-dot{width:6px;height:6px;border-radius:50%;background:var(--teal);flex-shrink:0;}
 .chat-context-text{font-weight:600;color:#0d0d0d;}
 .chat-messages{flex:1;overflow-y:auto;padding:16px 14px;display:flex;flex-direction:column;gap:12px;min-height:200px;}
 .chat-msg{display:flex;flex-direction:column;max-width:85%;}
@@ -533,17 +632,17 @@ footer{background:#fff;padding:40px 0 0;}
 .chat-send:hover{background:#333;}
 
 /* PERSONA SWITCHER */
-#persona-switcher{position:fixed;top:124px;right:24px;z-index:8500;font-family:var(--font);}
-#ps-toggle{display:flex;align-items:center;gap:8px;background:#0d0d0d;color:#fff;padding:10px 16px;border-radius:24px;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 20px rgba(0,0,0,.3);border:2px solid rgba(255,255,255,.2);user-select:none;}
-#ps-toggle .ps-dot{width:8px;height:8px;border-radius:50%;background:#00c8a0;flex-shrink:0;animation:psDotPulse 2s ease-in-out infinite;}
+#persona-switcher{position:relative;font-family:var(--font);}
+#ps-toggle{display:flex;align-items:center;gap:8px;background:var(--black);color:#fff;padding:8px 14px;border-radius:6px;font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.2);border:1.5px solid rgba(255,255,255,.15);user-select:none;}
+#ps-toggle .ps-dot{width:8px;height:8px;border-radius:50%;background:var(--teal);flex-shrink:0;animation:psDotPulse 2s ease-in-out infinite;}
 #ps-toggle .ps-chevron{font-size:9px;opacity:.7;transition:transform .2s;}
 #ps-toggle.open .ps-chevron{transform:rotate(180deg);}
-#ps-panel{display:none;position:absolute;top:calc(100% + 10px);right:0;background:#fff;border:1.5px solid var(--border);border-radius:10px;box-shadow:0 12px 40px rgba(0,0,0,.15);width:340px;overflow:hidden;}
+#ps-panel{display:none;position:absolute;top:calc(100% + 10px);right:0;background:#fff;border:1.5px solid var(--border);border-radius:10px;box-shadow:0 12px 40px rgba(0,0,0,.15);width:340px;overflow:hidden;z-index:8500;}
 #ps-panel.open{display:block;}
 .ps-header{background:#0d0d0d;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;}
 .ps-header-left h3{font-family:var(--font-serif);font-size:13px;font-weight:700;color:#fff;margin-bottom:2px;}
 .ps-header-left p{font-size:11px;color:rgba(255,255,255,.45);}
-.ps-badge-pill{background:#1a5f6a;color:#fff;font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:3px 8px;border-radius:3px;}
+.ps-badge-pill{background:var(--teal);color:#fff;font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:3px 8px;border-radius:3px;}
 .ps-active-bar{background:var(--off);padding:10px 18px;border-bottom:1px solid var(--border);font-size:11px;color:var(--text3);display:flex;align-items:center;gap:8px;}
 .ps-active-bar strong{color:#0d0d0d;font-size:12px;}
 .ps-active-dot{width:8px;height:8px;border-radius:50%;background:#00c8a0;flex-shrink:0;}
@@ -551,26 +650,26 @@ footer{background:#fff;padding:40px 0 0;}
 .ps-persona-list{padding:0 10px 10px;}
 .ps-persona{display:flex;align-items:center;gap:12px;padding:10px;border-radius:6px;cursor:pointer;transition:background .12s;border:1.5px solid transparent;}
 .ps-persona:hover{background:var(--off);}
-.ps-persona.active{background:#f0faf8;border-color:#1a5f6a;}
+.ps-persona.active{background:#f0faf8;border-color:var(--teal);}
 .ps-persona-avatar{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;}
 .ps-persona-info{flex:1;min-width:0;}
 .ps-persona-name{font-family:var(--font-serif);font-size:13px;font-weight:700;color:#0d0d0d;}
 .ps-persona-title{font-size:11px;color:var(--text3);margin-top:1px;}
 .ps-persona-tags{display:flex;gap:4px;margin-top:4px;flex-wrap:wrap;}
 .ps-tag{font-size:9px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:2px 6px;border-radius:3px;background:var(--off);color:var(--text3);}
-.ps-tag.segment{background:#e8f5f2;color:#1a5f6a;}
+.ps-tag.segment{background:#e8f5f2;color:var(--teal);}
 .ps-tag.state{background:#e8f0f4;color:#2a4a5a;}
-.ps-tag.auth{background:#e8f5f2;color:#1a5f6a;border:1px solid #a8d8d0;}
+.ps-tag.auth{background:#e8f5f2;color:var(--teal);border:1px solid #a8d8d0;}
 .ps-tag.unauth{background:#e8eef8;color:#2a3a6a;border:1px solid #b0c0e0;}
 .ps-tag.prospect{background:#f0eaff;color:#4a1a8a;border:1px solid #c4a8e8;}
 .ps-tag.nomatch{background:#f0ece8;color:#888;border:1px solid #d0cac4;}
-.ps-persona-check{font-size:14px;color:#1a5f6a;opacity:0;}
+.ps-persona-check{font-size:14px;color:var(--teal);opacity:0;}
 .ps-persona.active .ps-persona-check{opacity:1;}
 .ps-footer{border-top:1px solid var(--border);padding:10px 18px;display:flex;align-items:center;justify-content:space-between;}
 .ps-reset{font-size:11px;font-weight:600;color:var(--text3);cursor:pointer;}
 .ps-reset:hover{color:#0d0d0d;}
 .ps-page-indicator{font-size:11px;color:var(--text3);}
-.ps-page-indicator strong{color:#1a5f6a;}
+.ps-page-indicator strong{color:var(--teal);}
 
 /* RESPONSIVE */
 @media(max-width:1024px){
@@ -634,7 +733,7 @@ footer{background:#fff;padding:40px 0 0;}
   .cart-recs-row{grid-template-columns:repeat(2,1fr);}
   .cat-page-hero-inner{padding:0 16px;}
   .filter-chip{padding:7px 12px;font-size:11px;}
-  #persona-switcher{top:96px;right:12px;}
+  
   #ps-toggle{font-size:11px;padding:8px 12px;}
   #ps-panel{width:calc(100vw - 24px);right:0;}
   #sticky-20-btn{bottom:12px;left:12px;font-size:11px;padding:8px 12px;}
@@ -712,23 +811,23 @@ footer{background:#fff;padding:40px 0 0;}
     <button class="email-modal-close" onclick="closeEmailModal()">&#215;</button>
     <div class="email-modal-topbar"><div style="width:48px"></div><div style="font-size:11px;color:rgba(255,255,255,.4);letter-spacing:1px;">MAIL PREVIEW</div><div style="width:48px"></div></div>
     <div class="email-modal-subject-bar">
-      <div class="email-subject-row"><div class="email-subject-label">From:</div><div class="email-subject-value">Aura &lt;<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a0cecfd2c5d0ccd9e0c1d5d2c18ec3cfcd">[email&#160;protected]</a>&gt;</div></div>
-      <div class="email-subject-row"><div class="email-subject-label">To:</div><div class="email-subject-value" id="email-modal-to"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="325f534b531c515a575c72575f535b5e1c515d5f">[email&#160;protected]</a></div></div>
+      <div class="email-subject-row"><div class="email-subject-label">From:</div><div class="email-subject-value">Aura &lt;<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="355b5a475045594c75544047541b565a58">[email&#160;protected]</a>&gt;</div></div>
+      <div class="email-subject-row"><div class="email-subject-label">To:</div><div class="email-subject-value" id="email-modal-to"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="761b170f1758151e131836131b171f1a5815191b">[email&#160;protected]</a></div></div>
       <div class="email-subject-row"><div class="email-subject-label">Subject:</div><div class="email-subject-value" id="email-modal-subject" style="color:#fff;font-weight:600;">Maya, you left something behind</div></div>
     </div>
     <div class="email-body">
       <div class="email-header-band"><div class="email-logo">AURA</div></div>
-      <div class="email-hero"><div class="email-hero-eyebrow">Still thinking it over?</div><div class="email-hero-h1">Maya, you left something behind.</div><div class="email-hero-sub">Your cart is saved. As a Circle All-Access member, your exclusive 15% off is still applied.</div></div>
+      <div class="email-hero"><div class="email-hero-eyebrow">Still thinking it over?</div><div class="email-hero-h1">Maya, you left something behind.</div><div class="email-hero-sub">Your cart is saved. As an Aura Circle member, your exclusive discount is still applied.</div></div>
       <div class="email-content">
         <div class="email-product-card">
           <div class="email-product-img"></div>
-          <div class="email-product-info"><div class="email-product-eyebrow">In Your Cart</div><div class="email-product-name">High Rise Performance Tight 7/8</div><div class="email-product-detail">Size: S | Color: Midnight Black | Qty: 1</div><div class="email-product-price">$109</div><div class="email-product-member">Circle All-Access Price: $92.65 (15% off)</div><div class="email-product-points">You will earn 463 points on this order</div></div>
+          <div class="email-product-info"><div class="email-product-eyebrow">In Your Cart</div><div class="email-product-name">High Rise Performance Tight 7/8</div><div class="email-product-detail">Size: S | Color: Midnight Black | Qty: 1</div><div class="email-product-price">$109</div><div class="email-product-member">Circle Member Price: $98.10</div><div class="email-product-points">You will earn 545 points on this order</div></div>
         </div>
         <div class="email-body-copy">These sell out fast, Maya. Your size is still available.</div>
         <div class="email-cta-wrap"><div class="email-cta-btn">Complete My Purchase</div></div>
         <div class="email-encore-strip"><div style="font-size:24px;flex-shrink:0;">&#11088;</div><div class="email-encore-text"><strong>Aura Circle All-Access perk:</strong> You are earning 25 points per $1 on this purchase.</div></div>
       </div>
-      <div class="email-footer-band"><div class="email-footer-logo">AURA</div><div class="email-footer-links"><a>Unsubscribe</a><a>Privacy Policy</a><a>Help Center</a></div><div class="email-footer-legal">&copy; 2026 Aura Active, Inc. All Rights Reserved.</div></div>
+      <div class="email-footer-band"><div class="email-footer-logo">AURA</div><div class="email-footer-links"><a>Unsubscribe</a><a>Privacy Policy</a><a>Help Center</a></div><div class="email-footer-legal">&copy; 2026 Aura Active, Inc. All Rights Reserved. &nbsp;|&nbsp; Created by Victoria Morrissey &amp; Jessica Taylor for Merkle Data &amp; Identity Solutions</div></div>
       <div class="email-merkury-strip"><div class="email-merkury-title">Merkury signals - email partner</div><div class="email-merkury-pills"><div class="email-merkury-pill trigger"><span>email_engagement:</span> Active</div><div class="email-merkury-pill trigger"><span>last_purchase_days:</span> 12</div><div class="email-merkury-pill"><span>category_affinity_1:</span> Leggings</div><div class="email-merkury-pill"><span>match_type:</span> Deterministic</div></div></div>
     </div>
   </div>
@@ -761,7 +860,7 @@ footer{background:#fff;padding:40px 0 0;}
   <div class="signup-modal">
     <button class="signup-modal-close" onclick="dismissSignupModal()">&#215;</button>
     <div class="signup-step">STEP 1</div>
-    <div class="signup-headline">Score 20% off* when you join Aura.</div>
+    <div class="signup-headline">Score 15% off* when you join Aura.</div>
     <div class="signup-sub">Get the latest on new arrivals, exclusive offers, and more.</div>
     <input class="signup-input" type="email" id="signup-email-input" placeholder="Enter your email address">
     <button class="signup-btn" onclick="submitSignupModal()">Join Now</button>
@@ -772,7 +871,7 @@ footer{background:#fff;padding:40px 0 0;}
 <!-- PERSONALIZATION MODAL -->
 <div id="pers-modal-overlay">
   <div class="pers-modal">
-    <button class="pers-modal-close" onclick="dismissModal()">&#215;</button>
+    <button class="pers-modal-close" onclick="dismissModal()">&#215;</button><button class="pers-modal-data-link" onclick="dismissModal();if(!timelineOpen){timelineOpen=true;var tp=document.getElementById('id-timeline-panel');if(tp)tp.classList.add('open');}">See full Merkury payload &#8594;</button>
     <div class="pers-modal-header" id="pm-header">
       <div class="pers-modal-eyebrow">Merkury Identity Resolved</div>
       <div class="pers-modal-visitor-state" id="pm-visitor-state"></div>
@@ -783,14 +882,6 @@ footer{background:#fff;padding:40px 0 0;}
       <div class="pers-id-card" id="pm-id-card">
         <div class="pers-id-card-title">Resolved Identity</div>
         <div class="pers-id-grid"></div>
-      </div>
-      <div class="pm-campaign-row" id="pm-campaign-row">
-        <div class="pm-campaign-label">She left the site - build a re-engagement campaign via messaging partner</div>
-        <button class="pm-campaign-btn" onclick="dismissModal();setTimeout(openCampaignModal,200)">Build SMS Re-engagement Campaign</button>
-      </div>
-      <div class="pm-campaign-row" id="pm-email-row" style="display:none;">
-        <div class="pm-campaign-label">She left items in her cart - trigger an abandoned cart email via email partner</div>
-        <button class="pm-campaign-btn" style="background:#1a5f6a;" onclick="dismissModal();setTimeout(openEmailModal,200)">Preview Abandoned Cart Email</button>
       </div>
 
     </div>
@@ -829,7 +920,7 @@ footer{background:#fff;padding:40px 0 0;}
         <div class="cm-section-label">Send Time</div>
         <div class="cm-sendtime">
           <div class="cm-st-option" onclick="selectSendTime(0)"><div class="cm-st-radio selected" id="cm-st-0"></div><div><div class="cm-st-label">Use Send Time AI <span class="cm-st-badge">AI optimized</span></div><div class="cm-st-detail">Sent at each subscriber's optimal send time</div></div></div>
-          <div class="cm-st-option" onclick="selectSendTime(1)"><div class="cm-st-radio" id="cm-st-1"></div><div><div class="cm-st-label">Use specified time</div><div class="cm-st-detail">Wed, Apr 23 at 8:30 PM</div></div></div>
+          <div class="cm-st-option" onclick="selectSendTime(1)"><div class="cm-st-radio" id="cm-st-1"></div><div><div class="cm-st-label">Use specified time</div><div class="cm-st-detail">Today at 8:30 PM</div></div></div>
         </div>
       </div>
       <div class="cm-right">
@@ -844,36 +935,136 @@ footer{background:#fff;padding:40px 0 0;}
 
 <!-- STICKY PILL -->
 <button id="sticky-20-btn" onclick="onStickyPillClick()">
-  <span id="sticky-20-label">Get 20% Off</span>
+  <span id="sticky-20-label">Get 15% Off</span>
   <span class="s20-close" onclick="event.stopPropagation();document.getElementById('sticky-20-btn').classList.add('hidden')">&#215;</span>
 </button>
 
-<!-- PERSONA SWITCHER -->
-<div id="persona-switcher">
-  <div id="ps-toggle" onclick="toggleSwitcher()"><div class="ps-dot"></div><span>Demo Persona</span><span class="ps-chevron">&#9662;</span></div>
-  <div id="ps-panel">
-    <div class="ps-header"><div class="ps-header-left"><h3>Merkury Demo Switcher</h3><p>Swap visitor state in real time</p></div><span class="ps-badge-pill">Live</span></div>
-    <div class="ps-active-bar"><div class="ps-active-dot"></div>Active: <strong id="ps-active-name">Default</strong></div>
-    <div class="ps-section-label">Select a Visitor State</div>
-    <div class="ps-persona-list" id="ps-persona-list"></div>
-    <div class="ps-footer"><span class="ps-reset" onclick="resetPersona()">Reset to default</span><span class="ps-page-indicator">Page: <strong id="ps-page-name">Home</strong></span></div>
+
+<!-- PUSH NOTIFICATION MODAL -->
+<div id="push-modal" onclick="if(event.target===this)window.closePushModal()">
+  <div class="push-modal-box">
+    <div class="push-modal-header">
+      <h3>Push Notification — Maya Chen</h3>
+      <button class="push-modal-close" onclick="window.closePushModal()">&#215;</button>
+    </div>
+    <div class="push-modal-body">
+      <div class="dam-section-label">Notification Preview</div>
+      <div class="push-device-frame">
+        <div class="push-notif-preview">
+          <div class="push-notif-icon">🛍️</div>
+          <div class="push-notif-content">
+            <div class="push-notif-app">Aura</div>
+            <div class="push-notif-title">Maya, your cart is waiting ⭐</div>
+            <div class="push-notif-body">Your High Rise Tight is almost sold out. Use your 463 Circle points toward it.</div>
+            <div class="push-notif-time">now</div>
+          </div>
+        </div>
+      </div>
+      <div class="dam-section-label">Merkury signals that triggered this</div>
+      <div class="push-signals-row">
+        <span class="push-signal-pill">match_type: Deterministic</span>
+        <span class="push-signal-pill">confidence: 1</span>
+        <span class="push-signal-pill">brand_loyalty_score: 5</span>
+        <span class="push-signal-pill">email_engagement: Active</span>
+        <span class="push-signal-pill">open cart detected</span>
+      </div>
+      <button class="push-send-btn" onclick="window.closePushModal()">Send Notification &#10003;</button>
+    </div>
+  </div>
+</div>
+
+<!-- JENNIFER WIN-BACK EMAIL MODAL -->
+<!-- DISPLAY AD MODAL — Danielle -->
+<div id="display-ad-modal" onclick="if(event.target===this)closeDisplayAdModal()">
+  <div style="background:#fff;border-radius:8px;width:100%;max-width:480px;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,.25);animation:modalIn .22s ease;position:relative;">
+    <button onclick="closeDisplayAdModal()" style="position:absolute;top:14px;right:16px;font-size:24px;color:#717171;cursor:pointer;background:none;border:none;font-family:var(--font);z-index:2;">&times;</button>
+    <!-- Ad preview -->
+    <div style="background:linear-gradient(135deg,#4a1a8a,#2a0a5a);padding:32px 28px;text-align:center;">
+      <div style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:12px;">Display Ad Preview</div>
+      <div style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:20px;max-width:300px;margin:0 auto;">
+        <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:8px;">AURA ACTIVE — SPONSORED</div>
+        <div style="width:100%;height:120px;background:linear-gradient(135deg,#1a3a5a,#0d2030);border-radius:4px;margin-bottom:12px;display:flex;align-items:center;justify-content:center;">
+          <span style="font-size:32px;">🏊‍♀️</span>
+        </div>
+        <div style="font-size:15px;font-weight:700;color:#fff;margin-bottom:6px;font-family:var(--font-serif);">Dive into Aura Swim.</div>
+        <div style="font-size:12px;color:rgba(255,255,255,.65);margin-bottom:14px;line-height:1.5;">Built with the same performance fabric you love from the studio.</div>
+        <div style="background:#fff;color:#0d0d0d;border-radius:50px;padding:8px 20px;font-size:12px;font-weight:700;display:inline-block;">Shop Swim — SWIM20</div>
+      </div>
+      <div style="margin-top:12px;font-size:11px;color:rgba(255,255,255,.35);">300×250 · Programmatic · DSP delivery</div>
+    </div>
+    <!-- Merkury signals -->
+    <div style="padding:20px 24px;">
+      <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);margin-bottom:12px;">Merkury Signals — DSP Partner</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;">
+        <span style="background:var(--off);border:1px solid var(--border);border-radius:50px;padding:4px 12px;font-size:11px;font-weight:600;color:var(--text2);">category_affinity_1: Yoga &amp; Studio</span>
+        <span style="background:var(--off);border:1px solid var(--border);border-radius:50px;padding:4px 12px;font-size:11px;font-weight:600;color:var(--text2);">swim_propensity_score: 82</span>
+        <span style="background:var(--off);border:1px solid var(--border);border-radius:50px;padding:4px 12px;font-size:11px;font-weight:600;color:var(--text2);">swim_in_market: Y</span>
+        <span style="background:var(--off);border:1px solid var(--border);border-radius:50px;padding:4px 12px;font-size:11px;font-weight:600;color:var(--text2);">confidence_score: 4</span>
+        <span style="background:var(--off);border:1px solid var(--border);border-radius:50px;padding:4px 12px;font-size:11px;font-weight:600;color:var(--text2);">match_type: probabilistic</span>
+      </div>
+      <div style="font-size:12px;color:var(--text3);line-height:1.6;background:var(--off);border-radius:4px;padding:12px 14px;">
+        Danielle has never purchased swim at Aura — but Merkury's 3P graph detected a swim propensity score of 82 based on browsing and purchase signals across the open web. This display ad targets her via DSP without requiring her email or identity match.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="jennifer-email-modal" onclick="if(event.target===this)window.closeJenniferEmailModal()">
+  <div class="jem-box">
+    <div class="jem-chrome">
+      <div class="jem-chrome-close">
+        <div class="jem-chrome-dot" style="background:#ff5f57;"></div>
+        <div class="jem-chrome-dot" style="background:#febc2e;"></div>
+        <div class="jem-chrome-dot" style="background:#28c840;"></div>
+      </div>
+      <div class="jem-subject-row"><div class="jem-subject-label">From:</div><div>Aura &lt;<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6c02031e091c00152c0d191e0d420f0301">[email&#160;protected]</a>&gt;</div></div>
+      <div class="jem-subject-row"><div class="jem-subject-label">To:</div><div><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="29434c4747404f4c5b075e48455a41694c44484045074a4644">[email&#160;protected]</a></div></div>
+      <div class="jem-subject-row"><div class="jem-subject-label">Subject:</div><div style="font-weight:600;">Jennifer, your jackets are waiting — and so is your 20% off.</div></div>
+    </div>
+    <div class="jem-header">
+      <div class="jem-header-eyebrow">We've missed you</div>
+      <div class="jem-header-h1">Jennifer, your 20% off is still waiting.</div>
+      <div class="jem-header-sub">New jackets just arrived. Your exclusive Circle Premier discount is saved — come back and pick yours.</div>
+    </div>
+    <div class="jem-body">
+      <div class="jem-product">
+        <div class="jem-product-img"></div>
+        <div>
+          <div class="jem-product-name">Performance Softshell Jacket</div>
+          <div class="jem-product-detail">Your top affinity category · New colourways</div>
+          <div class="jem-product-price">$148.00</div>
+          <div class="jem-product-member">With your discount: $118.40</div>
+        </div>
+      </div>
+      <div class="jem-cta">Shop Jackets — 20% Off</div>
+      <div class="jem-merkury-strip">
+        <div class="jem-merkury-title">Merkury signals — email partner</div>
+        <div class="jem-merkury-pills">
+          <div class="jem-merkury-pill"><span>email_engagement:</span> Lapsed</div>
+          <div class="jem-merkury-pill"><span>last_purchase_days:</span> 47</div>
+          <div class="jem-merkury-pill"><span>category_affinity_1:</span> Jackets</div>
+          <div class="jem-merkury-pill"><span>match_type:</span> Deterministic</div>
+          <div class="jem-merkury-pill"><span>confidence:</span> 2</div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
 <!-- DEMO BANNER -->
-<div class="demo-banner">Demo Purposes Only &mdash; Merkury Tag Data</div>
+
 
 <!-- UTIL BAR -->
 <div class="util-bar">
   <div style="width:40px;flex-shrink:0;"></div>
-  <div class="util-center"><span>FREE SHIPPING ON $50+ FOR AURA CIRCLE MEMBERS</span><a onclick="openShipFlyout()">Join Now</a><a onclick="openShipFlyout()">Details</a></div>
-  <div class="util-right"><span class="util-icon" onclick="showPage('home')" style="cursor:pointer;">&#128100;</span><span class="util-icon" onclick="goToCart()" style="cursor:pointer;">&#128722;</span></div>
+  <div class="util-center"><span id="util-shipping-msg">FREE SHIPPING ON $50+ FOR AURA CIRCLE MEMBERS</span><a id="util-join-btn" onclick="openShipFlyout()">Join Now</a><a onclick="openShipFlyout()">Details</a></div>
+  <div class="util-right"><span class="util-icon" onclick="showPage('home')" style="cursor:pointer;">&#128100;</span><span class="util-icon" onclick="goToCart()" style="cursor:pointer;">&#128722;</span><span id="util-reset-btn" onclick="resetPersona();showPage('home')" style="display:none;font-size:11px;font-weight:700;color:rgba(255,255,255,.5);cursor:pointer;letter-spacing:.5px;border:1px solid rgba(255,255,255,.15);border-radius:3px;padding:3px 8px;white-space:nowrap;transition:color .15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.5)'">&#8634; Reset</span></div>
 </div>
 
 <!-- PROMO BAR -->
 <div class="promo-bar">
   <div style="width:80px;flex-shrink:0;"></div>
-  <div class="promo-bar-text" id="promo-bar-text">30% Off Your New Favorites <a onclick="showPage('category')">Shop Women</a></div>
+  <div class="promo-bar-text" id="promo-bar-text">15% Off Your New Favorites &#8212; <a onclick="showPage('category')">Shop Women</a></div>
   <div class="promo-bar-right"><a href="#">Exclusions Apply</a></div>
 </div>
 
@@ -882,42 +1073,61 @@ footer{background:#fff;padding:40px 0 0;}
   <div class="nav-inner">
     <div class="nav-logo" onclick="showPage('home')">AURA</div>
     <div class="nav-links">
-      <span class="nav-link" onclick="toggleMegaNav()" id="nav-new-link">New</span>
-      <span class="nav-link" onclick="showPage('category')">Bottoms</span>
-      <span class="nav-link" onclick="showPage('category')">Tops</span>
-      <span class="nav-link" onclick="showPage('category')">Bras</span>
-      <span class="nav-link" onclick="showPage('category')">Studio</span>
-      <span class="nav-link" onclick="showPage('category')">Jackets</span>
-      <span class="nav-link" onclick="showPage('category')">Swim</span>
-      <span class="nav-link sale" onclick="showPage('category')">Sale</span>
+      <span class="nav-link" onclick="showPage('new-arrivals')">New</span>
+      <span class="nav-link" onclick="showPage('bottoms')">Bottoms</span>
+      <span class="nav-link" onclick="showPage('jackets')">Jackets</span>
+      <span class="nav-link" onclick="showPage('circle')">Circle Rewards</span>
+      <span class="nav-link sale" onclick="showPage('sale')">Sale</span>
     </div>
     <div class="nav-search"><input type="text" placeholder="Search"><span style="color:var(--text3)">&#128269;</span></div>
+    <div id="persona-switcher" style="margin-left:16px;flex-shrink:0;">
+      <div id="ps-toggle" onclick="toggleSwitcher()"><div class="ps-dot"></div><span>Demo Persona</span><span class="ps-chevron">&#9662;</span></div>
+      <div id="ps-panel">
+        <div class="ps-header"><div class="ps-header-left"><h3>Merkury Demo Switcher</h3><p>Swap visitor state in real time</p></div><span class="ps-badge-pill">Live</span></div>
+        <div class="ps-active-bar"><div class="ps-active-dot"></div>Active: <strong id="ps-active-name">Default</strong></div>
+        <div class="ps-section-label">Select a Visitor State</div>
+        <div class="ps-persona-list" id="ps-persona-list"></div>
+        <div class="ps-footer"><span class="ps-reset" onclick="resetPersona()">Reset to default</span><span class="ps-page-indicator">Page: <strong id="ps-page-name">Home</strong></span></div>
+      </div>
+      <!-- Integration tab — visible when Jennifer active -->
+      <div id="ps-integration-tab">
+        <div class="ps-int-tab-header" id="int-tab-header">&#9889; Activations</div>
+        <button class="ps-int-tab-btn" style="background:rgba(194,122,90,.15);color:#e8a888;" onclick="if(!timelineOpen){timelineOpen=true;var tp=document.getElementById('id-timeline-panel');if(tp)tp.classList.add('open');}"><span class="ps-int-icon">🪪</span>Merkury Identity Resolved</button>
+        <div id="int-btn-maya" style="display:none;">
+          <button class="ps-int-tab-btn email" onclick="openEmailModal()"><span class="ps-int-icon">📧</span>Abandoned Cart Email</button>
+          <button class="ps-int-tab-btn" style="background:rgba(26,95,106,.15);color:#7ad8e0;" onclick="openOfferLightbox()"><span class="ps-int-icon">&#11088;</span>Circle All-Access Offer</button>
+        </div>
+        <div id="int-btn-jennifer" style="display:none;">
+          <button class="ps-int-tab-btn sms" onclick="openCampaignModal()"><span class="ps-int-icon">📱</span>SMS Re-engagement</button>
+          <button class="ps-int-tab-btn email" onclick="openJenniferEmailModal()"><span class="ps-int-icon">📧</span>Win-back Email</button>
+          <button class="ps-int-tab-btn" style="background:rgba(107,124,74,.15);color:#b8cc88;" onclick="openOfferLightbox()"><span class="ps-int-icon">🏷️</span>On-site Offer — 20% Off</button>
+        </div>
+        <div id="int-btn-danielle" style="display:none;">
+          <button class="ps-int-tab-btn" style="background:rgba(107,74,170,.15);color:#c8a8ff;" onclick="openDisplayAdModal()"><span class="ps-int-icon">🖥️</span>Display Ad — Swim Cross-Sell</button>
+          <button class="ps-int-tab-btn" style="background:rgba(107,124,74,.15);color:#b8cc88;" onclick="openOfferLightbox()"><span class="ps-int-icon">🏷️</span>On-site Offer — Swim 20% Off</button>
+        </div>
+        <div style="border-top:1px solid rgba(255,255,255,.08);padding:8px 10px;">
+          <button class="ps-int-tab-btn" style="background:transparent;color:rgba(255,255,255,.4);font-size:11px;padding:6px 10px;" onclick="openSwitcherPanel()"><span style="margin-right:6px;">&#8635;</span>Switch Persona</button>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
 <!-- HOME PAGE -->
 <div id="page-home" class="page active">
   <div class="hero"><div class="hero-split">
-    <div class="hero-photo-left"></div>
-    <div class="hero-center">
+    <div class="hero-photo-left" id="hero-photo-left"></div>
+    <div class="hero-center" id="hero-center">
       <p class="hero-eyebrow" id="hero-eyebrow"></p>
       <span class="hero-h1-light" id="hero-h1-light">MOVE IN WHAT</span>
       <span class="hero-h1-bold" id="hero-h1-bold">MOVES YOU</span>
       <p class="hero-sub" id="hero-sub">Discover our latest collection — designed for every move you make.</p>
       <a class="btn-pill btn-black" id="hero-cta1" onclick="showPage('category')">Shop Now</a>
     </div>
-    <div class="hero-photo-right"></div>
+    <div class="hero-photo-right" id="hero-photo-right"></div>
   </div></div>
 
-  <div class="cat-section"><div class="w">
-    <div class="cat-section-hdr"><h2 id="home-cat-title">SHOP THE COLLECTION</h2><a onclick="showPage('category')">View All</a></div>
-    <div class="cat-grid">
-      <div class="cat-tile" onclick="showPage('pdp')"><div class="cat-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/workout.1.webp') center/cover no-repeat;"><div class="cat-badge">New</div></div><div class="cat-label" id="cat-label-1">Matching Sets</div><div class="cat-sub" id="cat-sub-1">Effortlessly coordinated</div></div>
-      <div class="cat-tile" onclick="showPage('pdp')"><div class="cat-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/sports.bra.webp') center/cover no-repeat;"></div><div class="cat-label" id="cat-label-2">Flow State</div><div class="cat-sub" id="cat-sub-2">Built for your practice</div></div>
-      <div class="cat-tile" onclick="showPage('pdp')"><div class="cat-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/yoga.class.webp') center/cover no-repeat;"></div><div class="cat-label" id="cat-label-3">Studio Fits</div><div class="cat-sub" id="cat-sub-3">From class to everywhere</div></div>
-      <div class="cat-tile" onclick="showPage('pdp')"><div class="cat-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/workout.fit.webp') center/cover no-repeat;"></div><div class="cat-label" id="cat-label-4">On the Mat</div><div class="cat-sub" id="cat-sub-4">Your go-to studio layer</div></div>
-    </div>
-  </div></div>
 
   <div class="promo-band"><div class="promo-band-inner">
     <div class="pb-photo"></div>
@@ -940,14 +1150,66 @@ footer{background:#fff;padding:40px 0 0;}
   </div></div>
 
   <div class="loyalty-strip"><div class="loyalty-inner">
-    <div class="ls-col"><div class="ls-eyebrow">Earn 20% Off</div><div class="ls-title" id="loyalty-title">Join Aura Circle free</div><div class="ls-sub" id="loyalty-sub">Sign up for emails and get 20% off your next order.</div><div class="ls-email-row"><input class="ls-email-input" type="email" placeholder="Enter your email address"><button class="btn-pill btn-white btn-sm">Sign Up</button></div></div>
+    <div class="ls-col"><div class="ls-eyebrow" id="loyalty-eyebrow">Earn 15% Off</div><div class="ls-title" id="loyalty-title">Join Aura Circle free</div><div class="ls-sub" id="loyalty-sub">Sign up and get 15% off your next order.</div><div id="loyalty-action-row"><div class="ls-email-row"><input class="ls-email-input" type="email" placeholder="Enter your email address"><button class="btn-pill btn-white btn-sm">Sign Up</button></div></div></div>
     <div class="ls-divider"></div>
     <div class="ls-col"><div class="ls-eyebrow">Aura Circle</div><div class="ls-title" id="encore-title">Extra 20% off your first purchase</div><div class="ls-sub">When you open and shop with your new Aura Circle card.</div><div style="display:flex;gap:10px;"><button class="btn-pill btn-white btn-sm">Apply</button><button class="btn-pill btn-sm" style="color:#fff;border:2px solid rgba(255,255,255,.4);background:transparent">Learn More</button></div></div>
     <div class="ls-divider"></div>
     <div class="ls-col"><div class="ls-eyebrow">Our Mission</div><div class="ls-title">MOVE WITH PURPOSE</div><div class="ls-sub">We believe in performance, sustainability, and inclusivity in everything we make.</div><a style="color:rgba(255,255,255,.8);font-size:13px;text-decoration:underline" href="#">Learn More</a></div>
   </div></div>
 
-  <footer><div class="footer-cols"><div class="fc"><h4>Customer Support</h4><a>Shipping</a><a>Returns and Exchanges</a><a>Track Your Order</a><a>Gift Cards</a></div><div class="fc"><h4>Aura Circle</h4><a>Points and Rewards</a><a>Account</a><a>Pay Credit Card</a><a>Become a Circle Member</a></div><div class="fc"><h4>About Us</h4><a>Our Story</a><a>Sustainability</a><a>Careers</a></div><div class="fc"><h4>Find Us</h4><a>Contact Us</a><a>Store Locator</a><a>Aura App</a></div></div><div class="footer-bottom"><span>&copy; 2026 Aura Active, Inc. All Rights Reserved.</span><div class="footer-bottom-links"><a>Privacy Policy</a><a>Terms of Use</a><a>Accessibility</a></div><div class="footer-social"><a>IG</a><a>TT</a><a>FB</a><a>YT</a></div></div></footer>
+  <footer><div class="footer-cols"><div class="fc"><h4>Customer Support</h4><a>Shipping</a><a>Returns and Exchanges</a><a>Track Your Order</a><a>Gift Cards</a></div><div class="fc" id="footer-circle-col"><h4>Aura Circle</h4><a id="fc-link-1">Points and Rewards</a><a id="fc-link-2">Account</a><a id="fc-link-3">Pay Credit Card</a><a id="fc-link-4">Become a Circle Member</a></div><div class="fc"><h4>About Us</h4><a>Our Story</a><a>Sustainability</a><a>Careers</a></div><div class="fc"><h4>Find Us</h4><a>Contact Us</a><a>Store Locator</a><a>Aura App</a></div></div><div class="footer-bottom"><span>&copy; 2026 Aura Active, Inc. All Rights Reserved. &nbsp;|&nbsp; Created by Victoria Morrissey &amp; Jessica Taylor for Merkle Data &amp; Identity Solutions</span><div class="footer-bottom-links"><a>Privacy Policy</a><a>Terms of Use</a><a>Accessibility</a></div><div class="footer-social"><a>IG</a><a>TT</a><a>FB</a><a>YT</a></div></div></footer>
+</div>
+
+<!-- NEW ARRIVALS PAGE -->
+<div id="page-new-arrivals" class="page">
+  <div class="cat-page-hero"><div class="cat-page-hero-inner">
+    <div class="breadcrumb" onclick="showPage('home')">Home / New Arrivals</div>
+    <h1 class="cat-page-title">New Arrivals</h1>
+    <p class="cat-page-sub">The freshest styles, just landed.</p>
+    <div class="cat-page-filters"><div class="filter-chip active">Filter and Sort</div><div class="filter-chip">Category</div><div class="filter-chip">Color</div><div class="filter-chip">Size</div><div class="filter-chip">Activity</div></div>
+  </div></div>
+  <div class="cat-page-grid-wrap"><div class="w">
+    <div class="cat-page-result-count">24 Results</div>
+    <div class="product-grid">
+      <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/sunrise.yoga.webp') center/cover no-repeat;"><div class="pt-badge">New</div></div><div class="pt-name">Flow State Legging</div><div class="pt-price">$89</div><div class="pt-member-price">Circle Price $80</div></div>
+      <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/matching.sets.webp') center/cover no-repeat;"><div class="pt-badge">New</div></div><div class="pt-name">Studio Matching Set</div><div class="pt-price">$148</div><div class="pt-member-price">Circle Price $133</div></div>
+      <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-aura-demo/main/jacket.purple.zip.webp') center top/cover no-repeat;"><div class="pt-badge">New</div></div><div class="pt-name">Studio Zip Jacket</div><div class="pt-price">$68</div><div class="pt-member-price">Circle Price $61</div></div>
+      <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-aura-demo/main/jacket.silver.flat.png') center top/cover no-repeat;"><div class="pt-badge">New</div></div><div class="pt-name">Performance Rain Jacket</div><div class="pt-price">$98</div><div class="pt-member-price">Circle Price $88</div></div>
+    </div>
+  </div></div>
+  <footer><div class="footer-cols"><div class="fc"><h4>Customer Support</h4><a>Shipping</a><a>Returns</a></div><div class="fc"><h4>Aura Circle</h4><a>Points and Rewards</a></div><div class="fc"><h4>About Us</h4><a>Our Story</a></div><div class="fc"><h4>Find Us</h4><a>Contact Us</a></div></div><div class="footer-bottom"><span>&copy; 2026 Aura Active, Inc. All Rights Reserved. &nbsp;|&nbsp; Created by Victoria Morrissey &amp; Jessica Taylor for Merkle Data &amp; Identity Solutions</span><div class="footer-bottom-links"><a>Privacy Policy</a><a>Terms of Use</a></div></div></footer>
+</div>
+
+<!-- SALE PAGE -->
+<div id="page-sale" class="page">
+  <div style="background:#c0392b;padding:10px;text-align:center;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#fff;">Up to 40% off — final sale on select styles</div>
+  <div class="cat-page-hero" style="background:#faf6f0;"><div class="cat-page-hero-inner">
+    <div class="breadcrumb" onclick="showPage('home')">Home / Sale</div>
+    <h1 class="cat-page-title">Sale</h1>
+    <p class="cat-page-sub">Final markdowns on your favourite styles — while supplies last.</p>
+    <div class="cat-page-filters"><div class="filter-chip active">Filter and Sort</div><div class="filter-chip">Category</div><div class="filter-chip">Color</div><div class="filter-chip">Size</div><div class="filter-chip">% Off</div></div>
+  </div></div>
+  <div class="cat-page-grid-wrap"><div class="w">
+    <div class="cat-page-result-count">42 Results</div>
+    <div class="product-grid">
+      <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/legging.shot.webp') center/cover no-repeat;"><div class="pt-badge pt-badge-sale">30% Off</div></div><div class="pt-name">High Rise Performance Tight</div><div class="pt-price" style="text-decoration:line-through;color:var(--text3);">$89</div><div class="pt-price" style="color:#c0392b;">$62</div><div class="pt-member-price">Circle Price $56</div></div>
+
+      <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/matching.sets.webp') center/cover no-repeat;"><div class="pt-badge pt-badge-sale">25% Off</div></div><div class="pt-name">Studio Matching Set</div><div class="pt-price" style="text-decoration:line-through;color:var(--text3);">$148</div><div class="pt-price" style="color:#c0392b;">$111</div><div class="pt-member-price">Circle Price $100</div></div>
+
+      <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/yoga.mat.webp') center/cover no-repeat;"><div class="pt-badge pt-badge-sale">40% Off</div></div><div class="pt-name">Flow State Jogger</div><div class="pt-price" style="text-decoration:line-through;color:var(--text3);">$79</div><div class="pt-price" style="color:#c0392b;">$47</div><div class="pt-member-price">Circle Price $42</div></div>
+
+      <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/sports.bra.webp') center/cover no-repeat;"><div class="pt-badge pt-badge-sale">20% Off</div></div><div class="pt-name">High Impact Sports Bra</div><div class="pt-price" style="text-decoration:line-through;color:var(--text3);">$68</div><div class="pt-price" style="color:#c0392b;">$54</div><div class="pt-member-price">Circle Price $49</div></div>
+
+      <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/workout.fit.webp') center/cover no-repeat;"><div class="pt-badge pt-badge-sale">30% Off</div></div><div class="pt-name">Studio Wrap Jacket</div><div class="pt-price" style="text-decoration:line-through;color:var(--text3);">$128</div><div class="pt-price" style="color:#c0392b;">$90</div><div class="pt-member-price">Circle Price $81</div></div>
+
+      <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/yoga.girl.webp') center/cover no-repeat;"><div class="pt-badge pt-badge-sale">35% Off</div></div><div class="pt-name">Everyday Flare Pant</div><div class="pt-price" style="text-decoration:line-through;color:var(--text3);">$98</div><div class="pt-price" style="color:#c0392b;">$64</div><div class="pt-member-price">Circle Price $57</div></div>
+
+      <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/workout.1.webp') center/cover no-repeat;"><div class="pt-badge pt-badge-sale">25% Off</div></div><div class="pt-name">Relaxed Studio Jogger</div><div class="pt-price" style="text-decoration:line-through;color:var(--text3);">$79</div><div class="pt-price" style="color:#c0392b;">$59</div><div class="pt-member-price">Circle Price $53</div></div>
+
+      <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/workout.set.webp') center/cover no-repeat;"><div class="pt-badge pt-badge-sale">20% Off</div></div><div class="pt-name">Longline Sports Bra</div><div class="pt-price" style="text-decoration:line-through;color:var(--text3);">$59</div><div class="pt-price" style="color:#c0392b;">$47</div><div class="pt-member-price">Circle Price $42</div></div>
+    </div>
+  </div></div>
+  <footer><div class="footer-cols"><div class="fc"><h4>Customer Support</h4><a>Shipping</a><a>Returns</a></div><div class="fc"><h4>Aura Circle</h4><a>Points and Rewards</a></div><div class="fc"><h4>About Us</h4><a>Our Story</a></div><div class="fc"><h4>Find Us</h4><a>Contact Us</a></div></div><div class="footer-bottom"><span>&copy; 2026 Aura Active, Inc. All Rights Reserved. &nbsp;|&nbsp; Created by Victoria Morrissey &amp; Jessica Taylor for Merkle Data &amp; Identity Solutions</span><div class="footer-bottom-links"><a>Privacy Policy</a><a>Terms of Use</a></div></div></footer>
 </div>
 
 <!-- CATEGORY PAGE -->
@@ -967,25 +1229,168 @@ footer{background:#fff;padding:40px 0 0;}
       <div class="lb-tier" id="cat-tier-3"><div class="lb-tier-header"><div class="lb-tier-num">3</div><div class="lb-tier-hdr-text"><h3>Circle All-Access</h3><div class="lb-tier-hdr-btn"><a href="#">Apply Now</a></div></div></div><div class="lb-tier-body"><div class="lb-tier-body-desc">Become an All-Access member to unlock everything.</div><div class="lb-tier-perks"><div class="lb-tier-perk-pill">5X POINTS</div><div class="lb-tier-perk-pill">EARLY ACCESS</div><div class="lb-tier-more">+</div></div><div class="lb-tier-card-badge">ALL-ACCESS</div><div class="lb-tier-card-note">Get an extra 20% off your first purchase with your new Aura Circle Credit Card.</div></div></div>
     </div>
   </div>
-  <footer><div class="footer-cols"><div class="fc"><h4>Customer Support</h4><a>Shipping</a><a>Returns</a></div><div class="fc"><h4>Aura Circle</h4><a>Points and Rewards</a></div><div class="fc"><h4>About Us</h4><a>Our Story</a></div><div class="fc"><h4>Find Us</h4><a>Contact Us</a></div></div><div class="footer-bottom"><span>&copy; 2026 Aura Active, Inc. All Rights Reserved.</span><div class="footer-bottom-links"><a>Privacy Policy</a><a>Terms of Use</a></div></div></footer>
+  <footer><div class="footer-cols"><div class="fc"><h4>Customer Support</h4><a>Shipping</a><a>Returns</a></div><div class="fc"><h4>Aura Circle</h4><a>Points and Rewards</a></div><div class="fc"><h4>About Us</h4><a>Our Story</a></div><div class="fc"><h4>Find Us</h4><a>Contact Us</a></div></div><div class="footer-bottom"><span>&copy; 2026 Aura Active, Inc. All Rights Reserved. &nbsp;|&nbsp; Created by Victoria Morrissey &amp; Jessica Taylor for Merkle Data &amp; Identity Solutions</span><div class="footer-bottom-links"><a>Privacy Policy</a><a>Terms of Use</a></div></div></footer>
+</div>
+
+<!-- CIRCLE REWARDS PAGE -->
+<div id="page-circle" class="page">
+  <!-- Hero -->
+  <div style="background:var(--black);padding:56px 48px 48px;text-align:center;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--teal);margin-bottom:12px;">AURA CIRCLE</div>
+    <h1 id="circle-hero-h1" style="font-family:var(--font-serif);font-size:clamp(32px,4vw,52px);font-weight:700;color:#fff;margin-bottom:14px;line-height:1.1;">Earn rewards for every move.</h1>
+    <p id="circle-hero-sub" style="font-size:16px;color:rgba(255,255,255,.65);max-width:520px;margin:0 auto 28px;line-height:1.6;">Join Aura Circle free and start earning points on every purchase. The more you move, the more you earn.</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+      <button class="btn-pill" style="background:var(--teal);color:#fff;border-color:var(--teal);" id="circle-cta1">Join for Free</button>
+      <button class="btn-pill btn-outline" style="color:#fff;border-color:rgba(255,255,255,.35);" id="circle-cta2">Sign In to My Account</button>
+    </div>
+  </div>
+
+  <!-- Jennifer's active tier banner — only visible when Jennifer is active -->
+  <div id="circle-member-bar" style="display:none;flex-wrap:wrap;gap:16px;background:linear-gradient(135deg,#4a5c35,#3a4a28);padding:20px 48px;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
+    <div style="display:flex;align-items:center;gap:16px;">
+      <div style="width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:22px;">&#128105;</div>
+      <div>
+        <div style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:3px;">Welcome back</div>
+        <div style="font-size:18px;font-weight:700;color:#fff;">Jennifer Walsh</div>
+        <div style="font-size:12px;color:rgba(255,255,255,.5);margin-top:2px;">Circle Premier Member · Naperville, IL</div>
+      </div>
+    </div>
+    <div style="display:flex;gap:32px;flex-wrap:wrap;">
+      <div style="text-align:center;">
+        <div style="font-size:28px;font-weight:700;color:#fff;">1,240</div>
+        <div style="font-size:11px;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.5px;">Points Balance</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-size:28px;font-weight:700;color:var(--teal);">$110</div>
+        <div style="font-size:11px;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.5px;">Until Next Reward</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-size:28px;font-weight:700;color:#fff;">Tier 2</div>
+        <div style="font-size:11px;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.5px;">Circle Premier</div>
+      </div>
+    </div>
+    <button class="btn-pill btn-sm" style="background:var(--teal);color:#fff;border-color:var(--teal);">View My Rewards</button>
+  </div>
+
+  <!-- Tiers -->
+  <div style="padding:48px 48px 0;max-width:var(--mw);margin:0 auto;">
+    <h2 style="font-family:var(--font-serif);font-size:28px;text-align:center;color:var(--black);margin-bottom:8px;">Three tiers, endless rewards.</h2>
+    <p style="text-align:center;color:var(--text3);font-size:15px;margin-bottom:36px;">Every dollar spent moves you closer to more.</p>
+    <div class="lb-tiers" style="padding:0;margin:0;">
+      <div class="lb-tier" id="circle-tier-1">
+        <div class="lb-tier-header">
+          <div class="lb-tier-num">1</div>
+          <div class="lb-tier-hdr-text"><h3>Circle Core</h3><div id="circle-tier-1-btn" class="lb-tier-hdr-btn"><a href="#">Join for Free</a></div></div>
+        </div>
+        <div class="lb-tier-body">
+          <div class="lb-tier-body-desc" id="circle-tier-1-desc">Sign up for free to unlock our core benefits. Start earning points from your very first purchase.</div>
+          <div class="lb-tier-perks"><div class="lb-tier-perk-pill">5 PTS / $1</div><div class="lb-tier-perk-pill">FREE SHIPPING</div><div class="lb-tier-perk-pill">BIRTHDAY REWARD</div></div>
+        </div>
+      </div>
+      <div class="lb-tier" id="circle-tier-2">
+        <div class="lb-tier-header">
+          <div class="lb-tier-num">2</div>
+          <div class="lb-tier-hdr-text"><h3>Circle Premier</h3></div>
+        </div>
+        <div class="lb-tier-body">
+          <div class="lb-tier-body-desc" id="circle-tier-2-desc">Spend $350+ annually to unlock more benefits.</div>
+          <div id="circle-tier-2-perks">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text3);margin-bottom:6px;">Everything in Core, plus:</div>
+            <div class="lb-tier-perks"><div class="lb-tier-perk-pill">10 PTS / $1</div><div class="lb-tier-perk-pill">CREATE SALE DAY</div><div class="lb-tier-perk-pill">EXTENDED RETURNS</div><div class="lb-tier-perk-pill">EARLY ACCESS</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="lb-tier" id="circle-tier-3">
+        <div class="lb-tier-header">
+          <div class="lb-tier-num">3</div>
+          <div class="lb-tier-hdr-text"><h3>Circle All-Access</h3><div class="lb-tier-hdr-btn"><a href="#">Apply Now</a></div></div>
+        </div>
+        <div class="lb-tier-body">
+          <div class="lb-tier-body-desc">Open the Aura Circle Credit Card to unlock maximum points, exclusive events, and extra discounts.</div>
+          <div class="lb-tier-perks"><div class="lb-tier-perk-pill">25 PTS / $1</div><div class="lb-tier-perk-pill">EARLY ACCESS</div><div class="lb-tier-perk-pill">EXCLUSIVE EVENTS</div></div>
+          <div class="lb-tier-card-badge">ALL-ACCESS</div>
+          <div class="lb-tier-card-note">Get an extra 15% off your first purchase with your new Aura Circle Credit Card.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Merkury personalisation note — Jennifer only -->
+  <div id="circle-merkury-bar" style="display:none;margin:32px 48px;background:#f0ece8;border-left:4px solid var(--teal);border-radius:4px;padding:16px 20px;align-items:flex-start;gap:12px;">
+    <div style="font-size:20px;flex-shrink:0;">&#128204;</div>
+    <div>
+      <div style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--teal);margin-bottom:4px;">Merkury Identity Signal</div>
+      <div style="font-size:13px;color:var(--text2);line-height:1.6;">Jennifer was re-identified as a Circle Premier member without logging in. Merkury passed her tier, points balance, and lapsed status to this page — enabling a personalised rewards view before she authenticated.</div>
+      <div style="margin-top:8px;display:flex;flex-wrap:wrap;gap:6px;">
+        <span style="background:#fff;border:1px solid var(--border);border-radius:50px;padding:2px 10px;font-size:10px;font-weight:700;color:var(--text2);">CRM_ID: 10031847</span>
+        <span style="background:#fff;border:1px solid var(--border);border-radius:50px;padding:2px 10px;font-size:10px;font-weight:700;color:var(--text2);">confidence: 1</span>
+        <span style="background:#fff;border:1px solid var(--border);border-radius:50px;padding:2px 10px;font-size:10px;font-weight:700;color:var(--text2);">match_type: deterministic</span>
+        <span style="background:#fff;border:1px solid var(--border);border-radius:50px;padding:2px 10px;font-size:10px;font-weight:700;color:var(--text2);">brand_loyalty_score: 4</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="height:48px;"></div>
+  <footer><div class="footer-cols"><div class="fc"><h4>Customer Support</h4><a>Shipping</a><a>Returns</a><a>Track Your Order</a></div><div class="fc"><h4>Aura Circle</h4><a>Points and Rewards</a><a>My Account</a><a>Apply for Card</a></div><div class="fc"><h4>About Us</h4><a>Our Story</a><a>Sustainability</a></div><div class="fc"><h4>Find Us</h4><a>Contact Us</a><a>Store Locator</a></div></div><div class="footer-bottom"><span>&copy; 2026 Aura Active, Inc. All Rights Reserved. &nbsp;|&nbsp; Created by Victoria Morrissey &amp; Jessica Taylor for Merkle Data &amp; Identity Solutions</span><div class="footer-bottom-links"><a>Privacy Policy</a><a>Terms of Use</a></div></div></footer>
+</div>
+
+<!-- BOTTOMS PAGE -->
+<div id="page-bottoms" data-page="bottoms" class="page">
+  <div class="cat-page-hero"><div class="cat-page-hero-inner">
+    <div class="breadcrumb" onclick="showPage('home')">Home / Bottoms</div>
+    <h1 class="cat-page-title">Bottoms</h1>
+    <p class="cat-page-sub">Performance bottoms for every practice.</p>
+    <div class="cat-page-filters"><div class="filter-chip active">Filter and Sort</div><div class="filter-chip">Style</div><div class="filter-chip">Color</div><div class="filter-chip">Size</div><div class="filter-chip">Activity</div></div>
+  </div></div>
+  <div class="cat-page-grid-wrap"><div class="w">
+    <div class="cat-page-result-count">64 Results</div>
+    <div class="product-grid">
+      <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/legging.shot.webp') center/cover no-repeat;"><div class="pt-badge">New</div></div><div class="pt-name">High Rise Flare Performance Pant</div><div class="pt-price">$98</div><div class="pt-member-price">Circle Price $88</div></div>
+      <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/workout.1.webp') center/cover no-repeat;"></div><div class="pt-name">Performance Tight 7/8</div><div class="pt-price">$89</div><div class="pt-member-price">Circle Price $80</div></div>
+      <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/yoga.mat.webp') center/cover no-repeat;"></div><div class="pt-name">Wide Leg Studio Pant</div><div class="pt-price">$108</div><div class="pt-member-price">Circle Price $97</div></div>
+      <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/workout.fit.webp') center/cover no-repeat;"><div class="pt-badge pt-badge-sale">Sale</div></div><div class="pt-name">Studio Jogger</div><div class="pt-price">$79</div><div class="pt-member-price">Circle Price $71</div></div>
+    </div>
+  </div></div>
+  <footer><div class="footer-cols"><div class="fc"><h4>Customer Support</h4><a>Shipping</a><a>Returns</a></div><div class="fc"><h4>Aura Circle</h4><a>Points and Rewards</a></div><div class="fc"><h4>About Us</h4><a>Our Story</a></div><div class="fc"><h4>Find Us</h4><a>Contact Us</a></div></div><div class="footer-bottom"><span>&copy; 2026 Aura Active, Inc. All Rights Reserved. &nbsp;|&nbsp; Created by Victoria Morrissey &amp; Jessica Taylor for Merkle Data &amp; Identity Solutions</span><div class="footer-bottom-links"><a>Privacy Policy</a><a>Terms of Use</a></div></div></footer>
+</div>
+
+<!-- JACKETS PAGE -->
+<div id="page-jackets" data-page="jackets" class="page">
+  <div class="cat-page-hero"><div class="cat-page-hero-inner">
+    <div class="breadcrumb" onclick="showPage('home')">Home / Jackets</div>
+    <h1 class="cat-page-title">Jackets</h1>
+    <p class="cat-page-sub" id="jackets-page-sub">Layer up for whatever the day brings.</p>
+    <div class="cat-page-filters"><div class="filter-chip active">Filter and Sort</div><div class="filter-chip">Style</div><div class="filter-chip">Color</div><div class="filter-chip">Size</div><div class="filter-chip">Activity</div></div>
+  </div></div>
+
+  <div class="cat-page-grid-wrap"><div class="w">
+    <div class="cat-page-result-count" id="jackets-result-count">58 Results</div>
+    <div class="product-grid">
+      <div class="product-tile" onclick="showPage('pdp')" data-slot="jacket-1"><div class="pt-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-aura-demo/main/jacket.rain.hood.png') center/cover no-repeat;"><div class="pt-badge">New</div></div><div class="pt-name">Performance Rain Jacket</div><div class="pt-price">$189</div><div class="pt-member-price">Circle Price $170</div></div>
+      <div class="product-tile" onclick="showPage('pdp')" data-slot="jacket-2"><div class="pt-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-aura-demo/main/jacket.softshell.red.png') center top/cover no-repeat;"></div><div class="pt-name">Softshell Performance Jacket</div><div class="pt-price">$148</div><div class="pt-member-price">Circle Price $133</div></div>
+      <div class="product-tile" onclick="showPage('pdp')" data-slot="jacket-3"><div class="pt-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-aura-demo/main/jacket.trail.white.png') center/cover no-repeat;"><div class="pt-badge">Bestseller</div></div><div class="pt-name">Trail Jacket</div><div class="pt-price">$178</div><div class="pt-member-price">Circle Price $160</div></div>
+      <div class="product-tile" onclick="showPage('pdp')" data-slot="jacket-4"><div class="pt-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-aura-demo/main/jacket.studio.sage.png') center/cover no-repeat;"></div><div class="pt-name">Zip Studio Jacket</div><div class="pt-price">$138</div><div class="pt-member-price">Circle Price $124</div></div>
+    </div>
+  </div></div>
+  <footer><div class="footer-cols"><div class="fc"><h4>Customer Support</h4><a>Shipping</a><a>Returns</a></div><div class="fc"><h4>Aura Circle</h4><a>Points and Rewards</a></div><div class="fc"><h4>About Us</h4><a>Our Story</a></div><div class="fc"><h4>Find Us</h4><a>Contact Us</a></div></div><div class="footer-bottom"><span>&copy; 2026 Aura Active, Inc. All Rights Reserved. &nbsp;|&nbsp; Created by Victoria Morrissey &amp; Jessica Taylor for Merkle Data &amp; Identity Solutions</span><div class="footer-bottom-links"><a>Privacy Policy</a><a>Terms of Use</a></div></div></footer>
 </div>
 
 <!-- PDP PAGE -->
 <div id="page-pdp" class="page">
   <div class="pdp-wrap">
-    <div class="pdp-breadcrumb" onclick="showPage('category')">Back to <span id="pdp-breadcrumb-cat">Bottoms</span></div>
+    <div class="pdp-breadcrumb" id="pdp-breadcrumb" onclick="showPage(window._pdpFrom||'category')">Back to <span id="pdp-breadcrumb-cat">Bottoms</span></div>
     <div class="pdp-grid">
       <div class="pdp-photos">
-        <div class="pdp-photo-main grad-1"></div>
-        <div class="pdp-photo-thumb grad-2"></div>
-        <div class="pdp-photo-thumb grad-3"></div>
-        <div class="pdp-photo-thumb grad-4"></div>
+        <div class="pdp-photo-main" id="pdp-photo-main" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/legging.shot.webp') center/cover no-repeat;"></div>
+        <div class="pdp-photo-thumb" id="pdp-photo-t1" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/yoga.mat.webp') center/cover no-repeat;"></div>
+        <div class="pdp-photo-thumb" id="pdp-photo-t2" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/workout.1.webp') center/cover no-repeat;"></div>
+        <div class="pdp-photo-thumb" id="pdp-photo-t3" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/workout.fit.webp') center/cover no-repeat;"></div>
       </div>
       <div>
         <div class="pdp-eyebrow" id="pdp-eyebrow">Bottoms</div>
         <h1 class="pdp-title" id="pdp-title">High Rise Flare Performance Pant</h1>
-        <div class="pdp-price">$98</div>
-        <div class="pdp-member-price">Circle Member Price $88</div>
+        <div class="pdp-price" id="pdp-price-val">$98</div>
+        <div class="pdp-member-price" id="pdp-member-price-val">Circle Member Price $88</div>
         <div class="pdp-rating"><span class="pdp-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span>4.8 (312 Reviews)</span></div>
         <div class="pdp-color-label">Color: Midnight Black</div>
         <div class="pdp-swatches"><div class="pdp-swatch active" style="background:#1a1a1a"></div><div class="pdp-swatch" style="background:#2a5a8a"></div><div class="pdp-swatch" style="background:#8a2a2a"></div></div>
@@ -1001,14 +1406,14 @@ footer{background:#fff;padding:40px 0 0;}
     </div>
     <div class="pdp-recs"><h2 id="pdp-recs-title">YOU MAY ALSO LIKE</h2>
       <div class="pdp-recs-grid">
-        <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo grad-5"></div><div class="pt-name">Performance Tight 7/8</div><div class="pt-price">$98</div><div class="pt-member-price">Circle Price $88</div></div>
-        <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo grad-3"></div><div class="pt-name">Studio Jogger</div><div class="pt-price">$79</div><div class="pt-member-price">Circle Price $71</div></div>
-        <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo grad-4"></div><div class="pt-name">Barrel Leg Pant</div><div class="pt-price">$118</div><div class="pt-member-price">Circle Price $106</div></div>
-        <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo grad-6"></div><div class="pt-name">Wide Leg Studio Pant</div><div class="pt-price">$108</div><div class="pt-member-price">Circle Price $97</div></div>
+        <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/workout.1.webp') center/cover no-repeat;"></div><div class="pt-name">Performance Tight 7/8</div><div class="pt-price">$98</div><div class="pt-member-price">Circle Price $88</div></div>
+        <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/matching.sets.webp') center/cover no-repeat;"></div><div class="pt-name">Studio Jogger</div><div class="pt-price">$79</div><div class="pt-member-price">Circle Price $71</div></div>
+        <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/yoga.girl.webp') center/cover no-repeat;"></div><div class="pt-name">Barrel Leg Pant</div><div class="pt-price">$118</div><div class="pt-member-price">Circle Price $106</div></div>
+        <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/workout.fit.webp') center/cover no-repeat;"></div><div class="pt-name">Wide Leg Studio Pant</div><div class="pt-price">$108</div><div class="pt-member-price">Circle Price $97</div></div>
       </div>
     </div>
   </div>
-  <footer><div class="footer-cols"><div class="fc"><h4>Customer Support</h4><a>Shipping</a><a>Returns</a></div><div class="fc"><h4>Aura Circle</h4><a>Points and Rewards</a></div><div class="fc"><h4>About Us</h4><a>Our Story</a></div><div class="fc"><h4>Find Us</h4><a>Contact Us</a></div></div><div class="footer-bottom"><span>&copy; 2026 Aura Active, Inc. All Rights Reserved.</span><div class="footer-bottom-links"><a>Privacy Policy</a><a>Terms of Use</a></div></div></footer>
+  <footer><div class="footer-cols"><div class="fc"><h4>Customer Support</h4><a>Shipping</a><a>Returns</a></div><div class="fc"><h4>Aura Circle</h4><a>Points and Rewards</a></div><div class="fc"><h4>About Us</h4><a>Our Story</a></div><div class="fc"><h4>Find Us</h4><a>Contact Us</a></div></div><div class="footer-bottom"><span>&copy; 2026 Aura Active, Inc. All Rights Reserved. &nbsp;|&nbsp; Created by Victoria Morrissey &amp; Jessica Taylor for Merkle Data &amp; Identity Solutions</span><div class="footer-bottom-links"><a>Privacy Policy</a><a>Terms of Use</a></div></div></footer>
 </div>
 
 <!-- CART PAGE -->
@@ -1022,7 +1427,7 @@ footer{background:#fff;padding:40px 0 0;}
       <div id="cart-page-filled-state" style="display:none;">
         <div class="cart-page-title">My Bag (1 item)</div>
         <div class="cart-page-item">
-          <div class="cart-page-item-img" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/yoga.girl.webp') center/cover no-repeat;"></div>
+          <div class="cart-page-item-img" id="cart-pg-item-img" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/yoga.girl.webp') center/cover no-repeat;"></div>
           <div><div class="cart-page-item-name" id="cart-pg-name">High Rise Flare Performance Pant</div><div class="cart-page-item-detail" id="cart-pg-detail">Size: S · Color: Midnight Black · Qty: 1</div><div class="cart-page-item-price" id="cart-pg-price">$98.00</div><div class="cart-page-item-member" id="cart-pg-member">Circle Member Price $88.00</div><span class="cart-page-item-remove" onclick="emptyCart()">Remove</span></div>
           <div style="font-size:14px;font-weight:600;" id="cart-pg-total">$98.00</div>
         </div>
@@ -1041,29 +1446,29 @@ footer{background:#fff;padding:40px 0 0;}
       <div class="cart-loyalty-nudge"><div style="font-size:18px;flex-shrink:0;">&#11088;</div><div class="cart-loyalty-nudge-text" id="cart-pg-loyalty-text"><strong>Join Aura Circle free</strong> and earn points on every purchase.</div></div>
     </div>
   </div>
-  <footer><div class="footer-cols"><div class="fc"><h4>Customer Support</h4><a>Shipping</a><a>Returns</a><a>Track Your Order</a></div><div class="fc"><h4>Aura Circle</h4><a>Points and Rewards</a><a>Account</a></div><div class="fc"><h4>About Us</h4><a>Our Story</a></div><div class="fc"><h4>Find Us</h4><a>Contact Us</a><a>Store Locator</a></div></div><div class="footer-bottom"><span>&copy; 2026 Aura Active, Inc. All Rights Reserved.</span><div class="footer-bottom-links"><a>Privacy Policy</a><a>Terms of Use</a></div></div></footer>
+  <footer><div class="footer-cols"><div class="fc"><h4>Customer Support</h4><a>Shipping</a><a>Returns</a><a>Track Your Order</a></div><div class="fc"><h4>Aura Circle</h4><a>Points and Rewards</a><a>Account</a></div><div class="fc"><h4>About Us</h4><a>Our Story</a></div><div class="fc"><h4>Find Us</h4><a>Contact Us</a><a>Store Locator</a></div></div><div class="footer-bottom"><span>&copy; 2026 Aura Active, Inc. All Rights Reserved. &nbsp;|&nbsp; Created by Victoria Morrissey &amp; Jessica Taylor for Merkle Data &amp; Identity Solutions</span><div class="footer-bottom-links"><a>Privacy Policy</a><a>Terms of Use</a></div></div></footer>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 document.addEventListener('click',function(e){var a=e.target.closest('a');if(!a)return;var h=a.getAttribute('href');if(!h||h==='#'){var oc=a.getAttribute('onclick')||'';if(oc)return;e.preventDefault();}},true);
 
 var PAYLOADS={
   def:{d:{data:{},response:'no_match',version:'1.0.0'}},
   maya:{d:{data:{'dentsu.id':'a1b2c3d4e5f6a7b8c9d0',hashed_email:'3f4a5b6c7d8e9f0a1b2c',CRM_ID:'10048293',confidence_score:1,match_type:'deterministic',first_name:'Maya',last_name:'Chen',age_range:'25-34',gender:'F',marital_status:'S',education_level:'C',presence_of_children:'0',city:'San Francisco',state:'CA',zip:'94110',homeowner_flag:'R',household_income_range:'G',household_size:'1',length_of_residence:'3',purchase_frequency:'High',avg_order_value_range:'$150-$300',last_purchase_days:'12',preferred_channel:'Mobile',category_affinity_1:'Leggings',category_affinity_2:'Sports Bras',in_market_flag:'Y',lifestyle_segment:'Active Achiever',brand_loyalty_score:'5',email_engagement:'Active',social_influence_tier:'Micro',created_date:'2019-04-10 00:00:00',last_modified_date:'2026-03-15 00:00:00'},response:'match',version:'1.0.0'}},
-  jennifer:{d:{data:{'dentsu.id':'c3d4e5f6a7b8c9d0e1f2',hashed_email:'5b6c7d8e9f0a1b2c3d4e',CRM_ID:'10031847',confidence_score:2,match_type:'deterministic',first_name:'Jennifer',last_name:'Walsh',age_range:'35-44',gender:'F',marital_status:'M',education_level:'B',presence_of_children:'1',city:'Naperville',state:'IL',zip:'60540',homeowner_flag:'H',household_income_range:'H',household_size:'4',length_of_residence:'7',purchase_frequency:'Medium',avg_order_value_range:'$150-$300',last_purchase_days:'47',preferred_channel:'Omnichannel',category_affinity_1:'Jackets',category_affinity_2:'Wide Leg',in_market_flag:'Y',lifestyle_segment:'Weekend Warrior Mom',brand_loyalty_score:'4',email_engagement:'Lapsed',social_influence_tier:'Standard',created_date:'2020-08-19 00:00:00',last_modified_date:'2026-03-15 00:00:00'},response:'match',version:'1.0.0'}},
+  jennifer:{d:{data:{'dentsu.id':'c3d4e5f6a7b8c9d0e1f2',hashed_email:'5b6c7d8e9f0a1b2c3d4e',CRM_ID:'10031847',confidence_score:1,match_type:'deterministic',first_name:'Jennifer',last_name:'Walsh',age_range:'35-44',gender:'F',marital_status:'M',education_level:'B',presence_of_children:'1',city:'Naperville',state:'IL',zip:'60540',homeowner_flag:'H',household_income_range:'H',household_size:'4',length_of_residence:'7',purchase_frequency:'Medium',avg_order_value_range:'$150-$300',last_purchase_days:'47',preferred_channel:'Omnichannel',category_affinity_1:'Jackets',category_affinity_2:'Leggings',in_market_flag:'Y',lifestyle_segment:'Weekend Warrior Mom',brand_loyalty_score:'4',email_engagement:'Lapsed',social_influence_tier:'Standard',created_date:'2020-08-19 00:00:00',last_modified_date:'2026-03-15 00:00:00'},response:'match',version:'1.0.0'}},
   danielle:{d:{data:{'dentsu.id':'e5f6a7b8c9d0e1f2a3b4',hashed_email:null,CRM_ID:null,confidence_score:4,match_type:'probabilistic',first_name:null,last_name:null,age_range:'25-34',gender:'F',marital_status:'S',education_level:'B',presence_of_children:'0',city:'Austin',state:'TX',zip:'78701',homeowner_flag:'R',household_income_range:'F',household_size:'1',length_of_residence:'2',purchase_frequency:'Medium',avg_order_value_range:'$50-$150',last_purchase_days:null,preferred_channel:'Online',category_affinity_1:'Yoga & Studio',category_affinity_2:'Swim',in_market_flag:'Y',lifestyle_segment:'Active Wellness Seeker',brand_loyalty_score:null,email_engagement:null,social_influence_tier:'Nano',swim_propensity_score:'82',swim_in_market:'Y',created_date:'2025-11-04 00:00:00',last_modified_date:'2026-03-01 00:00:00'},response:'match',version:'1.0.0'}}
 };
 
 var CONTENT={
-  def:{promoBar:'30% Off Your New Favorites <a onclick="showPage(\'category\')">Shop Women</a>',heroEyebrow:'',heroH1Light:'MOVE IN WHAT',heroH1Bold:'MOVES YOU',heroSub:'Discover our latest collection — designed for every move you make.',heroCta1:'Shop Now',homeCatTitle:'SHOP THE COLLECTION',catLabels:['Matching Sets','Flow State','Studio Fits','On the Mat'],catSubs:['Effortlessly coordinated','Built for your practice','From class to everywhere','Your go-to studio layer'],pbEyebrow:'New Collection',pbH2:'Your Mat, Your Practice',pbP:'Built for every pose, every flow. Studio-ready styles designed to move with you.',pbCta:'Shop Now',lifeTitle:'MADE FOR THE MAT',lifeMainLabel:'STUDIO FAVORITES',lifeMainSub:'Top-rated by our community',lifeCards:['ON THE MAT','FLOW STATE','STUDIO FITS','MINDFUL MOVEMENT'],loyaltyTitle:'Join Aura Circle free',loyaltySub:'Sign up for emails and get 20% off your next order.',encoreTitle:'Extra 20% off your first purchase',catPageTitle:'New Arrivals',catPageSub:'The freshest styles, just landed.',catResultCount:'218 Results',pdpTitle:'High Rise Flare Performance Pant',pdpDesc:'From the studio to the street, this pant delivers a flattering silhouette with the performance you expect from Aura.',pdpRecsTitle:'YOU MAY ALSO LIKE',pdpAtcBtn:'Add to Bag',pdpEyebrow:'Bottoms',pdpBreadcrumbCat:'Bottoms'},
-  maya:{promoBar:'Welcome back Maya - Circle All-Access exclusive: extra 15% off <a onclick="showPage(\'category\')">Shop Now</a>',heroEyebrow:'Back For More',heroH1Light:'BACK FOR',heroH1Bold:'MORE. AS ALWAYS.',heroSub:'Your next obsession just landed. New leggings and bras made for how you move.',heroCta1:'Shop Leggings',homeCatTitle:'YOUR FAVORITES UPDATED',catLabels:['Matching Sets','Flow State','New Leggings','On the Mat'],catSubs:['Fresh drops','Your go-to','Just landed','Studio essentials'],pbEyebrow:'Circle All-Access',pbH2:'Your exclusive early access',pbP:'New drops hit your feed first. As a Circle member you get first pick.',pbCta:'Shop My Picks',lifeTitle:'BUILT FOR YOUR PRACTICE',lifeMainLabel:'YOGA ESSENTIALS',lifeMainSub:'Curated for you',lifeCards:['ON THE MAT','FLOW STATE','STUDIO FITS','MINDFUL MOVEMENT'],loyaltyTitle:'Hi Maya, your points are waiting',loyaltySub:'You have 240 Aura Circle points. Use them on your next order.',encoreTitle:'Circle All-Access: extra 15% off today',catPageTitle:'Leggings',catPageSub:'Your forever favorites.',catResultCount:'89 Results',pdpTitle:'High Rise Performance Tight 7/8',pdpDesc:'The legging our most loyal members keep coming back to.',pdpRecsTitle:'BECAUSE YOU LOVED THESE',pdpAtcBtn:'Add to Bag',pdpEyebrow:'Leggings',pdpBreadcrumbCat:'Leggings'},
-  jennifer:{promoBar:'New arrivals just landed - shop the drop <a onclick="showPage(\'category\')">Shop Now</a>',heroEyebrow:'For Every Moment',heroH1Light:'FROM THE MAT',heroH1Bold:'TO THE MOMENT.',heroSub:'Versatile pieces that work at school pickup, the gym, and everywhere in between.',heroCta1:'Shop Versatile Styles',homeCatTitle:'FROM ERRANDS TO EVERYTHING',catLabels:['Studio Fits','Matching Sets','Flow State','On the Mat'],catSubs:['Polished and easy','Layer up','All-day comfort','The classic'],pbEyebrow:'New In',pbH2:'The styles that do it all.',pbP:'Versatile, performance-ready pieces designed for wherever the day takes you.',pbCta:'Shop Now',lifeTitle:'WEAR IT EVERYWHERE',lifeMainLabel:'EVERYDAY ESSENTIALS',lifeMainSub:'From school run to yoga class',lifeCards:['STUDIO FITS','ON THE MAT','FLOW STATE','MINDFUL MOVEMENT'],loyaltyTitle:'We have missed you Jennifer',loyaltySub:'You are just a few points away from your next reward.',encoreTitle:'Welcome back bonus: 20% off your next purchase',catPageTitle:'Jackets',catPageSub:'Layer up for whatever the day brings.',catResultCount:'58 Results',pdpTitle:'Performance Softshell Jacket',pdpDesc:'Built for wherever the day takes you.',pdpRecsTitle:'COMPLETE THE LOOK',pdpAtcBtn:'Add to Bag',pdpEyebrow:'Jackets',pdpBreadcrumbCat:'Jackets'},
-  danielle:{promoBar:'New in swim — styles made for your next adventure <a onclick="showPage(\'category\')">Shop Swim</a>',heroEyebrow:'Just For You',heroH1Light:'YOUR PRACTICE.',heroH1Bold:'YOUR NEXT MOVE.',heroSub:'You love the studio. Now dive into our swim collection — built with the same performance you trust.',heroCta1:'Explore Swim',homeCatTitle:'MADE FOR HOW YOU MOVE',catLabels:['Flow State','Matching Sets','Studio Fits','On the Mat'],catSubs:['Your yoga go-to','New for you','Performance ready','Dive in'],pbEyebrow:'New Arrival',pbH2:'Find Your Flow',pbP:'New studio styles made for every practice. Discover what moves you.',pbCta:'Shop Now',lifeTitle:'BUILT FOR YOUR ACTIVE LIFE',lifeMainLabel:'STUDIO FAVORITES',lifeMainSub:'Your most-loved category',lifeCards:['ON THE MAT','FLOW STATE','STUDIO FITS','MINDFUL MOVEMENT'],loyaltyTitle:'Join Aura Circle — it is free',loyaltySub:'Earn points on every purchase and get 20% off your first order.',encoreTitle:'Free shipping on your first order',catPageTitle:'Yoga & Swim',catPageSub:'Performance made for every practice.',catResultCount:'186 Results',pdpTitle:'High Rise Performance Tight 7/8',pdpDesc:'Your go-to studio tight, now in new colourways. Built for flow, stretch, and everything in between.',pdpRecsTitle:'COMPLETE YOUR PRACTICE',pdpAtcBtn:'Add to Bag',pdpEyebrow:'Yoga & Studio',pdpBreadcrumbCat:'Yoga & Studio'}
+  def:{promoBar:'15% Off Your New Favorites &#8212; <a onclick="showPage(\'category\')">Shop Women</a>',heroEyebrow:'',heroH1Light:'MOVE IN WHAT',heroH1Bold:'MOVES YOU',heroSub:'Discover our latest collection — designed for every move you make.',heroCta1:'Shop Now',heroBg:'#fff',heroTextDark:true,homeCatTitle:'SHOP THE COLLECTION',catLabels:['Matching Sets','Flow State','Studio Fits','On the Mat'],catSubs:['Effortlessly coordinated','Built for your practice','From class to everywhere','Your go-to studio layer'],pbEyebrow:'New Collection',pbH2:'Your Mat, Your Practice',pbP:'Built for every pose, every flow. Studio-ready styles designed to move with you.',pbCta:'Shop Now',lifeTitle:'MADE FOR THE MAT',lifeMainLabel:'STUDIO FAVORITES',lifeMainSub:'Top-rated by our community',lifeCards:['ON THE MAT','FLOW STATE','STUDIO FITS','MINDFUL MOVEMENT'],loyaltyTitle:'Join Aura Circle free',loyaltySub:'Sign up and get 15% off your next order.',encoreTitle:'Extra 15% off your first purchase',catPageTitle:'New Arrivals',catPageSub:'The freshest styles, just landed.',catResultCount:'218 Results',pdpPrice:'$98',pdpMemberPrice:'Circle Member Price $88',pdpTitle:'High Rise Flare Performance Pant',pdpDesc:'From the studio to the street, this pant delivers a flattering silhouette with the performance you expect from Aura.',pdpRecsTitle:'YOU MAY ALSO LIKE',pdpAtcBtn:'Add to Bag',pdpEyebrow:'Bottoms',pdpBreadcrumbCat:'Bottoms'},
+  maya:{pdpPrice:'$89',pdpMemberPrice:'Circle All-Access Price $80',heroBg:'#1a4a3a',heroTextDark:false,promoBar:'MAYA — Circle All-Access: your exclusive 15% off is live &#8212; <a onclick="showPage(\'category\')" style="color:#fff;font-weight:700;text-decoration:underline;">Shop Now</a>',heroEyebrow:'Welcome back, Maya.',heroH1Light:'BACK FOR',heroH1Bold:'MORE. AS ALWAYS.',heroSub:'Your next obsession just landed. New leggings and bras made for how you move.',heroCta1:'Shop Leggings',homeCatTitle:'YOUR FAVORITES UPDATED',catLabels:['Matching Sets','Flow State','New Leggings','On the Mat'],catSubs:['Fresh drops','Your go-to','Just landed','Studio essentials'],pbEyebrow:'Circle All-Access',pbH2:'Your exclusive early access',pbP:'New drops hit your feed first. As a Circle member you get first pick.',pbCta:'Shop My Picks',lifeTitle:'BUILT FOR YOUR PRACTICE',lifeMainLabel:'YOGA ESSENTIALS',lifeMainSub:'Curated for you',lifeCards:['ON THE MAT','FLOW STATE','STUDIO FITS','MINDFUL MOVEMENT'],loyaltyTitle:'Hi Maya, your points are waiting',loyaltySub:'You have 240 Aura Circle points. Use them on your next order.',encoreTitle:'Circle All-Access: extra 15% off today',catPageTitle:'Leggings',catPageSub:'Your forever favorites.',catResultCount:'89 Results',pdpPrice:'$89',pdpMemberPrice:'Circle All-Access Price $80',pdpTitle:'High Rise Performance Tight 7/8',pdpDesc:'The legging our most loyal members keep coming back to.',pdpRecsTitle:'BECAUSE YOU LOVED THESE',pdpAtcBtn:'Add to Bag',pdpEyebrow:'Leggings',pdpBreadcrumbCat:'Leggings'},
+  jennifer:{promoBar:'JENNIFER — Check Out Our Best-Selling Jackets With Your Welcome Back 20% Off &#8212; <a onclick="showPage(\'jackets\')" style="color:#fff;font-weight:700;text-decoration:underline;">Shop Jackets</a>',heroEyebrow:'',heroH1Light:'FROM THE MAT',heroH1Bold:'TO THE MOMENT.',heroSub:'Versatile pieces that work at school pickup, the gym, and everywhere in between.',heroCta1:'Shop Versatile Styles',heroBg:'#faf6f0',heroTextDark:true,homeCatTitle:'FROM ERRANDS TO EVERYTHING',catLabels:['Studio Fits','Matching Sets','Flow State','On the Mat'],catSubs:['Polished and easy','Layer up','All-day comfort','The classic'],pbEyebrow:'New In',pbH2:'The styles that do it all.',pbP:'Versatile, performance-ready pieces designed for wherever the day takes you.',pbCta:'Shop Now',lifeTitle:'WEAR IT EVERYWHERE',lifeMainLabel:'EVERYDAY ESSENTIALS',lifeMainSub:'From school run to yoga class',lifeCards:['STUDIO FITS','ON THE MAT','FLOW STATE','MINDFUL MOVEMENT'],loyaltyTitle:'Your rewards are waiting',loyaltySub:'You are just a few points away from your next reward.',encoreTitle:'Welcome back bonus: 20% off your next purchase',catPageTitle:'Jackets',catPageSub:'Layer up for whatever the day brings.',catResultCount:'58 Results',pdpPrice:'$148',pdpMemberPrice:'With your discount: $118.40',pdpTitle:'Performance Softshell Jacket',pdpDesc:'Built for wherever the day takes you.',pdpRecsTitle:'COMPLETE THE LOOK',pdpAtcBtn:'Add to Bag',pdpEyebrow:'Jackets',pdpBreadcrumbCat:'Jackets'},
+  danielle:{pdpPrice:'$98',pdpMemberPrice:'Free Shipping on First Order',heroBg:'#fff',heroTextDark:true,promoBar:'New in swim — styles made for your next adventure <a onclick="showPage(\'category\')">Shop Swim</a>',heroEyebrow:'Just For You',heroH1Light:'YOUR PRACTICE.',heroH1Bold:'YOUR NEXT MOVE.',heroSub:'You love the studio. Now dive into our swim collection — built with the same performance you trust.',heroCta1:'Explore Swim',homeCatTitle:'MADE FOR HOW YOU MOVE',catLabels:['Flow State','Matching Sets','Studio Fits','On the Mat'],catSubs:['Your yoga go-to','New for you','Performance ready','Dive in'],pbEyebrow:'New Arrival',pbH2:'Find Your Flow',pbP:'New studio styles made for every practice. Discover what moves you.',pbCta:'Shop Now',lifeTitle:'BUILT FOR YOUR ACTIVE LIFE',lifeMainLabel:'STUDIO FAVORITES',lifeMainSub:'Your most-loved category',lifeCards:['ON THE MAT','FLOW STATE','STUDIO FITS','MINDFUL MOVEMENT'],loyaltyTitle:'Join Aura Circle — it is free',loyaltySub:'Earn points on every purchase and get 20% off your first order.',encoreTitle:'Free shipping on your first order',catPageTitle:'Yoga & Swim',catPageSub:'Performance made for every practice.',catResultCount:'186 Results',pdpTitle:'High Rise Performance Tight 7/8',pdpDesc:'Your go-to studio tight, now in new colourways. Built for flow, stretch, and everything in between.',pdpRecsTitle:'COMPLETE YOUR PRACTICE',pdpAtcBtn:'Add to Bag',pdpEyebrow:'Yoga & Studio',pdpBreadcrumbCat:'Yoga & Studio'}
 };
 
 var MODALS={
-  maya:{headerBg:'linear-gradient(135deg,#1a5f6a,#0d3d45)',visitorState:'Authenticated - Circle All-Access',tagline:'Studio Instructor - San Francisco, CA - Aura Circle Member',matchBadge:'Deterministic Match - Confidence 1',matchType:'Deterministic',matchClass:'det',confidence:'1 - Highest',offerBg:'#1a5f6a',offerHeader:'Circle All-Access Exclusive',offerHeadline:'Your extra 15% is waiting.',offerDesc:'As one of our most loyal members, you get early access to new arrivals plus an exclusive discount applied automatically at checkout.',offerCode:'MAYA15'},
-  jennifer:{headerBg:'linear-gradient(135deg,#2a3a5a,#151f35)',visitorState:'Unauthenticated - Known Visitor',tagline:'Weekend Warrior Mom - Naperville, IL - Lapsed Member',matchBadge:'Deterministic Match - Confidence 2',matchType:'Deterministic',matchClass:'det',confidence:'2 - High',offerBg:'#2a3a5a',offerHeader:'We Have Missed You',offerHeadline:'20% off to welcome you back.',offerDesc:'It has been a while and we have new styles we think you will love. From versatile jackets to everything in between.',offerCode:'WELCOME20'},
+  maya:{headerBg:'linear-gradient(135deg,var(--teal),#0d3d45)',visitorState:'Authenticated - Circle All-Access',tagline:'Studio Instructor - San Francisco, CA - Aura Circle Member',matchBadge:'Deterministic Match - Confidence 1',matchType:'Deterministic',matchClass:'det',confidence:'1 - Highest',offerBg:'#0d7a5a',offerHeader:'Circle All-Access — Top Tier',offerHeadline:'Your loyalty unlocks everything.',offerDesc:'15% off every order, always. Early access to new arrivals, free shipping, and Create Your Own Sale Day — earned by showing up for your practice.',offerCode:'MAYA15'},
+  jennifer:{headerBg:'linear-gradient(135deg,#b5717a,#9a5a68)',visitorState:'Unauthenticated - Known Visitor',tagline:'Weekend Warrior Mom - Naperville, IL - Lapsed Member',matchBadge:'Deterministic Match - Confidence 1',matchType:'Deterministic',matchClass:'det',confidence:'1 - Highest',offerBg:'#b5717a',offerHeader:'We Have Missed You',offerHeadline:'20% off to welcome you back.',offerDesc:'It has been a while and we have new styles we think you will love. From versatile jackets to everything in between.',offerCode:'WELCOME20'},
   danielle:{headerBg:'linear-gradient(135deg,#3a1a6a,#1e0a3d)',visitorState:'Probabilistic Match - Cross-Sell Signal',tagline:'Yoga Buyer — Merkury 3P swim propensity detected',matchBadge:'Probabilistic Match - Confidence 3',matchType:'Probabilistic',matchClass:'prob',confidence:'3 - Medium',offerBg:'#4a1a8a',offerHeader:'Identified via Merkury Tag',offerHeadline:'Dive into our swim collection.',offerDesc:'Merkury signals show this visitor has strong swim purchase propensity — a category she has never bought from Aura.',offerCode:'SWIM20'}
 };
 
@@ -1082,20 +1487,20 @@ var PRODUCTS={
 };
 
 var PERSONAS=[
-  {key:'def',name:'Default View',title:'Anonymous - no identity match',avatar:'&#127760;',bg:'#f0ece8',tags:[{l:'No Match',c:'nomatch'}]},
-  {key:'maya',name:'Maya Chen, 34',title:'Authenticated - All-Access - SF, CA',avatar:'&#129338;',bg:'#e8f5f2',tags:[{l:'Active Achiever',c:'segment'},{l:'Authenticated',c:'auth'}]},
-  {key:'jennifer',name:'Jennifer Walsh, 42',title:'Unauthenticated - Known Lapsed - Chicago',avatar:'&#128105;',bg:'#fff4f0',tags:[{l:'Weekend Warrior',c:'segment'},{l:'Unauthenticated',c:'unauth'}]},
+  {key:'def',name:'Default View',title:'Anonymous — no identity match',avatar:'&#127760;',bg:'#f0ece8',tags:[{l:'No Match',c:'nomatch'}]},
+  {key:'maya',name:'Maya Chen, 34',title:'Authenticated - Circle All-Access - SF, CA',avatar:'&#129338;',bg:'#e8f5f2',tags:[{l:'Active Achiever',c:'segment'},{l:'Authenticated',c:'auth'}]},
+  {key:'jennifer',name:'Jennifer Walsh, 42',title:'Unauthenticated — Known Lapsed — Naperville, IL',avatar:'&#128105;',bg:'#fff4f0',tags:[{l:'Weekend Warrior',c:'segment'},{l:'Deterministic',c:'unauth'}]},
   {key:'danielle',name:'Danielle Brooks, 29',title:'Yoga Buyer — 3P Swim Cross-Sell Signal',avatar:'&#127940;',bg:'#f0eaff',tags:[{l:'Yoga Affinity',c:'segment'},{l:'Swim Signal',c:'prospect'}]}
 ];
 
 var OFFER_LIGHTBOX={
-  maya:{name:'Welcome back, Maya',headline:'Your extra 15% off is waiting.',desc:'As one of our most loyal members, you get early access to new arrivals plus an exclusive discount at checkout.',code:'MAYA15'},
-  jennifer:{name:'We have missed you, Jennifer',headline:'20% off to welcome you back.',desc:'It has been a while and we have new styles we think you will love.',code:'WELCOME20'},
+  maya:{name:'Maya — Circle All-Access',headline:'You earned this. 15% off, always.',desc:'As our highest-tier member you unlock 15% off every purchase, early access to new drops, and free shipping on every order. This is your reward for showing up.',code:'MAYA15'},
+  jennifer:{name:'Jennifer',headline:'Save 20% off today.',desc:'Your exclusive Circle Premier discount is ready to use. New jackets just landed — shop now before they sell out.',code:'WELCOME20'},
   danielle:{name:'We found your next obsession',headline:'Dive into Aura Swim.',desc:'Based on your activity, we think you will love our swim collection. New styles just landed — built with the same performance fabric you trust from the studio.',code:'SWIM20'}
 };
 
 var CONF_EXPLAIN={
-  '1':{text:'Score 1 - Highest confidence. Deterministic match via confirmed email or login.',bg:'#e8f5f2',color:'#1a5f6a',border:'#1a5f6a'},
+  '1':{text:'Score 1 - Highest confidence. Deterministic match via confirmed email or login.',bg:'#e8f5f2',color:'var(--teal)',border:'var(--teal)'},
   '2':{text:'Score 2 - High confidence. Deterministic match from third-party data.',bg:'#fff8e8',color:'#6a4a10',border:'#c8a040'},
   '4':{text:'Score 4 - Lower confidence. Probabilistic match via behavioral and 3P signals.',bg:'#f0eaff',color:'#4a1a8a',border:'#8a5aaa'},
   '5':{text:'Score 5 - Lowest confidence. Probabilistic match via device signals only.',bg:'#fff0e8',color:'#6a2a10',border:'#c06030'}
@@ -1104,7 +1509,7 @@ var CONF_EXPLAIN={
 var CART_CONFIG={
   def:{itemName:'High Rise Flare Performance Pant',itemDetail:'Size: S - Color: Midnight Black - Qty: 1',itemPrice:'$98.00',itemMember:'Circle Member Price $88.00',itemGrad:'grad-1',pointsText:'<strong>Join Aura Circle free</strong> and earn points on this purchase.',recsTitle:"Styles We Think You'll Love",subtotal:'$98.00',recs:[{name:'Performance Tight 7/8',price:'$98',g:'grad-2'},{name:'Barrel Leg Pant',price:'$118',g:'grad-3'},{name:'Studio Jogger',price:'$79',g:'grad-5'}]},
   maya:{itemName:'High Rise Performance Tight 7/8',itemDetail:'Size: S - Color: Midnight Black - Qty: 1',itemPrice:'$109.00',itemMember:'Circle All-Access Price: $98.10',itemGrad:'grad-1',pointsText:'<strong>Circle All-Access:</strong> You will earn <strong>545 points</strong> on this order.',recsTitle:'Because You Loved These',subtotal:'$98.10',recs:[{name:'Longline Sports Bra',price:'$59',g:'grad-6'},{name:'Everyday Legging',price:'$74',g:'grad-2'},{name:'Studio Wrap Top',price:'$89',g:'grad-3'}]},
-  jennifer:{itemName:'Performance Softshell Jacket',itemDetail:'Size: M - Color: Black - Qty: 1',itemPrice:'$148.00',itemMember:'Circle Premier Price: $133.20',itemGrad:'grad-7',pointsText:'<strong>Welcome back, Jennifer.</strong> This purchase earns <strong>740 points</strong> toward your next reward.',recsTitle:'Complete the Look',subtotal:'$133.20',recs:[{name:'Studio Wrap Top',price:'$89',g:'grad-3'},{name:'Wide Leg Studio Pant',price:'$108',g:'grad-6'},{name:'Everyday Long Sleeve Top',price:'$59',g:'grad-4'}]},
+  jennifer:{itemName:'Performance Softshell Jacket',itemDetail:'Size: M - Color: Black - Qty: 1',itemPrice:'$148.00',itemMember:'With your discount: $133.20',itemGrad:'grad-7',itemBg:"url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-aura-demo/main/jacket.grey.model.png') center top/cover no-repeat",pointsText:'<strong>Welcome back, Jennifer.</strong> This purchase earns <strong>740 points</strong> toward your next reward.',recsTitle:'Complete the Look',subtotal:'$133.20',recs:[{name:'Studio Wrap Top',price:'$89',g:'grad-3'},{name:'Wide Leg Studio Pant',price:'$108',g:'grad-6'},{name:'Everyday Long Sleeve Top',price:'$59',g:'grad-4'}]},
   danielle:{itemName:'Structured Barrel Leg Pant',itemDetail:'Size: S - Color: Deep Plum - Qty: 1',itemPrice:'$118.00',itemMember:'Free shipping on your first order',itemGrad:'grad-3',pointsText:'<strong>Join Aura Circle free</strong> - earn points starting with this order.',subtotal:'$118.00',recs:[{name:'Wide Leg Studio Pant',price:'$108',g:'grad-6'},{name:'Everyday Studio Tank',price:'$49',g:'grad-4'},{name:'Performance Rain Jacket',price:'$189',g:'grad-8'}]}
 };
 
@@ -1138,7 +1543,7 @@ window._merkuryPersona='def';
 
 function merkuryResolve(key){
   key=key||'def';window._merkuryPersona=key;
-  var latency=key==='maya'?112:key==='jennifer'?143:key==='danielle'?178:95+Math.floor(Math.random()*80);
+  var latency=key==='jennifer'?100:key==='def'?80:95;
   var now=Date.now();
   setTimeout(function(){
     var payload=PAYLOADS[key]||PAYLOADS['def'];
@@ -1164,16 +1569,36 @@ function showPage(n){
   if(n==='pdp')setTimeout(wireATCButton,100);
   if(n==='cart')populateCartPage();
 }
-function goToCart(){if(activeKey==='maya'||activeKey==='jennifer'||activeKey==='danielle')cartHasItem=true;populateCartPage();showPage('cart');}
+function goToCart(){if(activeKey==='jennifer')cartHasItem=true;populateCartPage();showPage('cart');}
 function set(id,val){var el=document.getElementById(id);if(el)el.textContent=val||'';}
 function setHTML(id,val){var el=document.getElementById(id);if(el)el.innerHTML=val||'';}
 
 function applyContent(key){
   var v=CONTENT[key]||CONTENT['def'];
   setHTML('promo-bar-text',v.promoBar);
-  var ey=document.getElementById('hero-eyebrow');if(ey){ey.style.display=v.heroEyebrow?'block':'none';ey.textContent=v.heroEyebrow;}
+  var pb=document.querySelector('.promo-bar');
+  if(pb)pb.style.background=key==='jennifer'?'#b5717a':key==='maya'?'#0d7a5a':key==='danielle'?'var(--teal)':'var(--teal)';
+  var ey=document.getElementById('hero-eyebrow');
+  if(ey){
+    ey.style.display=v.heroEyebrow?'block':'none';
+    ey.textContent=v.heroEyebrow||'';
+    ey.style.color=v.heroTextDark===false?'rgba(255,255,255,.75)':'var(--text3)';
+  }
   set('hero-h1-light',v.heroH1Light);set('hero-h1-bold',v.heroH1Bold);set('hero-sub',v.heroSub);
   var hc=document.getElementById('hero-cta1');if(hc)hc.textContent=v.heroCta1;
+  // Hero center background + text colour swap
+  var heroCenter=document.getElementById('hero-center');
+  if(heroCenter){
+    heroCenter.style.background=v.heroBg||'#fff';
+    var dark=v.heroTextDark!==false;
+    heroCenter.style.color=dark?'var(--black)':'#fff';
+    var hl=document.getElementById('hero-h1-light');if(hl)hl.style.color=dark?'var(--black)':'#fff';
+    var hb=document.getElementById('hero-h1-bold');if(hb)hb.style.color=dark?'var(--black)':'#fff';
+    var hs=document.getElementById('hero-sub');if(hs)hs.style.color=dark?'var(--text2)':'rgba(255,255,255,.8)';
+    var hcta=document.getElementById('hero-cta1');
+    if(hcta){if(key==='maya'){hcta.className='btn-pill';hcta.style.background='#0d7a5a';hcta.style.color='#fff';hcta.style.borderColor='#0d7a5a';
+}else if(key==='jennifer'){hcta.className='btn-pill';hcta.style.background='#b5717a';hcta.style.color='#fff';hcta.style.borderColor='#b5717a';}else{hcta.className=dark?'btn-pill btn-black':'btn-pill';hcta.style.background=dark?'':'#fff';hcta.style.color=dark?'':'var(--black)';hcta.style.borderColor=dark?'':'#fff';}}
+  }
   set('home-cat-title',v.homeCatTitle);
   for(var i=0;i<4;i++){set('cat-label-'+(i+1),v.catLabels[i]);set('cat-sub-'+(i+1),v.catSubs[i]);}
   set('pb-eyebrow',v.pbEyebrow);set('pb-h2',v.pbH2);set('pb-p',v.pbP);
@@ -1181,12 +1606,107 @@ function applyContent(key){
   set('life-title',v.lifeTitle);set('life-main-label',v.lifeMainLabel);set('life-main-sub',v.lifeMainSub);
   for(var j=0;j<4;j++){set('life-card-'+(j+1),v.lifeCards[j]);}
   set('loyalty-title',v.loyaltyTitle);set('loyalty-sub',v.loyaltySub);set('encore-title',v.encoreTitle);
+  var loyaltyEy=document.getElementById('loyalty-eyebrow');
+  var loyaltyRow=document.getElementById('loyalty-action-row');
+  if(key==='jennifer'){
+    if(loyaltyEy)loyaltyEy.textContent='Your Account';
+    if(loyaltyRow)loyaltyRow.innerHTML='<div style="display:flex;gap:8px;justify-content:center;"><button class="btn-pill btn-white btn-sm" style="padding:11px 28px;">Sign In to My Account</button></div>';
+  }else{
+    if(loyaltyEy)loyaltyEy.textContent='Earn 15% Off';
+    if(loyaltyRow)loyaltyRow.innerHTML='<div class="ls-email-row"><input class="ls-email-input" type="email" placeholder="Enter your email address"><button class="btn-pill btn-white btn-sm">Sign Up</button></div>';
+  }
   set('cat-page-title',v.catPageTitle);set('cat-page-name',v.catPageTitle);set('cat-page-sub',v.catPageSub);set('cat-result-count',v.catResultCount);
   set('pdp-title',v.pdpTitle);set('pdp-desc',v.pdpDesc);set('pdp-recs-title',v.pdpRecsTitle);
+  var pdpPriceEl=document.getElementById('pdp-price-val');if(pdpPriceEl&&v.pdpPrice)pdpPriceEl.textContent=v.pdpPrice;
+  var pdpMemEl=document.getElementById('pdp-member-price-val');if(pdpMemEl&&v.pdpMemberPrice)pdpMemEl.textContent=v.pdpMemberPrice;
   var atc=document.getElementById('pdp-atc-btn');if(atc)atc.textContent=v.pdpAtcBtn;
   set('pdp-eyebrow',v.pdpEyebrow);
   var pbc=document.getElementById('pdp-breadcrumb-cat');if(pbc)pbc.textContent=v.pdpBreadcrumbCat;
   renderProductGrid(key);applyLoyalty(key);
+  // PDP photos swap per persona
+  var pdpMain=document.getElementById('pdp-photo-main');
+  var pdpT1=document.getElementById('pdp-photo-t1');
+  var pdpT2=document.getElementById('pdp-photo-t2');
+  var pdpT3=document.getElementById('pdp-photo-t3');
+  if(key==='maya'){
+    if(pdpMain)pdpMain.style.backgroundImage="url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/legging.shot.webp')";
+    if(pdpT1)pdpT1.style.backgroundImage="url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/yoga.mat.webp')";
+    if(pdpT2)pdpT2.style.backgroundImage="url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/sports.bra.webp')";
+    if(pdpT3)pdpT3.style.backgroundImage="url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/workout.1.webp')";
+  }else if(key==='danielle'){
+    if(pdpMain)pdpMain.style.backgroundImage="url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/yoga.class.webp')";
+    if(pdpT1)pdpT1.style.backgroundImage="url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/sunrise.yoga.webp')";
+    if(pdpT2)pdpT2.style.backgroundImage="url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/yoga.mat.webp')";
+    if(pdpT3)pdpT3.style.backgroundImage="url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/workout.fit.webp')";
+  }else if(key==='jennifer'){
+    if(pdpMain)pdpMain.style.backgroundImage="url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-aura-demo/main/jacket.grey.model.png')";
+    if(pdpT1)pdpT1.style.backgroundImage="url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-aura-demo/main/jacket.softshell.red.png')";
+    if(pdpT2)pdpT2.style.backgroundImage="url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-aura-demo/main/jacket.softshell.grey.png')";
+    if(pdpT3)pdpT3.style.backgroundImage="url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-aura-demo/main/jacket.studio.sage.png')";
+  }else{
+    if(pdpMain)pdpMain.style.backgroundImage="url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/legging.shot.webp')";
+    if(pdpT1)pdpT1.style.backgroundImage="url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/yoga.mat.webp')";
+    if(pdpT2)pdpT2.style.backgroundImage="url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/workout.1.webp')";
+    if(pdpT3)pdpT3.style.backgroundImage="url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/workout.fit.webp')";
+  }
+  var hpl=document.getElementById('hero-photo-left');
+  var hpr=document.getElementById('hero-photo-right');
+  if(key==='maya'){
+    if(hpl){hpl.style.backgroundImage="url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/yoga.class.webp')";hpl.style.backgroundSize='cover';hpl.style.backgroundPosition='center';}
+    if(hpr){hpr.style.backgroundImage="url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/sports.bra.webp')";hpr.style.backgroundSize='cover';hpr.style.backgroundPosition='center';}
+  }else if(key==='danielle'){
+    if(hpl){hpl.style.backgroundImage="url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/yoga.meditate.webp')";hpl.style.backgroundSize='cover';hpl.style.backgroundPosition='center';}
+    if(hpr){hpr.style.backgroundImage="url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/sunrise.yoga.webp')";hpr.style.backgroundSize='cover';hpr.style.backgroundPosition='center';}
+  }else if(key==='jennifer'){
+    if(hpl){hpl.style.backgroundImage="url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-aura-demo/main/leggings.group.webp')";hpl.style.backgroundSize='cover';hpl.style.backgroundPosition='center top';}
+    if(hpr){hpr.style.backgroundImage="url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-aura-demo/main/jacket.vest.park.png')";hpr.style.backgroundSize='cover';hpr.style.backgroundPosition='center top';}
+  }else{
+    if(hpl){hpl.style.backgroundImage="url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/yogi.sunrise.webp')";hpl.style.backgroundSize='cover';hpl.style.backgroundPosition='center';}
+    if(hpr){hpr.style.backgroundImage="url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/workout.1.webp')";hpr.style.backgroundSize='cover';hpr.style.backgroundPosition='center';}
+  }
+  // Circle page personalisation
+  // Jackets page personalisation bar
+  // jackets personalisation bar removed
+  var jacketsCount=document.getElementById('jackets-result-count');
+  if(jacketsCount)jacketsCount.textContent=key==='jennifer'?'58 Results — sorted by your affinity':'58 Results';
+
+  var memberBar=document.getElementById('circle-member-bar');
+  var merkuryBar=document.getElementById('circle-merkury-bar');
+  var tier2=document.getElementById('circle-tier-2');
+  var tier1Btn=document.getElementById('circle-tier-1-btn');
+  var tier1Desc=document.getElementById('circle-tier-1-desc');
+  var circleH1=document.getElementById('circle-hero-h1');
+  var circleSub=document.getElementById('circle-hero-sub');
+  var circleCta1=document.getElementById('circle-cta1');
+  if(key==='maya'){
+    if(memberBar){memberBar.style.display='flex';memberBar.style.background='linear-gradient(135deg,var(--teal),#0d3d45)';}
+    if(merkuryBar)merkuryBar.style.display='flex';
+    var tier3=document.getElementById('circle-tier-3');if(tier3)tier3.classList.add('active');
+    if(tier1Btn)tier1Btn.style.display='none';
+    if(tier1Desc)tier1Desc.textContent='Included in your All-Access membership.';
+    if(circleH1)circleH1.textContent='Welcome back, Maya.';
+    if(circleSub)circleSub.textContent='You are a Circle All-Access member — our highest tier. Your points and perks are ready.';
+    if(circleCta1){circleCta1.textContent='View My Rewards';circleCta1.style.background='var(--teal)';circleCta1.style.borderColor='var(--teal)';}
+  }else if(key==='jennifer'){
+    if(memberBar)memberBar.style.display='flex';
+    if(merkuryBar)merkuryBar.style.display='flex';
+    if(tier2)tier2.classList.add('active');
+    if(tier1Btn)tier1Btn.style.display='none';
+    if(tier1Desc)tier1Desc.textContent='Included in your Premier membership.';
+    if(circleH1)circleH1.textContent='Welcome back, Jennifer.';
+    if(circleSub)circleSub.textContent='You\'re a Circle Premier member. Your points are waiting — and you\'re closer to your next reward than you think.';
+    if(circleCta1){circleCta1.textContent='View My Rewards';circleCta1.style.background='#b5717a';circleCta1.style.borderColor='#b5717a';}
+  } else {
+    if(memberBar)memberBar.style.display='none';
+    if(merkuryBar)merkuryBar.style.display='none';
+    if(tier2)tier2.classList.remove('active');
+    var tier3r=document.getElementById('circle-tier-3');if(tier3r)tier3r.classList.remove('active');
+    if(tier1Btn)tier1Btn.style.display='';
+    if(tier1Desc)tier1Desc.textContent='Sign up for free to unlock our core benefits. Start earning points from your very first purchase.';
+    if(circleH1)circleH1.textContent='Earn rewards for every move.';
+    if(circleSub)circleSub.textContent='Join Aura Circle free and start earning points on every purchase. The more you move, the more you earn.';
+    if(circleCta1){circleCta1.textContent='Join for Free';circleCta1.style.background='var(--teal)';circleCta1.style.borderColor='var(--teal)';}
+  }
 }
 
 function renderProductGrid(key){
@@ -1222,6 +1742,8 @@ function populateCartPage(){
     set('cart-pg-price',cfg.itemPrice);set('cart-pg-member',cfg.itemMember);
     set('cart-pg-total',cfg.subtotal);set('cart-pg-subtotal',cfg.subtotal);set('cart-pg-est-total',cfg.subtotal);
     set('cart-pg-recs-title',cfg.recsTitle);
+    var cartImg=document.getElementById('cart-pg-item-img');
+    if(cartImg&&cfg.itemBg)cartImg.style.background=cfg.itemBg;
     var rg=document.getElementById('cart-pg-recs-grid');
     if(rg)rg.innerHTML=cfg.recs.map(function(r){return '<div class="cart-rec-tile" onclick="showPage(\'pdp\')">'+'<div class="cart-rec-tile-img '+r.g+'"></div>'+'<div class="cart-rec-tile-name">'+r.name+'</div>'+'<div class="cart-rec-tile-price">'+r.price+'</div></div>';}).join('');
   }else{if(empty)empty.style.display='block';if(filled)filled.style.display='none';set('cart-pg-subtotal','$0.00');set('cart-pg-est-total','$0.00');}
@@ -1232,7 +1754,7 @@ function applyPromo(){
   var inp=document.getElementById('cart-promo-input'),msg=document.getElementById('cart-promo-msg');if(!inp||!msg)return;
   var code=inp.value.trim().toUpperCase();
   var valid={MAYA15:'15% off applied!',WELCOME20:'20% off applied!',FREESHIP:'Free shipping applied!'};
-  if(valid[code]){msg.textContent=valid[code];msg.style.color='#1a5f6a';msg.style.display='block';}
+  if(valid[code]){msg.textContent=valid[code];msg.style.color='var(--teal)';msg.style.display='block';}
   else{msg.textContent='Invalid promo code.';msg.style.color='#c0392b';msg.style.display='block';}
 }
 function wireATCButton(){
@@ -1240,7 +1762,22 @@ function wireATCButton(){
   if(btn&&!btn._wired){btn.addEventListener('click',function(){cartHasItem=true;goToCart();});btn._wired=true;}
 }
 
+function showTimelineResolving(){
+  var body=document.getElementById('itp-identity-body');
+  if(!body)return;
+  body.innerHTML='<div style="padding:16px 0;display:flex;flex-direction:column;gap:8px;">'
+    +'<div style="height:10px;background:rgba(255,255,255,.06);border-radius:4px;width:70%;animation:itpPulse .8s ease infinite;"></div>'
+    +'<div style="height:10px;background:rgba(255,255,255,.06);border-radius:4px;width:50%;animation:itpPulse .8s ease .1s infinite;"></div>'
+    +'<div style="height:10px;background:rgba(255,255,255,.06);border-radius:4px;width:80%;animation:itpPulse .8s ease .2s infinite;"></div>'
+    +'<div style="margin-top:8px;font-size:11px;color:rgba(255,255,255,.3);letter-spacing:1px;text-transform:uppercase;">Resolving identity...</div>'
+    +'</div>';
+}
 function updateTimeline(key){
+  showTimelineResolving();
+  var _timelineKey=key;
+  setTimeout(function(){if(activeKey===_timelineKey)_doUpdateTimeline(_timelineKey);},key==='def'?0:100);
+}
+function _doUpdateTimeline(key){
   var body=document.getElementById('itp-identity-body');
   var resolveBar=document.getElementById('itp-resolve-bar');
   var resolveMs=document.getElementById('itp-resolve-ms');
@@ -1273,7 +1810,7 @@ function updateTimeline(key){
   body.innerHTML='<div class="itp-merkury-card"><div class="itp-merkury-card-title">Identity Resolution</div>'+idRows+'</div>'+'<div class="itp-merkury-card" style="margin-top:10px;"><div class="itp-merkury-card-title" style="color:#6a3aaa;border-color:#6a3aaa;">3P Data \u2014 Merkury Graph</div>'+thirdRows+'</div>'+firstBlock;
   if(resolveBar&&resolveMs){
     resolveBar.style.display='none';
-    var ms=key==='maya'?112:key==='jennifer'?143:key==='danielle'?178:95+Math.floor(Math.random()*80);
+    var ms=key==='jennifer'?100:key==='def'?80:95;
     setTimeout(function(){resolveMs.textContent=ms+'ms';resolveBar.style.display='flex';},ms);
   }
 }
@@ -1396,7 +1933,7 @@ function getChatReply(msg,key){
   // General greeting / hi
   if(/^(hi|hello|hey|good morning|good afternoon|good evening)[\s!?.,]*$/i.test(m)){
     if(key==='maya')return "Hi Maya! Great to see you again. What are you shopping for today — new leggings, a sports bra, or something else?";
-    if(key==='jennifer')return "Hi Jennifer! Welcome back. We have some beautiful new arrivals I think you will love. Can I help you find something specific?";
+    if(key==='jennifer')return "Hi Jennifer, welcome back! I can see you've been shopping our jacket collection. We just landed some beautiful new styles — and your 20% off is still waiting. Can I help you find the right one?";
     return "Hello! I'm your Aura Style Concierge. I'm here to help you find the perfect piece. Are you shopping for something specific, or would you like some inspiration?";
   }
   // Help
@@ -1422,10 +1959,34 @@ function updateChatContext(){
 function updateStickyPill(key){
   var btn=document.getElementById('sticky-20-btn'),label=document.getElementById('sticky-20-label');if(!btn||!label)return;
   btn.classList.remove('hidden');
-  var configs={maya:{text:'Your 15% Off is Ready',bg:'#1a5f6a'},jennifer:{text:'Welcome Back - 20% Off',bg:'#2a3a5a'},danielle:{text:'New — Aura Swim for You',bg:'#3a1a6a'},def:{text:'Get 20% Off',bg:'#0d0d0d'}};
+  var configs={maya:{text:'Your 15% Off is Ready',bg:'#0d7a5a'},jennifer:{text:'Save 20% off today',bg:'#b5717a'},danielle:{text:'New — Aura Swim',bg:'#6a3aaa'},def:{text:'Get 15% Off',bg:'var(--black)'}};
   var cfg=configs[key]||configs['def'];label.textContent=cfg.text;btn.style.background=cfg.bg;
+  // Personalise util bar for Jennifer
+  var joinBtn=document.getElementById('util-join-btn');
+  var shippingMsg=document.getElementById('util-shipping-msg');
+  if(key==='maya'){
+    if(joinBtn){joinBtn.textContent='My Account';joinBtn.onclick=function(){};}
+    if(shippingMsg)shippingMsg.textContent='FREE SHIPPING ON EVERY ORDER — CIRCLE ALL-ACCESS MEMBER';
+  }else if(key==='jennifer'){
+    if(joinBtn){joinBtn.textContent='Sign In';joinBtn.onclick=function(){openSignupModal();};}
+    if(shippingMsg)shippingMsg.textContent='FREE SHIPPING ON EVERY ORDER — CIRCLE PREMIER MEMBER';
+  }else{
+    if(joinBtn){joinBtn.textContent='Join Now';joinBtn.onclick=function(){openShipFlyout();};}
+    if(shippingMsg)shippingMsg.textContent='FREE SHIPPING ON $50+ FOR AURA CIRCLE MEMBERS';
+  }
+  var fc1=document.getElementById('fc-link-1'),fc2=document.getElementById('fc-link-2'),fc3=document.getElementById('fc-link-3'),fc4=document.getElementById('fc-link-4');
+  if(key==='maya'){
+    if(fc1)fc1.textContent='My Points (240)';if(fc2)fc2.textContent='My Account';
+    if(fc3)fc3.textContent='Redeem Rewards';if(fc4)fc4.textContent='All-Access Perks';
+  }else if(key==='jennifer'){
+    if(fc1)fc1.textContent='My Points (1,240)';if(fc2)fc2.textContent='My Account';
+    if(fc3)fc3.textContent='Redeem Rewards';if(fc4)fc4.textContent='Upgrade to All-Access';
+  }else{
+    if(fc1)fc1.textContent='Points and Rewards';if(fc2)fc2.textContent='Account';
+    if(fc3)fc3.textContent='Pay Credit Card';if(fc4)fc4.textContent='Become a Circle Member';
+  }
 }
-function onStickyPillClick(){if(activeKey==='maya'||activeKey==='jennifer'||activeKey==='danielle'){openOfferLightbox();}else{openSignupModal();}}
+function onStickyPillClick(){if(activeKey==='jennifer'){openOfferLightbox();}else{openSignupModal();}}
 
 function closeAllPanels(){
   // Floating panels — right side
@@ -1433,6 +1994,7 @@ function closeAllPanels(){
   panelOpen=false;var pan=document.getElementById('ps-panel'),tog=document.getElementById('ps-toggle');if(pan)pan.classList.remove('open');if(tog)tog.classList.remove('open');
   // Floating panels — left side
   timelineOpen=false;var tp=document.getElementById('id-timeline-panel');if(tp)tp.classList.remove('open');
+  var intTab=document.getElementById('ps-integration-tab');if(intTab&&activeKey!=='jennifer')intTab.classList.remove('open');
   // Modals / overlays
   var ol=document.getElementById('offer-lightbox-overlay');if(ol)ol.classList.remove('open');
   var pm=document.getElementById('pers-modal-overlay');if(pm)pm.style.display='none';
@@ -1451,7 +2013,14 @@ function openOfferLightbox(){
 }
 function closeOfferLightbox(){var o=document.getElementById('offer-lightbox-overlay');if(o){o.classList.remove('open');document.body.style.overflow='';}}
 
-function openModal(){closeAllPanels();var o=document.getElementById('pers-modal-overlay');if(o){o.style.display='flex';document.body.style.overflow='hidden';}}
+function openModal(){
+  // Close other panels but preserve identity timeline
+  var wasTimelineOpen=timelineOpen;
+  closeAllPanels();
+  // Re-open timeline if it was open before
+  if(wasTimelineOpen){timelineOpen=true;var tp=document.getElementById('id-timeline-panel');if(tp)tp.classList.add('open');}
+  var o=document.getElementById('pers-modal-overlay');if(o){o.style.display='flex';document.body.style.overflow='hidden';}
+}
 function dismissModal(){var o=document.getElementById('pers-modal-overlay');if(o){o.style.display='none';document.body.style.overflow='';}}
 
 function populateModal(key){
@@ -1461,13 +2030,12 @@ function populateModal(key){
   set('pm-visitor-state',v.visitorState);set('pm-tagline',v.tagline);set('pm-match-badge',v.matchBadge);
   var idCard=document.getElementById('pm-id-card');
   if(key==='danielle'){
-    if(idCard)idCard.innerHTML='<div class="pers-id-card-title">Resolved Identity</div><div class="pers-id-grid"><div class="pers-id-field"><div class="pers-id-label">Match Type</div><div class="pers-id-value prob">Probabilistic</div></div><div class="pers-id-field"><div class="pers-id-label">Confidence Score</div><div class="pers-id-value">4 - Lower</div><div class="conf-explainer" style="display:block;background:#f0eaff;color:#4a1a8a;border-left:3px solid #8a5aaa;">Score 4 - Lower confidence. Probabilistic match via behavioral and 3P signals.</div></div><div class="pers-id-field"><div class="pers-id-label">Age Range</div><div class="pers-id-value">25-34</div></div><div class="pers-id-field"><div class="pers-id-label">Location</div><div class="pers-id-value">Austin, TX</div></div><div class="pers-id-field"><div class="pers-id-label">HH Income</div><div class="pers-id-value">F — $75k-$99k</div></div><div class="pers-id-field"><div class="pers-id-label">Homeowner</div><div class="pers-id-value">R — Renter</div></div><div class="pers-id-field"><div class="pers-id-label">Lifestyle Segment</div><div class="pers-id-value">Active Wellness Seeker</div></div><div class="pers-id-field" style="grid-column:1/-1;border-top:2px solid #8a5aaa;padding-top:10px;margin-top:4px;"><div class="pers-id-label" style="color:#4a1a8a;font-weight:700;letter-spacing:1px;">&#9889; MERKURY 3P CROSS-SELL SIGNAL</div></div><div class="pers-id-field"><div class="pers-id-label">Known Affinity</div><div class="pers-id-value">Yoga &amp; Studio</div></div><div class="pers-id-field"><div class="pers-id-label">Swim Propensity</div><div class="pers-id-value" style="color:#4a1a8a;font-weight:700;">82% — In Market</div></div><div class="pers-id-field"><div class="pers-id-label">Swim In-Market</div><div class="pers-id-value" style="color:#1a5f6a;font-weight:700;">Y</div></div><div class="pers-id-field"><div class="pers-id-label">Not in Aura 1P Data</div><div class="pers-id-value" style="color:#c07820;">Category never purchased</div></div></div>';
+    if(idCard)idCard.innerHTML='<div class="pers-id-card-title">Resolved Identity</div><div class="pers-id-grid"><div class="pers-id-field"><div class="pers-id-label">Match Type</div><div class="pers-id-value prob">Probabilistic</div></div><div class="pers-id-field"><div class="pers-id-label">Confidence Score</div><div class="pers-id-value">4 - Lower</div><div class="conf-explainer" style="display:block;background:#f0eaff;color:#4a1a8a;border-left:3px solid #8a5aaa;">Score 4 - Lower confidence. Probabilistic match via behavioral and 3P signals.</div></div><div class="pers-id-field"><div class="pers-id-label">Age Range</div><div class="pers-id-value">25-34</div></div><div class="pers-id-field"><div class="pers-id-label">Location</div><div class="pers-id-value">Austin, TX</div></div><div class="pers-id-field"><div class="pers-id-label">HH Income</div><div class="pers-id-value">F — $75k-$99k</div></div><div class="pers-id-field"><div class="pers-id-label">Homeowner</div><div class="pers-id-value">R — Renter</div></div><div class="pers-id-field"><div class="pers-id-label">Lifestyle Segment</div><div class="pers-id-value">Active Wellness Seeker</div></div><div class="pers-id-field" style="grid-column:1/-1;border-top:2px solid #8a5aaa;padding-top:10px;margin-top:4px;"><div class="pers-id-label" style="color:#4a1a8a;font-weight:700;letter-spacing:1px;">&#9889; MERKURY 3P CROSS-SELL SIGNAL</div></div><div class="pers-id-field"><div class="pers-id-label">Known Affinity</div><div class="pers-id-value">Yoga &amp; Studio</div></div><div class="pers-id-field"><div class="pers-id-label">Swim Propensity</div><div class="pers-id-value" style="color:#4a1a8a;font-weight:700;">82% — In Market</div></div><div class="pers-id-field"><div class="pers-id-label">Swim In-Market</div><div class="pers-id-value" style="color:var(--teal);font-weight:700;">Y</div></div><div class="pers-id-field"><div class="pers-id-label">Not in Aura 1P Data</div><div class="pers-id-value" style="color:#c07820;">Category never purchased</div></div></div>';
   }else{
     var ck=CONF_EXPLAIN[String(d.confidence_score)];
     if(idCard)idCard.innerHTML='<div class="pers-id-card-title">Resolved Identity</div><div class="pers-id-grid"><div class="pers-id-field"><div class="pers-id-label">Match Type</div><div class="pers-id-value '+v.matchClass+'">'+v.matchType+'</div></div><div class="pers-id-field"><div class="pers-id-label">Confidence Score</div><div class="pers-id-value">'+v.confidence+'</div>'+(ck?'<div class="conf-explainer" style="display:block;background:'+ck.bg+';color:'+ck.color+';border-left:3px solid '+ck.border+';">'+ck.text+'</div>':'')+'</div><div class="pers-id-field"><div class="pers-id-label">Age Range</div><div class="pers-id-value">'+d.age_range+'</div></div><div class="pers-id-field"><div class="pers-id-label">Location</div><div class="pers-id-value">'+d.city+', '+d.state+'</div></div><div class="pers-id-field"><div class="pers-id-label">HH Income</div><div class="pers-id-value">'+d.household_income_range+'</div></div><div class="pers-id-field"><div class="pers-id-label">Purchase Frequency</div><div class="pers-id-value">'+d.purchase_frequency+'</div></div><div class="pers-id-field"><div class="pers-id-label">Category Affinity 1</div><div class="pers-id-value">'+d.category_affinity_1+'</div></div><div class="pers-id-field"><div class="pers-id-label">Category Affinity 2</div><div class="pers-id-value">'+d.category_affinity_2+'</div></div><div class="pers-id-field"><div class="pers-id-label">Lifestyle Segment</div><div class="pers-id-value">'+d.lifestyle_segment+'</div></div><div class="pers-id-field"><div class="pers-id-label">Email Engagement</div><div class="pers-id-value">'+d.email_engagement+'</div></div></div>';
   }
-  var row=document.getElementById('pm-campaign-row');if(row)row.style.display=key==='jennifer'?'block':'none';
-  var emailrow=document.getElementById('pm-email-row');if(emailrow)emailrow.style.display=key==='maya'?'block':'none';
+  // campaign rows now live in integration tab only
 
 }
 document.getElementById('pers-modal-overlay').addEventListener('click',function(e){if(e.target===this)dismissModal();});
@@ -1499,8 +2067,8 @@ function showPush(title,msg){var w=document.getElementById('push-notif-wrap');va
 function dismissPush(){var w=document.getElementById('push-notif-wrap');if(w)w.classList.remove('visible');}
 
 var megaNavOpen=false;
-function toggleMegaNav(){megaNavOpen=!megaNavOpen;document.getElementById('mega-nav-new').classList.toggle('open',megaNavOpen);document.getElementById('nav-new-link').classList.toggle('active',megaNavOpen);}
-function closeMegaNav(){megaNavOpen=false;var m=document.getElementById('mega-nav-new');if(m)m.classList.remove('open');var l=document.getElementById('nav-new-link');if(l)l.classList.remove('active');}
+function toggleMegaNav(){/* mega nav removed */}
+function closeMegaNav(){megaNavOpen=false;}
 document.addEventListener('click',function(e){if(!e.target.closest('.main-nav')&&!e.target.closest('#mega-nav-new'))closeMegaNav();});
 
 function setCmTone(btn,tone){document.querySelectorAll('.cm-tone-pill').forEach(function(p){p.classList.remove('active');});btn.classList.add('active');cmActiveTone=tone;var v=CM_COPY[tone]||CM_COPY['urgent'];var t0=document.getElementById('cv-text-0');if(t0)t0.textContent=v[0];var t1=document.getElementById('cv-text-1');if(t1)t1.textContent=v[1];updatePhonePreview();}
@@ -1517,7 +2085,36 @@ function buildPersonaList(){
     el.addEventListener('click',function(){applyPersona(p.key);});list.appendChild(el);
   });
 }
+function openSwitcherPanel(){
+  var intTab=document.getElementById('ps-integration-tab');
+  if(intTab)intTab.classList.remove('open');
+  panelOpen=true;
+  var pan=document.getElementById('ps-panel'),tog=document.getElementById('ps-toggle');
+  if(pan)pan.classList.add('open');
+  if(tog)tog.classList.add('open');
+  updatePageIndicator();
+}
 function toggleSwitcher(){
+  var intTab=document.getElementById('ps-integration-tab');
+  var isPersonaActive=activeKey&&activeKey!=='def';
+  if(isPersonaActive){
+    var intOpen=intTab&&intTab.classList.contains('open');
+    if(intOpen){
+      // Integration tab open — close it, open switcher panel
+      if(intTab)intTab.classList.remove('open');
+      openSwitcherPanel();
+    } else if(panelOpen){
+      // Switcher panel open — close it
+      panelOpen=false;
+      var pan=document.getElementById('ps-panel'),tog=document.getElementById('ps-toggle');
+      if(pan)pan.classList.remove('open');if(tog)tog.classList.remove('open');
+    } else {
+      // Nothing open — open integration tab
+      if(intTab)intTab.classList.add('open');
+      dismissModal();
+    }
+    return;
+  }
   if(panelOpen){panelOpen=false;var pan=document.getElementById('ps-panel'),tog=document.getElementById('ps-toggle');if(pan)pan.classList.remove('open');if(tog)tog.classList.remove('open');return;}
   closeAllPanels();
   panelOpen=true;var pan=document.getElementById('ps-panel'),tog=document.getElementById('ps-toggle');if(pan)pan.classList.add('open');if(tog)tog.classList.add('open');
@@ -1525,7 +2122,7 @@ function toggleSwitcher(){
 }
 document.addEventListener('click',function(e){if(!e.target.closest('#persona-switcher')&&!e.target.closest('#pers-modal-overlay')&&!e.target.closest('#offer-lightbox-overlay')&&!e.target.closest('#campaign-modal-overlay')&&!e.target.closest('#signup-modal-overlay')&&!e.target.closest('#email-modal-overlay')){panelOpen=false;var pan=document.getElementById('ps-panel'),tog=document.getElementById('ps-toggle');if(pan)pan.classList.remove('open');if(tog)tog.classList.remove('open');}});
 function currentPage(){var a=document.querySelector('.page.active');return a?a.id.replace('page-',''):'home';}
-function updatePageIndicator(){var L={home:'Home',category:'Category',pdp:'Product',cart:'Cart'};var el=document.getElementById('ps-page-name');if(el)el.textContent=L[currentPage()]||currentPage();}
+function updatePageIndicator(){var L={home:'Home',category:'Category',sale:'Sale','new-arrivals':'New Arrivals',bottoms:'Bottoms',jackets:'Jackets',pdp:'Product',cart:'Cart',circle:'Circle Rewards'};var el=document.getElementById('ps-page-name');if(el)el.textContent=L[currentPage()]||currentPage();}
 
 function applyPersona(key){
   activeKey=key;window._merkuryPersona=key;
@@ -1533,20 +2130,43 @@ function applyPersona(key){
   var persona=null;for(var i=0;i<PERSONAS.length;i++){if(PERSONAS[i].key===key){persona=PERSONAS[i];break;}}
   var nameEl=document.getElementById('ps-active-name');if(nameEl&&persona)nameEl.textContent=persona.name;
   updateTimeline(key);updateStickyPill(key);applyContent(key);merkuryResolve(key);dismissPush();
-  cartHasItem=(key==='maya'||key==='jennifer'||key==='danielle');
+  cartHasItem=(key==='jennifer'||key==='maya');
+  // Show reset button and integration tab when persona active
+  var resetBtn=document.getElementById('util-reset-btn');
+  if(resetBtn)resetBtn.style.display=key==='def'?'none':'inline-flex';
+  var intTab=document.getElementById('ps-integration-tab');
+  if(intTab)intTab.classList.toggle('open',key==='jennifer'||key==='maya'||key==='danielle');
+  ['maya','jennifer','danielle'].forEach(function(k){var b=document.getElementById('int-btn-'+k);if(b)b.style.display=k===key?'block':'none';});
+  // Close persona modal when integration tab opens
+  if(key!=='def'&&key!=='jennifer'){dismissModal();}
+  var intHeader=document.getElementById('int-tab-header');
+  if(intHeader){var names={maya:'Maya',jennifer:'Jennifer',danielle:'Danielle'};intHeader.textContent='\u26a1 '+(names[key]||'')+ ' — Activations';}
   chatHistory=[];
   var msgs=document.getElementById('chat-messages');if(msgs)msgs.innerHTML='';
   updateChatContext();
-  var reopenBtn=document.getElementById('pers-reopen-btn');if(reopenBtn)reopenBtn.classList.remove('visible');
+  // pers-reopen-btn removed
   setTimeout(function(){panelOpen=false;var pan=document.getElementById('ps-panel'),tog=document.getElementById('ps-toggle');if(pan)pan.classList.remove('open');if(tog)tog.classList.remove('open');},300);
   if(key!=='def'){
     populateModal(key);
-    setTimeout(function(){openModal();},380);
+    // Persona modal auto-opens, identity panel opens manually via integration tab
+    setTimeout(function(){openModal();},400);
   }else{
     dismissModal();
+    if(timelineOpen){timelineOpen=false;var tp=document.getElementById('id-timeline-panel');if(tp)tp.classList.remove('open');}
   }
 }
-function resetPersona(){applyPersona('def');}
+function openDisplayAdModal(){var m=document.getElementById('display-ad-modal');if(m){m.classList.add('open');document.body.style.overflow='hidden';}}
+function closeDisplayAdModal(){var m=document.getElementById('display-ad-modal');if(m){m.classList.remove('open');document.body.style.overflow='';}}
+function openJenniferEmailModal(){var m=document.getElementById('jennifer-email-modal');if(m){m.classList.add('open');document.body.style.overflow='hidden';}}
+function closeJenniferEmailModal(){var m=document.getElementById('jennifer-email-modal');if(m){m.classList.remove('open');document.body.style.overflow='';}}
+window.openJenniferEmailModal=openJenniferEmailModal;
+window.closeJenniferEmailModal=closeJenniferEmailModal;
+
+function resetPersona(){
+  applyPersona('def');
+  // Auto-close identity panel on reset — reinforces "tag stopped seeing her"
+  if(timelineOpen){timelineOpen=false;var tp=document.getElementById('id-timeline-panel');if(tp)tp.classList.remove('open');}
+}
 
 document.addEventListener('click',function(e){
   var sb=e.target.closest('.pdp-size-btn');if(sb&&!sb.classList.contains('oos')){document.querySelectorAll('.pdp-size-btn').forEach(function(b){b.classList.remove('active');});sb.classList.add('active');}
@@ -1558,6 +2178,20 @@ document.addEventListener('DOMContentLoaded',function(){
   updatePageIndicator();
   merkuryResolve('def');
   setTimeout(function(){updateStickyPill('def');},200);
+  // Track which page product tiles are clicked from for PDP breadcrumb
+  document.addEventListener('click',function(e){
+    var tile=e.target.closest('.product-tile');
+    if(tile){
+      var page=document.querySelector('.page.active');
+      if(page){
+        window._pdpFrom=page.id.replace('page-','');
+        // Update breadcrumb label to match
+        var bc=document.getElementById('pdp-breadcrumb-cat');
+        var labels={'bottoms':'Bottoms','jackets':'Jackets','category':'Category','pdp':'Products'};
+        if(bc)bc.textContent=labels[window._pdpFrom]||'Products';
+      }
+    }
+  });
 });
 </script>
 </body>
